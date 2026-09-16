@@ -1,6 +1,13 @@
 "use client";
 
-import { createContext, useContext, useEffect, useState, type ReactNode } from "react";
+import {
+  createContext,
+  useCallback,
+  useContext,
+  useEffect,
+  useSyncExternalStore,
+  type ReactNode,
+} from "react";
 import { dictionaries, defaultLang, type Dict, type Lang } from "./dictionaries";
 
 type Ctx = {
@@ -18,29 +25,52 @@ const LanguageContext = createContext<Ctx>({
 });
 
 const KEY = "vgi-lang";
+const EVENT = "vgi-lang-change";
+
+function readStored(): Lang {
+  try {
+    return window.localStorage.getItem(KEY) === "id" ? "id" : "en";
+  } catch {
+    return defaultLang;
+  }
+}
+
+function subscribe(cb: () => void) {
+  window.addEventListener("storage", cb);
+  window.addEventListener(EVENT, cb);
+  return () => {
+    window.removeEventListener("storage", cb);
+    window.removeEventListener(EVENT, cb);
+  };
+}
+
+const getSnapshot = () => readStored();
+const getServerSnapshot = () => defaultLang;
+
+function writeStored(lang: Lang) {
+  try {
+    window.localStorage.setItem(KEY, lang);
+  } catch {
+    /* private mode — session only */
+  }
+  window.dispatchEvent(new Event(EVENT));
+}
 
 export function LanguageProvider({ children }: { children: ReactNode }) {
-  const [lang, setLangState] = useState<Lang>(() => {
-    if (typeof window === "undefined") return defaultLang;
-    try {
-      const saved = window.localStorage.getItem(KEY);
-      return saved === "en" || saved === "id" ? saved : defaultLang;
-    } catch {
-      return defaultLang;
-    }
-  });
+  // useSyncExternalStore is the hydration-safe way to read localStorage:
+  // server renders `defaultLang`, client re-renders with the stored value
+  // without a hydration error.
+  const lang = useSyncExternalStore(subscribe, getSnapshot, getServerSnapshot);
 
   useEffect(() => {
-    document.documentElement.lang = lang === "id" ? "id" : "en";
-    try {
-      window.localStorage.setItem(KEY, lang);
-    } catch {
-      /* ignore */
-    }
+    document.documentElement.lang = lang;
   }, [lang]);
 
-  const setLang = (l: Lang) => setLangState(l);
-  const toggle = () => setLangState((l) => (l === "en" ? "id" : "en"));
+  const setLang = useCallback((l: Lang) => writeStored(l), []);
+  const toggle = useCallback(
+    () => writeStored(readStored() === "en" ? "id" : "en"),
+    []
+  );
 
   return (
     <LanguageContext.Provider value={{ lang, d: dictionaries[lang], setLang, toggle }}>
