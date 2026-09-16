@@ -73,6 +73,39 @@ export default function AboutContent() {
           </div>
           <Reveal>
             <Rule className="mt-14" />
+            <div className="mt-14">
+              <SectionHeading index="03" eyebrow={a.valuesEyebrow} title={a.valuesTitle} accent={a.valuesAccent} />
+            </div>
+          </Reveal>
+          <div className="mt-10 grid gap-px overflow-hidden border border-white/12 bg-white/12 sm:grid-cols-2 lg:grid-cols-3">
+            {a.values.map(([t, desc], i) => (
+              <Reveal key={t} delay={Math.min(i * 0.04, 0.2)}>
+                <div className="h-full bg-[#0d0d10] p-7 transition-colors hover:bg-[#150d2b]">
+                  <p className="font-tech text-xs text-violet-400">0{i + 1}</p>
+                  <h3 className="font-display mt-2 text-2xl uppercase tracking-wide text-[#f4f1eb]">{t}</h3>
+                  <p className="mt-2 text-sm leading-6 text-white/55">{desc}</p>
+                </div>
+              </Reveal>
+            ))}
+          </div>
+          <Reveal>
+            <div className="mt-14">
+              <SectionHeading index="04" eyebrow={a.whyEyebrow} title={a.whyTitle} accent={a.whyAccent} />
+            </div>
+          </Reveal>
+          <div className="mt-10 border-t border-white/12">
+            {a.why.map(([t, desc], i) => (
+              <Reveal key={t} delay={Math.min(i * 0.03, 0.12)}>
+                <div className="index-row grid grid-cols-[auto_1fr] items-baseline gap-5 border-b border-white/12 py-6 md:grid-cols-[80px_1fr_1fr] md:gap-10">
+                  <span className="font-tech text-xs text-violet-400">0{i + 1}</span>
+                  <span className="font-display text-2xl uppercase tracking-wide text-[#f4f1eb] md:text-3xl">{t}</span>
+                  <span className="col-span-2 leading-7 text-white/55 md:col-span-1">{desc}</span>
+                </div>
+              </Reveal>
+            ))}
+          </div>
+          <Reveal>
+            <Rule className="mt-14" />
             <div className="mt-8 flex flex-wrap items-center justify-between gap-6">
               <p className="font-tech max-w-3xl text-[11px] uppercase leading-6 tracking-[0.2em] text-white/45">
                 {a.objectiveNote}

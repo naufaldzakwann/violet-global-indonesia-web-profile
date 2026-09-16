@@ -42,7 +42,13 @@ export default function ConsultingContent() {
                   </div>
                   <div>
                     <p className="max-w-xl leading-7 text-white/60">{item.intro}</p>
-                    <p className="font-tech mt-5 text-[11px] uppercase leading-6 tracking-[0.16em] text-white/40">{item.points}</p>
+                    <ul className="mt-5 space-y-2 border-t border-white/12 pt-5">
+                      {item.bullets.map((b) => (
+                        <li key={b} className="flex gap-3 text-sm leading-6 text-white/70">
+                          <span className="text-violet-400" aria-hidden="true">✦</span> {b}
+                        </li>
+                      ))}
+                    </ul>
                   </div>
                 </div>
               </Reveal>

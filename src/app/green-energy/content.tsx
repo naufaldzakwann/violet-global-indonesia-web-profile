@@ -85,11 +85,38 @@ export default function GreenEnergyContent() {
             </Reveal>
             <Reveal delay={0.08}>
               <Eyebrow>{g.wasteEyebrow}</Eyebrow>
-              <p className="mt-4 leading-7 text-white/60">{g.wasteBody}</p>
+              <h2 className="font-display mt-4 text-4xl uppercase leading-[0.95] tracking-wide text-[#f4f1eb] sm:text-5xl">
+                {g.wasteTitle} <em className="font-serif-accent normal-case tracking-normal text-emerald-300">{g.wasteAccent}</em>
+              </h2>
+              <ul className="mt-6 space-y-2.5 border-t border-white/12 pt-6">
+                {g.waste.map((w) => (
+                  <li key={w} className="flex gap-3 text-sm leading-6 text-white/70">
+                    <span className="text-emerald-400" aria-hidden="true">✓</span> {w}
+                  </li>
+                ))}
+              </ul>
               <Link href="/contact" className="mt-7 inline-flex items-center gap-2 bg-emerald-400 px-6 py-3 font-tech text-[11px] uppercase tracking-[0.22em] text-black transition-colors hover:bg-emerald-300">
                 {g.feasibility} <ArrowRight className="h-3.5 w-3.5" />
               </Link>
             </Reveal>
+          </div>
+        </div>
+      </section>
+
+      <section className="border-t border-white/12 bg-[#0a0a0b]">
+        <div className="mx-auto max-w-[1600px] px-5 py-24 md:px-10 md:py-28">
+          <Reveal>
+            <SectionHeading index="03" eyebrow={g.capsEyebrow} title={g.capsTitle} accent={g.capsAccent} />
+          </Reveal>
+          <div className="mt-10 grid gap-px overflow-hidden border border-white/12 bg-white/12 sm:grid-cols-2 lg:grid-cols-4">
+            {g.caps.map((cap, i) => (
+              <Reveal key={cap} delay={Math.min(i * 0.03, 0.2)}>
+                <div className="h-full bg-[#0a0a0b] p-6 transition-colors hover:bg-[#0e1a14]">
+                  <p className="font-tech text-xs text-emerald-400">0{i + 1}</p>
+                  <p className="mt-2 text-sm font-medium leading-6 text-white/75">{cap}</p>
+                </div>
+              </Reveal>
+            ))}
           </div>
         </div>
       </section>
