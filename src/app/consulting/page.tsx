@@ -3,7 +3,8 @@ import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 import PageHero from "@/components/PageHero";
 import Reveal from "@/components/Reveal";
-import { SectionHeading, Card } from "@/components/Section";
+import { SectionHeading } from "@/components/Section";
+import { img } from "@/lib/site";
 
 export const metadata: Metadata = {
   title: "Consulting",
@@ -14,66 +15,31 @@ export const metadata: Metadata = {
 const items = [
   {
     no: "01",
-    title: "Market Entry Consultant",
-    sub: "Opening market-entry doors with the right strategy",
-    intro:
-      "For foreign technology, energy, and infrastructure firms entering Indonesia — and Indonesian firms expanding outward. We de-risk entry with data, regulatory clarity, and the right first partners.",
-    points: [
-      "Market research and analysis based on data & AI",
-      "Regulatory, licensing, and local compliance mapping",
-      "Market positioning and penetration strategy",
-      "Key partnership and stakeholder identification",
-      "Go-to-market roadmap and execution support",
-      "Competitive intelligence and benchmarking",
-    ],
-    deliverable: "Deliverable: market-entry blueprint with regulatory map, partner shortlist, and 12-month GTM plan.",
+    title: "Market Entry",
+    sub: "Opening doors with the right strategy",
+    intro: "For foreign technology, energy, and infrastructure firms entering Indonesia. We de-risk entry with data, regulatory clarity, and the right first partners.",
+    points: "Data & AI research · regulatory mapping · positioning · partner shortlist · 12-month GTM plan",
   },
   {
     no: "02",
-    title: "Strategic Technology Consultant",
-    sub: "Technology architecture for competitive advantage",
-    intro:
-      "For boards and CIOs modernizing under pressure. We translate business mandates into architectures that are secure, scalable, and auditable.",
-    points: [
-      "IT strategic planning and digital transformation roadmap",
-      "Enterprise architecture and technology assessment",
-      "AI/ML implementation strategy and data infrastructure",
-      "Cybersecurity framework design and compliance advisory",
-      "Cloud migration strategy and infrastructure optimization",
-      "Technology due diligence and vendor evaluation",
-    ],
-    deliverable: "Deliverable: architecture blueprint, phased roadmap, and investment priorities.",
+    title: "Technology Strategy",
+    sub: "Architecture for advantage",
+    intro: "For boards and CIOs modernizing under pressure — business mandates translated into secure, scalable, auditable architectures.",
+    points: "Transformation roadmap · enterprise architecture · AI & data strategy · cloud, security & compliance",
   },
   {
     no: "03",
-    title: "Business Development Consultant",
-    sub: "Accelerating sustainable business growth",
-    intro:
-      "For teams that must build pipeline in complex B2G and enterprise markets — long cycles, many stakeholders, formal procurement.",
-    points: [
-      "Strategic pipeline development and lead generation",
-      "Partnership and alliance building",
-      "Government tender and enterprise proposal support",
-      "Revenue model and pricing strategy",
-      "Market expansion planning",
-      "Relationship management and client retention",
-    ],
-    deliverable: "Deliverable: qualified pipeline, proposal assets, and a repeatable BD operating cadence.",
+    title: "Business Development",
+    sub: "Pipeline for complex markets",
+    intro: "For teams selling into long-cycle B2G and enterprise markets — many stakeholders, formal procurement, zero shortcuts.",
+    points: "Pipeline development · alliances · tender & proposal support · revenue & pricing strategy",
   },
   {
     no: "04",
-    title: "Prospective Market Enabler",
-    sub: "Activating untapped market potential",
-    intro:
-      "For opportunities that do not yet look like markets — new zones, new infrastructure, new demand. We create the conditions for bankable projects.",
-    points: [
-      "Identification and validation of new market opportunities",
-      "Ecosystem mapping and stakeholder engagement",
-      "Demand creation and market education",
-      "Pilot project and proof-of-concept design",
-      "Public-Private Partnership (PPP) facilitation",
-    ],
-    deliverable: "Deliverable: validated concept, stakeholder coalition, and pilot-to-scale pathway.",
+    title: "Market Enabler",
+    sub: "Activating untapped potential",
+    intro: "For opportunities that don't yet look like markets — new zones, new infrastructure, new demand. We create bankable conditions.",
+    points: "Opportunity validation · ecosystem mapping · pilot design · PPP facilitation",
   },
 ];
 
@@ -81,48 +47,42 @@ export default function ConsultingPage() {
   return (
     <>
       <PageHero
+        index="04"
         eyebrow="Consulting"
-        title="Senior counsel, backed by data and execution power"
-        lede="Four practices — market entry, technology strategy, business development, and market enabling — for institutions and firms operating in Indonesia's most complex markets."
+        title="Senior counsel,"
+        accent="backed by data."
+        lede="Market entry, technology strategy, business development, and market enabling — for Indonesia's most complex markets."
+        image={img.strategy}
       >
-        <Link href="/contact" className="inline-flex items-center gap-2 rounded-full bg-violet-600 px-5 py-2.5 text-sm font-semibold text-white hover:bg-violet-500">
-          Brief our consultants <ArrowRight className="h-4 w-4" />
+        <Link href="/contact" className="inline-flex items-center gap-2 bg-[#f4f1eb] px-6 py-3 font-tech text-[11px] uppercase tracking-[0.22em] text-black transition-colors hover:bg-violet-500 hover:text-white">
+          Brief our consultants <ArrowRight className="h-3.5 w-3.5" />
         </Link>
       </PageHero>
 
-      <section className="bg-white">
-        <div className="mx-auto max-w-7xl space-y-6 px-4 py-16 sm:px-6 lg:px-8">
-          {items.map((c, i) => (
-            <Reveal key={c.no} delay={Math.min(i * 0.04, 0.15)}>
-              <Card>
-                <div className="grid gap-6 lg:grid-cols-[220px_1fr_1fr]">
+      <section className="bg-[#0a0a0b]">
+        <div className="mx-auto max-w-[1600px] px-5 py-24 md:px-10 md:py-32">
+          <div className="border-t border-white/12">
+            {items.map((c, i) => (
+              <Reveal key={c.no} delay={Math.min(i * 0.04, 0.12)}>
+                <div className="index-row grid gap-4 border-b border-white/12 py-10 md:grid-cols-[80px_1fr_1fr] md:gap-10 md:py-12">
+                  <span className="font-tech text-xs text-violet-400">{c.no}</span>
                   <div>
-                    <p className="font-display text-4xl font-bold text-violet-200">{c.no}</p>
-                    <h2 className="mt-2 font-display text-xl font-bold text-slate-950">{c.title}</h2>
-                    <p className="mt-1 text-sm font-medium text-violet-700">{c.sub}</p>
+                    <h2 className="font-display text-4xl uppercase leading-[0.92] tracking-wide text-[#f4f1eb] md:text-6xl">{c.title}</h2>
+                    <p className="font-serif-accent mt-2 text-xl text-violet-300">{c.sub}</p>
                   </div>
-                  <p className="leading-7 text-slate-600">{c.intro}</p>
-                  <ul className="space-y-1.5 text-sm leading-6 text-slate-700">
-                    {c.points.map((p) => (
-                      <li key={p} className="flex gap-2"><span className="text-violet-500">✦</span>{p}</li>
-                    ))}
-                  </ul>
+                  <div>
+                    <p className="max-w-xl leading-7 text-white/60">{c.intro}</p>
+                    <p className="font-tech mt-5 text-[11px] uppercase leading-6 tracking-[0.16em] text-white/40">{c.points}</p>
+                  </div>
                 </div>
-                <p className="mt-5 rounded-xl bg-violet-50 px-4 py-3 text-sm font-medium text-violet-900">{c.deliverable}</p>
-              </Card>
-            </Reveal>
-          ))}
-
+              </Reveal>
+            ))}
+          </div>
           <Reveal>
-            <div className="rounded-2xl bg-slate-950 p-7 text-white">
-              <SectionHeading
-                dark
-                eyebrow="How we work"
-                title="Diagnose → design → de-risk → deliver"
-                lede="Fixed-scope diagnostics first, then phased execution with clear owners, milestones, and measurable outcomes."
-              />
-              <Link href="/contact" className="mt-6 inline-flex items-center gap-2 rounded-full bg-violet-600 px-5 py-2.5 text-sm font-semibold text-white hover:bg-violet-500">
-                Start with a diagnostic <ArrowRight className="h-4 w-4" />
+            <div className="mt-16 flex flex-wrap items-center justify-between gap-6 border border-white/12 bg-[#0d0d10] p-8 md:p-10">
+              <SectionHeading eyebrow="Engagement" title="Diagnose first," accent="then execute." />
+              <Link href="/contact" className="inline-flex items-center gap-2 bg-violet-600 px-6 py-3 font-tech text-[11px] uppercase tracking-[0.22em] text-white transition-colors hover:bg-violet-500">
+                Start with a diagnostic <ArrowRight className="h-3.5 w-3.5" />
               </Link>
             </div>
           </Reveal>

@@ -2,93 +2,137 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { useState } from "react";
-import { Menu, X, ArrowUpRight } from "lucide-react";
+import { useEffect, useState } from "react";
+import { AnimatePresence, motion } from "framer-motion";
+import { ArrowUpRight } from "lucide-react";
 import Logo from "./Logo";
 import { nav, site } from "@/lib/site";
-import { cn } from "@/lib/utils";
+
+const EASE = [0.22, 1, 0.36, 1] as const;
 
 export default function Navbar() {
   const pathname = usePathname();
   const [open, setOpen] = useState(false);
+  const close = () => setOpen(false);
+
+  useEffect(() => {
+    document.documentElement.style.overflow = open ? "hidden" : "";
+    return () => {
+      document.documentElement.style.overflow = "";
+    };
+  }, [open ]);
 
   return (
-    <header className="sticky top-0 z-50 border-b border-white/10 bg-[#0B0618]/85 backdrop-blur-xl">
-      <div className="mx-auto flex h-16 max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8">
-        <Link href="/" className="flex items-center gap-3" aria-label="Violet home">
-          <Logo className="h-9 w-9" />
-          <span className="leading-tight">
-            <span className="block text-[15px] font-bold tracking-wide text-white">
-              VIOLET
-            </span>
-            <span className="block text-[11px] font-medium tracking-[0.18em] text-violet-300">
-              GLOBAL INDONESIA
-            </span>
-          </span>
-        </Link>
-
-        <nav className="hidden items-center gap-1 lg:flex" aria-label="Primary">
-          {nav.map((item) => (
-            <Link
-              key={item.href}
-              href={item.href}
-              className={cn(
-                "rounded-full px-3.5 py-2 text-sm font-medium transition-colors",
-                pathname === item.href || pathname?.startsWith(item.href)
-                  ? "bg-white/10 text-white"
-                  : "text-slate-300 hover:bg-white/5 hover:text-white"
-              )}
-            >
-              {item.label}
+    <>
+      <header className="fixed inset-x-0 top-0 z-[60] mix-blend-normal">
+        <div className="border-b border-white/10 bg-[#0a0a0b]/80 backdrop-blur-md">
+          <div className="mx-auto flex h-16 max-w-[1600px] items-center justify-between px-5 md:h-[72px] md:px-10">
+            <Link href="/" className="flex items-center gap-3" aria-label="Violet home">
+              <Logo className="h-9 w-9" />
+              <span className="leading-none">
+                <span className="block font-display text-lg tracking-wide text-[#f4f1eb]">
+                  VIOLET<sup className="font-tech text-[9px] text-violet-400">®</sup>
+                </span>
+                <span className="font-tech block text-[9px] tracking-[0.28em] text-white/50">
+                  GLOBAL INDONESIA
+                </span>
+              </span>
             </Link>
-          ))}
-          <Link
-            href="/contact"
-            className="ml-2 inline-flex items-center gap-1.5 rounded-full bg-violet-600 px-4 py-2 text-sm font-semibold text-white shadow-lg shadow-violet-950/40 transition hover:bg-violet-500"
-          >
-            Get in touch <ArrowUpRight className="h-4 w-4" />
-          </Link>
-        </nav>
 
-        <button
-          className="inline-flex h-10 w-10 items-center justify-center rounded-lg text-slate-200 hover:bg-white/10 lg:hidden"
-          onClick={() => setOpen((v) => !v)}
-          aria-label="Toggle menu"
-          aria-expanded={open}
-        >
-          {open ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
-        </button>
-      </div>
+            <nav className="hidden items-center gap-7 xl:flex" aria-label="Primary">
+              {nav.slice(0, 6).map((item) => (
+                <Link
+                  key={item.href}
+                  href={item.href}
+                  className={`font-tech text-[11px] uppercase tracking-[0.2em] transition-colors ${
+                    pathname?.startsWith(item.href) ? "text-white" : "text-white/55 hover:text-white"
+                  }`}
+                >
+                  [{item.label}]
+                </Link>
+              ))}
+            </nav>
 
-      {open && (
-        <div className="border-t border-white/10 bg-[#0B0618] px-4 pb-6 pt-2 lg:hidden">
-          <nav className="grid gap-1" aria-label="Mobile">
-            <Link
-              href="/"
-              onClick={() => setOpen(false)}
-              className="rounded-lg px-3 py-2.5 text-sm font-medium text-slate-200 hover:bg-white/5"
-            >
-              Home
-            </Link>
-            {nav.map((item) => (
+            <div className="flex items-center gap-3">
               <Link
-                key={item.href}
-                href={item.href}
-                onClick={() => setOpen(false)}
-                className="rounded-lg px-3 py-2.5 text-sm font-medium text-slate-200 hover:bg-white/5"
+                href="/contact"
+                className="font-tech hidden items-center gap-1.5 text-[11px] uppercase tracking-[0.2em] text-white/80 transition-colors hover:text-white sm:inline-flex"
               >
-                {item.label}
+                Let&apos;s Talk <ArrowUpRight className="h-3.5 w-3.5" />
               </Link>
-            ))}
-            <a
-              href={`mailto:${site.email}`}
-              className="mt-2 rounded-lg bg-violet-600 px-3 py-2.5 text-center text-sm font-semibold text-white"
-            >
-              {site.email}
-            </a>
-          </nav>
+              <button
+                onClick={() => setOpen((v) => !v)}
+                aria-label={open ? "Close menu" : "Open menu"}
+                aria-expanded={open}
+                className="group flex h-11 items-center gap-3 border border-white/20 px-5 transition-colors hover:border-violet-500 hover:bg-violet-600"
+              >
+                <span className="font-tech text-[11px] uppercase tracking-[0.25em] text-white">
+                  {open ? "Close" : "Menu"}
+                </span>
+                <span className="relative block h-3 w-5" aria-hidden="true">
+                  <span className={`absolute left-0 top-0 h-px w-full bg-white transition-transform duration-300 ${open ? "translate-y-[5.5px] rotate-45" : ""}`} />
+                  <span className={`absolute left-0 top-[5.5px] h-px w-full bg-white transition-opacity duration-300 ${open ? "opacity-0" : ""}`} />
+                  <span className={`absolute bottom-0 left-0 h-px w-full bg-white transition-transform duration-300 ${open ? "-translate-y-[5.5px] -rotate-45" : ""}`} />
+                </span>
+              </button>
+            </div>
+          </div>
         </div>
-      )}
-    </header>
+      </header>
+
+      <AnimatePresence>
+        {open && (
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: 0.35, ease: "easeOut" }}
+            className="noise fixed inset-0 z-[55] flex flex-col bg-[#0c0716]/[.985] pt-24 backdrop-blur-xl"
+          >
+            <div className="hero-grid pointer-events-none absolute inset-0" aria-hidden="true" />
+            <nav className="relative mx-auto grid w-full max-w-[1600px] flex-1 content-center gap-1 overflow-y-auto px-5 md:px-10" aria-label="Menu">
+              <Link
+                href="/"
+                onClick={close}
+                className="group flex items-baseline gap-4 border-b border-white/10 py-3 md:py-4"
+              >
+                <span className="font-tech text-xs text-violet-400">00</span>
+                <span className="font-display text-5xl uppercase leading-none text-[#f4f1eb] transition-all duration-300 group-hover:translate-x-3 group-hover:text-violet-300 md:text-7xl">
+                  Index
+                </span>
+              </Link>
+              {nav.map((item, i) => (
+                <motion.div
+                  key={item.href}
+                  initial={{ opacity: 0, y: 28 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.55, delay: 0.05 + i * 0.05, ease: EASE }}
+                >
+                  <Link
+                    href={item.href}
+                    onClick={close}
+                    className="group flex items-baseline gap-4 border-b border-white/10 py-3 md:py-4"
+                  >
+                    <span className="font-tech text-xs text-violet-400">0{i + 1}</span>
+                    <span className="font-display text-5xl uppercase leading-none text-[#f4f1eb] transition-all duration-300 group-hover:translate-x-3 group-hover:text-violet-300 md:text-7xl">
+                      {item.label}
+                    </span>
+                    <ArrowUpRight className="ml-auto h-7 w-7 shrink-0 text-white/30 transition-all duration-300 group-hover:text-violet-300 md:h-9 md:w-9" />
+                  </Link>
+                </motion.div>
+              ))}
+            </nav>
+            <div className="relative border-t border-white/10">
+              <div className="mx-auto flex max-w-[1600px] flex-col gap-1 px-5 py-5 font-tech text-[11px] uppercase tracking-[0.2em] text-white/50 sm:flex-row sm:items-center sm:justify-between md:px-10">
+                <span>Jakarta — ID · 6.21°S 106.80°E</span>
+                <a href={`mailto:${site.email}`} className="text-violet-300 hover:text-white">
+                  {site.email}
+                </a>
+              </div>
+            </div>
+          </motion.div>
+        )}
+      </AnimatePresence>
+    </>
   );
 }

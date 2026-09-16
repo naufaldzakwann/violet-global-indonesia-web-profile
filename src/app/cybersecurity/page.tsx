@@ -1,9 +1,11 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { ArrowRight, Bug, Microscope, Siren, Fingerprint, ShieldCheck, GraduationCap } from "lucide-react";
+import Image from "next/image";
+import { ArrowRight } from "lucide-react";
 import PageHero from "@/components/PageHero";
 import Reveal from "@/components/Reveal";
-import { SectionHeading, Card } from "@/components/Section";
+import { SectionHeading } from "@/components/Section";
+import { img } from "@/lib/site";
 
 export const metadata: Metadata = {
   title: "Cybersecurity",
@@ -12,124 +14,82 @@ export const metadata: Metadata = {
 };
 
 const services = [
-  {
-    icon: Bug,
-    title: "AI-Powered Penetration Testing",
-    desc: "Security testing using AI for vulnerability identification across web, mobile, API, network, and cloud — with manual validation and executive-ready reporting.",
-    points: ["Black / grey / white-box testing", "OWASP, NIST-aligned methodology", "Retest and remediation verification"],
-  },
-  {
-    icon: Microscope,
-    title: "AI Exploit Research",
-    desc: "Controlled research and development of exploits for defense validation — proving impact so defenses are prioritized by real risk, not CVSS alone.",
-    points: ["Proof-of-concept in isolated labs", "Detection-rule development", "Patch-validation support"],
-  },
-  {
-    icon: Siren,
-    title: "Security Operations Center",
-    desc: "24/7 security monitoring with triage, escalation, and monthly threat briefs — your extended team, not a black-box alert feed.",
-    points: ["SIEM monitoring & tuning", "Incident triage & escalation", "Threat-hunting sprints"],
-  },
-  {
-    icon: Fingerprint,
-    title: "Incident Response & Forensics",
-    desc: "Rapid containment, eradication, and forensic analysis with chain-of-custody discipline — plus post-incident hardening.",
-    points: ["Remote & on-site response", "Disk, memory & log forensics", "Post-incident report & roadmap"],
-  },
+  { no: "01", title: "AI-Powered Penetration Testing", desc: "AI-assisted vulnerability identification across web, mobile, API, network, and cloud — manually validated, executive-ready reporting.", points: "Black / grey / white-box · OWASP & NIST-aligned · retest & remediation verification" },
+  { no: "02", title: "AI Exploit Research", desc: "Controlled exploit R&D in isolated labs to validate defenses — prioritizing by real impact, not CVSS alone.", points: "PoC development · detection-rule engineering · patch validation" },
+  { no: "03", title: "Security Operations Center", desc: "24/7 monitoring, triage, and escalation — an extended team with monthly threat briefs, not an alert feed.", points: "SIEM monitoring & tuning · triage & escalation · threat-hunting sprints" },
+  { no: "04", title: "Incident Response & Forensics", desc: "Rapid containment and forensic analysis with chain-of-custody discipline — plus post-incident hardening.", points: "Remote & on-site · disk, memory & log forensics · hardening roadmap" },
+];
+
+const infra: Array<[string, string]> = [
+  ["SIEM Implementation", "Deployment, tuning, managed detection engineering"],
+  ["Network Security", "Segmentation, firewalling, IDS/IPS, Zero-Trust pathways"],
+  ["Endpoint Protection", "EDR rollout, hardening baselines, playbooks"],
+  ["Identity Management", "IAM, MFA, PAM, access-lifecycle governance"],
 ];
 
 export default function CybersecurityPage() {
   return (
     <>
       <PageHero
+        index="03"
         eyebrow="Cybersecurity"
-        title="Offense-informed defense for critical operations"
-        lede="Test like an adversary, defend like an institution. Violet combines AI-assisted offensive testing with 24/7 operations and enterprise hardening."
+        title="Offense-informed"
+        accent="defense."
+        lede="Test like an adversary, defend like an institution — AI-assisted offensive testing with 24/7 operations and enterprise hardening."
+        image={img.cyber}
       >
-        <Link href="/contact" className="inline-flex items-center gap-2 rounded-full bg-violet-600 px-5 py-2.5 text-sm font-semibold text-white hover:bg-violet-500">
-          Request security assessment <ArrowRight className="h-4 w-4" />
+        <Link href="/contact" className="inline-flex items-center gap-2 bg-[#f4f1eb] px-6 py-3 font-tech text-[11px] uppercase tracking-[0.22em] text-black transition-colors hover:bg-violet-500 hover:text-white">
+          Request assessment <ArrowRight className="h-3.5 w-3.5" />
         </Link>
       </PageHero>
 
-      <section className="bg-white">
-        <div className="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8">
+      <section className="bg-[#0a0a0b]">
+        <div className="mx-auto max-w-[1600px] px-5 py-24 md:px-10 md:py-32">
           <Reveal>
-            <SectionHeading
-              eyebrow="Services"
-              title="Comprehensive security solutions"
-              lede="Four core practices covering the full lifecycle — find weakness, prove impact, monitor continuously, respond decisively."
-            />
+            <SectionHeading index="01" eyebrow="Practices" title="Four disciplines," accent="one shield." />
           </Reveal>
-          <div className="mt-8 grid gap-4 md:grid-cols-2">
+          <div className="mt-12 border-t border-white/12">
             {services.map((s, i) => (
-              <Reveal key={s.title} delay={Math.min(i * 0.06, 0.2)}>
-                <Card className="h-full">
-                  <s.icon className="h-7 w-7 text-violet-700" />
-                  <h3 className="mt-3 font-display text-lg font-bold text-slate-950">{s.title}</h3>
-                  <p className="mt-2 text-sm leading-6 text-slate-600">{s.desc}</p>
-                  <ul className="mt-3 space-y-1.5 text-sm text-slate-600">
-                    {s.points.map((p) => (
-                      <li key={p} className="flex gap-2"><span className="text-violet-500">✓</span>{p}</li>
-                    ))}
-                  </ul>
-                </Card>
+              <Reveal key={s.no} delay={Math.min(i * 0.04, 0.12)}>
+                <div className="index-row grid gap-3 border-b border-white/12 py-8 md:grid-cols-[80px_1fr_1.2fr] md:gap-10 md:py-10">
+                  <span className="font-tech text-xs text-violet-400">{s.no}</span>
+                  <div>
+                    <h2 className="font-display text-3xl uppercase leading-[0.95] tracking-wide text-[#f4f1eb] md:text-4xl">{s.title}</h2>
+                    <p className="font-tech mt-4 text-[11px] uppercase leading-6 tracking-[0.16em] text-white/40">{s.points}</p>
+                  </div>
+                  <p className="max-w-xl leading-7 text-white/60">{s.desc}</p>
+                </div>
               </Reveal>
             ))}
           </div>
         </div>
       </section>
 
-      <section className="bg-slate-50">
-        <div className="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8">
-          <div className="grid gap-6 lg:grid-cols-2">
-            <Reveal>
-              <SectionHeading
-                eyebrow="Systems & infrastructure"
-                title="Enterprise security infrastructure"
-                lede="Design, deploy, and operate the controls your auditors and boards expect."
-              />
-              <div className="mt-6 overflow-hidden rounded-2xl border border-slate-200 bg-white">
-                {[
-                  ["SIEM Implementation", "Implementation, tuning, and managed detection engineering."],
-                  ["Network Security", "Segmentation, firewalling, IDS/IPS, Zero-Trust pathways."],
-                  ["Endpoint Protection", "EDR rollout, hardening baselines, response playbooks."],
-                  ["Identity Management", "IAM, MFA, PAM, and access-lifecycle governance."],
-                ].map(([t, d]) => (
-                  <div key={t} className="flex flex-col gap-1 border-b border-slate-100 p-5 last:border-0 sm:flex-row sm:items-center sm:justify-between">
-                    <p className="font-semibold text-slate-950">{t}</p>
-                    <p className="max-w-md text-sm text-slate-600">{d}</p>
-                  </div>
-                ))}
-              </div>
-            </Reveal>
-            <Reveal delay={0.1}>
-              <div className="h-full rounded-2xl bg-slate-950 p-7 text-white">
-                <div className="flex items-center gap-2">
-                  <GraduationCap className="h-6 w-6 text-violet-300" />
-                  <h3 className="font-display text-xl font-bold">Consulting & training</h3>
+      <section className="border-t border-white/12 bg-[#0d0d10]">
+        <div className="mx-auto grid max-w-[1600px] gap-12 px-5 py-24 md:px-10 md:py-32 lg:grid-cols-2">
+          <Reveal>
+            <div className="scan relative aspect-[16/10] overflow-hidden">
+              <Image src={img.soc} alt="Security operations data center" fill sizes="(max-width:1024px) 100vw, 50vw" className="object-cover" />
+              <div className="absolute inset-0 bg-violet-950/30 mix-blend-multiply" aria-hidden="true" />
+            </div>
+          </Reveal>
+          <Reveal delay={0.08}>
+            <SectionHeading index="02" eyebrow="Infrastructure" title="Hardened by" accent="design." lede="The controls your auditors and boards expect — designed, deployed, and operated." />
+            <div className="mt-8 border-t border-white/12">
+              {infra.map(([t, d]) => (
+                <div key={t} className="flex flex-col gap-1 border-b border-white/12 py-5 sm:flex-row sm:items-baseline sm:justify-between sm:gap-6">
+                  <p className="font-display text-xl uppercase tracking-wide text-[#f4f1eb]">{t}</p>
+                  <p className="max-w-md text-sm leading-6 text-white/55 sm:text-right">{d}</p>
                 </div>
-                <p className="mt-2 text-sm leading-6 text-slate-300">
-                  Security education & compliance for teams that must prove due diligence.
-                </p>
-                <ul className="mt-5 space-y-3 text-sm leading-6 text-slate-200">
-                  {[
-                    ["Security assessment & audit", "Baseline your posture against a clear control set."],
-                    ["Risk assessment & compliance", "ISO 27001 and PCI-DSS readiness, risk registers, remediation plans."],
-                    ["Security awareness training", "Phishing-resistant culture for non-technical staff."],
-                    ["Technical skill development", "Hands-on upskilling for SOC, IT, and developer teams."],
-                  ].map(([t, d]) => (
-                    <li key={t} className="flex gap-3">
-                      <ShieldCheck className="mt-0.5 h-5 w-5 shrink-0 text-emerald-400" />
-                      <div><p className="font-semibold text-white">{t}</p><p className="text-slate-300">{d}</p></div>
-                    </li>
-                  ))}
-                </ul>
-                <Link href="/contact" className="mt-6 inline-flex items-center gap-2 rounded-full bg-violet-600 px-5 py-2.5 text-sm font-semibold text-white hover:bg-violet-500">
-                  Discuss your scope <ArrowRight className="h-4 w-4" />
-                </Link>
-              </div>
-            </Reveal>
-          </div>
+              ))}
+            </div>
+            <p className="font-tech mt-8 text-[11px] uppercase leading-6 tracking-[0.18em] text-white/45">
+              Training & compliance — ISO 27001 & PCI-DSS readiness · awareness programs · SOC upskilling
+            </p>
+            <Link href="/contact" className="mt-6 inline-flex items-center gap-2 bg-violet-600 px-6 py-3 font-tech text-[11px] uppercase tracking-[0.22em] text-white transition-colors hover:bg-violet-500">
+              Discuss your scope <ArrowRight className="h-3.5 w-3.5" />
+            </Link>
+          </Reveal>
         </div>
       </section>
     </>

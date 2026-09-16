@@ -32,3 +32,28 @@ export const pillars = [
   "Green Energy",
   "Sustainable Infrastructure",
 ] as const;
+
+const u = (id: string, w = 1600) =>
+  `https://images.unsplash.com/photo-${id}?q=80&w=${w}&auto=format&fit=crop`;
+
+export const img = {
+  hero: u("1518709268805-4e9042af9f23", 2000),
+  narativa: u("1551434678-e076c223a692"),
+  blockchain: u("1518546305927-5a555bb7020d"),
+  automation: u("1555066931-4365d14bab8c"),
+  cyber: u("1550751827-4bd374c3f58b"),
+  padlock: u("1563013544-824ae1b704d3"),
+  soc: u("1558494949-ef010cbdcc31"),
+  matrix: u("1526374965328-7f61d4dc18c5"),
+  strategy: u("1454165804606-c3d57bc86b40"),
+  team: u("1522071820081-009f0129c71c"),
+  solar: u("1509391366360-2e959784a276"),
+  wind: u("1466611653911-95081537e5b7"),
+  industrial: u("1504328345606-18bbc8c9d7d1"),
+  engineer: u("1581094794329-c8112a89af12"),
+  tower: u("1486406146926-c627a92ad1ab"),
+  city: u("1480714378408-67cf0d13bc1b"),
+  aiHand: u("1620712943543-bcc4688e7485"),
+  aiGradient: u("1677442136019-21780ecad995"),
+  satellite: u("1446776811953-b23d57bd21aa"),
+} as const;

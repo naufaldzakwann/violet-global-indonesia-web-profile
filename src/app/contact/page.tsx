@@ -1,10 +1,9 @@
 import type { Metadata } from "next";
 import PageHero from "@/components/PageHero";
 import Reveal from "@/components/Reveal";
-import { Card } from "@/components/Section";
+import { Eyebrow } from "@/components/Section";
 import ContactForm from "@/components/ContactForm";
-import { site } from "@/lib/site";
-import { Mail, MapPin, Building2 } from "lucide-react";
+import { site, img } from "@/lib/site";
 
 export const metadata: Metadata = {
   title: "Contact",
@@ -16,49 +15,42 @@ export default function ContactPage() {
   return (
     <>
       <PageHero
+        index="07"
         eyebrow="Contact"
-        title="Tell us about your mandate"
+        title="State your"
+        accent="mandate."
         lede="Share your mission, RFP, or BoQ — we respond with a scoped approach, timeline, and commercial model."
+        image={img.aiGradient}
       />
 
-      <section className="bg-white">
-        <div className="mx-auto grid max-w-7xl gap-8 px-4 py-16 sm:px-6 lg:grid-cols-[1.2fr_1fr] lg:px-8">
+      <section className="bg-[#0a0a0b]">
+        <div className="mx-auto grid max-w-[1600px] gap-12 px-5 py-24 md:px-10 md:py-32 lg:grid-cols-[1.25fr_1fr]">
           <Reveal>
             <ContactForm />
           </Reveal>
-          <Reveal delay={0.1}>
-            <div className="grid gap-4">
-              <Card>
-                <div className="flex items-center gap-2">
-                  <Building2 className="h-5 w-5 text-violet-700" />
-                  <h2 className="font-display font-bold text-slate-950">Company information</h2>
-                </div>
-                <dl className="mt-4 space-y-3 text-sm leading-6">
-                  <div><dt className="font-semibold text-slate-900">Company</dt><dd className="text-slate-600">{site.name}</dd></div>
-                  <div><dt className="font-semibold text-slate-900">Business field</dt><dd className="text-slate-600">IT Solutions, Cybersecurity, Digital Intelligence</dd></div>
-                  <div><dt className="font-semibold text-slate-900">Website</dt><dd className="text-violet-700">www.vgi.web.id</dd></div>
-                </dl>
-              </Card>
-              <Card>
-                <div className="flex items-center gap-2">
-                  <MapPin className="h-5 w-5 text-violet-700" />
-                  <h2 className="font-display font-bold text-slate-950">Address</h2>
-                </div>
-                <p className="mt-3 text-sm leading-6 text-slate-600">{site.address}</p>
-                <a href={site.mapsUrl} target="_blank" rel="noreferrer" className="mt-3 inline-flex text-sm font-semibold text-violet-700 hover:text-violet-900">
-                  View on Google Maps →
+          <Reveal delay={0.08}>
+            <div className="space-y-px border border-white/12 bg-white/12">
+              <div className="bg-[#0a0a0b] p-7">
+                <Eyebrow>Entity</Eyebrow>
+                <p className="font-display mt-3 text-2xl uppercase tracking-wide text-[#f4f1eb]">{site.name}</p>
+                <p className="mt-2 text-sm leading-6 text-white/55">IT Solutions · Cybersecurity · Digital Intelligence</p>
+              </div>
+              <div className="bg-[#0a0a0b] p-7">
+                <Eyebrow>Address</Eyebrow>
+                <p className="mt-3 text-sm leading-6 text-white/60">{site.address}</p>
+                <a href={site.mapsUrl} target="_blank" rel="noreferrer" className="font-tech mt-3 inline-block text-[11px] uppercase tracking-[0.2em] text-violet-300 hover:text-white">
+                  Google Maps ↗
                 </a>
-              </Card>
-              <Card>
-                <div className="flex items-center gap-2">
-                  <Mail className="h-5 w-5 text-violet-700" />
-                  <h2 className="font-display font-bold text-slate-950">Email</h2>
-                </div>
-                <a href={`mailto:${site.email}`} className="mt-3 block font-semibold text-violet-700 hover:text-violet-900">
+              </div>
+              <div className="bg-[#0a0a0b] p-7">
+                <Eyebrow>Direct</Eyebrow>
+                <a href={`mailto:${site.email}`} className="font-display mt-3 block break-all text-xl uppercase tracking-wide text-[#f4f1eb] transition-colors hover:text-violet-300 md:text-2xl">
                   {site.email}
                 </a>
-                <p className="mt-1 text-xs text-slate-500">For fastest response include subject: Inquiry — [Topic] — [Organization]</p>
-              </Card>
+                <p className="font-tech mt-3 text-[10px] uppercase leading-5 tracking-[0.18em] text-white/40">
+                  Subject format — Inquiry / [Topic] / [Organization]
+                </p>
+              </div>
             </div>
           </Reveal>
         </div>

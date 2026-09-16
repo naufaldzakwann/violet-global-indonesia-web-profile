@@ -1,45 +1,41 @@
 import type { ReactNode } from "react";
 import { cn } from "@/lib/utils";
 
-export function Eyebrow({ children, dark = false }: { children: ReactNode; dark?: boolean }) {
+export function Eyebrow({ children, index }: { children: ReactNode; index?: string }) {
   return (
-    <p
-      className={cn(
-        "text-xs font-bold uppercase tracking-[0.22em]",
-        dark ? "text-violet-300" : "text-violet-700"
-      )}
-    >
+    <p className="font-tech flex items-center gap-3 text-[11px] uppercase tracking-[0.3em] text-violet-400">
+      {index && <span className="text-white/40">[{index}]</span>}
       {children}
     </p>
   );
 }
 
 export function SectionHeading({
+  index,
   eyebrow,
   title,
+  accent,
   lede,
-  dark = false,
   align = "left",
 }: {
+  index?: string;
   eyebrow: string;
   title: string;
+  accent?: string;
   lede?: string;
-  dark?: boolean;
   align?: "left" | "center";
 }) {
   return (
-    <div className={cn("max-w-3xl", align === "center" && "mx-auto text-center")}>
-      <Eyebrow dark={dark}>{eyebrow}</Eyebrow>
-      <h2
-        className={cn(
-          "mt-3 text-3xl font-bold tracking-tight text-balance sm:text-4xl",
-          dark ? "text-white" : "text-slate-950"
-        )}
-      >
-        {title}
+    <div className={cn("max-w-5xl", align === "center" && "mx-auto text-center")}>
+      <div className={cn(align === "center" && "flex justify-center")}>
+        <Eyebrow index={index}>{eyebrow}</Eyebrow>
+      </div>
+      <h2 className="font-display mt-5 text-5xl uppercase leading-[0.92] tracking-wide text-balance text-[#f4f1eb] sm:text-6xl lg:text-7xl">
+        {title}{" "}
+        {accent && <em className="font-serif-accent normal-case tracking-normal text-violet-300">{accent}</em>}
       </h2>
       {lede && (
-        <p className={cn("mt-4 text-base leading-7 sm:text-lg sm:leading-8", dark ? "text-slate-300" : "text-slate-600")}>
+        <p className={cn("mt-6 max-w-2xl text-base leading-7 text-white/60 sm:text-lg sm:leading-8", align === "center" && "mx-auto")}>
           {lede}
         </p>
       )}
@@ -47,26 +43,6 @@ export function SectionHeading({
   );
 }
 
-export function Card({
-  children,
-  className,
-  dark = false,
-}: {
-  children: ReactNode;
-  className?: string;
-  dark?: boolean;
-}) {
-  return (
-    <div
-      className={cn(
-        "rounded-2xl border p-6 transition-colors",
-        dark
-          ? "border-white/10 bg-white/[0.04] hover:bg-white/[0.07]"
-          : "border-slate-200 bg-white shadow-sm hover:shadow-md",
-        className
-      )}
-    >
-      {children}
-    </div>
-  );
+export function Rule({ className }: { className?: string }) {
+  return <div className={cn("h-px w-full bg-white/10", className)} aria-hidden="true" />;
 }
