@@ -33,15 +33,7 @@ export default function Navbar() {
         <div className="border-b border-white/10 bg-[#0a0a0b]/80 backdrop-blur-md">
           <div className="mx-auto flex h-16 max-w-[1600px] items-center justify-between px-5 md:h-[72px] md:px-10">
             <Link href="/" className="flex items-center gap-3" aria-label="Violet home">
-              <Logo className="h-9 w-9" />
-              <span className="leading-none">
-                <span className="font-display block text-lg tracking-wide text-[#f4f1eb]">
-                  VIOLET<sup className="font-tech text-[9px] text-violet-400">®</sup>
-                </span>
-                <span className="font-tech block text-[9px] tracking-[0.28em] text-white/50">
-                  GLOBAL INDONESIA
-                </span>
-              </span>
+              <Logo className="h-11 w-11" />
             </Link>
 
             <nav className="hidden items-center gap-7 xl:flex" aria-label="Primary">

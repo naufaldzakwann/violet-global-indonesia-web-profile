@@ -35,11 +35,7 @@ export default function Footer() {
         <div className="mt-14 grid gap-10 border-t border-white/10 pt-10 md:grid-cols-4">
           <div>
             <div className="flex items-center gap-3">
-              <Logo className="h-10 w-10" />
-              <div className="leading-none">
-                <p className="font-display text-xl tracking-wide">VIOLET</p>
-                <p className="font-tech mt-1 text-[9px] tracking-[0.28em] text-white/50">GLOBAL INDONESIA</p>
-              </div>
+              <Logo className="h-20 w-20" />
             </div>
             <p className="mt-5 max-w-xs text-sm leading-6 text-white/55">{f.desc}</p>
           </div>

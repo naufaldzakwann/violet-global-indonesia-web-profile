@@ -41,6 +41,7 @@ export const metadata: Metadata = {
     title: "PT Violet Global Indonesia — Orchestrating Intelligence, Defining the Future",
     description: site.description,
     locale: "en_US",
+    images: [{ url: "/logo.png", width: 288, height: 288, alt: site.name }],
   },
   twitter: {
     card: "summary_large_image",
