@@ -33,7 +33,7 @@ export default function Navbar() {
         <div className="border-b border-white/10 bg-[#0a0a0b]/80 backdrop-blur-md">
           <div className="mx-auto flex h-16 max-w-[1600px] items-center justify-between px-5 md:h-[72px] md:px-10">
             <Link href="/" className="flex items-center gap-3" aria-label="Violet home">
-              <Logo className="h-11 w-11" />
+              <Logo className="h-11 w-auto" />
             </Link>
 
             <nav className="hidden items-center gap-7 xl:flex" aria-label="Primary">
