@@ -6,14 +6,19 @@ import { useEffect, useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import { ArrowUpRight } from "lucide-react";
 import Logo from "./Logo";
-import { nav, site } from "@/lib/site";
+import LanguageToggle from "./LanguageToggle";
+import { useLanguage } from "@/i18n/LanguageProvider";
+import { site } from "@/lib/site";
 
 const EASE = [0.22, 1, 0.36, 1] as const;
 
 export default function Navbar() {
   const pathname = usePathname();
+  const { d } = useLanguage();
   const [open, setOpen] = useState(false);
   const close = () => setOpen(false);
+
+  const links = d.navHrefs.map((href, i) => ({ href, label: d.nav[i] as string }));
 
   useEffect(() => {
     document.documentElement.style.overflow = open ? "hidden" : "";
@@ -30,7 +35,7 @@ export default function Navbar() {
             <Link href="/" className="flex items-center gap-3" aria-label="Violet home">
               <Logo className="h-9 w-9" />
               <span className="leading-none">
-                <span className="block font-display text-lg tracking-wide text-[#f4f1eb]">
+                <span className="font-display block text-lg tracking-wide text-[#f4f1eb]">
                   VIOLET<sup className="font-tech text-[9px] text-violet-400">®</sup>
                 </span>
                 <span className="font-tech block text-[9px] tracking-[0.28em] text-white/50">
@@ -40,7 +45,7 @@ export default function Navbar() {
             </Link>
 
             <nav className="hidden items-center gap-7 xl:flex" aria-label="Primary">
-              {nav.slice(0, 6).map((item) => (
+              {links.slice(0, 6).map((item) => (
                 <Link
                   key={item.href}
                   href={item.href}
@@ -54,20 +59,21 @@ export default function Navbar() {
             </nav>
 
             <div className="flex items-center gap-3">
+              <LanguageToggle className="hidden sm:flex" />
               <Link
                 href="/contact"
-                className="font-tech hidden items-center gap-1.5 text-[11px] uppercase tracking-[0.2em] text-white/80 transition-colors hover:text-white sm:inline-flex"
+                className="font-tech hidden items-center gap-1.5 text-[11px] uppercase tracking-[0.2em] text-white/80 transition-colors hover:text-white lg:inline-flex"
               >
-                Let&apos;s Talk <ArrowUpRight className="h-3.5 w-3.5" />
+                {d.letsTalk} <ArrowUpRight className="h-3.5 w-3.5" />
               </Link>
               <button
                 onClick={() => setOpen((v) => !v)}
-                aria-label={open ? "Close menu" : "Open menu"}
+                aria-label={open ? d.close : d.menu}
                 aria-expanded={open}
-                className="group flex h-11 items-center gap-3 border border-white/20 px-5 transition-colors hover:border-violet-500 hover:bg-violet-600"
+                className="group flex h-11 cursor-pointer items-center gap-3 border border-white/20 px-5 transition-colors hover:border-violet-500 hover:bg-violet-600"
               >
                 <span className="font-tech text-[11px] uppercase tracking-[0.25em] text-white">
-                  {open ? "Close" : "Menu"}
+                  {open ? d.close : d.menu}
                 </span>
                 <span className="relative block h-3 w-5" aria-hidden="true">
                   <span className={`absolute left-0 top-0 h-px w-full bg-white transition-transform duration-300 ${open ? "translate-y-[5.5px] rotate-45" : ""}`} />
@@ -98,10 +104,10 @@ export default function Navbar() {
               >
                 <span className="font-tech text-xs text-violet-400">00</span>
                 <span className="font-display text-5xl uppercase leading-none text-[#f4f1eb] transition-all duration-300 group-hover:translate-x-3 group-hover:text-violet-300 md:text-7xl">
-                  Index
+                  {d.index}
                 </span>
               </Link>
-              {nav.map((item, i) => (
+              {links.map((item, i) => (
                 <motion.div
                   key={item.href}
                   initial={{ opacity: 0, y: 28 }}
@@ -123,11 +129,14 @@ export default function Navbar() {
               ))}
             </nav>
             <div className="relative border-t border-white/10">
-              <div className="mx-auto flex max-w-[1600px] flex-col gap-1 px-5 py-5 font-tech text-[11px] uppercase tracking-[0.2em] text-white/50 sm:flex-row sm:items-center sm:justify-between md:px-10">
-                <span>Jakarta — ID · 6.21°S 106.80°E</span>
-                <a href={`mailto:${site.email}`} className="text-violet-300 hover:text-white">
-                  {site.email}
-                </a>
+              <div className="mx-auto flex max-w-[1600px] flex-col gap-3 px-5 py-5 font-tech text-[11px] uppercase tracking-[0.2em] text-white/50 sm:flex-row sm:items-center sm:justify-between md:px-10">
+                <span>{d.coords}</span>
+                <div className="flex items-center gap-4">
+                  <LanguageToggle />
+                  <a href={`mailto:${site.email}`} className="text-violet-300 hover:text-white">
+                    {site.email}
+                  </a>
+                </div>
               </div>
             </div>
           </motion.div>

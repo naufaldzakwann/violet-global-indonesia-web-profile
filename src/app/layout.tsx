@@ -4,6 +4,7 @@ import "./globals.css";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import SmoothScroll from "@/components/SmoothScroll";
+import { LanguageProvider } from "@/i18n/LanguageProvider";
 import { site } from "@/lib/site";
 
 const inter = Inter({ variable: "--font-inter", subsets: ["latin"], display: "swap" });
@@ -76,9 +77,11 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
         <SmoothScroll>
-          <Navbar />
-          <main className="flex-1">{children}</main>
-          <Footer />
+          <LanguageProvider>
+            <Navbar />
+            <main className="flex-1">{children}</main>
+            <Footer />
+          </LanguageProvider>
         </SmoothScroll>
       </body>
     </html>

@@ -10,6 +10,8 @@ export default function PageHero({
   lede,
   image,
   children,
+  crumbHome = "Index",
+  localeTag = "VGI — Jakarta, ID",
 }: {
   index: string;
   eyebrow: string;
@@ -18,6 +20,8 @@ export default function PageHero({
   lede?: string;
   image: string;
   children?: ReactNode;
+  crumbHome?: string;
+  localeTag?: string;
 }) {
   return (
     <section className="noise relative flex min-h-[92svh] flex-col justify-end overflow-hidden bg-[#0a0a0b]">
@@ -49,11 +53,11 @@ export default function PageHero({
         {children && <div className="mt-8 flex flex-wrap gap-3">{children}</div>}
         <div className="mt-10 flex items-center justify-between border-t border-white/15 pt-5 font-tech text-[10px] uppercase tracking-[0.25em] text-white/45">
           <nav aria-label="Breadcrumb">
-            <Link href="/" className="transition-colors hover:text-white">Index</Link>
+            <Link href="/" className="transition-colors hover:text-white">{crumbHome}</Link>
             <span className="mx-2" aria-hidden="true">/</span>
             <span className="text-white/70">{eyebrow}</span>
           </nav>
-          <span className="hidden sm:block">VGI — Jakarta, ID</span>
+          <span className="hidden sm:block">{localeTag}</span>
         </div>
       </div>
     </section>
