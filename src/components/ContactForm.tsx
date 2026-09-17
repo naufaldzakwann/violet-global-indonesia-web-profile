@@ -49,15 +49,15 @@ export default function ContactForm() {
       <div className="mt-8 grid gap-5 sm:grid-cols-2">
         <div>
           <label htmlFor="cf-name" className={label}>{c.name} *</label>
-          <input id="cf-name" required className={input} value={form.name} onChange={(e) => setForm({ ...form, name: e.target.value })} placeholder={c.namePh} autoComplete="name" />
+          <input id="cf-name" required className={input} value={form.name} onChange={(e) => setForm({ ...form, name: e.target.value })} autoComplete="name" />
         </div>
         <div>
           <label htmlFor="cf-org" className={label}>{c.org}</label>
-          <input id="cf-org" className={input} value={form.org} onChange={(e) => setForm({ ...form, org: e.target.value })} placeholder={c.orgPh} autoComplete="organization" />
+          <input id="cf-org" className={input} value={form.org} onChange={(e) => setForm({ ...form, org: e.target.value })} autoComplete="organization" />
         </div>
         <div>
           <label htmlFor="cf-email" className={label}>{c.email} *</label>
-          <input id="cf-email" required type="email" className={input} value={form.email} onChange={(e) => setForm({ ...form, email: e.target.value })} placeholder={c.emailPh} autoComplete="email" />
+          <input id="cf-email" required type="email" className={input} value={form.email} onChange={(e) => setForm({ ...form, email: e.target.value })} autoComplete="email" />
         </div>
         <div>
           <label htmlFor="cf-topic" className={label}>{c.topic}</label>
@@ -69,7 +69,7 @@ export default function ContactForm() {
         </div>
         <div className="sm:col-span-2">
           <label htmlFor="cf-msg" className={label}>{c.message} *</label>
-          <textarea id="cf-msg" required rows={6} className={input} value={form.message} onChange={(e) => setForm({ ...form, message: e.target.value })} placeholder={c.msgPh} />
+          <textarea id="cf-msg" required rows={6} className={input} value={form.message} onChange={(e) => setForm({ ...form, message: e.target.value })} />
         </div>
       </div>
       <button type="submit" className="mt-8 inline-flex w-full cursor-pointer items-center justify-center gap-2 bg-violet-600 px-8 py-4 font-tech text-[11px] uppercase tracking-[0.25em] text-white transition-colors hover:bg-violet-500 sm:w-auto">

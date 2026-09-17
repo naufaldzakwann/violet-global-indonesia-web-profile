@@ -4,13 +4,13 @@ export const site = {
   tagline: "Orchestrating Intelligence, Defining the Future",
   domain: "https://vgi.web.id",
   url: "https://vgi.web.id",
-  email: "info@vgi.web.id",
-  emailFallback: "info@violetglobalindo.com",
-  phone: "+62-21-000-0000",
+  email: "laluwidh@vgi.web.id",
   address:
-    "Arjuna Building, Jl. Arjuna Utara No. 28 Kav. 11, Tanjung Duren Selatan, Grogol Petamburan, Jakarta Barat 11470, Indonesia",
+    "Jl. Lempongsari Timur IV No. 302 K, Kec. Gajah Mungkur, Kota Semarang 50231, Indonesia",
   mapsUrl:
-    "https://maps.google.com/?q=Arjuna+Building+Jl+Arjuna+Utara+No+28+Kav+11+Jakarta+Barat",
+    "https://www.google.com/maps/search/?api=1&query=Jl.+Lempongsari+Timur+IV+No.+302+K,+Gajah+Mungkur,+Semarang+50231",
+  mapsEmbed:
+    "https://www.google.com/maps?q=Jl.+Lempongsari+Timur+IV+No.+302+K,+Gajah+Mungkur,+Semarang+50231&output=embed",
   description:
     "PT Violet Global Indonesia is a deep-tech company and digital transformation partner focused on AI, digital intelligence, cybersecurity, and technology-enabled sustainable infrastructure.",
 } as const;

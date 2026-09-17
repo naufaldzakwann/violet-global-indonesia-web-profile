@@ -22,6 +22,7 @@ export default function SmoothScroll({ children }: { children: React.ReactNode }
     const raf = (time: number) => lenis.raf(time * 1000);
     gsap.ticker.add(raf);
     gsap.ticker.lagSmoothing(0);
+    (window as unknown as { __lenis?: Lenis }).__lenis = lenis;
 
     const onClick = (e: MouseEvent) => {
       const a = (e.target as HTMLElement).closest('a[href^="#"]') as HTMLAnchorElement | null;
@@ -45,6 +46,7 @@ export default function SmoothScroll({ children }: { children: React.ReactNode }
       window.removeEventListener("load", refresh);
       document.removeEventListener("click", onClick);
       gsap.ticker.remove(raf);
+      delete (window as unknown as { __lenis?: Lenis }).__lenis;
       lenis.destroy();
       ScrollTrigger.getAll().forEach((s) => s.kill());
     };

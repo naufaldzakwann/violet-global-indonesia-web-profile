@@ -7,8 +7,8 @@ const en = {
   menu: "Menu",
   close: "Close",
   index: "Index",
-  localeTag: "VGI — Jakarta, ID",
-  coords: "Jakarta — ID · 6.21°S 106.80°E",
+  localeTag: "VGI — Semarang, ID",
+  coords: "Semarang — ID · 7.01°S 110.43°E",
 
   footer: {
     working: "Working — Worldwide",
@@ -33,7 +33,7 @@ const en = {
   home: {
     heroDescA: "Deep-tech company & digital transformation partner — built on uncompromising",
     heroDescB: "precision and intent.",
-    est: "Violet® — Est. Jakarta, ID",
+    est: "Violet® — Est. Semarang, ID",
     heroTags: "AI · Cyber · Energy — Defining the future",
     explore: "Explore",
     scroll: "Scroll",
@@ -366,7 +366,7 @@ const en = {
     subjectHint: "Subject format — Inquiry / [Topic] / [Organization]",
     formKicker: "[ Transmission ]",
     formTitle: "Send an inquiry",
-    formNote: "Static site — submitting opens your mail client addressed to info@vgi.web.id. Nothing is stored here.",
+    formNote: "Static site — submitting opens your mail client addressed to laluwidh@vgi.web.id. Nothing is stored here.",
     name: "Full name",
     org: "Organization",
     email: "Work email",
@@ -393,8 +393,8 @@ const id: Dict = {
   menu: "Menu",
   close: "Tutup",
   index: "Indeks",
-  localeTag: "VGI — Jakarta, ID",
-  coords: "Jakarta — ID · 6,21°LS 106,80°BT",
+  localeTag: "VGI — Semarang, ID",
+  coords: "Semarang — ID · 7,01°LS 110,43°BT",
 
   footer: {
     working: "Berkarya — Mendunia",
@@ -419,7 +419,7 @@ const id: Dict = {
   home: {
     heroDescA: "Perusahaan deep-tech & mitra transformasi digital — dibangun di atas",
     heroDescB: "presisi dan intensi tanpa kompromi.",
-    est: "Violet® — Berdiri di Jakarta, ID",
+    est: "Violet® — Berdiri di Semarang, ID",
     heroTags: "AI · Siber · Energi — Mendefinisikan masa depan",
     explore: "Jelajahi",
     scroll: "Gulir",
@@ -752,7 +752,7 @@ const id: Dict = {
     subjectHint: "Format subjek — Inquiry / [Topik] / [Organisasi]",
     formKicker: "[ Transmisi ]",
     formTitle: "Kirim inquiry",
-    formNote: "Situs statis — pengiriman membuka aplikasi email Anda ke info@vgi.web.id. Tidak ada yang disimpan di sini.",
+    formNote: "Situs statis — pengiriman membuka aplikasi email Anda ke laluwidh@vgi.web.id. Tidak ada yang disimpan di sini.",
     name: "Nama lengkap",
     org: "Organisasi",
     email: "Email kerja",

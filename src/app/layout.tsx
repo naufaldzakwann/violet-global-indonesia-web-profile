@@ -4,6 +4,7 @@ import "./globals.css";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import SmoothScroll from "@/components/SmoothScroll";
+import ScrollToTop from "@/components/ScrollToTop";
 import { LanguageProvider } from "@/i18n/LanguageProvider";
 import { site } from "@/lib/site";
 
@@ -61,9 +62,9 @@ const jsonLd = {
   email: site.email,
   address: {
     "@type": "PostalAddress",
-    streetAddress: "Arjuna Building, Jl. Arjuna Utara No.28 Kav.11, Tanjung Duren Selatan",
-    addressLocality: "Jakarta Barat",
-    postalCode: "11470",
+    streetAddress: "Jl. Lempongsari Timur IV No. 302 K, Gajah Mungkur",
+    addressLocality: "Semarang",
+    postalCode: "50231",
     addressCountry: "ID",
   },
   sameAs: [],
@@ -79,6 +80,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
         />
         <SmoothScroll>
           <LanguageProvider>
+            <ScrollToTop />
             <Navbar />
             <main className="flex-1">{children}</main>
             <Footer />

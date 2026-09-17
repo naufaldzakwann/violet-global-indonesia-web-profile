@@ -3,7 +3,6 @@
 import Link from "next/link";
 import { ArrowUpRight } from "lucide-react";
 import Logo from "./Logo";
-import LanguageToggle from "./LanguageToggle";
 import { useLanguage } from "@/i18n/LanguageProvider";
 import { site } from "@/lib/site";
 
@@ -59,7 +58,11 @@ export default function Footer() {
             <h3 className="font-tech text-[11px] uppercase tracking-[0.25em] text-white/40">{f.enquiries}</h3>
             <ul className="mt-4 space-y-2 text-sm text-white/70">
               <li><a className="text-violet-300 hover:text-white" href={`mailto:${site.email}`}>{site.email}</a></li>
-              <li className="leading-6 text-white/55">{site.address}</li>
+              <li className="leading-6 text-white/55">
+                <a href={site.mapsUrl} target="_blank" rel="noreferrer" className="transition-colors hover:text-white">
+                  {site.address}
+                </a>
+              </li>
               <li><a href={site.mapsUrl} target="_blank" rel="noreferrer" className="underline underline-offset-4 hover:text-white">Google Maps ↗</a></li>
             </ul>
           </div>
@@ -69,10 +72,7 @@ export default function Footer() {
       <div className="border-t border-white/10">
         <div className="mx-auto flex max-w-[1600px] flex-col gap-3 px-5 py-5 font-tech text-[10px] uppercase tracking-[0.2em] text-white/35 sm:flex-row sm:items-center sm:justify-between md:px-10">
           <p>© {new Date().getFullYear()} {site.name} — {f.rights}</p>
-          <div className="flex items-center gap-5">
-            <LanguageToggle />
-            <p>vgi.web.id — Jakarta, Indonesia</p>
-          </div>
+          <p>vgi.web.id — Semarang, Indonesia</p>
           <a href="#top" className="hover:text-white">{f.backToTop}</a>
         </div>
       </div>
