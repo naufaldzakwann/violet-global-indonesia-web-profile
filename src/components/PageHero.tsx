@@ -43,7 +43,7 @@ export default function PageHero({
         <p className="font-tech flex flex-wrap items-center gap-3 text-[11px] uppercase tracking-[0.3em] text-violet-300">
           <span className="text-white/40">[{index}]</span> {eyebrow}
         </p>
-        <h1 className="font-display mt-5 max-w-6xl text-[15vw] uppercase leading-[0.88] tracking-wide text-balance text-[#f4f1eb] sm:text-7xl lg:text-8xl">
+        <h1 className="font-display mt-5 max-w-6xl text-[12vw] break-words uppercase leading-[0.9] tracking-wide text-balance text-[#f4f1eb] sm:text-7xl lg:text-8xl">
           {title}{" "}
           {accent && <em className="font-serif-accent normal-case tracking-normal text-violet-300">{accent}</em>}
         </h1>

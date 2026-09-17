@@ -61,12 +61,12 @@ function Hero({ titleA, titleB1, titleB2 }: { titleA: string; titleB1: string; t
 
         <h1 className="h-title mt-8 md:mt-10">
           <span className="h-line block overflow-hidden">
-            <span className="font-display block text-[16.5vw] uppercase leading-[0.88] tracking-wide text-[#f4f1eb] md:text-[10.5vw]">
+            <span className="font-display block text-[12vw] uppercase leading-[0.88] tracking-wide text-[#f4f1eb] sm:text-[11vw] md:text-[10.5vw]">
               {titleA}
             </span>
           </span>
           <span className="h-line block overflow-hidden">
-            <span className="font-display block text-[16.5vw] uppercase leading-[0.88] tracking-wide text-[#f4f1eb] md:text-[10.5vw]">
+            <span className="font-display block text-[12vw] uppercase leading-[0.88] tracking-wide text-[#f4f1eb] sm:text-[11vw] md:text-[10.5vw]">
               <span className="text-stroke-violet">{titleB1}</span>{titleB2}
             </span>
           </span>
