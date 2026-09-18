@@ -4,7 +4,7 @@ import AboutContent from "./content";
 export const metadata: Metadata = {
   title: "About",
   description:
-    "PT Violet Global Indonesia — deep-tech company and digital transformation consultant for AI, digital intelligence, cybersecurity, and sustainable infrastructure.",
+    "PT Violet Global Indonesia, a deep-tech company and digital transformation consultant for AI, digital intelligence, cybersecurity, and sustainable infrastructure.",
 };
 
 export default function AboutPage() {

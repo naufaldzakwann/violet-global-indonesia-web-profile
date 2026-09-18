@@ -1,9 +1,11 @@
 @import "tailwindcss";
 
+@custom-variant dark (&:where(.dark, .dark *));
+
 @theme {
-  --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
+  --font-sans: var(--font-sans-base), ui-sans-serif, system-ui, sans-serif;
   --font-display: var(--font-anton), ui-sans-serif, system-ui, sans-serif;
-  --font-serif: var(--font-instrument), Georgia, serif;
+  --font-serif: var(--font-editorial), Georgia, serif;
   --font-mono: var(--font-tech), ui-monospace, monospace;
 
   --color-ink: #0a0a0b;
@@ -23,6 +25,10 @@
   --ink: #0a0a0b;
   --bone: #f4f1eb;
   --violet: #7c3aed;
+  color-scheme: light;
+}
+.dark {
+  color-scheme: dark;
 }
 
 html {
@@ -54,16 +60,24 @@ body {
   letter-spacing: 0.005em;
 }
 .font-serif-accent {
-  font-family: var(--font-instrument), Georgia, serif;
+  font-family: var(--font-editorial), Georgia, serif;
   font-style: italic;
-  font-weight: 400;
+  font-weight: 500;
 }
 .font-tech {
   font-family: var(--font-tech), ui-monospace, monospace;
 }
 
 .text-stroke {
+  -webkit-text-stroke: 1.5px rgb(23 23 29 / 0.45);
+  color: transparent;
+}
+.dark .text-stroke {
   -webkit-text-stroke: 1.5px rgb(244 241 235 / 0.5);
+  color: transparent;
+}
+.text-stroke-bone {
+  -webkit-text-stroke: 1.5px rgb(244 241 235 / 0.55);
   color: transparent;
 }
 .text-stroke-violet {
@@ -73,7 +87,21 @@ body {
 
 .text-balance { text-wrap: balance; }
 
-/* Film grain */
+/* Keyboard focus must always be visible (a11y, non-optional) */
+:focus-visible {
+  outline: 2px solid #7c3aed;
+  outline-offset: 3px;
+}
+
+/* Tactile press feedback for all buttons */
+@media (hover: hover) {
+  button:active {
+    scale: 0.98;
+  }
+}
+
+/* Film grain: static texture only, never animated. Disabled on small
+   screens to protect mobile GPU budgets during scroll. */
 .noise::after {
   content: "";
   position: absolute;
@@ -82,34 +110,24 @@ body {
   opacity: 0.09;
   background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
 }
+@media (max-width: 767px) {
+  .noise::after {
+    display: none;
+  }
+}
 
-/* HUD grid lines */
+/* HUD grid lines — violet-tinted to read on cream and ink */
 .hero-grid {
   background-image:
-    linear-gradient(to right, rgb(255 255 255 / 0.055) 1px, transparent 1px),
-    linear-gradient(to bottom, rgb(255 255 255 / 0.055) 1px, transparent 1px);
+    linear-gradient(to right, rgb(124 58 237 / 0.09) 1px, transparent 1px),
+    linear-gradient(to bottom, rgb(124 58 237 / 0.09) 1px, transparent 1px);
   background-size: 72px 72px;
   mask-image: radial-gradient(ellipse 90% 80% at 50% 20%, black 30%, transparent 100%);
 }
-
-/* Scanline sweep for images */
-.scan {
-  position: relative;
-  overflow: hidden;
-}
-.scan::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  z-index: 1;
-  pointer-events: none;
-  background: linear-gradient(to bottom, transparent 0%, rgb(124 58 237 / 0.14) 48%, rgb(255 255 255 / 0.22) 50%, rgb(124 58 237 / 0.14) 52%, transparent 100%);
-  background-size: 100% 280%;
-  animation: scanline 7s linear infinite;
-}
-@keyframes scanline {
-  from { background-position: 0 140%; }
-  to { background-position: 0 -140%; }
+.dark .hero-grid {
+  background-image:
+    linear-gradient(to right, rgb(255 255 255 / 0.055) 1px, transparent 1px),
+    linear-gradient(to bottom, rgb(255 255 255 / 0.055) 1px, transparent 1px);
 }
 
 /* Work cards */
@@ -134,13 +152,6 @@ body {
 /* Index rows */
 .index-row { transition: background 0.3s ease, padding 0.3s ease; }
 .index-row:hover { background: rgb(255 255 255 / 0.035); }
-
-/* Scroll cue line */
-@keyframes dropLine {
-  0% { transform: translateY(-100%); }
-  100% { transform: translateY(320%); }
-}
-.animate-dropline { animation: dropLine 1.8s cubic-bezier(0.65, 0, 0.35, 1) infinite; }
 
 /* Marquee pause on hover */
 .marquee-mask {

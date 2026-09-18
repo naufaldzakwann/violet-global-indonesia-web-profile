@@ -4,7 +4,7 @@ import ContactContent from "./content";
 export const metadata: Metadata = {
   title: "Contact",
   description:
-    "Contact PT Violet Global Indonesia — Jakarta Barat. Intelligence, cybersecurity, consulting, and green-energy inquiries.",
+    "Contact PT Violet Global Indonesia in Semarang. Intelligence, cybersecurity, consulting, and green-energy inquiries.",
 };
 
 export default function ContactPage() {

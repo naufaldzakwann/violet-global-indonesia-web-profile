@@ -16,7 +16,6 @@ export default function GreenEnergyContent() {
   return (
     <>
       <PageHero
-        index="05"
         eyebrow={g.heroEyebrow}
         title={g.heroTitle}
         accent={g.heroAccent}
@@ -30,46 +29,40 @@ export default function GreenEnergyContent() {
         </Link>
       </PageHero>
 
-      <section className="bg-[#0a0a0b]">
+      <section className="bg-[#FAF6EE] dark:bg-[#0a0a0b]">
         <div className="mx-auto max-w-[1600px] px-5 py-24 md:px-10 md:py-32">
           <Reveal>
-            <div className="border border-amber-300/25 bg-amber-300/[0.06] p-5 text-sm leading-6 text-amber-200/90">
-              {g.disclaimer}
-            </div>
-          </Reveal>
-          <Reveal>
             <div className="mt-14">
-              <SectionHeading index="01" eyebrow={g.approachEyebrow} title={g.approachTitle} accent={g.approachAccent} />
+              <SectionHeading title={g.approachTitle} accent={g.approachAccent} />
             </div>
           </Reveal>
-          <div className="mt-10 grid gap-px overflow-hidden border border-white/12 bg-white/12 sm:grid-cols-2 lg:grid-cols-3">
-            {g.steps.map(([no, t, desc], i) => (
-              <Reveal key={t} delay={Math.min(i * 0.04, 0.2)}>
-                <div className="h-full bg-[#0a0a0b] p-7 transition-colors hover:bg-[#0e1a14]">
-                  <p className="font-tech text-xs text-emerald-400">{no}</p>
-                  <h3 className="font-display mt-2 text-2xl uppercase tracking-wide text-[#f4f1eb]">{t}</h3>
-                  <p className="mt-2 text-sm leading-6 text-white/55">{desc}</p>
-                </div>
-              </Reveal>
+          <div className="mt-10 grid gap-x-10 gap-y-8 sm:grid-cols-2 lg:grid-cols-3">
+            {g.steps.map(([t, desc]) => (
+              <div key={t} className="border-t-2 border-emerald-700/60 pt-5 dark:border-emerald-400/60">
+                <h3 className="font-display text-2xl uppercase tracking-wide text-[#141419] dark:text-[#f4f1eb]">{t}</h3>
+                <p className="mt-2 text-sm leading-6 text-stone-600 dark:text-white/55">{desc}</p>
+              </div>
             ))}
           </div>
         </div>
       </section>
 
-      <section className="border-t border-white/12 bg-[#0d0d10]">
-        <div className="mx-auto max-w-[1600px] px-5 py-24 md:px-10 md:py-32">
+      <section className="relative overflow-hidden border-t border-stone-900/10 dark:border-white/12 bg-[#F3EDE1] dark:bg-[#0d0d10]">
+        <div className="pointer-events-none absolute -top-32 left-1/4 h-96 w-[42rem] rounded-full bg-emerald-400/20 blur-[130px] dark:bg-emerald-500/15" aria-hidden="true" />
+        <div className="pointer-events-none absolute -right-32 top-1/2 h-80 w-80 rounded-full bg-lime-300/20 blur-[120px] dark:bg-lime-400/10" aria-hidden="true" />
+        <div className="relative mx-auto max-w-[1600px] px-5 py-24 md:px-10 md:py-32">
           <Reveal>
-            <SectionHeading index="02" eyebrow={g.pipelineEyebrow} title={g.pipelineTitle} accent={g.pipelineAccent} />
+            <SectionHeading title={g.pipelineTitle} accent={g.pipelineAccent} />
+            <p className="mt-5 max-w-3xl text-xs leading-5 text-stone-500 dark:text-white/40">{g.disclaimer}</p>
           </Reveal>
-          <div className="mt-12 border-t border-white/12">
+          <div className="mt-12 border-t border-stone-900/10 dark:border-white/12">
             {g.projects.map((p, i) => (
               <Reveal key={p.no} delay={Math.min(i * 0.04, 0.15)}>
-                <div className="index-row grid gap-3 border-b border-white/12 py-8 md:grid-cols-[80px_1fr_1.2fr] md:gap-10">
-                  <span className="font-tech text-xs text-emerald-400">{p.no}</span>
-                  <h2 className="font-display text-3xl uppercase leading-[0.95] tracking-wide text-[#f4f1eb] md:text-4xl">{p.title}</h2>
+                <div className="index-row grid gap-3 border-b border-stone-900/10 dark:border-white/12 py-8 md:grid-cols-[1fr_1.2fr] md:gap-10">
+                  <h2 className="font-display text-3xl uppercase leading-[0.95] tracking-wide text-[#141419] dark:text-[#f4f1eb] md:text-4xl">{p.title}</h2>
                   <div>
-                    <p className="max-w-xl leading-7 text-white/60">{p.desc}</p>
-                    <p className="font-tech mt-3 text-[11px] uppercase leading-6 tracking-[0.16em] text-white/40">{p.stakeholders}</p>
+                    <p className="max-w-xl leading-7 text-stone-600 dark:text-white/60">{p.desc}</p>
+                    <p className="font-tech mt-3 text-[11px] uppercase leading-6 tracking-[0.16em] text-stone-500 dark:text-white/40">{p.stakeholders}</p>
                   </div>
                 </div>
               </Reveal>
@@ -78,20 +71,26 @@ export default function GreenEnergyContent() {
 
           <div className="mt-16 grid gap-10 lg:grid-cols-2">
             <Reveal>
-              <div className="scan relative aspect-[16/10] overflow-hidden">
-                <Image src={img.solar} alt="Solar PV installation" fill sizes="(max-width:1024px) 100vw, 50vw" className="object-cover" />
-                <div className="absolute inset-0 bg-emerald-950/25 mix-blend-multiply" aria-hidden="true" />
+              <div className="relative aspect-[16/10] overflow-hidden">
+                <Image src={img.wastePlant} alt="Sorted municipal recycling containers ready for collection" fill sizes="(max-width:1024px) 100vw, 50vw" className="object-cover" />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/35 via-transparent to-transparent" aria-hidden="true" />
               </div>
+              <p className="mt-3 text-xs leading-5 text-stone-500 dark:text-white/40">
+                Sorted recycling collection point. Photo: Friedrich Haag, CC BY-SA 4.0, via{" "}
+                <a className="underline underline-offset-2 hover:text-violet-700 dark:hover:text-white" href="https://commons.wikimedia.org/wiki/File:Recycling_001_2014_03_16.jpg" target="_blank" rel="noreferrer">
+                  Wikimedia Commons
+                </a>
+              </p>
             </Reveal>
             <Reveal delay={0.08}>
               <Eyebrow>{g.wasteEyebrow}</Eyebrow>
-              <h2 className="font-display mt-4 text-4xl uppercase leading-[0.95] tracking-wide text-[#f4f1eb] sm:text-5xl">
-                {g.wasteTitle} <em className="font-serif-accent normal-case tracking-normal text-emerald-300">{g.wasteAccent}</em>
+              <h2 className="font-display mt-4 text-4xl uppercase leading-[0.95] tracking-wide text-[#141419] dark:text-[#f4f1eb] sm:text-5xl">
+                {g.wasteTitle} <em className="font-serif-accent normal-case tracking-normal text-emerald-700 dark:text-emerald-300">{g.wasteAccent}</em>
               </h2>
-              <ul className="mt-6 space-y-2.5 border-t border-white/12 pt-6">
+              <ul className="mt-6 space-y-2.5 border-t border-stone-900/10 dark:border-white/12 pt-6">
                 {g.waste.map((w) => (
-                  <li key={w} className="flex gap-3 text-sm leading-6 text-white/70">
-                    <span className="text-emerald-400" aria-hidden="true">✓</span> {w}
+                  <li key={w} className="flex gap-3 text-sm leading-6 text-stone-600 dark:text-white/70">
+                    <span className="text-emerald-700 dark:text-emerald-400" aria-hidden="true">✓</span> {w}
                   </li>
                 ))}
               </ul>
@@ -103,21 +102,18 @@ export default function GreenEnergyContent() {
         </div>
       </section>
 
-      <section className="border-t border-white/12 bg-[#0a0a0b]">
+      <section className="border-t border-stone-900/10 dark:border-white/12 bg-[#FAF6EE] dark:bg-[#0a0a0b]">
         <div className="mx-auto max-w-[1600px] px-5 py-24 md:px-10 md:py-28">
           <Reveal>
-            <SectionHeading index="03" eyebrow={g.capsEyebrow} title={g.capsTitle} accent={g.capsAccent} />
+            <SectionHeading title={g.capsTitle} accent={g.capsAccent} />
           </Reveal>
-          <div className="mt-10 grid gap-px overflow-hidden border border-white/12 bg-white/12 sm:grid-cols-2 lg:grid-cols-4">
-            {g.caps.map((cap, i) => (
-              <Reveal key={cap} delay={Math.min(i * 0.03, 0.2)}>
-                <div className="h-full bg-[#0a0a0b] p-6 transition-colors hover:bg-[#0e1a14]">
-                  <p className="font-tech text-xs text-emerald-400">0{i + 1}</p>
-                  <p className="mt-2 text-sm font-medium leading-6 text-white/75">{cap}</p>
-                </div>
-              </Reveal>
+          <ul className="mt-10 grid gap-x-10 gap-y-4 sm:grid-cols-2">
+            {g.caps.map((cap) => (
+              <li key={cap} className="flex gap-3 border-t border-stone-900/10 pt-4 text-sm font-medium leading-6 text-stone-700 dark:border-white/12 dark:text-white/75">
+                <span className="text-emerald-700 dark:text-emerald-400" aria-hidden="true">✓</span> {cap}
+              </li>
             ))}
-          </div>
+          </ul>
         </div>
       </section>
     </>
