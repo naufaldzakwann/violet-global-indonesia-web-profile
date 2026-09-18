@@ -4,7 +4,7 @@ export const site = {
   tagline: "Orchestrating Intelligence, Defining the Future",
   domain: "https://vgi.web.id",
   url: "https://vgi.web.id",
-  email: "laluwidh@vgi.web.id",
+  email: "rey@vgi.web.id",
   address:
     "Jl. Lempongsari Timur IV No. 302 K, Kec. Gajah Mungkur, Kota Semarang 50231, Indonesia",
   mapsUrl:
