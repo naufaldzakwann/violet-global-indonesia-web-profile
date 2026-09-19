@@ -36,9 +36,14 @@ export const pillars = [
 const u = (id: string, w = 1600) =>
   `https://images.unsplash.com/photo-${id}?q=80&w=${w}&auto=format&fit=crop`;
 
+/* Self-hosted CC photos (Wikimedia Commons originals; attribution captions are rendered next to each usage). */
+const local = (file: string) => `/images/${file}`;
+
 export const img = {
-  wastePlant:
-    "https://upload.wikimedia.org/wikipedia/commons/thumb/1/18/Recycling_001_2014_03_16.jpg/1280px-Recycling_001_2014_03_16.jpg",
+  plasticBales: local("plastic-bales.jpg"),
+  sortedPlastic: local("sorted-plastic.jpg"),
+  thermalPlant: local("thermal-plant.jpg"),
+  indonesiaDawn: local("indonesia-dawn.jpg"),
   hero: u("1486406146926-c627a92ad1ab", 2000),
   narativa: u("1551434678-e076c223a692"),
   blockchain: u("1518546305927-5a555bb7020d"),
@@ -51,6 +56,7 @@ export const img = {
   solar: u("1509391366360-2e959784a276"),
   wind: u("1466611653911-95081537e5b7"),
   engineer: u("1581094794329-c8112a89af12"),
+  regenxLab: u("1581091226825-a6a2a5aee158"),
   tower: u("1486406146926-c627a92ad1ab"),
   city: u("1480714378408-67cf0d13bc1b"),
   aiGradient: u("1677442136019-21780ecad995"),

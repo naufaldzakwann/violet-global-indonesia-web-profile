@@ -100,13 +100,14 @@ export default function Navbar() {
             className="noise fixed inset-0 z-[55] flex flex-col bg-[#FAF6EE]/[.98] pt-24 backdrop-blur-xl dark:bg-[#0c0716]/[.985]"
           >
             <div className="hero-grid pointer-events-none absolute inset-0" aria-hidden="true" />
-            <nav className="relative mx-auto grid w-full max-w-[1600px] flex-1 content-center gap-1 overflow-y-auto px-5 md:px-10" aria-label="Menu">
+            <nav className="relative mx-auto flex w-full min-h-0 max-w-[1600px] flex-1 flex-col overflow-y-auto px-5 py-4 md:px-10" aria-label="Menu">
+              <div className="my-auto flex flex-col">
               <Link
                 href="/"
                 onClick={close}
-                className="group flex items-baseline gap-4 border-b border-stone-900/10 py-3 md:py-4 dark:border-white/10"
+                className="group flex items-baseline gap-4 border-b border-stone-900/10 py-3 dark:border-white/10"
               >
-                <span className="font-display text-5xl uppercase leading-none text-[#141419] transition-all duration-300 group-hover:translate-x-3 group-hover:text-violet-700 md:text-7xl dark:text-[#f4f1eb] dark:group-hover:text-violet-300">
+                <span className="font-display text-5xl uppercase leading-none text-[#141419] transition-all duration-300 group-hover:translate-x-3 group-hover:text-violet-700 md:text-6xl 2xl:text-7xl dark:text-[#f4f1eb] dark:group-hover:text-violet-300">
                   {d.index}
                 </span>
               </Link>
@@ -120,15 +121,16 @@ export default function Navbar() {
                   <Link
                     href={item.href}
                     onClick={close}
-                    className="group flex items-baseline gap-4 border-b border-stone-900/10 py-3 md:py-4 dark:border-white/10"
+                    className="group flex items-baseline gap-4 border-b border-stone-900/10 py-3 dark:border-white/10"
                   >
-                    <span className="font-display text-4xl uppercase leading-none text-[#141419] transition-all duration-300 group-hover:translate-x-3 group-hover:text-violet-700 sm:text-5xl md:text-7xl dark:text-[#f4f1eb] dark:group-hover:text-violet-300">
+                    <span className="font-display text-4xl uppercase leading-none text-[#141419] transition-all duration-300 group-hover:translate-x-3 group-hover:text-violet-700 sm:text-5xl md:text-6xl 2xl:text-7xl dark:text-[#f4f1eb] dark:group-hover:text-violet-300">
                       {item.label}
                     </span>
                     <ArrowUpRight className="ml-auto h-7 w-7 shrink-0 text-stone-400 transition-all duration-300 group-hover:text-violet-700 md:h-9 md:w-9 dark:text-white/30 dark:group-hover:text-violet-300" />
                   </Link>
                 </motion.div>
               ))}
+              </div>
             </nav>
             <div className="relative border-t border-stone-900/10 dark:border-white/10">
               <div className="font-tech mx-auto flex max-w-[1600px] flex-col gap-3 px-5 py-5 text-[11px] uppercase tracking-[0.2em] text-stone-500 sm:flex-row sm:items-center sm:justify-between md:px-10 dark:text-white/50">

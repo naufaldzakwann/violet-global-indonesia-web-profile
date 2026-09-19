@@ -5,7 +5,7 @@ import Link from "next/link";
 import Image from "next/image";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import { ArrowRight, ArrowUpRight, Plus } from "lucide-react";
+import { ArrowRight, ArrowUpRight, Leaf, MapPin, Plus } from "lucide-react";
 import Reveal from "@/components/Reveal";
 import Marquee from "@/components/Marquee";
 import { SectionHeading } from "@/components/Section";
@@ -121,6 +121,7 @@ const workImages = [img.narativa, img.blockchain, img.automation];
 export default function Home() {
   const { d, lang } = useLanguage();
   const h = d.home;
+  const r = d.regenx;
   const heroTitle = lang === "id"
     ? { a: "Mengorkestrasi", b1: "Inteli", b2: "jensi" }
     : { a: "Orchestrating", b1: "Intelli", b2: "gence" };
@@ -261,6 +262,61 @@ export default function Home() {
               {h.energyCta} <ArrowRight className="h-4 w-4" />
             </Link>
           </Reveal>
+        </div>
+      </section>
+
+      {/* Flagship program — E3i RegenX */}
+      <section className="noise relative overflow-hidden bg-[#12382D] dark:bg-[#0c2a21]">
+        <div className="pointer-events-none absolute -left-28 top-20 h-96 w-96 rounded-full bg-emerald-400/15 blur-[130px]" aria-hidden="true" />
+        <div className="pointer-events-none absolute -right-24 bottom-16 h-80 w-80 rounded-full bg-emerald-400/10 blur-[120px]" aria-hidden="true" />
+        <div className="relative mx-auto max-w-[1600px] px-5 py-24 md:px-10 md:py-32">
+          <Reveal>
+            <p className="font-tech flex items-center gap-2.5 text-[10px] uppercase tracking-[0.3em] text-emerald-300">
+              <Leaf className="h-3.5 w-3.5" aria-hidden="true" /> {r.heroEyebrow}
+            </p>
+            <h2 className="font-display mt-5 max-w-5xl text-5xl uppercase leading-[0.95] tracking-wide text-white sm:text-6xl lg:text-7xl">
+              {r.heroTitle}{" "}
+              <em className="font-serif-accent normal-case tracking-normal text-emerald-300">{r.heroSubtitle}</em>
+            </h2>
+          </Reveal>
+          <div className="mt-14 grid gap-12 lg:grid-cols-[1.3fr_1fr] lg:items-center lg:gap-10">
+            <Reveal>
+              <Link
+                href="/green-energy/regenx"
+                aria-label={r.brand}
+                className="group relative block aspect-[16/10] overflow-hidden border border-white/15"
+              >
+                <Image
+                  src={img.regenxLab}
+                  alt="Process engineering laboratory for the E3i RegenX plastics-to-fuel program"
+                  fill
+                  sizes="(max-width:1024px) 100vw, 55vw"
+                  className="object-cover transition-transform duration-700 ease-out group-hover:scale-[1.03]"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-[#0b241c]/75 via-transparent to-transparent" aria-hidden="true" />
+                <p className="font-tech absolute bottom-4 left-5 right-5 flex items-center gap-2 text-[10px] uppercase tracking-[0.22em] text-white/90">
+                  <MapPin className="h-3.5 w-3.5 shrink-0 text-emerald-300" aria-hidden="true" /> {r.closingPin}
+                </p>
+              </Link>
+            </Reveal>
+            <Reveal delay={0.1}>
+              <p className="max-w-xl text-base leading-7 text-white/75 sm:text-lg sm:leading-8">{r.heroDesc}</p>
+              <div className="mt-10 grid grid-cols-3 gap-px border border-white/15 bg-white/15">
+                {[r.stats[0], r.stats[2], r.stats[4]].map(([num, unit]) => (
+                  <div key={unit} className="bg-[#12382D] p-4 text-center md:p-6">
+                    <p className="font-display text-2xl uppercase leading-none tracking-wide text-white md:text-4xl">{num}</p>
+                    <p className="font-tech mt-2 text-[9px] uppercase tracking-[0.2em] text-emerald-300">{unit}</p>
+                  </div>
+                ))}
+              </div>
+              <Link
+                href="/green-energy/regenx"
+                className="mt-10 inline-flex items-center gap-2 bg-emerald-400 px-7 py-4 font-tech text-[11px] uppercase tracking-[0.25em] text-black transition-colors hover:bg-emerald-300"
+              >
+                {d.green.featuredCta} <ArrowRight className="h-3.5 w-3.5" />
+              </Link>
+            </Reveal>
+          </div>
         </div>
       </section>
 
