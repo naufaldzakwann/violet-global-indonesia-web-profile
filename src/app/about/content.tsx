@@ -33,7 +33,7 @@ export default function AboutContent() {
       </PageHero>
 
       <section className="bg-[#FAF6EE] dark:bg-[#0a0a0b]">
-        <div className="mx-auto grid max-w-[1600px] gap-12 px-5 py-24 md:px-10 md:py-32 lg:grid-cols-2">
+        <div className="mx-auto grid max-w-[1600px] gap-12 px-5 pt-12 pb-24 md:px-10 md:pt-16 md:pb-32 lg:grid-cols-2">
           <Reveal>
             <SectionHeading title={a.whoTitle} accent={a.whoAccent} lede={a.whoLede} />
             <div className="mt-8 space-y-5 leading-7 text-stone-600 dark:text-white/60">

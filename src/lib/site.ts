@@ -59,6 +59,5 @@ export const img = {
   regenxLab: u("1581091226825-a6a2a5aee158"),
   tower: u("1486406146926-c627a92ad1ab"),
   city: u("1480714378408-67cf0d13bc1b"),
-  aiGradient: u("1677442136019-21780ecad995"),
   satellite: u("1446776811953-b23d57bd21aa"),
 } as const;

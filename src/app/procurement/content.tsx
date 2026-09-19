@@ -30,7 +30,7 @@ export default function ProcurementContent() {
       </PageHero>
 
       <section className="bg-[#FAF6EE] dark:bg-[#0a0a0b]">
-        <div className="mx-auto max-w-[1600px] px-5 py-24 md:px-10 md:py-32">
+        <div className="mx-auto max-w-[1600px] px-5 pt-12 pb-24 md:px-10 md:pt-16 md:pb-32">
           <div className="border-t border-stone-900/10 dark:border-white/12">
             {p.cats.map(([no, t, desc], i) => (
               <Reveal key={no} delay={Math.min(i * 0.04, 0.15)}>

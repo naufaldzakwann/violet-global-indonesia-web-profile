@@ -30,7 +30,7 @@ export default function CybersecurityContent() {
       </PageHero>
 
       <section className="bg-[#FAF6EE] dark:bg-[#0a0a0b]">
-        <div className="mx-auto max-w-[1600px] px-5 py-24 md:px-10 md:py-32">
+        <div className="mx-auto max-w-[1600px] px-5 pt-12 pb-24 md:px-10 md:pt-16 md:pb-32">
           <Reveal>
             <SectionHeading title={c.practicesTitle} accent={c.practicesAccent} />
           </Reveal>

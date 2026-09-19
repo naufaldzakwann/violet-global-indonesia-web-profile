@@ -5,7 +5,7 @@ import Reveal from "@/components/Reveal";
 import { Eyebrow } from "@/components/Section";
 import ContactForm from "@/components/ContactForm";
 import { useLanguage } from "@/i18n/LanguageProvider";
-import { site, img } from "@/lib/site";
+import { site } from "@/lib/site";
 
 export default function ContactContent() {
   const { d } = useLanguage();
@@ -18,13 +18,12 @@ export default function ContactContent() {
         title={c.heroTitle}
         accent={c.heroAccent}
         lede={c.heroLede}
-        image={img.aiGradient}
         crumbHome={d.index}
         localeTag={d.localeTag}
       />
 
       <section className="bg-[#FAF6EE] dark:bg-[#0a0a0b]">
-        <div className="mx-auto grid max-w-[1600px] gap-12 px-5 py-24 md:px-10 md:py-32 lg:grid-cols-[1.25fr_1fr]">
+        <div className="mx-auto grid max-w-[1600px] gap-12 px-5 pt-12 pb-24 md:px-10 md:pt-16 md:pb-32 lg:grid-cols-[1.25fr_1fr]">
           <Reveal>
             <ContactForm />
           </Reveal>

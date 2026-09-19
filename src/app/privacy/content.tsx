@@ -42,7 +42,7 @@ export default function PrivacyContent() {
     <>
       <PageHero eyebrow={t.eyebrow} title={t.title} accent={t.accent} lede={t.lede} image={img.matrix} crumbHome={lang === "id" ? "Indeks" : "Index"} />
       <section className="bg-[#FAF6EE] dark:bg-[#0a0a0b]">
-        <div className="mx-auto max-w-4xl px-5 py-20 md:px-10 md:py-28">
+        <div className="mx-auto max-w-4xl px-5 pt-10 pb-20 md:px-10 md:pt-14 md:pb-28">
           {t.blocks.map(([title, body], i) => (
             <Reveal key={title}>
               <div className="border-t border-stone-900/10 py-8 last:border-b dark:border-white/12">

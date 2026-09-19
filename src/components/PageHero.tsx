@@ -21,13 +21,15 @@ export default function PageHero({
   title: string;
   accent?: string;
   lede?: string;
-  image: string;
+  image?: string;
   children?: ReactNode;
   crumbHome?: string;
   localeTag?: string;
 }) {
   return (
-    <section className="noise relative flex min-h-[92svh] flex-col justify-end overflow-hidden bg-[#FAF6EE] dark:bg-[#0a0a0b]">
+    <section
+      className={`noise relative flex flex-col justify-end overflow-hidden bg-[#FAF6EE] dark:bg-[#0a0a0b] ${image ? "min-h-[92svh]" : "min-h-[64svh]"}`}
+    >
       <div className="pointer-events-none absolute -right-32 top-24 h-96 w-96 rounded-full bg-violet-500/15 blur-[130px] dark:bg-violet-600/20" aria-hidden="true" />
       <div className="hero-grid absolute inset-0" aria-hidden="true" />
 
@@ -45,6 +47,7 @@ export default function PageHero({
         {children && <div className="mt-8 flex flex-wrap gap-3">{children}</div>}
 
         {/* Field panel — same structure in both modes */}
+        {image && (
         <div className="relative mt-10 aspect-[16/7] overflow-hidden border border-stone-900/10 shadow-[0_30px_80px_-40px_rgb(0_0_0/0.35)] dark:border-white/15 dark:shadow-[0_30px_90px_-30px_rgb(124_58_237/0.3)]">
           <Image
             src={image}
@@ -55,6 +58,7 @@ export default function PageHero({
           />
           <div className="absolute inset-0 bg-gradient-to-t from-black/35 via-transparent to-transparent" aria-hidden="true" />
         </div>
+        )}
 
         <div className="mt-10 flex items-center justify-between border-t border-stone-900/10 pt-5 font-tech text-[10px] uppercase tracking-[0.25em] text-stone-500 dark:border-white/15 dark:text-white/45">
           <nav aria-label="Breadcrumb">
