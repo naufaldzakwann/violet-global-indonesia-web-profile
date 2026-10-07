@@ -1,0 +1,212 @@
+{
+  "nav": {
+    "home": "Home",
+    "about": "About Us",
+    "services": "Services",
+    "portfolio": "Portfolio",
+    "caseStudy": "Case Study",
+    "blog": "Blog",
+    "contact": "Contact",
+    "faq": "FAQ",
+    "cta": "Free Consultation"
+  },
+  "hero": {
+    "badge": "One-Stop IT & Digital Solution",
+    "title": "The Most Complete IT Solution for Your Business",
+    "subtitle": "Violet Global Indonesia is your trusted technology partner — from website development, cybersecurity, to complete digital business transformation.",
+    "ctaPrimary": "Get Free Consultation Now",
+    "ctaSecondary": "View Our Portfolio"
+  },
+  "services": {
+    "badge": "Our Services",
+    "title": "Complete Solutions for Your Digital Needs",
+    "subtitle": "From website development to cybersecurity — we are your one-stop partner for all IT and digital business needs.",
+    "learnMore": "Learn More",
+    "consultNow": "Consult Now",
+    "allServices": "All Services"
+  },
+  "why": {
+    "badge": "Why Choose VGI",
+    "title": "The Right Technology Partner for Your Business",
+    "subtitle": "We are not just a vendor — we are a strategic partner committed to your business success.",
+    "points": [
+      {
+        "icon": "Package",
+        "title": "One-Stop Solution",
+        "desc": "All your IT and digital needs met in one place. No need to coordinate with multiple vendors."
+      },
+      {
+        "icon": "Award",
+        "title": "Experienced Team",
+        "desc": "Our team consists of professionals with an average of 7+ years of experience in the technology industry."
+      },
+      {
+        "icon": "Clock",
+        "title": "On-Time Delivery",
+        "desc": "We are committed to deadlines. 95% of our projects are completed on-time or ahead of schedule."
+      },
+      {
+        "icon": "HeadphonesIcon",
+        "title": "24/7 Support",
+        "desc": "Our support team is ready to assist you whenever needed, including outside business hours."
+      },
+      {
+        "icon": "TrendingUp",
+        "title": "Measurable Results",
+        "desc": "Every solution we build is designed to deliver real and measurable business outcomes."
+      },
+      {
+        "icon": "Shield",
+        "title": "Data Security",
+        "desc": "All projects are protected by NDA and the highest industry security standards."
+      }
+    ]
+  },
+  "portfolio": {
+    "badge": "Portfolio",
+    "title": "Work That Speaks For Itself",
+    "subtitle": "See how we have helped businesses across industries transform digitally.",
+    "viewAll": "View All Projects",
+    "viewDetail": "View Detail",
+    "filterAll": "All",
+    "problem": "Challenge",
+    "solution": "Solution",
+    "result": "Results",
+    "technologies": "Technologies",
+    "liveProject": "View Live Project",
+    "backToPortfolio": "← Back to Portfolio"
+  },
+  "testimonials": {
+    "badge": "Client Testimonials",
+    "title": "What Our Clients Say",
+    "subtitle": "Client trust and satisfaction are our greatest pride."
+  },
+  "cta": {
+    "title": "Ready to Digitally Transform Your Business?",
+    "subtitle": "Consult your IT needs with our expert team for free. We are ready to help.",
+    "primary": "Get Free Consultation Now",
+    "secondary": "Contact via WhatsApp",
+    "phone": "+62 851-6641-5046"
+  },
+  "about": {
+    "badge": "About Us",
+    "title": "Trusted Technology Partner for Indonesian Businesses",
+    "subtitle": "Violet Global Indonesia was founded on the belief that every business deserves enterprise-quality technology solutions.",
+    "vision": {
+      "title": "Vision",
+      "text": "To become a leading technology and digital solutions company in Indonesia trusted by individuals, SMEs, corporations, and government institutions."
+    },
+    "mission": {
+      "title": "Mission",
+      "items": [
+        "Provide comprehensive, innovative, and high-quality IT and digital solutions",
+        "Help businesses of all scales transform and grow in the digital era",
+        "Build long-term trust-based relationships with clients and partners",
+        "Continuously innovate by adopting the latest technologies for efficiency and effectiveness"
+      ]
+    },
+    "history": {
+      "title": "Our Journey",
+      "items": [
+        { "year": "2019", "event": "VGI founded with initial focus on website and application development" },
+        { "year": "2020", "event": "Service expansion to digital marketing and brand design" },
+        { "year": "2021", "event": "Opening Cybersecurity and Data Analytics division" },
+        { "year": "2022", "event": "Reached milestone of 50 active clients and built a 20+ professional team" },
+        { "year": "2023", "event": "Launched Automation & System Integration services for corporations" },
+        { "year": "2024", "event": "Achieved 150+ completed projects and expanded services to international clients" },
+        { "year": "2025", "event": "Launch of new corporate website as a commitment to transparency" }
+      ]
+    },
+    "values": "Our Core Values",
+    "team": {
+      "title": "Management Team",
+      "subtitle": "Led by experienced professionals committed to client success."
+    }
+  },
+  "blog": {
+    "badge": "Blog & Articles",
+    "title": "Latest Insights & Knowledge",
+    "subtitle": "Articles, tutorials, and insights from the VGI expert team to help your business grow.",
+    "readMore": "Read More",
+    "readTime": "min read",
+    "search": "Search articles...",
+    "filterAll": "All",
+    "noResults": "No articles found.",
+    "shareOn": "Share on",
+    "backToBlog": "← Back to Blog"
+  },
+  "contact": {
+    "badge": "Contact Us",
+    "title": "Start a Project With Us",
+    "subtitle": "Fill out the consultation form and our team will contact you within 24 business hours.",
+    "info": {
+      "title": "Contact Information",
+      "phone": "Phone / WhatsApp",
+      "email": "Email",
+      "address": "Address",
+      "hours": "Business Hours",
+      "phoneVal": "+62 851-6641-5046",
+      "emailVal": "hello@violetglobal.id",
+      "addressVal": "Jl. Teknologi Digital No. 1, South Jakarta, DKI Jakarta 12345",
+      "hoursVal": "Monday – Friday: 09:00 AM – 06:00 PM WIB"
+    },
+    "form": {
+      "step1": "Personal Information",
+      "step2": "Service Needs",
+      "step3": "Your Message",
+      "fullName": "Full Name",
+      "email": "Email Address",
+      "phone": "Phone / WhatsApp Number",
+      "services": "Services of Interest",
+      "budget": "Estimated Budget",
+      "message": "Message / Additional Notes",
+      "agreeTerms": "I agree to VGI's privacy policy",
+      "next": "Next",
+      "prev": "Previous",
+      "submit": "Send Consultation",
+      "submitting": "Sending...",
+      "successTitle": "Message Sent!",
+      "successMsg": "Thank you! Our team will contact you within 24 business hours.",
+      "errorMsg": "An error occurred. Please try again or contact us via WhatsApp.",
+      "budgets": [
+        "< IDR 5 Million",
+        "IDR 5 – 20 Million",
+        "IDR 20 – 50 Million",
+        "IDR 50 – 100 Million",
+        "> IDR 100 Million"
+      ]
+    }
+  },
+  "faq": {
+    "badge": "FAQ",
+    "title": "Frequently Asked Questions",
+    "subtitle": "Find answers to common questions about VGI's services and work processes.",
+    "search": "Search questions...",
+    "noResults": "Question not found. Try different keywords or contact us directly.",
+    "filterAll": "All"
+  },
+  "footer": {
+    "tagline": "The most complete IT & Digital solution for your business. One-stop solution for all your needs.",
+    "services": "Services",
+    "company": "Company",
+    "contact": "Contact",
+    "newsletter": "Stay Updated",
+    "newsletterText": "Get the latest articles and insights delivered directly to your inbox.",
+    "emailPlaceholder": "Your Email",
+    "subscribe": "Subscribe",
+    "copyright": "© 2025 Violet Global Indonesia. All rights reserved.",
+    "privacy": "Privacy Policy",
+    "terms": "Terms & Conditions"
+  },
+  "common": {
+    "learnMore": "Learn More",
+    "viewAll": "View All",
+    "contactUs": "Contact Us",
+    "backHome": "Back to Home",
+    "loading": "Loading...",
+    "client": "Client",
+    "year": "Year",
+    "category": "Category",
+    "by": "by"
+  }
+}

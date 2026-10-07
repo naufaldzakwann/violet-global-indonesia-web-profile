@@ -1,0 +1,212 @@
+{
+  "nav": {
+    "home": "Beranda",
+    "about": "Tentang Kami",
+    "services": "Layanan",
+    "portfolio": "Portofolio",
+    "caseStudy": "Case Study",
+    "blog": "Blog",
+    "contact": "Kontak",
+    "faq": "FAQ",
+    "cta": "Konsultasi Gratis"
+  },
+  "hero": {
+    "badge": "One-Stop IT & Digital Solution",
+    "title": "Solusi IT Terlengkap untuk Bisnis Anda",
+    "subtitle": "Violet Global Indonesia hadir sebagai mitra teknologi terpercaya — dari pengembangan website, keamanan siber, hingga transformasi digital bisnis Anda.",
+    "ctaPrimary": "Konsultasi Gratis Sekarang",
+    "ctaSecondary": "Lihat Portofolio Kami"
+  },
+  "services": {
+    "badge": "Layanan Kami",
+    "title": "Solusi Lengkap untuk Kebutuhan Digital Anda",
+    "subtitle": "Dari pengembangan website hingga keamanan siber — kami adalah mitra satu atap untuk semua kebutuhan IT dan digital bisnis Anda.",
+    "learnMore": "Pelajari Lebih Lanjut",
+    "consultNow": "Konsultasi Sekarang",
+    "allServices": "Semua Layanan"
+  },
+  "why": {
+    "badge": "Mengapa Memilih VGI",
+    "title": "Partner Teknologi yang Tepat untuk Bisnis Anda",
+    "subtitle": "Kami bukan sekadar vendor — kami adalah mitra strategis yang berkomitmen pada kesuksesan bisnis Anda.",
+    "points": [
+      {
+        "icon": "Package",
+        "title": "One-Stop Solution",
+        "desc": "Semua kebutuhan IT dan digital Anda terpenuhi di satu tempat. Tidak perlu koordinasi dengan banyak vendor."
+      },
+      {
+        "icon": "Award",
+        "title": "Tim Berpengalaman",
+        "desc": "Tim kami terdiri dari para profesional dengan pengalaman rata-rata 7+ tahun di industri teknologi."
+      },
+      {
+        "icon": "Clock",
+        "title": "Tepat Waktu",
+        "desc": "Kami berkomitmen pada deadline. 95% proyek kami diselesaikan on-time atau lebih awal dari jadwal."
+      },
+      {
+        "icon": "HeadphonesIcon",
+        "title": "Support 24/7",
+        "desc": "Tim support kami siap membantu Anda kapan pun dibutuhkan, termasuk di luar jam kerja."
+      },
+      {
+        "icon": "TrendingUp",
+        "title": "Hasil Terukur",
+        "desc": "Setiap solusi yang kami buat dirancang untuk memberikan hasil bisnis yang nyata dan terukur."
+      },
+      {
+        "icon": "Shield",
+        "title": "Keamanan Data",
+        "desc": "Semua proyek dilindungi oleh NDA dan standar keamanan industri tertinggi."
+      }
+    ]
+  },
+  "portfolio": {
+    "badge": "Portofolio",
+    "title": "Hasil Kerja yang Berbicara Sendiri",
+    "subtitle": "Lihat bagaimana kami telah membantu bisnis dari berbagai industri bertransformasi secara digital.",
+    "viewAll": "Lihat Semua Proyek",
+    "viewDetail": "Lihat Detail",
+    "filterAll": "Semua",
+    "problem": "Tantangan",
+    "solution": "Solusi",
+    "result": "Hasil",
+    "technologies": "Teknologi",
+    "liveProject": "Lihat Live Project",
+    "backToPortfolio": "← Kembali ke Portofolio"
+  },
+  "testimonials": {
+    "badge": "Testimoni Klien",
+    "title": "Apa Kata Klien Kami",
+    "subtitle": "Kepercayaan dan kepuasan klien adalah kebanggaan terbesar kami."
+  },
+  "cta": {
+    "title": "Siap Transformasi Digital Bisnis Anda?",
+    "subtitle": "Konsultasikan kebutuhan IT Anda dengan tim ahli kami secara gratis. Kami siap membantu.",
+    "primary": "Konsultasi Gratis Sekarang",
+    "secondary": "Hubungi via WhatsApp",
+    "phone": "+62 851-6641-5046"
+  },
+  "about": {
+    "badge": "Tentang Kami",
+    "title": "Mitra Teknologi Terpercaya untuk Bisnis Indonesia",
+    "subtitle": "Violet Global Indonesia berdiri atas keyakinan bahwa setiap bisnis berhak mendapatkan solusi teknologi berkualitas enterprise.",
+    "vision": {
+      "title": "Visi",
+      "text": "Menjadi perusahaan teknologi dan solusi digital terkemuka di Indonesia yang dipercaya oleh individu, UKM, korporasi, hingga institusi pemerintah."
+    },
+    "mission": {
+      "title": "Misi",
+      "items": [
+        "Menyediakan solusi IT dan digital yang komprehensif, inovatif, dan berkualitas tinggi",
+        "Membantu bisnis dari semua skala bertransformasi dan berkembang di era digital",
+        "Membangun hubungan jangka panjang berbasis kepercayaan dengan klien dan mitra",
+        "Terus berinovasi dengan mengadopsi teknologi terbaru untuk efisiensi dan efektivitas"
+      ]
+    },
+    "history": {
+      "title": "Perjalanan Kami",
+      "items": [
+        { "year": "2019", "event": "VGI didirikan dengan fokus awal pada pengembangan website dan aplikasi" },
+        { "year": "2020", "event": "Ekspansi layanan ke digital marketing dan desain branding" },
+        { "year": "2021", "event": "Membuka divisi Cybersecurity dan Data Analytics" },
+        { "year": "2022", "event": "Mencapai milestone 50 klien aktif dan membangun tim 20+ profesional" },
+        { "year": "2023", "event": "Meluncurkan layanan Automasi & Integrasi Sistem untuk korporasi" },
+        { "year": "2024", "event": "Mencapai 150+ proyek selesai dan ekspansi layanan ke klien internasional" },
+        { "year": "2025", "event": "Peluncuran website korporat baru sebagai wujud komitmen transparansi" }
+      ]
+    },
+    "values": "Nilai Inti Kami",
+    "team": {
+      "title": "Tim Manajemen",
+      "subtitle": "Dipimpin oleh profesional berpengalaman yang berkomitmen pada kesuksesan klien."
+    }
+  },
+  "blog": {
+    "badge": "Blog & Artikel",
+    "title": "Insights & Pengetahuan Terbaru",
+    "subtitle": "Artikel, tutorial, dan wawasan dari tim ahli VGI untuk membantu bisnis Anda berkembang.",
+    "readMore": "Baca Selengkapnya",
+    "readTime": "menit baca",
+    "search": "Cari artikel...",
+    "filterAll": "Semua",
+    "noResults": "Tidak ada artikel yang ditemukan.",
+    "shareOn": "Bagikan ke",
+    "backToBlog": "← Kembali ke Blog"
+  },
+  "contact": {
+    "badge": "Hubungi Kami",
+    "title": "Mulai Proyek Bersama Kami",
+    "subtitle": "Isi form konsultasi berikut dan tim kami akan menghubungi Anda dalam 1×24 jam di hari kerja.",
+    "info": {
+      "title": "Informasi Kontak",
+      "phone": "Telepon / WhatsApp",
+      "email": "Email",
+      "address": "Alamat",
+      "hours": "Jam Operasional",
+      "phoneVal": "+62 851-6641-5046",
+      "emailVal": "hello@violetglobal.id",
+      "addressVal": "Jl. Teknologi Digital No. 1, Jakarta Selatan, DKI Jakarta 12345",
+      "hoursVal": "Senin – Jumat: 09.00 – 18.00 WIB"
+    },
+    "form": {
+      "step1": "Informasi Diri",
+      "step2": "Kebutuhan Layanan",
+      "step3": "Pesan Anda",
+      "fullName": "Nama Lengkap",
+      "email": "Alamat Email",
+      "phone": "Nomor Telepon / WhatsApp",
+      "services": "Layanan yang Diminati",
+      "budget": "Estimasi Budget",
+      "message": "Pesan / Keterangan Tambahan",
+      "agreeTerms": "Saya menyetujui kebijakan privasi VGI",
+      "next": "Selanjutnya",
+      "prev": "Sebelumnya",
+      "submit": "Kirim Konsultasi",
+      "submitting": "Mengirim...",
+      "successTitle": "Pesan Terkirim!",
+      "successMsg": "Terima kasih! Tim kami akan menghubungi Anda dalam 1×24 jam di hari kerja.",
+      "errorMsg": "Terjadi kesalahan. Silakan coba lagi atau hubungi kami via WhatsApp.",
+      "budgets": [
+        "< Rp 5 Juta",
+        "Rp 5 – 20 Juta",
+        "Rp 20 – 50 Juta",
+        "Rp 50 – 100 Juta",
+        "> Rp 100 Juta"
+      ]
+    }
+  },
+  "faq": {
+    "badge": "FAQ",
+    "title": "Pertanyaan yang Sering Ditanyakan",
+    "subtitle": "Temukan jawaban atas pertanyaan umum seputar layanan dan proses kerja VGI.",
+    "search": "Cari pertanyaan...",
+    "noResults": "Pertanyaan tidak ditemukan. Coba kata kunci lain atau hubungi kami langsung.",
+    "filterAll": "Semua"
+  },
+  "footer": {
+    "tagline": "Solusi IT & Digital terlengkap untuk bisnis Anda. Palugada — Apa Lu Mau Gua Ada.",
+    "services": "Layanan",
+    "company": "Perusahaan",
+    "contact": "Kontak",
+    "newsletter": "Tetap Update",
+    "newsletterText": "Dapatkan artikel dan insight terbaru langsung di inbox Anda.",
+    "emailPlaceholder": "Email Anda",
+    "subscribe": "Langganan",
+    "copyright": "© 2025 Violet Global Indonesia. Semua hak dilindungi.",
+    "privacy": "Kebijakan Privasi",
+    "terms": "Syarat & Ketentuan"
+  },
+  "common": {
+    "learnMore": "Pelajari Lebih Lanjut",
+    "viewAll": "Lihat Semua",
+    "contactUs": "Hubungi Kami",
+    "backHome": "Kembali ke Beranda",
+    "loading": "Memuat...",
+    "client": "Klien",
+    "year": "Tahun",
+    "category": "Kategori",
+    "by": "oleh"
+  }
+}
