@@ -339,45 +339,18 @@ export function HeroSection({ isInitiallyUnlocked = false }: { isInitiallyUnlock
         >
           {/* 4-Line Segmented Heading */}
           <h1 className="text-[38px] font-semibold leading-[1.0] tracking-[-0.04em] text-white sm:text-[52px] md:text-[66px] lg:text-[78px] xl:text-[88px]">
-            {locale === "id" ? (
-              <>
-                <span className="flex flex-col md:hidden lg:flex">
-                  <span>Membangun</span>
-                  <span className="text-violet-400 drop-shadow-[0_0_15px_rgba(168,85,247,0.4)]">Masa Depan</span>
-                  <span>Bisnis</span>
-                  <span className="font-bold text-blue-400 drop-shadow-[0_0_15px_rgba(59,130,246,0.3)]">Digital</span>
-                </span>
-                <span className="hidden md:flex md:flex-col lg:hidden">
-                  <span>Membangun</span>
-                  <span>
-                    <span className="text-violet-400 drop-shadow-[0_0_15px_rgba(168,85,247,0.4)]">Masa Depan</span> Bisnis
-                  </span>
-                  <span className="font-bold text-blue-400 drop-shadow-[0_0_15px_rgba(59,130,246,0.3)]">Digital</span>
-                </span>
-              </>
-            ) : (
-              <>
-                <span className="flex flex-col md:hidden lg:flex">
-                  <span>Building</span>
-                  <span className="text-violet-400 drop-shadow-[0_0_15px_rgba(168,85,247,0.4)]">Your Digital</span>
-                  <span>Business</span>
-                  <span className="font-bold text-blue-400 drop-shadow-[0_0_15px_rgba(59,130,246,0.3)]">Future</span>
-                </span>
-                <span className="hidden md:flex md:flex-col lg:hidden">
-                  <span>Building</span>
-                  <span className="text-violet-400 drop-shadow-[0_0_15px_rgba(168,85,247,0.4)]">Your Digital</span>
-                  <span>
-                    Business <span className="font-bold text-blue-400 drop-shadow-[0_0_15px_rgba(59,130,246,0.3)]">Future</span>
-                  </span>
-                </span>
-              </>
-            )}
+            <span className="flex flex-col">
+              <span>Orchestrating</span>
+              <span className="text-violet-400 drop-shadow-[0_0_15px_rgba(168,85,247,0.4)]">Intelligence,</span>
+              <span>Defining the</span>
+              <span className="font-bold text-blue-400 drop-shadow-[0_0_15px_rgba(59,130,246,0.3)]">Future</span>
+            </span>
           </h1>
 
           <div className="flex w-full max-w-[26rem] self-center items-stretch justify-center gap-3 sm:max-w-[30rem] sm:gap-4 md:mt-[40px] md:max-w-[34rem] lg:mt-0 lg:w-auto lg:max-w-none lg:self-start lg:justify-start">
-            {/* Portfolio Link - Primary */}
+            {/* Smart Waste Management Link - Primary */}
             <Link
-              href={`/${locale}/portfolio`}
+              href={`/${locale}/smart-waste-management`}
               className="group relative flex min-w-0 flex-1 items-center justify-center gap-2 overflow-hidden rounded-full border border-violet-500/50 bg-violet-600/10 px-4 py-3 text-center text-[10px] font-bold tracking-[0.14em] text-white transition-all hover:bg-violet-600 sm:gap-3 sm:px-6 sm:text-[11px] md:py-3.5 md:text-[12px] lg:h-16 lg:flex-none lg:justify-start lg:gap-4 lg:px-8 lg:text-[13px] lg:tracking-[0.2em]"
             >
               <span className="relative z-10 whitespace-nowrap">

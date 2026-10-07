@@ -14,20 +14,25 @@ export default function AboutPage() {
   const missionItems = t.raw("mission.items") as string[];
   const companyOverview = {
     eyebrow: locale === "id" ? "Siapa Kami" : "Who We Are",
-    title: locale === "id" ? "Mitra teknologi yang membangun sistem, brand, dan pertumbuhan bisnis." : "A technology partner that builds systems, brands, and business growth.",
+    title:
+      locale === "id"
+        ? "Perusahaan Deep Tech & Konsultan Transformasi Digital."
+        : "A Deep Tech Company & Digital Transformation Consultant.",
     description:
       locale === "id"
-        ? "Violet Global Indonesia hadir untuk membantu perusahaan bergerak lebih cepat di era digital melalui solusi yang terukur, rapi, and benar-benar relevan dengan kebutuhan bisnis. Kami tidak hanya membuat output yang terlihat baik, tetapi juga merancang fondasi digital yang kuat untuk operasional, pemasaran, dan pengambilan keputusan."
-        : "Violet Global Indonesia helps companies move faster in the digital era through solutions that are measurable, structured, and deeply aligned with business needs. We do not only create polished outputs, but also design strong digital foundations for operations, marketing, and decision-making.",
+        ? "PT Violet Global Indonesia adalah perusahaan Deep Tech dan Konsultan Transformasi Digital yang berfokus pada Kecerdasan Artifisial (AI) Lanjutan, Infrastruktur Data Strategis, keamanan siber, intelijen digital, dan infrastruktur berkelanjutan berbasis teknologi."
+        : "PT Violet Global Indonesia is a Deep Tech company and Digital Transformation Consultant focused on Advanced Artificial Intelligence (AI), Strategic Data Infrastructure, cybersecurity, digital intelligence, and technology-enabled sustainable infrastructure.",
     points:
       locale === "id"
         ? [
-          "Pendekatan kami menggabungkan strategi, desain, dan teknologi dalam satu alur kerja yang lebih efisien.",
-          "Setiap solusi disusun agar dapat dipakai jangka panjang, mudah dikembangkan, dan jelas dampaknya untuk bisnis.",
+          "Violet berperan sebagai Arsitek Ekosistem Digital — mengintegrasikan teknologi, data, infrastruktur, dan kemitraan strategis untuk mendukung pengambilan keputusan yang kompleks dan transformasi jangka panjang bagi institusi pemerintah dan korporasi.",
+          "Violet mengembangkan sektor bisnis Green & Renewable Energy terintegrasi yang menghubungkan intelijen digital dengan infrastruktur energi dan lingkungan — mencakup energi terbarukan, waste-to-energy, manajemen energi, solusi ekonomi sirkular, dan pemantauan lingkungan berbasis data.",
+          "Tujuan kami adalah menciptakan proyek-proyek terhubung di mana teknologi digital meningkatkan perencanaan, pemantauan, efisiensi, keamanan, dan skalabilitas infrastruktur berkelanjutan.",
         ]
         : [
-          "Our approach combines strategy, design, and technology in one more efficient workflow.",
-          "Every solution is built for long-term use, easier growth, and clear business impact.",
+          "Violet positions itself as a Digital Ecosystem Architect — integrating technology, data, infrastructure, and strategic partnerships to support complex decision-making and long-term transformation for government institutions and corporations.",
+          "Violet is developing an integrated Green & Renewable Energy business sector that connects digital intelligence with practical energy and environmental infrastructure — renewable power, waste-to-energy, energy management, circular-economy solutions, and data-driven environmental monitoring.",
+          "The objective is to create connected projects in which digital technology improves the planning, monitoring, efficiency, security, and scalability of sustainable infrastructure.",
         ],
   };
 

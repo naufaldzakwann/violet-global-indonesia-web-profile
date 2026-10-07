@@ -90,19 +90,22 @@
   },
   "about": {
     "badge": "Tentang Kami",
-    "title": "Mitra Teknologi Terpercaya untuk Bisnis Indonesia",
-    "subtitle": "Violet Global Indonesia berdiri atas keyakinan bahwa setiap bisnis berhak mendapatkan solusi teknologi berkualitas enterprise.",
+    "title": "Perusahaan Deep Tech & Konsultan Transformasi Digital",
+    "subtitle": "PT Violet Global Indonesia adalah perusahaan Deep Tech yang berfokus pada AI Lanjutan, Keamanan Siber, Intelijen Digital, dan Infrastruktur Berkelanjutan.",
     "vision": {
       "title": "Visi",
-      "text": "Menjadi perusahaan teknologi dan solusi digital terkemuka di Indonesia yang dipercaya oleh individu, UKM, korporasi, hingga institusi pemerintah."
+      "text": "Menjadi platform teknologi dan infrastruktur berkelanjutan terkemuka di Indonesia yang mengintegrasikan AI, keamanan siber, intelijen digital, dan solusi green energy untuk membantu organisasi melindungi aset, meningkatkan efisiensi, dan mengambil keputusan strategis demi masa depan yang berkelanjutan."
     },
     "mission": {
       "title": "Misi",
       "items": [
-        "Menyediakan solusi IT dan digital yang komprehensif, inovatif, dan berkualitas tinggi",
-        "Membantu bisnis dari semua skala bertransformasi dan berkembang di era digital",
-        "Membangun hubungan jangka panjang berbasis kepercayaan dengan klien dan mitra",
-        "Terus berinovasi dengan mengadopsi teknologi terbaru untuk efisiensi dan efektivitas"
+        "Monitor — Mengumpulkan dan memproses data secara real time.",
+        "Analyze — Menggunakan AI untuk mengekstraksi insight dengan akurasi tinggi.",
+        "Detect — Memberikan peringatan dini terhadap ancaman, anomali, dan risiko operasional.",
+        "Protect — Menghadirkan keamanan siber dan perlindungan infrastruktur yang komprehensif.",
+        "Transform — Mendukung transformasi digital, lingkungan, dan energi melalui teknologi yang skalabel.",
+        "Develop — Memfasilitasi proyek yang layak investasi, kemitraan, dan pengembangan infrastruktur berkelanjutan.",
+        "Support — Menyediakan dukungan teknologi, pengadaan, implementasi, dan operasional."
       ]
     },
     "history": {
