@@ -2,7 +2,7 @@
 
 import type { CSSProperties } from "react";
 import { useEffect, useRef, useState } from "react";
-import { useLocale } from "next-intl";
+import { useLocale, useTranslations } from "next-intl";
 import { useRouter, usePathname } from "next/navigation";
 import Link from "next/link";
 import { cn } from "@/lib/utils";
@@ -37,6 +37,8 @@ const HERO_POPUP_POSITIONS = [
 
 export function HeroSection({ isInitiallyUnlocked = false }: { isInitiallyUnlocked?: boolean }) {
   const locale = useLocale();
+  const t = useTranslations("hero");
+  const headlineLines = t.raw("headline") as string[];
   const router = useRouter();
   const pathname = usePathname();
   const sectionRef = useRef<HTMLElement | null>(null);
@@ -340,10 +342,20 @@ export function HeroSection({ isInitiallyUnlocked = false }: { isInitiallyUnlock
           {/* 4-Line Segmented Heading */}
           <h1 className="text-[38px] font-semibold leading-[1.0] tracking-[-0.04em] text-white sm:text-[52px] md:text-[66px] lg:text-[78px] xl:text-[88px]">
             <span className="flex flex-col">
-              <span>Orchestrating</span>
-              <span className="text-violet-400 drop-shadow-[0_0_15px_rgba(168,85,247,0.4)]">Intelligence,</span>
-              <span>Defining the</span>
-              <span className="font-bold text-blue-400 drop-shadow-[0_0_15px_rgba(59,130,246,0.3)]">Future</span>
+              {headlineLines.map((line, i) => (
+                <span
+                  key={i}
+                  className={
+                    i === 1
+                      ? "text-violet-400 drop-shadow-[0_0_15px_rgba(168,85,247,0.4)]"
+                      : i === 3
+                        ? "font-bold text-blue-400 drop-shadow-[0_0_15px_rgba(59,130,246,0.3)]"
+                        : undefined
+                  }
+                >
+                  {line}
+                </span>
+              ))}
             </span>
           </h1>
 
