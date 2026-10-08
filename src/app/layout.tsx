@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 import { ThemeInitializer } from "@/components/theme/ThemeInitializer";
 import "./globals.css";
 
@@ -52,6 +53,7 @@ export default function RootLayout({
       <body className="antialiased">
         <ThemeInitializer />
         {children}
+        <SpeedInsights />
       </body>
     </html>
   );

@@ -41,9 +41,36 @@ export default async function ServiceDetailPage({ params }: Props) {
   const audience = isId ? (entry.audience || []) : (entry.audienceEn || entry.audience || []);
   const processSteps = entry.process || [];
   const category = entry.category || "default";
+  // Layout khusus Consulting: tanpa section "What is", audience dipindah ke bawah produk
+  const isConsulting = entry.slug === "consulting";
 
   // Proyek portfolio yang relevan dengan kategori layanan ini
   const relevantPortfolio = portfolios.filter((p) => p.category === category).slice(0, 3);
+
+  const audienceSection = audience.length > 0 && (
+    <section className="mb-20">
+      <AnimateOnView>
+        <h2 className="mb-3 text-xs font-bold uppercase tracking-widest text-violet-600 dark:text-violet-400">
+          {isId ? "Layanan Ini Cocok untuk Siapa?" : "Who Is This Service For?"}
+        </h2>
+        <p className="mb-8 text-sm text-slate-400 dark:text-white/40">
+          {isId ? "Cocokkan dengan kondisi Anda — kalau salah satu terasa familiar, layanan ini untuk Anda." : "Match it with your situation — if any of these feels familiar, this service is for you."}
+        </p>
+      </AnimateOnView>
+      <div className="grid gap-3 sm:grid-cols-2">
+        {audience.map((item, i) => (
+          <AnimateOnView key={i} delay={i * 60}>
+            <div className="flex h-full items-start gap-3 rounded-2xl border border-slate-100 bg-white p-5 dark:border-white/10 dark:bg-white/[0.03]">
+              <div className="mt-0.5 flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-violet-600/10 text-violet-600 dark:bg-violet-500/15 dark:text-violet-300">
+                <Icon name="Check" size={13} />
+              </div>
+              <p className="text-[14.5px] leading-relaxed text-slate-700 dark:text-slate-200">{item}</p>
+            </div>
+          </AnimateOnView>
+        ))}
+      </div>
+    </section>
+  );
 
   return (
     <div className="min-h-screen bg-[#f8faf9] pt-24 font-sans selection:bg-violet-100 selection:text-violet-900 dark:bg-[#0a0810] dark:text-white">
@@ -110,46 +137,25 @@ export default async function ServiceDetailPage({ params }: Props) {
         </header>
 
         {/* APA ITU LAYANAN INI? — penjelasan bahasa sederhana */}
-        <section className="mb-20">
-          <AnimateOnView>
-            <h2 className="mb-6 text-xs font-bold uppercase tracking-widest text-violet-600 dark:text-violet-400">
-              {isId ? `Apa itu ${title}?` : `What is ${title}?`}
-            </h2>
-            <div className="space-y-6 text-lg font-light leading-relaxed text-slate-600 dark:text-slate-300">
-              <RichTextContent
-                value={content}
-                className="portable-text-container prose prose-violet max-w-none prose-p:leading-relaxed dark:prose-invert"
-                fallback={<p>{desc}</p>}
-              />
-            </div>
-          </AnimateOnView>
-        </section>
-
-        {/* COCOK UNTUK SIAPA? */}
-        {audience.length > 0 && (
+        {!isConsulting && (
           <section className="mb-20">
             <AnimateOnView>
-              <h2 className="mb-3 text-xs font-bold uppercase tracking-widest text-violet-600 dark:text-violet-400">
-                {isId ? "Layanan Ini Cocok untuk Siapa?" : "Who Is This Service For?"}
+              <h2 className="mb-6 text-xs font-bold uppercase tracking-widest text-violet-600 dark:text-violet-400">
+                {isId ? `Apa itu ${title}?` : `What is ${title}?`}
               </h2>
-              <p className="mb-8 text-sm text-slate-400 dark:text-white/40">
-                {isId ? "Cocokkan dengan kondisi Anda — kalau salah satu terasa familiar, layanan ini untuk Anda." : "Match it with your situation — if any of these feels familiar, this service is for you."}
-              </p>
+              <div className="space-y-6 text-lg font-light leading-relaxed text-slate-600 dark:text-slate-300">
+                <RichTextContent
+                  value={content}
+                  className="portable-text-container prose prose-violet max-w-none prose-p:leading-relaxed dark:prose-invert"
+                  fallback={<p>{desc}</p>}
+                />
+              </div>
             </AnimateOnView>
-            <div className="grid gap-3 sm:grid-cols-2">
-              {audience.map((item, i) => (
-                <AnimateOnView key={i} delay={i * 60}>
-                  <div className="flex h-full items-start gap-3 rounded-2xl border border-slate-100 bg-white p-5 dark:border-white/10 dark:bg-white/[0.03]">
-                    <div className="mt-0.5 flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-violet-600/10 text-violet-600 dark:bg-violet-500/15 dark:text-violet-300">
-                      <Icon name="Check" size={13} />
-                    </div>
-                    <p className="text-[14.5px] leading-relaxed text-slate-700 dark:text-slate-200">{item}</p>
-                  </div>
-                </AnimateOnView>
-              ))}
-            </div>
           </section>
         )}
+
+        {/* COCOK UNTUK SIAPA? — Consulting: dirender setelah produk */}
+        {!isConsulting && audienceSection}
 
         {/* PRODUK & PLATFORM */}
         {entry.products && entry.products.length > 0 && (
@@ -216,6 +222,9 @@ export default async function ServiceDetailPage({ params }: Props) {
             </div>
           </section>
         )}
+
+        {/* COCOK UNTUK SIAPA? — khusus Consulting, di bawah produk */}
+        {isConsulting && audienceSection}
 
         {/* CARA KAMI BEKERJA — langkah sederhana */}
         {processSteps.length > 0 && (
