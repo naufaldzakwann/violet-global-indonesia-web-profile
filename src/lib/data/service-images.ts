@@ -18,6 +18,7 @@ export const serviceDetailHero = "/migrated/services/detail-hero.jpg";
 
 // Hero halaman detail yang spesifik per layanan (sisanya pakai serviceDetailHero)
 export const serviceDetailHeroes: Record<string, string> = {
+  "consulting": "/migrated/services/consulting-hero.jpg",
   "sustainable-energy-solutions": "/migrated/green-energy/sustainable-solutions-hero.png",
 };
 

@@ -41,12 +41,6 @@ export function CTASection() {
                 </h2>
               </AnimateOnView>
 
-              <AnimateOnView delay={180}>
-                <p className="mt-5 max-w-2xl text-[15px] leading-7 text-violet-100/88 sm:text-base">
-                  {t("subtitle")}
-                </p>
-              </AnimateOnView>
-
               <AnimateOnView delay={240}>
                 <div className="mt-8 flex flex-wrap items-center gap-x-6 gap-y-3 text-sm text-violet-100/88">
                   <div className="flex items-center gap-3 rounded-full border border-white/12 bg-white/8 px-4 py-2 backdrop-blur-sm">

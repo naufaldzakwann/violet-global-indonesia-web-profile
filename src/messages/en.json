@@ -28,13 +28,13 @@
   },
   "why": {
     "badge": "Why Choose VGI",
-    "title": "The Right Technology Partner for Your Business",
+    "title": "The Right Technology for Your Business",
     "subtitle": "We are not just a vendor — we are a strategic partner committed to your business success.",
     "points": [
       {
         "icon": "Package",
         "title": "One-Stop Solution",
-        "desc": "All your IT and digital needs met in one place. No need to coordinate with multiple vendors."
+        "desc": "All your business needs met in one place. No need to coordinate with multiple vendors."
       },
       {
         "icon": "Award",
@@ -83,7 +83,7 @@
     "subtitle": "Client trust and satisfaction are our greatest pride."
   },
   "cta": {
-    "title": "Ready to Digitally Transform Your Business?",
+    "title": "Ready to Transform Your Business?",
     "subtitle": "Consult your IT needs with our expert team for free. We are ready to help.",
     "primary": "Get Free Consultation Now",
     "secondary": "Contact via WhatsApp",

@@ -37,9 +37,6 @@ export async function PortfolioSection({ limit, locale }: { limit?: number; loca
           <AnimateOnView delay={100}>
             <h2 className="section-title mb-4">{t("title")}</h2>
           </AnimateOnView>
-          <AnimateOnView delay={200}>
-            <p className="section-subtitle mx-auto">{t("subtitle")}</p>
-          </AnimateOnView>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-2 sm:gap-3 max-w-[1200px] mx-auto">
