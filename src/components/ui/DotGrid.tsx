@@ -55,6 +55,25 @@ function hexToRgb(hex: string) {
   };
 }
 
+type Rgb = { r: number; g: number; b: number };
+
+/**
+ * Dots inside the pointer radius are grouped into this many colour steps, so a
+ * frame is painted with a handful of canvas fills instead of one blurred fill
+ * per dot.
+ */
+const COLOR_STEPS = 8;
+
+/** How long the grid may stay unchanged before it stops painting altogether. */
+const IDLE_STOP_MS = 800;
+
+function lerpColor(from: Rgb, to: Rgb, ratio: number) {
+  const r = Math.round(from.r + (to.r - from.r) * ratio);
+  const g = Math.round(from.g + (to.g - from.g) * ratio);
+  const b = Math.round(from.b + (to.b - from.b) * ratio);
+  return `rgb(${r}, ${g}, ${b})`;
+}
+
 export default function DotGrid({
   dotSize = 16,
   gap = 32,
@@ -73,6 +92,9 @@ export default function DotGrid({
   const wrapperRef = useRef<HTMLDivElement>(null);
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const dotsRef = useRef<Dot[]>([]);
+  const viewRef = useRef({ width: 0, height: 0, dpr: 1 });
+  const paintRef = useRef<((withGlow: boolean) => void) | null>(null);
+  const wakeRef = useRef<() => void>(() => {});
   const pointerRef = useRef({
     x: 0,
     y: 0,
@@ -103,11 +125,15 @@ export default function DotGrid({
     const { width, height } = wrap.getBoundingClientRect();
     if (!width || !height) return;
 
-    const dpr = window.devicePixelRatio || 1;
+    // Cap the backing store: a 3x buffer costs 2.25x the pixels of a 2x one for
+    // pixels nobody can see on 1.8px dots.
+    const dpr = Math.min(window.devicePixelRatio || 1, 2);
     canvas.width = width * dpr;
     canvas.height = height * dpr;
     canvas.style.width = `${width}px`;
     canvas.style.height = `${height}px`;
+
+    viewRef.current = { width, height, dpr };
 
     const ctx = canvas.getContext("2d");
     if (ctx) {
@@ -139,25 +165,45 @@ export default function DotGrid({
     }
 
     dotsRef.current = dots;
+
+    // The paint loop may be asleep (idle or off screen); make sure a rebuilt
+    // grid is visible straight away.
+    paintRef.current?.(true);
   }, [dotSize, gap]);
 
   useEffect(() => {
     if (!circlePath) return;
 
-    let rafId = 0;
+    const canvas = canvasRef.current;
+    const ctx = canvas?.getContext("2d");
+    if (!canvas || !ctx) return;
+
+    const radius = dotSize / 2;
+    const glowBlur = dotSize * 8;
     const proximitySquared = proximity * proximity;
+    const stepColors = Array.from({ length: COLOR_STEPS }, (_, index) =>
+      lerpColor(baseRgb, activeRgb, index / (COLOR_STEPS - 1)),
+    );
 
-    const draw = () => {
-      const canvas = canvasRef.current;
-      if (!canvas) return;
+    // One paint pass draws the whole grid: the dots outside the pointer radius
+    // are batched into a single path (one shared glow pass) and the dots inside
+    // it are grouped into a few colour steps. That replaces a
+    // save/translate/shadowBlur/fill/restore cycle per dot, per frame — the
+    // reason an idle page kept a CPU core busy.
+    const paint = (withGlow: boolean) => {
+      const { width, height, dpr } = viewRef.current;
+      if (!width || !height) return;
 
-      const ctx = canvas.getContext("2d");
-      if (!ctx) return;
-
-      const { width, height } = canvas.getBoundingClientRect();
+      ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
       ctx.clearRect(0, 0, width, height);
 
-      const { x: pointerX, y: pointerY } = pointerRef.current;
+      const pointerX = pointerRef.current.x;
+      const pointerY = pointerRef.current.y;
+      const farPath = new Path2D();
+      const nearPaths: Path2D[] = [];
+      for (let step = 0; step < COLOR_STEPS; step += 1) {
+        nearPaths.push(new Path2D());
+      }
 
       for (const dot of dotsRef.current) {
         const x = dot.cx + dot.xOffset;
@@ -166,32 +212,140 @@ export default function DotGrid({
         const dy = dot.cy - pointerY;
         const distanceSquared = dx * dx + dy * dy;
 
-        let fill = baseColor;
-        if (distanceSquared <= proximitySquared) {
-          const distance = Math.sqrt(distanceSquared);
-          const ratio = 1 - distance / proximity;
-          const r = Math.round(baseRgb.r + (activeRgb.r - baseRgb.r) * ratio);
-          const g = Math.round(baseRgb.g + (activeRgb.g - baseRgb.g) * ratio);
-          const b = Math.round(baseRgb.b + (activeRgb.b - baseRgb.b) * ratio);
-          fill = `rgb(${r}, ${g}, ${b})`;
+        let path = farPath;
+        if (withGlow && distanceSquared <= proximitySquared) {
+          const ratio = 1 - Math.sqrt(distanceSquared) / proximity;
+          const step = Math.min(COLOR_STEPS - 1, Math.max(0, Math.round(ratio * (COLOR_STEPS - 1))));
+          path = nearPaths[step];
         }
 
-        ctx.save();
-        ctx.translate(x, y);
-        ctx.fillStyle = fill;
-        // Stronger Glow Effect
-        ctx.shadowBlur = dotSize * 8;
-        ctx.shadowColor = fill;
-        ctx.fill(circlePath);
-        ctx.restore();
+        path.moveTo(x + radius, y);
+        path.arc(x, y, radius, 0, Math.PI * 2);
       }
 
-      rafId = window.requestAnimationFrame(draw);
+      ctx.fillStyle = baseColor;
+      ctx.shadowColor = baseColor;
+      if (withGlow) ctx.shadowBlur = glowBlur;
+      ctx.fill(farPath);
+      ctx.shadowBlur = 0;
+
+      for (let step = 0; step < COLOR_STEPS; step += 1) {
+        const color = stepColors[step];
+        ctx.fillStyle = color;
+        if (withGlow) {
+          ctx.shadowBlur = glowBlur;
+          ctx.shadowColor = color;
+        }
+        ctx.fill(nearPaths[step]);
+      }
+
+      ctx.shadowBlur = 0;
     };
 
-    draw();
-    return () => window.cancelAnimationFrame(rafId);
-  }, [activeRgb, baseColor, baseRgb, circlePath, proximity]);
+    paintRef.current = paint;
+
+    const reduceMotion =
+      typeof window.matchMedia === "function" &&
+      window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+    if (reduceMotion) {
+      // Respect the OS setting: draw the grid once and never animate it.
+      const frameId = window.requestAnimationFrame(() => paint(true));
+      return () => {
+        window.cancelAnimationFrame(frameId);
+        paintRef.current = null;
+      };
+    }
+
+    let rafId = 0;
+    let running = false;
+    let onScreen = false;
+    let lastPaint = 0;
+    let lastPointerX = Number.NaN;
+    let lastPointerY = Number.NaN;
+
+    const hasMovingDot = () => {
+      for (const dot of dotsRef.current) {
+        if (dot.xOffset !== 0 || dot.yOffset !== 0) return true;
+      }
+      return false;
+    };
+
+    const frame = () => {
+      const pointer = pointerRef.current;
+      const now = performance.now();
+      const pointerMoved = pointer.x !== lastPointerX || pointer.y !== lastPointerY;
+
+      if (pointerMoved || hasMovingDot()) {
+        lastPointerX = pointer.x;
+        lastPointerY = pointer.y;
+        lastPaint = now;
+        paint(true);
+      }
+
+      // Nothing to show any more: sleep until the next interaction instead of
+      // re-drawing a static grid 60 times per second.
+      if (now - lastPaint > IDLE_STOP_MS) {
+        stop();
+        return;
+      }
+
+      rafId = window.requestAnimationFrame(frame);
+    };
+
+    function start() {
+      if (running || document.hidden || !onScreen) return;
+      running = true;
+      lastPaint = performance.now();
+      rafId = window.requestAnimationFrame(frame);
+    }
+
+    function stop() {
+      if (!running) return;
+      running = false;
+      window.cancelAnimationFrame(rafId);
+      rafId = 0;
+    }
+
+    wakeRef.current = start;
+
+    const wrapper = wrapperRef.current;
+    let observer: IntersectionObserver | null = null;
+
+    if (wrapper && typeof IntersectionObserver !== "undefined") {
+      observer = new IntersectionObserver(
+        (entries) => {
+          onScreen = entries[entries.length - 1].isIntersecting;
+          if (onScreen) {
+            lastPointerX = Number.NaN;
+            start();
+          } else {
+            stop();
+          }
+        },
+        { threshold: 0 },
+      );
+      observer.observe(wrapper);
+    } else {
+      onScreen = true;
+      start();
+    }
+
+    const onVisibilityChange = () => {
+      if (document.hidden) stop();
+      else start();
+    };
+
+    document.addEventListener("visibilitychange", onVisibilityChange);
+
+    return () => {
+      stop();
+      observer?.disconnect();
+      document.removeEventListener("visibilitychange", onVisibilityChange);
+      wakeRef.current = () => {};
+      paintRef.current = null;
+    };
+  }, [activeRgb, baseColor, baseRgb, circlePath, dotSize, proximity]);
 
   useEffect(() => {
     buildGrid();
@@ -219,6 +373,8 @@ export default function DotGrid({
     const onMove = (event: MouseEvent) => {
       const canvas = canvasRef.current;
       if (!canvas) return;
+
+      wakeRef.current();
 
       const now = performance.now();
       const pointer = pointerRef.current;
@@ -275,6 +431,8 @@ export default function DotGrid({
     const onClick = (event: MouseEvent) => {
       const canvas = canvasRef.current;
       if (!canvas) return;
+
+      wakeRef.current();
 
       const rect = canvas.getBoundingClientRect();
       const clickX = event.clientX - rect.left;
