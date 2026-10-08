@@ -137,7 +137,7 @@ export function Navbar() {
             style={getRevealProps("brand").style}
           >
             <Image
-              src="/favicon.svg"
+              src="/VGI_Logo.PNG"
               alt="Violet Global Indonesia"
               width={72}
               height={72}

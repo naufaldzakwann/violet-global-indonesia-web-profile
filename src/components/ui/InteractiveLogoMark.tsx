@@ -5,7 +5,7 @@ import Image from "next/image";
 function LogoLayer({ priority = false }: { priority?: boolean }) {
   return (
     <Image
-      src="/favicon.svg"
+      src="/VGI_Logo.PNG"
       alt=""
       aria-hidden="true"
       fill
