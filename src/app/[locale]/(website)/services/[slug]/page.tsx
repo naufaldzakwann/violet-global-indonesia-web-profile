@@ -43,8 +43,9 @@ export default async function ServiceDetailPage({ params }: Props) {
   const category = entry.category || "default";
   // Layout khusus Consulting: tanpa section "What is", audience dipindah ke bawah produk
   const isConsulting = entry.slug === "consulting";
-  // Layout khusus Sustainable Energy Solutions: tanpa paragraf intro di hero
+  // Layout khusus Sustainable Energy Solutions: tanpa paragraf intro di hero, audience di bawah produk
   const isSustainable = entry.slug === "sustainable-energy-solutions";
+  const audienceAfterProducts = isConsulting || isSustainable;
 
   // Proyek portfolio yang relevan dengan kategori layanan ini
   const relevantPortfolio = portfolios.filter((p) => p.category === category).slice(0, 3);
@@ -158,8 +159,8 @@ export default async function ServiceDetailPage({ params }: Props) {
           </section>
         )}
 
-        {/* COCOK UNTUK SIAPA? — Consulting: dirender setelah produk */}
-        {!isConsulting && audienceSection}
+        {/* COCOK UNTUK SIAPA? — Consulting & Sustainable: dirender setelah produk */}
+        {!audienceAfterProducts && audienceSection}
 
         {/* PRODUK & PLATFORM */}
         {entry.products && entry.products.length > 0 && (
@@ -227,8 +228,8 @@ export default async function ServiceDetailPage({ params }: Props) {
           </section>
         )}
 
-        {/* COCOK UNTUK SIAPA? — khusus Consulting, di bawah produk */}
-        {isConsulting && audienceSection}
+        {/* COCOK UNTUK SIAPA? — khusus Consulting & Sustainable, di bawah produk */}
+        {audienceAfterProducts && audienceSection}
 
         {/* CARA KAMI BEKERJA — langkah sederhana */}
         {processSteps.length > 0 && (
