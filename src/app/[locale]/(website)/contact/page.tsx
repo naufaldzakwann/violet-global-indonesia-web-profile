@@ -206,14 +206,14 @@ export default function ContactPage() {
         <section className="mt-24">
           <AnimateOnView delay={400} className="text-center mb-12">
             <span className="text-[10px] font-bold text-violet-600 uppercase tracking-[0.5em] mb-4 block">Visit Our Studio</span>
-            <h3 className="text-xl md:text-2xl font-medium text-slate-800 tracking-tight leading-relaxed max-w-3xl mx-auto" style={{ fontFamily: "var(--font-poppins)" }}>
+            <h3 className="text-xl md:text-2xl font-medium text-slate-800 tracking-tight leading-relaxed max-w-3xl mx-auto whitespace-pre-line" style={{ fontFamily: "var(--font-poppins)" }}>
               {t("info.addressVal")}
             </h3>
           </AnimateOnView>
 
           <AnimateOnView delay={500} className="rounded-2xl overflow-hidden border border-slate-100 h-[450px] shadow-2xl shadow-slate-200">
             <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3966.521260322283!2d106.8195613!3d-6.194699!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69f5d2e764b12d%3A0x3d2ad6e1e0e9bcc8!2sJalan%20Teknologi!5e0!3m2!1sen!2sid!4v1234567890"
+              src="https://maps.google.com/maps?q=Menara%20Hijau%20Jl.%20MT%20Haryono%20Kav.%2033%20Pancoran%20Jakarta%20Selatan&z=16&output=embed"
               width="100%" height="100%" style={{ border: 0 }} allowFullScreen loading="lazy" referrerPolicy="no-referrer-when-downgrade"
             />
           </AnimateOnView>

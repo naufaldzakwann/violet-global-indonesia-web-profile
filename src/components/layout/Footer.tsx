@@ -106,14 +106,16 @@ export function Footer() {
               </li>
               <li className="flex items-start gap-3">
                 <Icon name="Mail" size={15} className="mt-0.5 shrink-0 text-violet-300" />
-                <span className="text-sm leading-6 text-violet-100/68">hello@violetglobal.id</span>
+                <span className="text-sm leading-6 text-violet-100/68">ello@vgi.web.id</span>
               </li>
               <li className="flex items-start gap-3">
                 <Icon name="MapPin" size={15} className="mt-0.5 shrink-0 text-violet-300" />
                 <span className="text-sm leading-6 text-violet-100/68">
-                  Jl. Teknologi Digital No. 1,
+                  Menara Hijau Jl. MT Haryono Kav. 33 Lt.07 No. 702,
                   <br />
-                  Jakarta Selatan 12345
+                  Kel. Cikoko, Kec. Pancoran, Kota Adm. Jakarta Selatan,
+                  <br />
+                  Provinsi DKI Jakarta
                 </span>
               </li>
             </ul>
