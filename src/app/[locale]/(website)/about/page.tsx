@@ -255,7 +255,7 @@ export default function AboutPage() {
             </AnimateOnView>
           </div>
 
-          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-10">
             {teamMembers.map((member, i) => {
               const nameParts = member.name.split(" ");
               const initials = `${nameParts[0][0]}${nameParts[nameParts.length - 1][0]}`.toUpperCase();

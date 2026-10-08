@@ -60,12 +60,6 @@ export const testimonials: Testimonial[] = [
 
 export const teamMembers: TeamMember[] = [
   {
-    id: "team-001",
-    name: "Cindy A Spot",
-    position: "Komisaris Utama",
-    positionEn: "President Commissioner",
-  },
-  {
     id: "team-002",
     name: "Shafigh Pahlevi Lontoh",
     position: "Komisaris",
