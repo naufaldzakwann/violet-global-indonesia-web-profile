@@ -11,18 +11,6 @@ export function WhyUsSection() {
   return (
     <section className="section-padding bg-violet-50/70 theme-section">
       <div className="section-container max-w-6xl mx-auto">
-        <div className="mb-16 text-center max-w-3xl mx-auto">
-          <AnimateOnView>
-            <span className="badge mb-4 mx-auto">{t("badge")}</span>
-          </AnimateOnView>
-          <AnimateOnView delay={100}>
-            <h2 className="section-title mb-6">{t("title")}</h2>
-          </AnimateOnView>
-          <AnimateOnView delay={200}>
-            <p className="section-subtitle mb-8">{t("subtitle")}</p>
-          </AnimateOnView>
-        </div>
-
         {/* Extremely Minimalist & Professional Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-10 gap-y-14">
           {points.map((point, i) => (

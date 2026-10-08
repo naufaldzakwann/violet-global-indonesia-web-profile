@@ -13,8 +13,8 @@ export default function AboutPage() {
     eyebrow: locale === "id" ? "Siapa Kami" : "Who We Are",
     title:
       locale === "id"
-        ? "Mitra terintegrasi — dari teknologi digital hingga energi berkelanjutan."
-        : "An integrated partner — from digital technology to sustainable energy.",
+        ? "Memberdayakan bisnis dengan menghubungkan teknologi global bersama peluang yang terus berkembang di Indonesia — melalui panduan strategis dan solusi energi berkelanjutan."
+        : "Empowering businesses by connecting global technology with Indonesia's emerging opportunities through strategic guidance and sustainable energy solutions.",
     description:
       locale === "id"
         ? "Violet Global Indonesia (VGI) adalah perusahaan teknologi dan solusi energi berkelanjutan yang berdiri sejak 2019. Kami menghadirkan solusi terintegrasi dari hulu ke hilir (upstream to downstream) — menyatukan tiga pilar layanan dalam satu ekosistem pendampingan yang utuh."
@@ -74,16 +74,14 @@ export default function AboutPage() {
 
           <AnimateOnView delay={100}>
             <h1 className="text-4xl md:text-6xl font-bold mb-6 tracking-tight leading-[1.2]">
+              <span className="bg-gradient-to-b from-white via-white to-white/70 bg-clip-text text-transparent">
+                {locale === "id" ? "Tentang" : "About"}
+              </span>
+              <br />
               <span className="text-violet-400 drop-shadow-[0_0_15px_rgba(167,139,250,0.25)]">
                 Violet Global Indonesia
               </span>
             </h1>
-          </AnimateOnView>
-
-          <AnimateOnView delay={200}>
-            <p className="text-white/50 text-base md:text-lg font-medium max-w-xl mx-auto leading-relaxed">
-              {t("subtitle")}
-            </p>
           </AnimateOnView>
         </div>
 
