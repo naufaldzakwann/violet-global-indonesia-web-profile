@@ -9,12 +9,9 @@ import {
 
 const CATEGORIES = [
   "all",
-  "web-app",
-  "data-analytics",
-  "ecommerce",
-  "design-branding",
-  "automation",
-  "cybersecurity",
+  "it-develop",
+  "consultan-service",
+  "green-energy-tech",
 ] as const;
 
 type PortfolioListItem = {

@@ -1,8 +1,5 @@
 import { useTranslations, useLocale } from "next-intl";
-import Image from "next/image";
-import Link from "next/link";
 import { teamMembers, coreValues } from "@/lib/data/general";
-import { e3iRegenx } from "@/lib/data/green-energy";
 import { AnimateOnView } from "@/components/ui/AnimateOnView";
 import { Icon } from "@/components/ui/Icon";
 import { PageHeroDotGrid } from "@/components/ui/PageHeroDotGrid";
@@ -112,102 +109,6 @@ export default function AboutPage() {
                 </div>
               </div>
             </AnimateOnView>
-          </div>
-        </div>
-      </section>
-
-      {/* Flagship Program Preview — E3i RegenX (Green Energy) */}
-      <section className="relative bg-[#07231a] py-24 sm:py-32 text-white overflow-hidden">
-        {/* Subtle glow accents */}
-        <div className="absolute top-0 right-0 w-[500px] h-[500px] rounded-full bg-[radial-gradient(circle,rgba(16,185,129,0.16)_0%,transparent_70%)] blur-3xl pointer-events-none" />
-        <div className="absolute bottom-0 -left-20 w-[400px] h-[400px] rounded-full bg-[radial-gradient(circle,rgba(16,185,129,0.10)_0%,transparent_70%)] blur-3xl pointer-events-none" />
-
-        <div className="section-container relative z-10">
-          <div className="grid lg:grid-cols-12 gap-12 lg:gap-16 items-center">
-            {/* Poster preview */}
-            <AnimateOnView className="lg:col-span-5">
-              <Link
-                href={`/${locale}/green-energy/regenx`}
-                className="group block relative mx-auto max-w-sm"
-                aria-label={locale === "id" ? "Lihat selengkapnya tentang E3i RegenX" : "Learn more about E3i RegenX"}
-              >
-                <div className="relative overflow-hidden rounded-2xl border border-emerald-400/20 shadow-[0_30px_70px_rgba(0,0,0,0.45)] transition-transform duration-500 group-hover:-translate-y-1.5">
-                  <Image
-                    src={e3iRegenx.posterImage}
-                    alt={
-                      locale === "id"
-                        ? "Poster program E3i RegenX — Plastics-to-Fuel"
-                        : "E3i RegenX — Plastics-to-Fuel program poster"
-                    }
-                    width={853}
-                    height={1280}
-                    className="h-auto w-full"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-[#04170f]/70 via-transparent to-transparent opacity-80 transition-opacity duration-500 group-hover:opacity-40" />
-                  <div className="absolute inset-x-0 bottom-0 flex items-center justify-center pb-5">
-                    <span className="inline-flex items-center gap-2 rounded-full bg-white/10 px-4 py-2 text-xs font-semibold text-white backdrop-blur-md border border-white/15 transition-colors group-hover:bg-emerald-500 group-hover:text-[#052017]">
-                      <Icon name="ExternalLink" size={13} />
-                      {locale === "id" ? "Pratinjau poster" : "Poster preview"}
-                    </span>
-                  </div>
-                </div>
-              </Link>
-            </AnimateOnView>
-
-            {/* Copy */}
-            <div className="lg:col-span-7">
-              <AnimateOnView>
-                <div className="inline-flex items-center gap-3 mb-6">
-                  <span className="h-px w-10 bg-emerald-500/40" />
-                  <span className="text-xs font-semibold uppercase tracking-[0.3em] text-emerald-400">
-                    {locale === "id" ? "Program Unggulan · Green Energy" : "Flagship Program · Green Energy"}
-                  </span>
-                </div>
-                <h2 className="text-4xl sm:text-5xl font-semibold text-white tracking-tight leading-[1.1]" style={{ fontFamily: "var(--font-poppins)" }}>
-                  E3i RegenX
-                  <span className="mt-2 block text-2xl sm:text-3xl font-medium bg-gradient-to-r from-emerald-400 to-emerald-200 bg-clip-text text-transparent">
-                    {locale === "id" ? "Plastics-to-Fuel" : "Plastics-to-Fuel"}
-                  </span>
-                </h2>
-                <p className="mt-6 max-w-xl text-lg leading-relaxed text-white/60">
-                  {locale === "id" ? e3iRegenx.description : e3iRegenx.descriptionEn}
-                </p>
-              </AnimateOnView>
-
-              <AnimateOnView delay={150}>
-                <div className="mt-8 grid grid-cols-2 sm:grid-cols-4 gap-px overflow-hidden rounded-xl border border-white/10">
-                  {e3iRegenx.stats.slice(0, 4).map((stat, i) => (
-                    <div key={i} className="bg-white/[0.04] px-4 py-5">
-                      <p className="text-xl font-bold text-emerald-400 tracking-tight" style={{ fontFamily: "var(--font-poppins)" }}>
-                        {locale === "id" ? stat.value : stat.valueEn}
-                      </p>
-                      <p className="mt-1 text-[10px] font-semibold uppercase tracking-wider text-emerald-300/70">
-                        {locale === "id" ? stat.unit : stat.unitEn}
-                      </p>
-                      <p className="mt-1 text-[11px] leading-4 text-white/40">
-                        {locale === "id" ? stat.label : stat.labelEn}
-                      </p>
-                    </div>
-                  ))}
-                </div>
-              </AnimateOnView>
-
-              <AnimateOnView delay={250}>
-                <div className="mt-10 flex flex-wrap items-center gap-5">
-                  <Link
-                    href={`/${locale}/green-energy/regenx`}
-                    className="inline-flex items-center gap-2 rounded-xl bg-emerald-500 px-6 py-3 text-sm font-semibold text-[#052017] shadow-[0_14px_30px_rgba(16,185,129,0.28)] transition-all duration-300 hover:bg-emerald-400 hover:-translate-y-0.5"
-                  >
-                    {locale === "id" ? "Lihat Selengkapnya" : "Learn More"}
-                    <Icon name="ArrowRight" size={15} />
-                  </Link>
-                  <span className="inline-flex items-center gap-2 text-sm text-white/40">
-                    <Icon name="MapPin" size={14} className="text-emerald-400/70" />
-                    {locale === "id" ? e3iRegenx.location : e3iRegenx.locationEn}
-                  </span>
-                </div>
-              </AnimateOnView>
-            </div>
           </div>
         </div>
       </section>

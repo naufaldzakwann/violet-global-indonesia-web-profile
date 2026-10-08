@@ -303,32 +303,6 @@ export const services: Service[] = [
         href: "/smart-waste-management",
       },
       {
-        icon: "Zap",
-        name: "E3i RegenX — Plastics-to-Fuel",
-        nameEn: "E3i RegenX — Plastics-to-Fuel",
-        tagline: "Konversi Limbah Plastik menjadi Bahan Bakar",
-        taglineEn: "Turning Plastic Waste into Fuel",
-        description:
-          "Program unggulan konversi limbah plastik pasca-konsumsi menjadi bahan bakar cair setara diesel melalui proses termal katalitik — dua modul, kapasitas 20 ton per hari.",
-        descriptionEn:
-          "A flagship program converting post-consumer plastic waste into diesel-equivalent liquid fuel through a catalytic thermal process — two modules, 20 metric tons per day.",
-        capabilities: [
-          "Proses termal katalitik limbah plastik pasca-konsumsi",
-          "Hasil akhir bahan bakar cair setara diesel",
-          "Kapasitas 20 ton per hari dengan fasilitas dua modul",
-          "Model bisnis penjualan bahan bakar & pendapatan gate fee",
-          "Mengurangi penimbunan sampah plastik di TPA",
-        ],
-        capabilitiesEn: [
-          "Catalytic thermal process for post-consumer plastic waste",
-          "Diesel-equivalent liquid fuel as the final output",
-          "20 metric tons per day capacity with a two-module facility",
-          "Business model combining fuel sales & gate fee revenue",
-          "Reduces plastic waste accumulation in landfills",
-        ],
-        href: "/green-energy/regenx",
-      },
-      {
         icon: "Globe",
         name: "Green Energy Project Development",
         nameEn: "Green Energy Project Development",
