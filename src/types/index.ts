@@ -54,8 +54,8 @@ export interface Service {
 }
 
 export type ServiceCategory =
-  | "it-develop"
-  | "consultan-service"
+  | "it-development"
+  | "consulting"
   | "green-energy-tech"
   | "web-app"
   | "consulting"

@@ -1,6 +1,6 @@
 export const serviceImages: Record<string, string> = {
-  "it-develop": "/migrated/services/data-analytics-business-intelligence.jpg",
-  "consultan-service": "/migrated/services/konsultasi-it.jpg",
+  "it-development": "/migrated/services/data-analytics-business-intelligence.jpg",
+  "consulting": "/migrated/services/konsultasi-it.jpg",
   "green-energy-tech": "/migrated/green-energy/thermal-plant.jpg",
   // Legacy slugs (dipertahankan untuk data migrasi lama)
   "pembuatan-website-aplikasi": "/migrated/services/pembuatan-website-aplikasi.jpg",

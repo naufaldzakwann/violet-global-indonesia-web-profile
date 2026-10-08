@@ -9,8 +9,8 @@ import {
 
 const CATEGORIES = [
   "all",
-  "it-develop",
-  "consultan-service",
+  "it-development",
+  "consulting",
   "green-energy-tech",
 ] as const;
 

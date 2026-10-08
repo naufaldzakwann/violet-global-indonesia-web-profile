@@ -4,17 +4,17 @@ import type { Service } from "@/types";
 // company profile resmi (violet-global-compro).
 export const services: Service[] = [
   {
-    id: "svc-it-develop",
-    slug: "it-develop",
+    id: "svc-it-development",
+    slug: "it-development",
     icon: "Cpu",
-    title: "IT Develop",
-    titleEn: "IT Develop",
+    title: "IT Development",
+    titleEn: "IT Development",
     shortDesc: "Platform dan produk digital berbasis AI — media intelligence, blockchain analytics, dan automasi enterprise.",
     shortDescEn: "AI-powered digital platforms and products — media intelligence, blockchain analytics, and enterprise automation.",
     description:
-      "Lini IT Develop menghadirkan platform digital intelligence berbasis AI: memantau percakapan publik, menganalisis data blockchain, hingga mengotomatiskan operasi media sosial berskala enterprise. Semua produk dirancang agar aman, skalabel, dan terukur dampaknya.",
+      "Lini IT Development menghadirkan platform digital intelligence berbasis AI: memantau percakapan publik, menganalisis data blockchain, hingga mengotomatiskan operasi media sosial berskala enterprise. Semua produk dirancang agar aman, skalabel, dan terukur dampaknya.",
     descriptionEn:
-      "The IT Develop division delivers AI-powered digital intelligence platforms: monitoring public conversations, analyzing blockchain data, and automating enterprise-scale social media operations. Every product is designed to be secure, scalable, and measurable.",
+      "The IT Development division delivers AI-powered digital intelligence platforms: monitoring public conversations, analyzing blockchain data, and automating enterprise-scale social media operations. Every product is designed to be secure, scalable, and measurable.",
     features: [
       "Platform intelligence berbasis AI",
       "Dashboard pemantauan real-time & pelaporan otomatis",
@@ -29,7 +29,7 @@ export const services: Service[] = [
       "Scalable infrastructure for large data volumes",
       "Integration with existing analytics tools",
     ],
-    category: "it-develop",
+    category: "it-development",
     audience: [
       "Anda ingin memantau percakapan dan reputasi di media sosial secara otomatis, tanpa cek manual satu per satu",
       "Institusi keuangan atau penegak hukum yang perlu memantau transaksi crypto dan investigasi forensik",
@@ -127,11 +127,11 @@ export const services: Service[] = [
     ],
   },
   {
-    id: "svc-consultan-service",
-    slug: "consultan-service",
+    id: "svc-consulting",
+    slug: "consulting",
     icon: "Lightbulb",
-    title: "Consultan Service",
-    titleEn: "Consultan Service",
+    title: "Consulting",
+    titleEn: "Consulting",
     shortDesc: "Konsultasi strategis — market entry, teknologi, pengembangan bisnis, dan aktivasi pasar baru.",
     shortDescEn: "Strategic consulting — market entry, technology, business development, and new market activation.",
     description:
@@ -152,7 +152,7 @@ export const services: Service[] = [
       "Strategic partnership and PPP structuring",
       "Proposal & investment documentation",
     ],
-    category: "consultan-service",
+    category: "consulting",
     audience: [
       "Ingin masuk pasar baru tapi belum tahu harus mulai dari mana",
       "Butuh peta jalan (roadmap) transformasi digital yang jelas dan bertahap",
@@ -386,12 +386,11 @@ export const services: Service[] = [
 
 export const getCategoryLabel = (category: string, locale: string): string => {
   const labels: Record<string, { id: string; en: string }> = {
-    "it-develop":          { id: "IT Develop", en: "IT Develop" },
-    "consultan-service":   { id: "Consultan Service", en: "Consultan Service" },
+    "it-development":          { id: "IT Development", en: "IT Development" },
+    "consulting":   { id: "Consulting", en: "Consulting" },
     "green-energy-tech":   { id: "Green Energy Tech", en: "Green Energy Tech" },
     "web-app":             { id: "Website & Aplikasi", en: "Website & App" },
-    "consulting":          { id: "Konsultasi IT", en: "IT Consulting" },
-    "cybersecurity":       { id: "Keamanan Siber", en: "Cybersecurity" },
+      "cybersecurity":       { id: "Keamanan Siber", en: "Cybersecurity" },
     "social-media":        { id: "Social Media", en: "Social Media" },
     "digital-marketing":   { id: "Optimasi Digital", en: "Digital Optimization" },
     "design-branding":     { id: "Desain & Branding", en: "Design & Branding" },
