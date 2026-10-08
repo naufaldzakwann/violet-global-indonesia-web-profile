@@ -6,7 +6,7 @@ import type { Portfolio } from "@/types";
 const categoryLabels: Record<Portfolio["category"], { id: string; en: string }> = {
   "it-development": { id: "IT Development", en: "IT Development" },
   "consulting": { id: "Consulting", en: "Consulting" },
-  "green-energy-tech": { id: "Green Energy Tech", en: "Green Energy Tech" },
+  "sustainable-energy-solutions": { id: "Sustainable Energy Solutions", en: "Sustainable Energy Solutions" },
   // Legacy (dipertahankan agar tipe Record tetap lengkap)
   "web-app": { id: "Website & Aplikasi", en: "Website & App" },
   "cybersecurity": { id: "Keamanan Siber", en: "Cybersecurity" },
@@ -93,9 +93,9 @@ export const portfolios: Portfolio[] = [
     slug: "program-integrated-smart-waste-management",
     title: "Integrated Smart Waste Management",
     titleEn: "Integrated Smart Waste Management",
-    category: "green-energy-tech",
-    categoryLabel: categoryLabels["green-energy-tech"].id,
-    categoryLabelEn: categoryLabels["green-energy-tech"].en,
+    category: "sustainable-energy-solutions",
+    categoryLabel: categoryLabels["sustainable-energy-solutions"].id,
+    categoryLabelEn: categoryLabels["sustainable-energy-solutions"].en,
     thumbnail: "/migrated/green-energy/thermal-plant.jpg",
     images: [
       "/migrated/green-energy/thermal-plant.jpg",

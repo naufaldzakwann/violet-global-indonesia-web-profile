@@ -281,17 +281,17 @@ export const services: Service[] = [
     ],
   },
   {
-    id: "svc-green-energy-tech",
-    slug: "green-energy-tech",
+    id: "svc-sustainable-energy-solutions",
+    slug: "sustainable-energy-solutions",
     icon: "Recycle",
-    title: "Green Energy Tech",
-    titleEn: "Green Energy Tech",
+    title: "Sustainable Energy Solutions",
+    titleEn: "Sustainable Energy Solutions",
     shortDesc: "Teknologi energi & lingkungan — smart waste management, plastics-to-fuel, dan proyek energi terbarukan.",
     shortDescEn: "Energy & environmental technology — smart waste management, plastics-to-fuel, and renewable energy projects.",
     description:
-      "Lini Green Energy Tech menghubungkan digital intelligence dengan infrastruktur energi dan lingkungan yang praktis: pengelolaan sampah pintar terintegrasi, konversi limbah plastik menjadi bahan bakar, hingga pengembangan proyek energi terbarukan yang berkelanjutan.",
+      "Lini Sustainable Energy Solutions menghubungkan digital intelligence dengan infrastruktur energi dan lingkungan yang praktis: pengelolaan sampah pintar terintegrasi, konversi limbah plastik menjadi bahan bakar, hingga pengembangan proyek energi terbarukan yang berkelanjutan.",
     descriptionEn:
-      "The Green Energy Tech division connects digital intelligence with practical energy and environmental infrastructure: integrated smart waste management, plastics-to-fuel conversion, and sustainable renewable energy project development.",
+      "The Sustainable Energy Solutions division connects digital intelligence with practical energy and environmental infrastructure: integrated smart waste management, plastics-to-fuel conversion, and sustainable renewable energy project development.",
     features: [
       "Perencanaan & pengembangan infrastruktur pengolahan sampah (TPST/TPA)",
       "Implementasi Smart Bin & monitoring armada berbasis IoT",
@@ -306,7 +306,7 @@ export const services: Service[] = [
       "PPP scheme structuring with government & business entities",
       "Digital monitoring & performance management across the project lifecycle",
     ],
-    category: "green-energy-tech",
+    category: "sustainable-energy-solutions",
     audience: [
       "Pemerintah daerah yang ingin membangun sistem pengelolaan sampah modern (TPST/TPA)",
       "Perusahaan yang wajib mengelola limbah dan laporan kepatuhan lingkungan",
@@ -388,7 +388,7 @@ export const getCategoryLabel = (category: string, locale: string): string => {
   const labels: Record<string, { id: string; en: string }> = {
     "it-development":          { id: "IT Development", en: "IT Development" },
     "consulting":   { id: "Consulting", en: "Consulting" },
-    "green-energy-tech":   { id: "Green Energy Tech", en: "Green Energy Tech" },
+    "sustainable-energy-solutions":   { id: "Sustainable Energy Solutions", en: "Sustainable Energy Solutions" },
     "web-app":             { id: "Website & Aplikasi", en: "Website & App" },
       "cybersecurity":       { id: "Keamanan Siber", en: "Cybersecurity" },
     "social-media":        { id: "Social Media", en: "Social Media" },

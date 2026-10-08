@@ -11,7 +11,7 @@ const CATEGORIES = [
   "all",
   "it-development",
   "consulting",
-  "green-energy-tech",
+  "sustainable-energy-solutions",
 ] as const;
 
 type PortfolioListItem = {
