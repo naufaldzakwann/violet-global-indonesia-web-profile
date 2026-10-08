@@ -106,7 +106,7 @@ export function Footer() {
               </li>
               <li className="flex items-start gap-3">
                 <Icon name="Mail" size={15} className="mt-0.5 shrink-0 text-violet-300" />
-                <span className="text-sm leading-6 text-violet-100/68">ello@vgi.web.id</span>
+                <span className="text-sm leading-6 text-violet-100/68">mail@vgi.web.id</span>
               </li>
               <li className="flex items-start gap-3">
                 <Icon name="MapPin" size={15} className="mt-0.5 shrink-0 text-violet-300" />
