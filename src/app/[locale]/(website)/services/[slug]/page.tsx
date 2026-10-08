@@ -3,7 +3,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { services as staticServices, getCategoryLabel } from "@/lib/data/services";
 import { portfolios } from "@/lib/data/portfolio";
-import { serviceDetailHero } from "@/lib/data/service-images";
+import { getDetailHero } from "@/lib/data/service-images";
 import { AnimateOnView } from "@/components/ui/AnimateOnView";
 import { Icon } from "@/components/ui/Icon";
 import { RichTextContent } from "@/components/ui/RichTextContent";
@@ -43,6 +43,8 @@ export default async function ServiceDetailPage({ params }: Props) {
   const category = entry.category || "default";
   // Layout khusus Consulting: tanpa section "What is", audience dipindah ke bawah produk
   const isConsulting = entry.slug === "consulting";
+  // Layout khusus Sustainable Energy Solutions: tanpa paragraf intro di hero
+  const isSustainable = entry.slug === "sustainable-energy-solutions";
 
   // Proyek portfolio yang relevan dengan kategori layanan ini
   const relevantPortfolio = portfolios.filter((p) => p.category === category).slice(0, 3);
@@ -102,9 +104,11 @@ export default async function ServiceDetailPage({ params }: Props) {
             >
               {title}
             </h1>
-            <p className="mb-8 max-w-2xl text-lg font-light leading-relaxed text-slate-600 dark:text-slate-300">
-              {shortDesc}
-            </p>
+            {!isSustainable && (
+              <p className="mb-8 max-w-2xl text-lg font-light leading-relaxed text-slate-600 dark:text-slate-300">
+                {shortDesc}
+              </p>
+            )}
             <div className="flex flex-wrap items-center gap-4">
               <Link
                 href={`/${locale}/contact`}
@@ -127,7 +131,7 @@ export default async function ServiceDetailPage({ params }: Props) {
           {/* Gambar hero */}
           <AnimateOnView delay={200} className="relative mt-10 aspect-[21/9] overflow-hidden rounded-3xl border border-slate-100 shadow-xl shadow-slate-200/50 dark:border-white/10 dark:shadow-black/40">
             <Image
-              src={serviceDetailHero}
+              src={getDetailHero(entry.slug)}
               alt={title}
               fill
               className="object-cover opacity-90 dark:opacity-75"

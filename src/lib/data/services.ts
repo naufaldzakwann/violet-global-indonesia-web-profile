@@ -291,7 +291,7 @@ export const services: Service[] = [
     description:
       "Lini Sustainable Energy Solutions menghubungkan digital intelligence dengan infrastruktur energi dan lingkungan yang praktis: pengelolaan sampah pintar terintegrasi, konversi limbah plastik menjadi bahan bakar, hingga pengembangan proyek energi terbarukan yang berkelanjutan.",
     descriptionEn:
-      "The Sustainable Energy Solutions division connects digital intelligence with practical energy and environmental infrastructure: integrated smart waste management, plastics-to-fuel conversion, and sustainable renewable energy project development.",
+      "We deliver integrated solutions that transform energy and resource challenges into sustainable economic opportunities. Our focus spans renewable energy, waste-to-energy, waste-to-fuel, resource recovery, bioenergy, and sustainable infrastructure.",
     features: [
       "Perencanaan & pengembangan infrastruktur pengolahan sampah (TPST/TPA)",
       "Implementasi Smart Bin & monitoring armada berbasis IoT",

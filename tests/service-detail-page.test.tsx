@@ -41,6 +41,7 @@ vi.mock("@/lib/data/service-images", () => ({
   serviceImages: {},
   serviceFallbackImage: "/fixtures/service-fallback.jpg",
   serviceDetailHero: "/fixtures/service-detail-hero.jpg",
+  getDetailHero: () => "/fixtures/service-detail-hero.jpg",
 }));
 
 async function renderServiceDetail(slug: string, locale: "id" | "en") {
