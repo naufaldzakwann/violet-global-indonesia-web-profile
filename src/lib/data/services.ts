@@ -30,6 +30,24 @@ export const services: Service[] = [
       "Integration with existing analytics tools",
     ],
     category: "it-develop",
+    audience: [
+      "Anda ingin memantau percakapan dan reputasi di media sosial secara otomatis, tanpa cek manual satu per satu",
+      "Institusi keuangan atau penegak hukum yang perlu memantau transaksi crypto dan investigasi forensik",
+      "Tim yang mengelola banyak akun media sosial sekaligus dan butuh sistem yang aman & terukur",
+      "Perusahaan yang butuh dashboard data real-time untuk pengambilan keputusan cepat",
+    ],
+    audienceEn: [
+      "You want to monitor conversations and reputation on social media automatically, without manual checking",
+      "Financial institutions or law enforcement that need crypto transaction monitoring and forensic investigation",
+      "Teams managing many social media accounts at once and needing a secure, measurable system",
+      "Companies that need real-time data dashboards for fast decision-making",
+    ],
+    process: [
+      { title: "Ceritakan Kebutuhan Anda", titleEn: "Tell Us Your Needs", desc: "Diskusi santai (gratis) untuk memahami masalah yang ingin Anda selesaikan — belum perlu tahu solusi teknisnya.", descEn: "A relaxed (free) discussion to understand the problem you want to solve — no technical knowledge needed upfront." },
+      { title: "Demo & Usulan Solusi", titleEn: "Demo & Proposed Solution", desc: "Kami perkenalkan platform yang relevan lewat demo langsung, lalu susun usulan solusi dan estimasinya.", descEn: "We introduce the relevant platform with a live demo, then prepare a solution proposal and estimate." },
+      { title: "Implementasi & Integrasi", titleEn: "Implementation & Integration", desc: "Tim kami memasang, menyesuaikan, dan menghubungkan sistem dengan tools yang sudah Anda pakai.", descEn: "Our team sets up, customizes, and connects the system with the tools you already use." },
+      { title: "Pelatihan & Dukungan", titleEn: "Training & Support", desc: "Kami latih tim Anda sampai terbiasa, dan tetap standby bila ada kendala atau kebutuhan baru.", descEn: "We train your team until they are comfortable, and stay on standby for issues or new needs." },
+    ],
     products: [
       {
         icon: "Globe",
@@ -135,6 +153,24 @@ export const services: Service[] = [
       "Proposal & investment documentation",
     ],
     category: "consultan-service",
+    audience: [
+      "Ingin masuk pasar baru tapi belum tahu harus mulai dari mana",
+      "Butuh peta jalan (roadmap) transformasi digital yang jelas dan bertahap",
+      "Ingin mengembangkan bisnis, mencari kemitraan, atau mengikuti tender pemerintah",
+      "Punya peluang pasar baru yang belum tergarap dan butuh validasi sebelum investasi",
+    ],
+    audienceEn: [
+      "You want to enter a new market but don't know where to start",
+      "You need a clear, phased digital transformation roadmap",
+      "You want to grow the business, find partnerships, or pursue government tenders",
+      "You have an untapped market opportunity that needs validation before investing",
+    ],
+    process: [
+      { title: "Sesi Pemahaman Bisnis", titleEn: "Business Discovery Session", desc: "Kami dengarkan kondisi, target, dan kendala Anda — tanpa jargon teknis.", descEn: "We listen to your situation, goals, and constraints — no tech jargon." },
+      { title: "Riset & Analisis", titleEn: "Research & Analysis", desc: "Tim kami melakukan riset pasar, regulasi, dan analisis data sesuai lingkup kesepakatan.", descEn: "Our team conducts market, regulatory, and data analysis according to the agreed scope." },
+      { title: "Rekomendasi & Roadmap", titleEn: "Recommendations & Roadmap", desc: "Anda menerima rekomendasi yang mudah dibaca: apa yang harus dilakukan, urutannya, dan estimasinya.", descEn: "You receive easy-to-read recommendations: what to do, in what order, and the estimates." },
+      { title: "Pendampingan Eksekusi", titleEn: "Execution Support", desc: "Kalau diperlukan, kami dampingi langkah awal implementasi hingga kemitraan terbentuk.", descEn: "If needed, we accompany the first implementation steps through to formed partnerships." },
+    ],
     products: [
       {
         icon: "Globe",
@@ -271,6 +307,24 @@ export const services: Service[] = [
       "Digital monitoring & performance management across the project lifecycle",
     ],
     category: "green-energy-tech",
+    audience: [
+      "Pemerintah daerah yang ingin membangun sistem pengelolaan sampah modern (TPST/TPA)",
+      "Perusahaan yang wajib mengelola limbah dan laporan kepatuhan lingkungan",
+      "Investor atau pengembang yang sedang mencari proyek green energy yang layak",
+      "Kawasan industri yang ingin sistem pengelolaan sampah & energi terpadu",
+    ],
+    audienceEn: [
+      "Local governments wanting to build modern waste management systems (TPST/TPA)",
+      "Companies required to manage waste and environmental compliance reporting",
+      "Investors or developers looking for viable green energy projects",
+      "Industrial estates wanting integrated waste & energy management systems",
+    ],
+    process: [
+      { title: "Konsultasi & Studi Kelayakan", titleEn: "Consultation & Feasibility Study", desc: "Kami pelajari kondisi lokasi, volume sampah/energi, dan potensi ekonominya dulu sebelum lanjut.", descEn: "We first study site conditions, waste/energy volume, and economic potential before proceeding." },
+      { title: "Perancangan Skema", titleEn: "Scheme Design", desc: "Menyusun skema teknis, pembiayaan, dan kerja sama — termasuk format KPBU dengan pemerintah bila relevan.", descEn: "We design the technical, financing, and cooperation scheme — including government PPP (KPBU) formats when relevant." },
+      { title: "Pembangunan & Integrasi Teknologi", titleEn: "Construction & Technology Integration", desc: "Infrastruktur dibangun dan dihubungkan dengan teknologi pintar (IoT, dashboard pemantauan).", descEn: "Infrastructure is built and connected with smart technology (IoT, monitoring dashboards)." },
+      { title: "Operasional & Pemantauan", titleEn: "Operations & Monitoring", desc: "Sistem berjalan dengan pemantauan digital berkelanjutan dan dukungan tim kami.", descEn: "The system runs with continuous digital monitoring and support from our team." },
+    ],
     products: [
       {
         icon: "Recycle",

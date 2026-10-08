@@ -21,6 +21,13 @@ export interface ServiceProduct {
   href?: string;
 }
 
+export interface ServiceProcessStep {
+  title: string;
+  titleEn: string;
+  desc: string;
+  descEn: string;
+}
+
 export interface Service {
   id: string;
   slug: string;
@@ -36,6 +43,11 @@ export interface Service {
   category: ServiceCategory;
   /** Produk/platform di dalam kategori layanan (halaman detail). */
   products?: ServiceProduct[];
+  /** "Layanan ini cocok untuk siapa?" — bahasa sederhana untuk orang awam. */
+  audience?: string[];
+  audienceEn?: string[];
+  /** "Cara kami bekerja" — langkah-langkah sederhana. */
+  process?: ServiceProcessStep[];
   /** Rich text opsional yang dirender di halaman detail layanan. */
   content?: RichText;
   contentEn?: RichText;

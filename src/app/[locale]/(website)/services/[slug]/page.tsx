@@ -29,119 +29,172 @@ export default async function ServiceDetailPage({ params }: Props) {
   const svc = staticServices.find((s) => s.slug === slug);
   if (!svc) notFound();
 
+  const isId = locale === "id";
   const entry = svc;
-  const title = locale === "id" ? entry.title : entry.titleEn || entry.title;
-  const desc = locale === "id" 
-    ? (entry.description || entry.shortDesc) 
+  const title = isId ? entry.title : entry.titleEn || entry.title;
+  const shortDesc = isId ? entry.shortDesc : entry.shortDescEn || entry.shortDesc;
+  const desc = isId
+    ? (entry.description || entry.shortDesc)
     : (entry.descriptionEn || entry.shortDescEn || entry.description || entry.shortDesc);
-  const features = locale === "id" 
-    ? (entry.features || []) 
-    : (entry.featuresEn || entry.features || []);
-  const content = locale === "id" ? entry.content : (entry.contentEn ?? entry.content);
+  const features = isId ? (entry.features || []) : (entry.featuresEn || entry.features || []);
+  const content = isId ? entry.content : (entry.contentEn ?? entry.content);
+  const audience = isId ? (entry.audience || []) : (entry.audienceEn || entry.audience || []);
+  const processSteps = entry.process || [];
   const category = entry.category || "default";
 
-  // Filter relevant portfolio items
-  const relevantPortfolio = portfolios.filter(p => p.category === category).slice(0, 3);
+  // Proyek portfolio yang relevan dengan kategori layanan ini
+  const relevantPortfolio = portfolios.filter((p) => p.category === category).slice(0, 3);
 
   return (
-    <div className="pt-24 bg-white selection:bg-violet-100 selection:text-violet-900 min-h-screen font-sans">
-      <div className="max-w-4xl mx-auto px-6 py-12 md:py-16">
-        
-        {/* COMPACT BREADCRUMB */}
+    <div className="min-h-screen bg-[#f8faf9] pt-24 font-sans selection:bg-violet-100 selection:text-violet-900 dark:bg-[#0a0810] dark:text-white">
+      <div className="mx-auto max-w-4xl px-6 py-12 md:py-16">
+
+        {/* BREADCRUMB */}
         <header className="mb-12">
-          <AnimateOnView className="flex items-center gap-4 mb-10">
-            <Link href={`/${locale}/services`} className="text-[10px] font-bold text-violet-600 uppercase tracking-widest hover:text-slate-900 transition-colors">
-              ← {locale === "id" ? "Layanan" : "Services"}
+          <AnimateOnView className="mb-10 flex items-center gap-4">
+            <Link
+              href={`/${locale}/services`}
+              className="text-[10px] font-bold uppercase tracking-widest text-violet-600 transition-colors hover:text-slate-900 dark:text-violet-400 dark:hover:text-white"
+            >
+              ← {isId ? "Layanan" : "Services"}
             </Link>
-            <div className="h-4 w-px bg-slate-200" />
-            <div className="text-[10px] font-bold text-slate-400 uppercase tracking-widest">
+            <div className="h-4 w-px bg-slate-200 dark:bg-white/10" />
+            <div className="text-[10px] font-bold uppercase tracking-widest text-slate-400 dark:text-white/40">
               {getCategoryLabel(category, locale)}
             </div>
           </AnimateOnView>
 
+          {/* Hero: judul + penjelasan singkat + CTA */}
           <AnimateOnView delay={100}>
-            <h1 className="text-4xl md:text-6xl font-medium text-slate-950 tracking-tighter leading-tight mb-10" style={{ fontFamily: "var(--font-poppins)" }}>
+            <div className="mb-8 flex h-14 w-14 items-center justify-center rounded-2xl bg-violet-600 text-white shadow-[0_12px_28px_rgba(124,58,237,0.35)]">
+              <Icon name={entry.icon} size={26} strokeWidth={1.75} />
+            </div>
+            <h1
+              className="mb-6 text-4xl font-medium leading-tight tracking-tighter text-slate-950 md:text-6xl dark:text-white"
+              style={{ fontFamily: "var(--font-poppins)" }}
+            >
               {title}
             </h1>
+            <p className="mb-8 max-w-2xl text-lg font-light leading-relaxed text-slate-600 dark:text-slate-300">
+              {shortDesc}
+            </p>
+            <div className="flex flex-wrap items-center gap-4">
+              <Link
+                href={`/${locale}/contact`}
+                className="inline-flex items-center gap-2 rounded-full bg-violet-600 px-6 py-3 text-[12px] font-bold uppercase tracking-[0.14em] text-white shadow-[0_14px_30px_rgba(124,58,237,0.35)] transition-all hover:bg-violet-500"
+              >
+                {isId ? "Konsultasi Gratis" : "Free Consultation"}
+                <Icon name="ArrowRight" size={14} />
+              </Link>
+              {entry.products && entry.products.length > 0 && (
+                <a
+                  href="#produk"
+                  className="inline-flex items-center gap-2 rounded-full border border-slate-200 px-6 py-3 text-[12px] font-bold uppercase tracking-[0.14em] text-slate-600 transition-all hover:border-violet-300 hover:text-violet-700 dark:border-white/15 dark:text-slate-300 dark:hover:border-violet-400/50 dark:hover:text-white"
+                >
+                  {isId ? "Lihat Produknya" : "See the Products"}
+                </a>
+              )}
+            </div>
           </AnimateOnView>
 
-          {/* Feature Image (Compact) */}
-          <AnimateOnView delay={200} className="relative aspect-[21/9] rounded-3xl overflow-hidden border border-slate-100 shadow-xl shadow-slate-200/50">
-             <Image 
-               src={serviceDetailHero}
-               alt={title}
-               fill
-               className="object-cover opacity-90"
-             />
-             <div className="absolute inset-0 bg-gradient-to-t from-white/10 to-transparent" />
+          {/* Gambar hero */}
+          <AnimateOnView delay={200} className="relative mt-10 aspect-[21/9] overflow-hidden rounded-3xl border border-slate-100 shadow-xl shadow-slate-200/50 dark:border-white/10 dark:shadow-black/40">
+            <Image
+              src={serviceDetailHero}
+              alt={title}
+              fill
+              className="object-cover opacity-90 dark:opacity-75"
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-black/10 to-transparent dark:from-black/30" />
           </AnimateOnView>
         </header>
 
-        {/* LONG NARRATIVE SECTION */}
+        {/* APA ITU LAYANAN INI? — penjelasan bahasa sederhana */}
         <section className="mb-20">
-           <AnimateOnView delay={300}>
-              <div className="text-slate-600 text-lg md:text-xl font-light leading-relaxed mb-10 space-y-8">
-                 <RichTextContent
-                   value={content}
-                   className="portable-text-container prose prose-violet max-w-none prose-p:leading-relaxed"
-                   fallback={<p>{desc}</p>}
-                 />
-                  
-                  {/* Supplementary Narrative */}
-                  <p className="text-slate-400 text-base italic border-l-2 border-violet-100 pl-6 py-2">
-                    {locale === "id" 
-                      ? "Kami percaya bahwa setiap solusi digital haruslah menjadi investasi strategis, bukan sekadar pelengkap operasional. Dengan pendekatan yang fokus pada skalabilitas dan keamanan, kami memastikan layanan ini mampu berevolusi seiring dengan pertumbuhan target bisnis Anda."
-                      : "We believe every digital solution should be a strategic investment, not just an operational addition. With a focus on scalability and security, we ensure this service evolves alongside your business growth targets."}
-                  </p>
-                  
-                  <p>
-                    {locale === "id"
-                      ? "Melalui metodologi yang tajam, tim kami menggali potensi terdalam dari kebutuhan Anda, menggabungkan desain yang berpusat pada pengguna dengan performa teknis kelas dunia. Hasilnya adalah sebuah ekosistem digital yang responsif, efisien, dan siap menghadapi tantangan pasar yang dinamis."
-                      : "Through a sharp methodology, our team extracts the deepest potential of your needs, combining user-centric design with world-class technical performance. The result is a digital ecosystem that is responsive, efficient, and ready to face dynamic market challenges."}
-                  </p>
-              </div>
-           </AnimateOnView>
+          <AnimateOnView>
+            <h2 className="mb-6 text-xs font-bold uppercase tracking-widest text-violet-600 dark:text-violet-400">
+              {isId ? `Apa itu ${title}?` : `What is ${title}?`}
+            </h2>
+            <div className="space-y-6 text-lg font-light leading-relaxed text-slate-600 dark:text-slate-300">
+              <RichTextContent
+                value={content}
+                className="portable-text-container prose prose-violet max-w-none prose-p:leading-relaxed dark:prose-invert"
+                fallback={<p>{desc}</p>}
+              />
+            </div>
+          </AnimateOnView>
         </section>
 
-        {/* PRODUCTS & PLATFORMS */}
-        {entry.products && entry.products.length > 0 && (
-          <section className="mb-24">
+        {/* COCOK UNTUK SIAPA? */}
+        {audience.length > 0 && (
+          <section className="mb-20">
             <AnimateOnView>
-              <h4 className="text-xs font-bold text-violet-600 uppercase tracking-widest mb-10 flex items-center gap-2">
-                <span className="w-1.5 h-1.5 rounded-full bg-violet-600" />
-                {locale === "id" ? "Produk & Platform" : "Products & Platforms"}
-              </h4>
+              <h2 className="mb-3 text-xs font-bold uppercase tracking-widest text-violet-600 dark:text-violet-400">
+                {isId ? "Layanan Ini Cocok untuk Siapa?" : "Who Is This Service For?"}
+              </h2>
+              <p className="mb-8 text-sm text-slate-400 dark:text-white/40">
+                {isId ? "Cocokkan dengan kondisi Anda — kalau salah satu terasa familiar, layanan ini untuk Anda." : "Match it with your situation — if any of these feels familiar, this service is for you."}
+              </p>
+            </AnimateOnView>
+            <div className="grid gap-3 sm:grid-cols-2">
+              {audience.map((item, i) => (
+                <AnimateOnView key={i} delay={i * 60}>
+                  <div className="flex h-full items-start gap-3 rounded-2xl border border-slate-100 bg-white p-5 dark:border-white/10 dark:bg-white/[0.03]">
+                    <div className="mt-0.5 flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-violet-600/10 text-violet-600 dark:bg-violet-500/15 dark:text-violet-300">
+                      <Icon name="Check" size={13} />
+                    </div>
+                    <p className="text-[14.5px] leading-relaxed text-slate-700 dark:text-slate-200">{item}</p>
+                  </div>
+                </AnimateOnView>
+              ))}
+            </div>
+          </section>
+        )}
+
+        {/* PRODUK & PLATFORM */}
+        {entry.products && entry.products.length > 0 && (
+          <section id="produk" className="mb-20 scroll-mt-24">
+            <AnimateOnView>
+              <h2 className="mb-3 text-xs font-bold uppercase tracking-widest text-violet-600 dark:text-violet-400">
+                {isId ? "Produk & Platform di Layanan Ini" : "Products & Platforms in This Service"}
+              </h2>
+              <p className="mb-8 text-sm text-slate-400 dark:text-white/40">
+                {isId ? "Beberapa pilihan yang tersedia — klik untuk melihat detailnya." : "The available options — click to see the details."}
+              </p>
             </AnimateOnView>
 
-            <div className="space-y-10">
+            <div className="space-y-6">
               {entry.products.map((product, pIdx) => (
-                <AnimateOnView key={product.name} delay={pIdx * 80}>
-                  <div className="rounded-[2rem] border border-slate-100 bg-white p-8 md:p-10 shadow-[0_10px_40px_rgba(0,0,0,0.04)]">
+                <AnimateOnView key={product.name} delay={pIdx * 60}>
+                  <div className="rounded-[2rem] border border-slate-100 bg-white p-8 shadow-[0_10px_40px_rgba(0,0,0,0.04)] dark:border-white/10 dark:bg-white/[0.04] dark:shadow-black/20 md:p-10">
                     <div className="flex flex-col gap-6 md:flex-row md:items-start">
-                      <div className="flex h-14 w-14 shrink-0 items-center justify-center rounded-2xl bg-violet-50 text-violet-600">
+                      <div className="flex h-14 w-14 shrink-0 items-center justify-center rounded-2xl bg-violet-50 text-violet-600 dark:bg-violet-500/15 dark:text-violet-300">
                         <Icon name={product.icon} size={26} strokeWidth={1.75} />
                       </div>
                       <div className="min-w-0 flex-1">
                         <div className="mb-1 flex items-center gap-3">
-                          <span className="text-[10px] font-mono font-bold text-violet-400">{String(pIdx + 1).padStart(2, "0")}</span>
-                          <h3 className="text-xl md:text-2xl font-bold text-slate-900 tracking-tight" style={{ fontFamily: "var(--font-poppins)" }}>
-                            {locale === "id" ? product.name : product.nameEn}
+                          <span className="font-mono text-[10px] font-bold text-violet-400">{String(pIdx + 1).padStart(2, "0")}</span>
+                          <h3
+                            className="text-xl font-bold tracking-tight text-slate-900 md:text-2xl dark:text-white"
+                            style={{ fontFamily: "var(--font-poppins)" }}
+                          >
+                            {isId ? product.name : product.nameEn}
                           </h3>
                         </div>
-                        <p className="text-[13px] font-semibold text-violet-600 mb-4">
-                          {locale === "id" ? product.tagline : product.taglineEn}
+                        <p className="mb-4 text-[13px] font-semibold text-violet-600 dark:text-violet-300">
+                          {isId ? product.tagline : product.taglineEn}
                         </p>
-                        <p className="text-slate-500 text-[15px] leading-relaxed mb-6 max-w-2xl">
-                          {locale === "id" ? product.description : product.descriptionEn}
+                        <p className="mb-6 max-w-2xl text-[15px] leading-relaxed text-slate-500 dark:text-slate-300">
+                          {isId ? product.description : product.descriptionEn}
                         </p>
 
                         <div className="grid gap-2.5 sm:grid-cols-2">
-                          {(locale === "id" ? product.capabilities : product.capabilitiesEn).map((cap) => (
-                            <div key={cap} className="flex items-start gap-2.5 rounded-xl bg-slate-50/70 border border-slate-100 px-3.5 py-2.5">
-                              <div className="mt-0.5 text-violet-500 shrink-0">
+                          {(isId ? product.capabilities : product.capabilitiesEn).map((cap) => (
+                            <div key={cap} className="flex items-start gap-2.5 rounded-xl border border-slate-100 bg-slate-50/70 px-3.5 py-2.5 dark:border-white/5 dark:bg-white/[0.03]">
+                              <div className="mt-0.5 shrink-0 text-violet-500 dark:text-violet-300">
                                 <Icon name="Check" size={12} />
                               </div>
-                              <span className="text-[12.5px] leading-relaxed text-slate-600">{cap}</span>
+                              <span className="text-[12.5px] leading-relaxed text-slate-600 dark:text-slate-300">{cap}</span>
                             </div>
                           ))}
                         </div>
@@ -149,9 +202,9 @@ export default async function ServiceDetailPage({ params }: Props) {
                         {product.href && (
                           <Link
                             href={`/${locale}${product.href}`}
-                            className="mt-7 inline-flex items-center gap-2 rounded-full border border-violet-200 bg-violet-50 px-5 py-2.5 text-[11px] font-bold uppercase tracking-[0.14em] text-violet-700 transition-all hover:bg-violet-600 hover:text-white hover:border-violet-600"
+                            className="mt-7 inline-flex items-center gap-2 rounded-full border border-violet-200 bg-violet-50 px-5 py-2.5 text-[11px] font-bold uppercase tracking-[0.14em] text-violet-700 transition-all hover:border-violet-600 hover:bg-violet-600 hover:text-white dark:border-violet-400/30 dark:bg-violet-500/10 dark:text-violet-200 dark:hover:bg-violet-600 dark:hover:text-white"
                           >
-                            {locale === "id" ? "Lihat Halaman Lengkap" : "View Full Page"}
+                            {isId ? "Lihat Halaman Lengkap" : "View Full Page"}
                             <Icon name="ArrowRight" size={13} />
                           </Link>
                         )}
@@ -164,110 +217,159 @@ export default async function ServiceDetailPage({ params }: Props) {
           </section>
         )}
 
-        {/* CAPABILITIES & ADVANTAGES GRID */}
-        <div className="grid md:grid-cols-2 gap-16 border-t border-slate-100 pt-20 mb-24">
-           <AnimateOnView delay={400}>
-              <h4 className="text-xs font-bold text-violet-600 uppercase tracking-widest mb-8 flex items-center gap-2">
-                <span className="w-1.5 h-1.5 rounded-full bg-violet-600" />
-                {locale === "id" ? "Keunggulan Strategis" : "Key Strategic Benefits"}
-              </h4>
-              <div className="space-y-8">
-                 {[
-                   { t: locale === "id" ? "Metodologi Teruji" : "Proven Methodology", d: locale === "id" ? "Proses kerja yang transparan dan terukur dari awal hingga akhir." : "Transparent and measurable workflow from start to finish." },
-                   { t: locale === "id" ? "Skalabilitas Tinggi" : "High Scalability", d: locale === "id" ? "Solusi yang dirancang untuk tumbuh bersama volume bisnis Anda." : "Solutions designed to scale with your business volume." },
-                   { t: locale === "id" ? "Dukungan Berkelanjutan" : "Continuous Support", d: locale === "id" ? "Pemeliharaan rutin dan respons cepat untuk keamanan sistem." : "Routine maintenance and fast response for system security." }
-                 ].map((adv, i) => (
-                   <div key={i} className="group">
-                      <h5 className="text-base font-bold text-slate-900 mb-2 group-hover:text-violet-600 transition-colors">{adv.t}</h5>
-                      <p className="text-sm text-slate-400 font-light leading-relaxed">{adv.d}</p>
-                   </div>
-                 ))}
-              </div>
-           </AnimateOnView>
+        {/* CARA KAMI BEKERJA — langkah sederhana */}
+        {processSteps.length > 0 && (
+          <section className="mb-20">
+            <AnimateOnView>
+              <h2 className="mb-3 text-xs font-bold uppercase tracking-widest text-violet-600 dark:text-violet-400">
+                {isId ? "Cara Kami Bekerja" : "How We Work"}
+              </h2>
+              <p className="mb-8 text-sm text-slate-400 dark:text-white/40">
+                {isId ? "Prosesnya sederhana dan transparan — Anda tahu apa yang terjadi di setiap langkah." : "The process is simple and transparent — you know what happens at every step."}
+              </p>
+            </AnimateOnView>
 
-           <AnimateOnView delay={500}>
-              <h4 className="text-xs font-bold text-slate-400 uppercase tracking-widest mb-8 flex items-center gap-2">
-                <span className="w-1.5 h-1.5 rounded-full bg-slate-300" />
-                {locale === "id" ? "Output Layanan" : "Service Deliverables"}
-              </h4>
-              <ul className="space-y-3">
-                 {features.map((f: string) => (
-                   <li key={f} className="flex items-center gap-3 p-4 rounded-2xl bg-slate-50/50 border border-slate-100 text-[13px] text-slate-600 hover:bg-white hover:border-violet-100 transition-all">
-                      <div className="text-violet-600 shrink-0">
-                         <Icon name="Check" size={14} />
-                      </div>
-                      <span className="font-medium">{f}</span>
-                   </li>
-                 ))}
-              </ul>
-           </AnimateOnView>
-        </div>
-
-        {/* NARRATIVE REFERENCES: Success stories from Portfolio */}
-        {relevantPortfolio.length > 0 && (
-           <section className="border-t border-slate-100 pt-20">
-              <AnimateOnView className="mb-14">
-                 <h2 className="text-xs font-bold text-slate-400 uppercase tracking-widest mb-4">
-                    {locale === "id" ? "Bukti Kualitas" : "Proof of Excellence"}
-                 </h2>
-                 <h3 className="text-3xl font-medium text-slate-900 tracking-tight leading-tight mb-6" style={{ fontFamily: "var(--font-poppins)" }}>
-                    {locale === "id" ? `${title} yang Berhasil Kami Wujudkan.` : `Successfully delivered ${title} projects.`}
-                 </h3>
-                 <p className="text-slate-400 text-sm max-w-2xl leading-relaxed">
-                    {locale === "id" 
-                      ? "Setiap proyek di bawah ini mewakili dedikasi kami untuk memberikan solusi yang berdampak langsung bagi bisnis klien. Berikut adalah beberapa referensi terpilih yang mencerminkan kapabilitas kami."
-                      : "Each project below represents our dedication to delivering solutions that directly impact our clients' business. Here are selected references reflecting our capabilities."}
-                 </p>
-              </AnimateOnView>
-
-              <div className="grid gap-10">
-                 {relevantPortfolio.map((project, idx) => (
-                    <AnimateOnView key={project.id} delay={idx * 100}>
-                       <Link href={`/${locale}/portfolio/${project.slug}`} className="group grid md:grid-cols-12 gap-8 items-center p-6 rounded-[2rem] border border-slate-100 hover:border-violet-100 hover:bg-violet-50/10 transition-all">
-                          <div className="md:col-span-4 aspect-[4/3] rounded-2xl overflow-hidden relative shadow-lg">
-                             <Image 
-                               src={project.thumbnail}
-                               alt={project.title}
-                               fill
-                               className="object-cover group-hover:scale-105 transition-transform duration-700"
-                             />
-                          </div>
-                          <div className="md:col-span-7">
-                             <div className="text-[10px] font-bold text-violet-400 uppercase tracking-widest mb-3">{project.client}</div>
-                             <h4 className="text-xl font-bold text-slate-900 group-hover:text-violet-600 mb-3 transition-colors">
-                                {locale === "id" ? project.title : project.titleEn}
-                             </h4>
-                             <p className="text-xs text-slate-400 line-clamp-3 leading-relaxed mb-4">
-                                {locale === "id" ? project.problem : project.problemEn}
-                             </p>
-                             <div className="flex flex-wrap gap-2">
-                                {project.technologies.slice(0, 3).map(t => (
-                                  <span key={t} className="text-[9px] font-bold text-slate-400 uppercase border border-slate-200 px-2 py-0.5 rounded-full">{t}</span>
-                                ))}
-                             </div>
-                          </div>
-                          <div className="md:col-span-1 flex justify-end pr-4">
-                             <div className="w-10 h-10 rounded-full border border-slate-200 flex items-center justify-center text-slate-300 group-hover:text-violet-600 group-hover:border-violet-600 transition-all">
-                                <Icon name="ArrowRight" size={16} />
-                             </div>
-                          </div>
-                       </Link>
-                    </AnimateOnView>
-                 ))}
-              </div>
-              
-              <AnimateOnView delay={300} className="mt-12 text-center">
-                 <Link href={`/${locale}/portfolio`} className="text-xs font-bold text-slate-400 uppercase tracking-widest hover:text-violet-600 transition-colors">
-                    {locale === "id" ? "Lihat Seluruh Arsip Portofolio →" : "View Entire Portfolio Archive →"}
-                 </Link>
-              </AnimateOnView>
-           </section>
+            <div className="space-y-4">
+              {processSteps.map((step, i) => (
+                <AnimateOnView key={i} delay={i * 60}>
+                  <div className="flex gap-5 rounded-2xl border border-slate-100 bg-white p-6 dark:border-white/10 dark:bg-white/[0.03]">
+                    <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-violet-600 text-sm font-bold text-white">
+                      {i + 1}
+                    </div>
+                    <div className="min-w-0">
+                      <h3 className="mb-1.5 text-[16px] font-bold text-slate-900 dark:text-white">
+                        {isId ? step.title : step.titleEn}
+                      </h3>
+                      <p className="text-[14px] leading-relaxed text-slate-500 dark:text-slate-300">
+                        {isId ? step.desc : step.descEn}
+                      </p>
+                    </div>
+                  </div>
+                </AnimateOnView>
+              ))}
+            </div>
+          </section>
         )}
 
-        <footer className="mt-32 border-t border-slate-50 pt-12 text-center">
-           <AnimateOnView className="opacity-10 select-none pointer-events-none">
-              <span className="text-[9px] font-bold uppercase tracking-[1.5em]">VIOLET GLOBAL INDONESIA • {new Date().getFullYear()}</span>
-           </AnimateOnView>
+        {/* YANG ANDA DAPATKAN */}
+        <section className="mb-20">
+          <AnimateOnView>
+            <h2 className="mb-3 text-xs font-bold uppercase tracking-widest text-violet-600 dark:text-violet-400">
+              {isId ? "Yang Anda Dapatkan" : "What You Get"}
+            </h2>
+          </AnimateOnView>
+          <ul className="mt-6 grid gap-3 sm:grid-cols-2">
+            {features.map((f: string) => (
+              <li key={f} className="flex items-center gap-3 rounded-2xl border border-slate-100 bg-white p-4 text-[13px] text-slate-600 transition-all hover:border-violet-100 dark:border-white/10 dark:bg-white/[0.03] dark:text-slate-300 dark:hover:border-violet-400/30">
+                <div className="shrink-0 text-violet-600 dark:text-violet-300">
+                  <Icon name="Check" size={14} />
+                </div>
+                <span className="font-medium">{f}</span>
+              </li>
+            ))}
+          </ul>
+        </section>
+
+        {/* REFERENSI PORTFOLIO */}
+        {relevantPortfolio.length > 0 && (
+          <section className="border-t border-slate-100 pt-16 dark:border-white/5">
+            <AnimateOnView className="mb-10">
+              <h2 className="mb-4 text-xs font-bold uppercase tracking-widest text-slate-400 dark:text-white/40">
+                {isId ? "Bukti Kualitas" : "Proof of Excellence"}
+              </h2>
+              <h3
+                className="mb-6 text-3xl font-medium leading-tight tracking-tight text-slate-900 dark:text-white"
+                style={{ fontFamily: "var(--font-poppins)" }}
+              >
+                {isId ? `Karya ${title} yang Pernah Kami Kerjakan.` : `Successfully delivered ${title} projects.`}
+              </h3>
+            </AnimateOnView>
+
+            <div className="grid gap-8">
+              {relevantPortfolio.map((project, idx) => (
+                <AnimateOnView key={project.id} delay={idx * 60}>
+                  <Link
+                    href={`/${locale}/portfolio/${project.slug}`}
+                    className="group grid items-center gap-6 rounded-[2rem] border border-slate-100 p-6 transition-all hover:border-violet-100 hover:bg-violet-50/10 dark:border-white/10 dark:hover:border-violet-400/30 dark:hover:bg-white/[0.03] md:grid-cols-12 md:gap-8"
+                  >
+                    <div className="relative aspect-[4/3] overflow-hidden rounded-2xl shadow-lg md:col-span-4">
+                      <Image
+                        src={project.thumbnail}
+                        alt={project.title}
+                        fill
+                        className="object-cover transition-transform duration-700 group-hover:scale-105"
+                      />
+                    </div>
+                    <div className="md:col-span-7">
+                      <div className="mb-3 text-[10px] font-bold uppercase tracking-widest text-violet-400">{project.client}</div>
+                      <h4 className="mb-3 text-xl font-bold text-slate-900 transition-colors group-hover:text-violet-600 dark:text-white dark:group-hover:text-violet-300">
+                        {isId ? project.title : project.titleEn}
+                      </h4>
+                      <p className="mb-4 line-clamp-3 text-xs leading-relaxed text-slate-400 dark:text-slate-400">
+                        {isId ? project.problem : project.problemEn}
+                      </p>
+                      <div className="flex flex-wrap gap-2">
+                        {project.technologies.slice(0, 3).map((t) => (
+                          <span key={t} className="rounded-full border border-slate-200 px-2 py-0.5 text-[9px] font-bold uppercase text-slate-400 dark:border-white/15 dark:text-white/50">
+                            {t}
+                          </span>
+                        ))}
+                      </div>
+                    </div>
+                    <div className="flex justify-end pr-4 md:col-span-1">
+                      <div className="flex h-10 w-10 items-center justify-center rounded-full border border-slate-200 text-slate-300 transition-all group-hover:border-violet-600 group-hover:text-violet-600 dark:border-white/15 dark:text-white/40 dark:group-hover:border-violet-400 dark:group-hover:text-violet-300">
+                        <Icon name="ArrowRight" size={16} />
+                      </div>
+                    </div>
+                  </Link>
+                </AnimateOnView>
+              ))}
+            </div>
+
+            <AnimateOnView delay={300} className="mt-10 text-center">
+              <Link
+                href={`/${locale}/portfolio`}
+                className="text-xs font-bold uppercase tracking-widest text-slate-400 transition-colors hover:text-violet-600 dark:hover:text-violet-300"
+              >
+                {isId ? "Lihat Seluruh Portfolio →" : "View Entire Portfolio →"}
+              </Link>
+            </AnimateOnView>
+          </section>
+        )}
+
+        {/* CTA PENUTUP */}
+        <section className="mt-20">
+          <AnimateOnView>
+            <div className="relative overflow-hidden rounded-[2rem] bg-[#0a0810] px-8 py-14 text-center dark:border dark:border-white/10">
+              <div className="absolute -top-24 left-1/2 h-64 w-[36rem] -translate-x-1/2 rounded-full bg-violet-600/20 blur-[100px]" />
+              <div className="relative">
+                <h2
+                  className="mb-4 text-2xl font-bold tracking-tight text-white md:text-3xl"
+                  style={{ fontFamily: "var(--font-poppins)" }}
+                >
+                  {isId ? `Masih ragu ${title} cocok untuk Anda?` : `Not sure ${title} is right for you?`}
+                </h2>
+                <p className="mx-auto mb-8 max-w-md text-[15px] leading-relaxed text-white/50">
+                  {isId
+                    ? "Ceritakan kebutuhan Anda — konsultasi pertama gratis, tanpa komitmen apa pun."
+                    : "Tell us what you need — the first consultation is free, with no commitment."}
+                </p>
+                <Link
+                  href={`/${locale}/contact`}
+                  className="inline-flex items-center gap-2 rounded-full bg-violet-600 px-7 py-3.5 text-[12px] font-bold uppercase tracking-[0.14em] text-white shadow-[0_14px_30px_rgba(124,58,237,0.4)] transition-all hover:bg-violet-500"
+                >
+                  {isId ? "Mulai Konsultasi Gratis" : "Start Free Consultation"}
+                  <Icon name="ArrowRight" size={14} />
+                </Link>
+              </div>
+            </div>
+          </AnimateOnView>
+        </section>
+
+        <footer className="mt-16 border-t border-slate-50 pt-10 text-center dark:border-white/5">
+          <AnimateOnView className="pointer-events-none select-none opacity-10">
+            <span className="text-[9px] font-bold uppercase tracking-[1.5em]">VIOLET GLOBAL INDONESIA • {new Date().getFullYear()}</span>
+          </AnimateOnView>
         </footer>
 
       </div>
