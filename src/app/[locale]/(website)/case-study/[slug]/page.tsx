@@ -3,6 +3,7 @@ import { notFound } from "next/navigation";
 import { caseStudies } from "@/lib/data/case-studies";
 import type { CaseStudyItem } from "@/lib/data/case-studies";
 import { PortableText } from "@portabletext/react";
+import { Icon } from "@/components/ui/Icon";
 
 // `explanation`/`explanationEn` hold Portable Text blocks or a string, `image`
 // a local asset path, and `isContinuation` marks a continuation page. These
@@ -164,8 +165,13 @@ export default async function CaseStudyDetailPage({ params }: Props) {
     title: isId ? "Daftar Isi" : "Table of Contents",
   };
 
+  // Rangkuman gratis: halaman konten pertama. Sisanya terkunci di balik
+  // gerbang berbayar (membership / beli per riset).
+  const FREE_CONTENT_PAGES = 1;
   const contentPages = buildContentPages(study, locale);
-  const allPages = [coverPage, tocPage, ...contentPages];
+  const freeContentPages = contentPages.slice(0, FREE_CONTENT_PAGES);
+  const lockedContentPages = contentPages.slice(FREE_CONTENT_PAGES);
+  const allPages = [coverPage, tocPage, ...freeContentPages];
   const spreads = chunkPages(allPages, 2);
 
   return (
@@ -306,6 +312,95 @@ export default async function CaseStudyDetailPage({ params }: Props) {
           </section>
         ))}
       </main>
+
+      {/* ── Paywall: akses penuh berbayar ── */}
+      <section className="relative border-t-2 border-dashed border-[#8a7a65]/30 bg-[#f3ecdd]">
+        <div
+          className="pointer-events-none absolute inset-0 opacity-[0.35]"
+          style={{
+            backgroundImage:
+              "linear-gradient(rgba(122,104,80,0.05) 1px, transparent 1px), linear-gradient(90deg, rgba(122,104,80,0.04) 1px, transparent 1px)",
+            backgroundSize: "30px 30px, 30px 30px",
+          }}
+        />
+        <div className="relative mx-auto max-w-3xl px-6 py-20 text-center lg:py-28">
+          <div className="mx-auto mb-8 flex h-16 w-16 items-center justify-center rounded-full border border-[#8a7a65]/25 bg-[#fbf7ef] text-[#5a4b3d] shadow-[0_10px_26px_rgba(83,62,41,0.12),inset_0_1px_0_rgba(255,255,255,0.8)]">
+            <Icon name="Lock" size={26} strokeWidth={1.75} />
+          </div>
+
+          <p className="research-hand text-[11px] font-semibold uppercase tracking-[0.3em] text-[#8a7a65]">
+            {isId ? "Akses Penuh Terkunci" : "Full Access Locked"}
+          </p>
+          <h2 className="research-hand mt-4 text-3xl font-semibold tracking-[-0.03em] text-[#2f261e] md:text-5xl">
+            {isId ? "Buka Hasil Riset Lengkap" : "Unlock the Full Research"}
+          </h2>
+          <p className="research-hand mx-auto mt-6 max-w-xl text-[15px] leading-8 text-[#55493d]">
+            {isId
+              ? `Yang Anda baca saat ini adalah rangkuman gratis. ${lockedContentPages.length} halaman riset selanjutnya — temuan, analisis, dan rekomendasi lengkap — tersedia untuk member atau melalui pembelian per riset.`
+              : `What you just read is the free summary. The next ${lockedContentPages.length} research pages — complete findings, analysis, and recommendations — are available to members or via single-research purchase.`}
+          </p>
+
+          {lockedContentPages.length > 0 && (
+            <div className="mx-auto mt-10 max-w-md rounded-2xl border border-[#8a7a65]/20 bg-[#fbf7ef]/80 px-6 py-5 text-left shadow-[inset_0_1px_0_rgba(255,255,255,0.7)]">
+              <p className="research-hand mb-3 text-[10px] font-semibold uppercase tracking-[0.24em] text-[#8a7a65]">
+                {isId ? "Di dalam versi lengkap" : "Inside the full version"}
+              </p>
+              <ul className="space-y-2">
+                {lockedContentPages.filter((item) => !item.isContinuation).slice(0, 5).map((item) => (
+                  <li key={item.id} className="flex items-center gap-2.5 text-[13px] text-[#55493d]/80">
+                    <span className="text-[#a08b6f]">
+                      <Icon name="Lock" size={12} />
+                    </span>
+                    <span className="research-hand truncate">{item.title}</span>
+                  </li>
+                ))}
+                {lockedContentPages.filter((item) => !item.isContinuation).length > 5 && (
+                  <li className="research-hand pl-[22px] text-[12px] italic text-[#8a7a65]">
+                    {isId ? "…dan masih banyak lagi" : "…and more"}
+                  </li>
+                )}
+              </ul>
+            </div>
+          )}
+
+          <div className="mt-10 grid gap-4 sm:grid-cols-2">
+            <Link
+              href={`/${locale}/contact`}
+              className="research-hand group rounded-2xl border border-[#3d3125] bg-[linear-gradient(180deg,#3d3125,#2b2118)] px-6 py-5 text-center shadow-[0_14px_30px_rgba(60,45,30,0.25)] transition-transform duration-300 hover:-translate-y-0.5"
+            >
+              <span className="block text-[10px] font-semibold uppercase tracking-[0.24em] text-[#c9b28f]">
+                {isId ? "Pilihan 1" : "Option 1"}
+              </span>
+              <span className="mt-1.5 block text-lg font-semibold text-[#fbf7ef]">
+                {isId ? "Membership" : "Membership"}
+              </span>
+              <span className="mt-1 block text-[12px] leading-5 text-[#c9b28f]/85">
+                {isId ? "Akses tak terbatas ke seluruh arsip riset" : "Unlimited access to the entire research archive"}
+              </span>
+            </Link>
+            <Link
+              href={`/${locale}/contact`}
+              className="research-hand group rounded-2xl border border-[#8a7a65]/35 bg-[#fbf7ef] px-6 py-5 text-center shadow-[0_14px_30px_rgba(83,62,41,0.10),inset_0_1px_0_rgba(255,255,255,0.8)] transition-transform duration-300 hover:-translate-y-0.5"
+            >
+              <span className="block text-[10px] font-semibold uppercase tracking-[0.24em] text-[#8a7a65]">
+                {isId ? "Pilihan 2" : "Option 2"}
+              </span>
+              <span className="mt-1.5 block text-lg font-semibold text-[#2f261e]">
+                {isId ? "Beli Riset Ini" : "Buy This Research"}
+              </span>
+              <span className="mt-1 block text-[12px] leading-5 text-[#55493d]/80">
+                {isId ? "Sekali bayar untuk satu dokumen riset" : "One-time purchase for a single research document"}
+              </span>
+            </Link>
+          </div>
+
+          <p className="research-hand mt-8 text-[12px] text-[#8a7a65]">
+            {isId
+              ? "Tertarik menjadi member atau membeli riset ini? Hubungi tim kami melalui halaman kontak."
+              : "Interested in membership or purchasing this research? Reach our team through the contact page."}
+          </p>
+        </div>
+      </section>
       <style>{`
         .research-book {
           background:

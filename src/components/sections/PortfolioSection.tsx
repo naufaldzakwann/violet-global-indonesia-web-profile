@@ -22,6 +22,9 @@ export async function PortfolioSection({ limit, locale }: { limit?: number; loca
 
   const displayed = limit ? portfolios.slice(0, limit) : portfolios;
 
+  // Sembunyikan section di halaman depan saat belum ada proyek.
+  if (displayed.length === 0) return null;
+
 
 
   return (

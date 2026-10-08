@@ -29,7 +29,10 @@ vi.mock("next/navigation", () => ({
 
 vi.mock("@/lib/data/services", async () => {
   const fixtures = await import("./fixtures/rich-text-fixtures");
-  return { services: fixtures.serviceFixtures };
+  return {
+    services: fixtures.serviceFixtures,
+    getCategoryLabel: (category: string) => category,
+  };
 });
 
 vi.mock("@/lib/data/portfolio", () => ({ portfolios: [] }));

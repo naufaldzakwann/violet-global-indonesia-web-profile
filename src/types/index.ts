@@ -7,6 +7,20 @@ import type { PortableTextBlock } from "@portabletext/react";
 export type RichText = string | PortableTextBlock[];
 
 // ─── Service ───────────────────────────────────────────────────────────────
+export interface ServiceProduct {
+  icon: string;
+  name: string;
+  nameEn: string;
+  tagline: string;
+  taglineEn: string;
+  description: string;
+  descriptionEn: string;
+  capabilities: string[];
+  capabilitiesEn: string[];
+  /** Path internal tanpa prefix locale, mis. "/smart-waste-management". */
+  href?: string;
+}
+
 export interface Service {
   id: string;
   slug: string;
@@ -20,12 +34,17 @@ export interface Service {
   features: string[];
   featuresEn: string[];
   category: ServiceCategory;
+  /** Produk/platform di dalam kategori layanan (halaman detail). */
+  products?: ServiceProduct[];
   /** Rich text opsional yang dirender di halaman detail layanan. */
   content?: RichText;
   contentEn?: RichText;
 }
 
 export type ServiceCategory =
+  | "it-develop"
+  | "consultan-service"
+  | "green-energy-tech"
   | "web-app"
   | "consulting"
   | "cybersecurity"

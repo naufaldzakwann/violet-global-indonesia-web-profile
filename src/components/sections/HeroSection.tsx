@@ -12,6 +12,7 @@ import { GridScan } from "@/components/ui/GridScan";
 import { services } from "@/lib/data/services";
 
 const HOME_HERO_UNLOCK_EVENT = "violet:home-hero-unlock";
+// Tiga pilar layanan — posisi pop-up di desktop (mobile: 2 kiri, 1 kanan).
 const HERO_POPUP_POSITIONS = [
   {
     className: "left-[59%] top-[31%] sm:left-[63%] sm:top-[31%] lg:left-[72%] lg:top-[27%]",
@@ -27,11 +28,6 @@ const HERO_POPUP_POSITIONS = [
     className: "left-[60%] top-[58%] sm:left-[64%] sm:top-[58%] lg:left-[73%] lg:top-[57%]",
     fromX: "52px",
     fromY: "-18px",
-  },
-  {
-    className: "left-[68%] top-[70%] sm:left-[72%] sm:top-[69%] lg:left-[89%] lg:top-[69%]",
-    fromX: "-68px",
-    fromY: "-118px",
   },
 ] as const;
 
@@ -309,7 +305,7 @@ export function HeroSection({ isInitiallyUnlocked = false }: { isInitiallyUnlock
 
               <div className="pointer-events-none absolute inset-0 z-40">
                 {showServicePopups
-                  ? [2, 3].map((index) => {
+                  ? [2].map((index) => {
                       const service = services[(activeServiceOffset + index) % services.length];
 
                       return (
@@ -318,9 +314,7 @@ export function HeroSection({ isInitiallyUnlocked = false }: { isInitiallyUnlock
                           href={`/${locale}/services/${service.slug}`}
                           className={cn(
                             "hero-service-popup-card pointer-events-auto absolute !flex !min-w-0 !w-[8.9rem] !px-3 !py-3 !text-[10px] sm:!w-[10.4rem] sm:!text-[11px] md:!w-[13.5rem] md:!px-4 md:!py-3.5 md:!text-[13px]",
-                            index === 2
-                              ? "right-[4%] top-[28%] md:right-[6%] md:top-[24%]"
-                              : "right-[2%] top-[68%] md:right-[4%] md:top-[70%]",
+                            "right-[4%] top-[28%] md:right-[6%] md:top-[24%]",
                           )}
                         >
                           {locale === "id" ? service.title : service.titleEn}
@@ -360,21 +354,6 @@ export function HeroSection({ isInitiallyUnlocked = false }: { isInitiallyUnlock
           </h1>
 
           <div className="flex w-full max-w-[26rem] self-center items-stretch justify-center gap-3 sm:max-w-[30rem] sm:gap-4 md:mt-[40px] md:max-w-[34rem] lg:mt-0 lg:w-auto lg:max-w-none lg:self-start lg:justify-start">
-            {/* Smart Waste Management Link - Primary */}
-            <Link
-              href={`/${locale}/smart-waste-management`}
-              className="group relative flex min-w-0 flex-1 items-center justify-center gap-2 overflow-hidden rounded-full border border-violet-500/50 bg-violet-600/10 px-4 py-3 text-center text-[10px] font-bold tracking-[0.14em] text-white transition-all hover:bg-violet-600 sm:gap-3 sm:px-6 sm:text-[11px] md:py-3.5 md:text-[12px] lg:h-16 lg:flex-none lg:justify-start lg:gap-4 lg:px-8 lg:text-[13px] lg:tracking-[0.2em]"
-            >
-              <span className="relative z-10 whitespace-nowrap">
-                {locale === "id" ? "LIHAT PROJECT" : "VIEW PROJECTS"}
-              </span>
-              <div className="relative z-10 flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-white/10 transition-transform duration-500 group-hover:translate-x-1 sm:h-6 sm:w-6">
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round">
-                  <path d="M5 12h14M12 5l7 7-7 7" />
-                </svg>
-              </div>
-            </Link>
-
             {/* Contact Link - Secondary */}
             <Link
               href={`/${locale}/contact`}

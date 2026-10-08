@@ -73,6 +73,45 @@ export function PortfolioContent({ projects, locale, categoryOptions }: Portfoli
       : projects.filter((project) => project.category === activeFilter);
   const activeFilterOption = categoryOptions.find((category) => category.value === activeFilter) ?? categoryOptions[0];
 
+  // Belum ada proyek terdaftar — tampilkan empty state yang rapi.
+  if (projects.length === 0) {
+    return (
+      <section className="portfolio-content-shell bg-[linear-gradient(180deg,#fcfbf8_0%,#f4efe8_46%,#f7f3ee_100%)]">
+        <div className="mx-auto w-full max-w-[92rem] px-4 py-16 sm:px-6 lg:px-8 lg:py-24">
+          <h1 className="portfolio-page-title mb-12 text-4xl font-semibold tracking-[-0.05em] text-black md:text-5xl">Project</h1>
+
+          <div className="portfolio-enter mx-auto max-w-2xl rounded-[1.6rem] border border-black/8 bg-white/72 px-8 py-16 text-center shadow-[0_18px_44px_rgba(15,23,42,0.06),inset_0_1px_0_rgba(255,255,255,0.88)] backdrop-blur-sm sm:px-12">
+            <div className="mx-auto mb-7 flex h-16 w-16 items-center justify-center rounded-2xl border border-black/6 bg-[#f4efe8] text-black/50">
+              <LayoutGrid className="h-7 w-7" strokeWidth={1.5} />
+            </div>
+            <h2 className="mb-3 text-xl font-semibold tracking-tight text-black md:text-2xl" style={{ fontFamily: "var(--font-poppins)" }}>
+              {locale === "id" ? "Portfolio Sedang Diperbarui" : "Portfolio Is Being Updated"}
+            </h2>
+            <p className="mx-auto mb-9 max-w-md text-[14px] leading-relaxed text-black/55">
+              {locale === "id"
+                ? "Kami sedang merapikan arsip proyek agar hanya menampilkan karya nyata terbaik kami. Silakan jelajahi layanan kami atau hubungi tim untuk mendiskusikan kebutuhan proyek Anda."
+                : "We are curating our project archive to showcase only our best real-world work. Explore our services or contact our team to discuss your project needs."}
+            </p>
+            <div className="flex flex-col items-center justify-center gap-3 sm:flex-row">
+              <Link
+                href={`/${locale}/services`}
+                className="inline-flex items-center justify-center rounded-full bg-black px-6 py-3 text-[11px] font-bold uppercase tracking-[0.18em] text-white transition-colors hover:bg-black/80"
+              >
+                {locale === "id" ? "Lihat Layanan" : "View Services"}
+              </Link>
+              <Link
+                href={`/${locale}/contact`}
+                className="inline-flex items-center justify-center rounded-full border border-black/12 bg-white px-6 py-3 text-[11px] font-bold uppercase tracking-[0.18em] text-black/70 transition-colors hover:border-black/30 hover:text-black"
+              >
+                {locale === "id" ? "Hubungi Kami" : "Contact Us"}
+              </Link>
+            </div>
+          </div>
+        </div>
+      </section>
+    );
+  }
+
   const getMosaicClasses = (index: number, total: number) => {
     const isLast = index === total - 1;
     const pos = index % 6;

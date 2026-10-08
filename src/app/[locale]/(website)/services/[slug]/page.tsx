@@ -1,7 +1,7 @@
 import { notFound } from "next/navigation";
 import Link from "next/link";
 import Image from "next/image";
-import { services as staticServices } from "@/lib/data/services";
+import { services as staticServices, getCategoryLabel } from "@/lib/data/services";
 import { portfolios } from "@/lib/data/portfolio";
 import { serviceDetailHero } from "@/lib/data/service-images";
 import { AnimateOnView } from "@/components/ui/AnimateOnView";
@@ -55,7 +55,7 @@ export default async function ServiceDetailPage({ params }: Props) {
             </Link>
             <div className="h-4 w-px bg-slate-200" />
             <div className="text-[10px] font-bold text-slate-400 uppercase tracking-widest">
-              {category.replace('-', ' ')}
+              {getCategoryLabel(category, locale)}
             </div>
           </AnimateOnView>
 
@@ -102,6 +102,67 @@ export default async function ServiceDetailPage({ params }: Props) {
               </div>
            </AnimateOnView>
         </section>
+
+        {/* PRODUCTS & PLATFORMS */}
+        {entry.products && entry.products.length > 0 && (
+          <section className="mb-24">
+            <AnimateOnView>
+              <h4 className="text-xs font-bold text-violet-600 uppercase tracking-widest mb-10 flex items-center gap-2">
+                <span className="w-1.5 h-1.5 rounded-full bg-violet-600" />
+                {locale === "id" ? "Produk & Platform" : "Products & Platforms"}
+              </h4>
+            </AnimateOnView>
+
+            <div className="space-y-10">
+              {entry.products.map((product, pIdx) => (
+                <AnimateOnView key={product.name} delay={pIdx * 80}>
+                  <div className="rounded-[2rem] border border-slate-100 bg-white p-8 md:p-10 shadow-[0_10px_40px_rgba(0,0,0,0.04)]">
+                    <div className="flex flex-col gap-6 md:flex-row md:items-start">
+                      <div className="flex h-14 w-14 shrink-0 items-center justify-center rounded-2xl bg-violet-50 text-violet-600">
+                        <Icon name={product.icon} size={26} strokeWidth={1.75} />
+                      </div>
+                      <div className="min-w-0 flex-1">
+                        <div className="mb-1 flex items-center gap-3">
+                          <span className="text-[10px] font-mono font-bold text-violet-400">{String(pIdx + 1).padStart(2, "0")}</span>
+                          <h3 className="text-xl md:text-2xl font-bold text-slate-900 tracking-tight" style={{ fontFamily: "var(--font-poppins)" }}>
+                            {locale === "id" ? product.name : product.nameEn}
+                          </h3>
+                        </div>
+                        <p className="text-[13px] font-semibold text-violet-600 mb-4">
+                          {locale === "id" ? product.tagline : product.taglineEn}
+                        </p>
+                        <p className="text-slate-500 text-[15px] leading-relaxed mb-6 max-w-2xl">
+                          {locale === "id" ? product.description : product.descriptionEn}
+                        </p>
+
+                        <div className="grid gap-2.5 sm:grid-cols-2">
+                          {(locale === "id" ? product.capabilities : product.capabilitiesEn).map((cap) => (
+                            <div key={cap} className="flex items-start gap-2.5 rounded-xl bg-slate-50/70 border border-slate-100 px-3.5 py-2.5">
+                              <div className="mt-0.5 text-violet-500 shrink-0">
+                                <Icon name="Check" size={12} />
+                              </div>
+                              <span className="text-[12.5px] leading-relaxed text-slate-600">{cap}</span>
+                            </div>
+                          ))}
+                        </div>
+
+                        {product.href && (
+                          <Link
+                            href={`/${locale}${product.href}`}
+                            className="mt-7 inline-flex items-center gap-2 rounded-full border border-violet-200 bg-violet-50 px-5 py-2.5 text-[11px] font-bold uppercase tracking-[0.14em] text-violet-700 transition-all hover:bg-violet-600 hover:text-white hover:border-violet-600"
+                          >
+                            {locale === "id" ? "Lihat Halaman Lengkap" : "View Full Page"}
+                            <Icon name="ArrowRight" size={13} />
+                          </Link>
+                        )}
+                      </div>
+                    </div>
+                  </div>
+                </AnimateOnView>
+              ))}
+            </div>
+          </section>
+        )}
 
         {/* CAPABILITIES & ADVANTAGES GRID */}
         <div className="grid md:grid-cols-2 gap-16 border-t border-slate-100 pt-20 mb-24">

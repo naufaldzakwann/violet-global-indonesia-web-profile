@@ -17,7 +17,7 @@ type LocalizedServiceCard = Service & {
 
 export const metadata: Metadata = {
   title: "Layanan / Services",
-  description: "Temukan semua layanan IT & digital dari Violet Global Indonesia â€” Web Development, Cybersecurity, Digital Marketing, Data Analytics, dan lebih banyak lagi.",
+  description: "Tiga pilar layanan Violet Global Indonesia — IT Develop, Consultan Service, dan Green Energy Tech.",
 };
 
 const getGraphic = (slug: string) => serviceImages[slug] || serviceFallbackImage;
