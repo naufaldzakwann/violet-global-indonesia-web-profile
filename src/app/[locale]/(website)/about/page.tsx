@@ -11,22 +11,49 @@ export default function AboutPage() {
   const missionItems = t.raw("mission.items") as string[];
   const companyOverview = {
     eyebrow: locale === "id" ? "Siapa Kami" : "Who We Are",
-    title: locale === "id" ? "Mitra teknologi yang membangun sistem, brand, dan pertumbuhan bisnis." : "A technology partner that builds systems, brands, and business growth.",
+    title:
+      locale === "id"
+        ? "Mitra terintegrasi — dari teknologi digital hingga energi berkelanjutan."
+        : "An integrated partner — from digital technology to sustainable energy.",
     description:
       locale === "id"
-        ? "Violet Global Indonesia hadir untuk membantu perusahaan bergerak lebih cepat di era digital melalui solusi yang terukur, rapi, and benar-benar relevan dengan kebutuhan bisnis. Kami tidak hanya membuat output yang terlihat baik, tetapi juga merancang fondasi digital yang kuat untuk operasional, pemasaran, dan pengambilan keputusan."
-        : "Violet Global Indonesia helps companies move faster in the digital era through solutions that are measurable, structured, and deeply aligned with business needs. We do not only create polished outputs, but also design strong digital foundations for operations, marketing, and decision-making.",
+        ? "Violet Global Indonesia (VGI) adalah perusahaan teknologi dan solusi energi berkelanjutan yang berdiri sejak 2019. Kami menghadirkan solusi terintegrasi dari hulu ke hilir (upstream to downstream) — menyatukan tiga pilar layanan dalam satu ekosistem pendampingan yang utuh."
+        : "Violet Global Indonesia (VGI) is a technology and sustainable energy solutions company established in 2019. We deliver integrated solutions from upstream to downstream — uniting three service pillars in one complete accompanying ecosystem.",
+    description2:
+      locale === "id"
+        ? "Dari membangun sistem digital, merancang strategi bisnis, hingga mengembangkan proyek energi terbarukan dan pengelolaan sampah — kami mendampingi dari riset dan strategi, pembangunan, sampai operasional, dengan pendekatan berbasis data dan AI."
+        : "From building digital systems and designing business strategy to developing renewable energy and waste management projects — we accompany clients from research and strategy through construction to operations, with a data- and AI-driven approach.",
     points:
       locale === "id"
         ? [
-          "Pendekatan kami menggabungkan strategi, desain, dan teknologi dalam satu alur kerja yang lebih efisien.",
-          "Setiap solusi disusun agar dapat dipakai jangka panjang, mudah dikembangkan, dan jelas dampaknya untuk bisnis.",
+          "Satu mitra untuk seluruh kebutuhan: dari sistem digital, strategi bisnis, hingga proyek energi berkelanjutan.",
+          "Pendekatan end-to-end: riset, strategi, pembangunan, hingga pendampingan operasional.",
+          "Berbasis data & AI — terukur, terstruktur, dan relevan dengan kebutuhan bisnis Anda.",
         ]
         : [
-          "Our approach combines strategy, design, and technology in one more efficient workflow.",
-          "Every solution is built for long-term use, easier growth, and clear business impact.",
+          "One partner for every need: from digital systems and business strategy to sustainable energy projects.",
+          "An end-to-end approach: research, strategy, build, and operational support.",
+          "Data- & AI-driven — measurable, structured, and relevant to your business needs.",
         ],
   };
+
+  const pillars = [
+    {
+      icon: "Cpu",
+      name: locale === "id" ? "IT Development" : "IT Development",
+      desc: locale === "id" ? "Sistem, aplikasi & infrastruktur digital" : "Systems, applications & digital infrastructure",
+    },
+    {
+      icon: "Lightbulb",
+      name: locale === "id" ? "Consulting" : "Consulting",
+      desc: locale === "id" ? "Strategi, market entry & pengembangan bisnis" : "Strategy, market entry & business development",
+    },
+    {
+      icon: "Recycle",
+      name: locale === "id" ? "Sustainable Energy Solutions" : "Sustainable Energy Solutions",
+      desc: locale === "id" ? "Energi terbarukan & ekonomi sirkular" : "Renewable energy & circular economy",
+    },
+  ];
 
   return (
     <div className="about-page pt-20">
@@ -47,12 +74,8 @@ export default function AboutPage() {
 
           <AnimateOnView delay={100}>
             <h1 className="text-4xl md:text-6xl font-bold mb-6 tracking-tight leading-[1.2]">
-              <span className="bg-gradient-to-b from-white via-white to-white/70 bg-clip-text text-transparent">
-                {locale === "id" ? "Tentang" : "About"}
-              </span>
-              <br />
               <span className="text-violet-400 drop-shadow-[0_0_15px_rgba(167,139,250,0.25)]">
-                {locale === "id" ? "Violet Global" : "Violet Global"}
+                Violet Global Indonesia
               </span>
             </h1>
           </AnimateOnView>
@@ -97,6 +120,7 @@ export default function AboutPage() {
             <AnimateOnView delay={150}>
               <div className="space-y-8 text-lg text-slate-600 leading-relaxed">
                 <p>{companyOverview.description}</p>
+                <p>{companyOverview.description2}</p>
                 <div className="grid gap-4 pt-4 border-t border-slate-100">
                   {companyOverview.points.map((point, idx) => (
                     <div key={idx} className="flex flex-col sm:flex-row sm:items-start gap-4">
@@ -109,6 +133,23 @@ export default function AboutPage() {
                 </div>
               </div>
             </AnimateOnView>
+          </div>
+
+          {/* Tiga pilar layanan */}
+          <div className="grid sm:grid-cols-3 gap-6 mt-20 lg:mt-28">
+            {pillars.map((pillar, i) => (
+              <AnimateOnView key={pillar.name} delay={i * 120}>
+                <div className="group h-full rounded-2xl border border-slate-100 bg-white p-8 shadow-[0_10px_30px_rgba(0,0,0,0.03)] hover:border-violet-200 hover:shadow-[0_15px_40px_rgba(124,58,237,0.08)] transition-all duration-500">
+                  <div className="mb-6 flex h-12 w-12 items-center justify-center rounded-xl bg-violet-50 text-violet-600 transition-colors duration-500 group-hover:bg-violet-600 group-hover:text-white">
+                    <Icon name={pillar.icon} size={22} strokeWidth={1.75} />
+                  </div>
+                  <h3 className="mb-3 text-lg font-semibold text-slate-900 tracking-tight" style={{ fontFamily: "var(--font-poppins)" }}>
+                    {pillar.name}
+                  </h3>
+                  <p className="text-sm leading-relaxed text-slate-500">{pillar.desc}</p>
+                </div>
+              </AnimateOnView>
+            ))}
           </div>
         </div>
       </section>
