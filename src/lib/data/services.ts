@@ -354,7 +354,6 @@ export const services: Service[] = [
           "Analytics dashboard for environmental supervision & compliance",
           "Community education, socialization & sustainable empowerment programs",
         ],
-        href: "/smart-waste-management",
       },
       {
         icon: "Globe",
