@@ -42,11 +42,11 @@ export function Footer() {
           <div className="max-w-sm">
             <Link href={`/${locale}/home`} className="mb-5 inline-flex items-center">
               <Image
-                src="/VGI_Logo.PNG"
+                src="/VGI_Logo_Horizontal.PNG"
                 alt="Violet Global Indonesia"
-                width={72}
-                height={72}
-                className="h-12 w-12 object-contain md:h-14 md:w-14"
+                width={1618}
+                height={352}
+                className="h-10 w-auto object-contain md:h-12"
               />
             </Link>
 
