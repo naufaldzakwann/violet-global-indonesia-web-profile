@@ -20,15 +20,15 @@
   },
   "services": {
     "badge": "Layanan Kami",
-    "title": "Solusi Terintegrasi untuk Kebutuhan Digital Anda",
-    "subtitle": "Tiga pilar layanan kami — IT Development, Consulting, dan Sustainable Energy Solutions — menghadirkan solusi terintegrasi dari teknologi hingga strategi.",
+    "title": "Solusi terintegrasi untuk kebutuhan enterprise Anda",
+    "subtitle": "Tiga pilar layanan kami — IT Development, Consulting, dan Sustainable Energy Solutions — menghadirkan solusi terintegrasi: upstream - downstream.",
     "learnMore": "Pelajari",
     "consultNow": "Konsultasi Sekarang",
     "allServices": "Semua Layanan"
   },
   "why": {
     "badge": "Mengapa Memilih VGI",
-    "title": "Partner Teknologi yang Tepat untuk Bisnis Anda",
+    "title": "Teknologi yang Tepat untuk Bisnis Anda",
     "subtitle": "Kami bukan sekadar vendor — kami adalah mitra strategis yang berkomitmen pada kesuksesan bisnis Anda.",
     "points": [
       {
@@ -94,13 +94,13 @@
     "title": "Mitra Teknologi Terpercaya untuk Bisnis Indonesia",
     "vision": {
       "title": "Visi",
-      "text": "Menjadi perusahaan teknologi dan solusi digital terkemuka di Indonesia yang dipercaya oleh individu, UKM, korporasi, hingga institusi pemerintah."
+      "text": "Menjadi mitra inovasi global utama Indonesia yang menghubungkan teknologi dan solusi terdepan dari seluruh dunia dengan bisnis, institusi pemerintah, serta peluang yang terus berkembang di seluruh Indonesia."
     },
     "mission": {
       "title": "Misi",
       "items": [
-        "Menyediakan solusi IT dan digital yang komprehensif, inovatif, dan berkualitas tinggi",
-        "Membantu bisnis dari semua skala bertransformasi dan berkembang di era digital",
+        "Menyediakan solusi yang komprehensif, inovatif, dan berkualitas tinggi",
+        "Membantu bisnis dari semua skala bertransformasi dan berkembang",
         "Membangun hubungan jangka panjang berbasis kepercayaan dengan klien dan mitra",
         "Terus berinovasi dengan mengadopsi teknologi terbaru untuk efisiensi dan efektivitas"
       ]
