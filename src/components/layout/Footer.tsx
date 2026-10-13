@@ -50,8 +50,6 @@ export function Footer() {
               />
             </Link>
 
-            <p className="mb-6 text-sm leading-7 text-violet-100/64">{t("tagline")}</p>
-
             <div className="flex gap-2.5">
               {socialLinks.map(({ name, icon, href }) => (
                 <a
