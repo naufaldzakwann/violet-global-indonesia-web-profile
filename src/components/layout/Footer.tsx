@@ -29,7 +29,7 @@ export function Footer() {
   ];
 
   const socialLinks = [
-    { name: "Instagram", icon: "Instagram", href: "https://instagram.com" },
+    { name: "Instagram", icon: "Instagram", href: "https://www.instagram.com/violetglobalindonesia" },
     { name: "LinkedIn", icon: "Linkedin", href: "https://linkedin.com" },
     { name: "Twitter", icon: "Twitter", href: "https://twitter.com" },
     { name: "YouTube", icon: "Youtube", href: "https://youtube.com" },

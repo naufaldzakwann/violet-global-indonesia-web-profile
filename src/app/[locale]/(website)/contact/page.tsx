@@ -118,8 +118,8 @@ export default function ContactPage() {
                 <Icon name="Instagram" size={24} strokeWidth={1.5} />
               </div>
               <h3 className="text-lg font-bold text-slate-800 mb-1">Instagram</h3>
-              <p className="text-xs text-slate-400 mb-4 font-medium">@violetglobal.id</p>
-              <a href="https://instagram.com/violetglobal.id" target="_blank" rel="noopener noreferrer" className="text-sm font-bold text-slate-900 hover:text-pink-600 transition-colors">Follow Us</a>
+              <p className="text-xs text-slate-400 mb-4 font-medium">@violetglobalindonesia</p>
+              <a href="https://www.instagram.com/violetglobalindonesia" target="_blank" rel="noopener noreferrer" className="text-sm font-bold text-slate-900 hover:text-pink-600 transition-colors">Follow Us</a>
               <div className="hidden md:block absolute right-0 top-1/2 -translate-y-1/2 w-px h-16 bg-slate-100" />
             </AnimateOnView>
 
