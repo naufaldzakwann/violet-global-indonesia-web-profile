@@ -16,18 +16,18 @@ export function ClientsSection() {
           <h2 id="our-client-title" className="section-title">{t("title")}</h2>
         </AnimateOnView>
 
-        <ul className="mx-auto grid max-w-4xl grid-cols-1 gap-4 sm:grid-cols-3 sm:gap-6">
+        <ul className="mx-auto flex max-w-6xl flex-wrap justify-center gap-4 sm:gap-6">
           {clients.map((client, index) => (
-            <li key={client.id}>
-              <AnimateOnView delay={index * 80}>
+            <li key={client.id} className="w-full sm:w-[calc((100%_-_1.5rem)/2)] lg:w-[calc((100%_-_3rem)/3)]">
+              <AnimateOnView delay={(index % 3) * 80}>
                 <div className="flex h-44 items-center justify-center rounded-2xl border border-violet-100 bg-[#fff] px-8 py-7 shadow-sm sm:h-48 sm:px-6">
                   <Image
                     src={client.logo}
                     alt={client.id === "pemprov-jateng" ? t("pemprovName") : client.name}
                     width={client.width}
                     height={client.height}
-                    sizes="(max-width: 639px) 240px, 250px"
-                    className="h-auto max-h-28 w-auto max-w-full object-contain"
+                    sizes="256px"
+                    className="h-28 w-full max-w-64 object-contain"
                   />
                 </div>
               </AnimateOnView>

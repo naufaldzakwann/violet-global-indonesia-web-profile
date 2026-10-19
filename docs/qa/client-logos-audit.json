@@ -1,0 +1,222 @@
+{
+  "scope": "Owner-supplied Our Client logo additions and Siber Polri replacement",
+  "date": "2026-10-19",
+  "checks": [
+    {
+      "label": "desktop-ID-dark",
+      "bkk": 1,
+      "centered": true,
+      "columns": 3,
+      "contained": true,
+      "count": 13,
+      "loaded": 13,
+      "locale": "id",
+      "mabes": 0,
+      "overflow": false,
+      "siber": 1,
+      "surfaces": [
+        "rgb(255, 255, 255)"
+      ],
+      "theme": "dark",
+      "viewport": 1280
+    },
+    {
+      "label": "desktop-ID-light",
+      "bkk": 1,
+      "centered": true,
+      "columns": 3,
+      "contained": true,
+      "count": 13,
+      "loaded": 13,
+      "locale": "id",
+      "mabes": 0,
+      "overflow": false,
+      "siber": 1,
+      "surfaces": [
+        "rgb(255, 255, 255)"
+      ],
+      "theme": "light",
+      "viewport": 1280
+    },
+    {
+      "label": "desktop-EN-light",
+      "bkk": 1,
+      "centered": true,
+      "columns": 3,
+      "contained": true,
+      "count": 13,
+      "loaded": 13,
+      "locale": "en",
+      "mabes": 0,
+      "overflow": false,
+      "siber": 1,
+      "surfaces": [
+        "rgb(255, 255, 255)"
+      ],
+      "theme": "light",
+      "viewport": 1280
+    },
+    {
+      "label": "desktop-EN-dark",
+      "bkk": 1,
+      "centered": true,
+      "columns": 3,
+      "contained": true,
+      "count": 13,
+      "loaded": 13,
+      "locale": "en",
+      "mabes": 0,
+      "overflow": false,
+      "siber": 1,
+      "surfaces": [
+        "rgb(255, 255, 255)"
+      ],
+      "theme": "dark",
+      "viewport": 1280
+    },
+    {
+      "label": "tablet-EN-dark",
+      "bkk": 1,
+      "centered": true,
+      "columns": 2,
+      "contained": true,
+      "count": 13,
+      "loaded": 13,
+      "locale": "en",
+      "mabes": 0,
+      "overflow": false,
+      "siber": 1,
+      "surfaces": [
+        "rgb(255, 255, 255)"
+      ],
+      "theme": "dark",
+      "viewport": 768
+    },
+    {
+      "label": "tablet-EN-light",
+      "bkk": 1,
+      "centered": true,
+      "columns": 2,
+      "contained": true,
+      "count": 13,
+      "loaded": 13,
+      "locale": "en",
+      "mabes": 0,
+      "overflow": false,
+      "siber": 1,
+      "surfaces": [
+        "rgb(255, 255, 255)"
+      ],
+      "theme": "light",
+      "viewport": 768
+    },
+    {
+      "label": "tablet-ID-light",
+      "bkk": 1,
+      "centered": true,
+      "columns": 2,
+      "contained": true,
+      "count": 13,
+      "loaded": 13,
+      "locale": "id",
+      "mabes": 0,
+      "overflow": false,
+      "siber": 1,
+      "surfaces": [
+        "rgb(255, 255, 255)"
+      ],
+      "theme": "light",
+      "viewport": 768
+    },
+    {
+      "label": "tablet-ID-dark",
+      "bkk": 1,
+      "centered": true,
+      "columns": 2,
+      "contained": true,
+      "count": 13,
+      "loaded": 13,
+      "locale": "id",
+      "mabes": 0,
+      "overflow": false,
+      "siber": 1,
+      "surfaces": [
+        "rgb(255, 255, 255)"
+      ],
+      "theme": "dark",
+      "viewport": 768
+    },
+    {
+      "label": "mobile-ID-dark",
+      "bkk": 1,
+      "centered": true,
+      "columns": 1,
+      "contained": true,
+      "count": 13,
+      "loaded": 13,
+      "locale": "id",
+      "mabes": 0,
+      "overflow": false,
+      "siber": 1,
+      "surfaces": [
+        "rgb(255, 255, 255)"
+      ],
+      "theme": "dark",
+      "viewport": 390
+    },
+    {
+      "label": "mobile-ID-light",
+      "bkk": 1,
+      "centered": true,
+      "columns": 1,
+      "contained": true,
+      "count": 13,
+      "loaded": 13,
+      "locale": "id",
+      "mabes": 0,
+      "overflow": false,
+      "siber": 1,
+      "surfaces": [
+        "rgb(255, 255, 255)"
+      ],
+      "theme": "light",
+      "viewport": 390
+    },
+    {
+      "label": "mobile-EN-light",
+      "bkk": 1,
+      "centered": true,
+      "columns": 1,
+      "contained": true,
+      "count": 13,
+      "loaded": 13,
+      "locale": "en",
+      "mabes": 0,
+      "overflow": false,
+      "siber": 1,
+      "surfaces": [
+        "rgb(255, 255, 255)"
+      ],
+      "theme": "light",
+      "viewport": 390
+    },
+    {
+      "label": "mobile-EN-dark",
+      "bkk": 1,
+      "centered": true,
+      "columns": 1,
+      "contained": true,
+      "count": 13,
+      "loaded": 13,
+      "locale": "en",
+      "mabes": 0,
+      "overflow": false,
+      "siber": 1,
+      "surfaces": [
+        "rgb(255, 255, 255)"
+      ],
+      "theme": "dark",
+      "viewport": 390
+    }
+  ]
+}
