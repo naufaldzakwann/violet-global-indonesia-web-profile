@@ -1,10 +1,10 @@
 import { HeroSection } from "@/components/sections/HeroSection";
-import type { Metadata } from "next";
+import { getPageMetadata } from "@/lib/page-metadata";
 
-export const metadata: Metadata = {
-  title: "Violet Global Indonesia — Digital Solution",
-  description: "Violet Global Indonesia — Solusi IT dan digital terlengkap untuk bisnis Anda.",
-};
+export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }) {
+  const { locale } = await params;
+  return getPageMetadata(locale, "landing");
+}
 
 export default async function LandingPage() {
   return <HeroSection isInitiallyUnlocked={false} />;

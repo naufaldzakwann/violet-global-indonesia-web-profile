@@ -13,6 +13,11 @@ import {
   PRESET_NARRATIVE_ID,
 } from "./fixtures/rich-text-fixtures";
 
+vi.mock("next-intl/server", async () => {
+  const { getTestTranslations } = await import("./fixtures/i18n");
+  return { getTranslations: getTestTranslations };
+});
+
 vi.mock("next/image", async () => {
   const React = await import("react");
   return {

@@ -1,4 +1,6 @@
+import { getPageMetadata } from "@/lib/page-metadata";
 import { PortfolioContent } from "./PortfolioContent";
+import { getTranslations } from "next-intl/server";
 import { getCategoryLabel } from "@/lib/data/services";
 import { portfolios } from "@/lib/data/portfolio";
 import {
@@ -33,10 +35,11 @@ type PortfolioListItem = {
 
 export default async function PortfolioPage({ params }: { params: Promise<{ locale: string }> }) {
   const { locale } = await params;
+  const t = await getTranslations({ locale, namespace: "portfolioList" });
   const statusVariants = [
-    { id: "Live", en: "Live", tone: "green" as const },
-    { id: "Review", en: "Review", tone: "yellow" as const },
-    { id: "Archive", en: "Archive", tone: "red" as const },
+    { id: t("live"), en: t("live"), tone: "green" as const },
+    { id: t("review"), en: t("review"), tone: "yellow" as const },
+    { id: t("archive"), en: t("archive"), tone: "red" as const },
   ];
 
   const projects: PortfolioListItem[] = portfolios
@@ -64,7 +67,7 @@ export default async function PortfolioPage({ params }: { params: Promise<{ loca
         category: project.category,
         categoryLabel: isId ? project.categoryLabel : project.categoryLabelEn,
         thumbnail: project.thumbnail,
-        client: sanitizePortfolioText(project.client || "Client"),
+        client: sanitizePortfolioText(project.client || t("client")),
         year: yearNum,
 
         summary: buildProjectSummary(solution, problem),
@@ -101,4 +104,9 @@ export default async function PortfolioPage({ params }: { params: Promise<{ loca
       <PortfolioContent projects={projects} locale={locale} categoryOptions={categoryOptions} />
     </main>
   );
+}
+
+export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }) {
+  const { locale } = await params;
+  return getPageMetadata(locale, "portfolio");
 }

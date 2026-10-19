@@ -1,0 +1,2750 @@
+{
+  "date": "2026-10-19",
+  "timezone": "Asia/Jakarta",
+  "environment": "Next.js production build on localhost:3001",
+  "publicRoutes": [
+    {
+      "path": "/id",
+      "status": 200,
+      "htmlLanguage": "id",
+      "untranslatedUi": [],
+      "hiddenLinks": []
+    },
+    {
+      "path": "/id/home",
+      "status": 200,
+      "htmlLanguage": "id",
+      "untranslatedUi": [],
+      "hiddenLinks": []
+    },
+    {
+      "path": "/id/about",
+      "status": 200,
+      "htmlLanguage": "id",
+      "untranslatedUi": [],
+      "hiddenLinks": []
+    },
+    {
+      "path": "/id/services",
+      "status": 200,
+      "htmlLanguage": "id",
+      "untranslatedUi": [],
+      "hiddenLinks": []
+    },
+    {
+      "path": "/id/portfolio",
+      "status": 200,
+      "htmlLanguage": "id",
+      "untranslatedUi": [],
+      "hiddenLinks": []
+    },
+    {
+      "path": "/id/faq",
+      "status": 200,
+      "htmlLanguage": "id",
+      "untranslatedUi": [],
+      "hiddenLinks": []
+    },
+    {
+      "path": "/id/contact",
+      "status": 200,
+      "htmlLanguage": "id",
+      "untranslatedUi": [],
+      "hiddenLinks": []
+    },
+    {
+      "path": "/id/services/it-development",
+      "status": 200,
+      "htmlLanguage": "id",
+      "untranslatedUi": [],
+      "hiddenLinks": []
+    },
+    {
+      "path": "/id/services/consulting",
+      "status": 200,
+      "htmlLanguage": "id",
+      "untranslatedUi": [],
+      "hiddenLinks": []
+    },
+    {
+      "path": "/id/services/sustainable-energy-solutions",
+      "status": 200,
+      "htmlLanguage": "id",
+      "untranslatedUi": [],
+      "hiddenLinks": []
+    },
+    {
+      "path": "/id/portfolio/platform-narativa-x",
+      "status": 200,
+      "htmlLanguage": "id",
+      "untranslatedUi": [],
+      "hiddenLinks": []
+    },
+    {
+      "path": "/id/portfolio/platform-crypto-analytics",
+      "status": 200,
+      "htmlLanguage": "id",
+      "untranslatedUi": [],
+      "hiddenLinks": []
+    },
+    {
+      "path": "/id/portfolio/platform-enterprise-automation",
+      "status": 200,
+      "htmlLanguage": "id",
+      "untranslatedUi": [],
+      "hiddenLinks": []
+    },
+    {
+      "path": "/id/portfolio/program-integrated-smart-waste-management",
+      "status": 200,
+      "htmlLanguage": "id",
+      "untranslatedUi": [],
+      "hiddenLinks": []
+    },
+    {
+      "path": "/id/portfolio/portal-procurement-b2b-demo",
+      "status": 200,
+      "htmlLanguage": "id",
+      "untranslatedUi": [],
+      "hiddenLinks": []
+    },
+    {
+      "path": "/id/portfolio/sales-command-center-demo",
+      "status": 200,
+      "htmlLanguage": "id",
+      "untranslatedUi": [],
+      "hiddenLinks": []
+    },
+    {
+      "path": "/id/portfolio/invoice-automation-enterprise-demo",
+      "status": 200,
+      "htmlLanguage": "id",
+      "untranslatedUi": [],
+      "hiddenLinks": []
+    },
+    {
+      "path": "/id/portfolio/customer-self-service-portal-demo",
+      "status": 200,
+      "htmlLanguage": "id",
+      "untranslatedUi": [],
+      "hiddenLinks": []
+    },
+    {
+      "path": "/id/portfolio/sistem-erp-manufaktur-jaya",
+      "status": 200,
+      "htmlLanguage": "id",
+      "untranslatedUi": [],
+      "hiddenLinks": []
+    },
+    {
+      "path": "/id/portfolio/dashboard-bi-retail-chain",
+      "status": 200,
+      "htmlLanguage": "id",
+      "untranslatedUi": [],
+      "hiddenLinks": []
+    },
+    {
+      "path": "/id/portfolio/platform-ecommerce-fashion",
+      "status": 200,
+      "htmlLanguage": "id",
+      "untranslatedUi": [],
+      "hiddenLinks": []
+    },
+    {
+      "path": "/id/portfolio/automasi-hr-perusahaan-tbk",
+      "status": 200,
+      "htmlLanguage": "id",
+      "untranslatedUi": [],
+      "hiddenLinks": []
+    },
+    {
+      "path": "/en",
+      "status": 200,
+      "htmlLanguage": "en",
+      "untranslatedUi": [],
+      "hiddenLinks": []
+    },
+    {
+      "path": "/en/home",
+      "status": 200,
+      "htmlLanguage": "en",
+      "untranslatedUi": [],
+      "hiddenLinks": []
+    },
+    {
+      "path": "/en/about",
+      "status": 200,
+      "htmlLanguage": "en",
+      "untranslatedUi": [],
+      "hiddenLinks": []
+    },
+    {
+      "path": "/en/services",
+      "status": 200,
+      "htmlLanguage": "en",
+      "untranslatedUi": [],
+      "hiddenLinks": []
+    },
+    {
+      "path": "/en/portfolio",
+      "status": 200,
+      "htmlLanguage": "en",
+      "untranslatedUi": [],
+      "hiddenLinks": []
+    },
+    {
+      "path": "/en/faq",
+      "status": 200,
+      "htmlLanguage": "en",
+      "untranslatedUi": [],
+      "hiddenLinks": []
+    },
+    {
+      "path": "/en/contact",
+      "status": 200,
+      "htmlLanguage": "en",
+      "untranslatedUi": [],
+      "hiddenLinks": []
+    },
+    {
+      "path": "/en/services/it-development",
+      "status": 200,
+      "htmlLanguage": "en",
+      "untranslatedUi": [],
+      "hiddenLinks": []
+    },
+    {
+      "path": "/en/services/consulting",
+      "status": 200,
+      "htmlLanguage": "en",
+      "untranslatedUi": [],
+      "hiddenLinks": []
+    },
+    {
+      "path": "/en/services/sustainable-energy-solutions",
+      "status": 200,
+      "htmlLanguage": "en",
+      "untranslatedUi": [],
+      "hiddenLinks": []
+    },
+    {
+      "path": "/en/portfolio/platform-narativa-x",
+      "status": 200,
+      "htmlLanguage": "en",
+      "untranslatedUi": [],
+      "hiddenLinks": []
+    },
+    {
+      "path": "/en/portfolio/platform-crypto-analytics",
+      "status": 200,
+      "htmlLanguage": "en",
+      "untranslatedUi": [],
+      "hiddenLinks": []
+    },
+    {
+      "path": "/en/portfolio/platform-enterprise-automation",
+      "status": 200,
+      "htmlLanguage": "en",
+      "untranslatedUi": [],
+      "hiddenLinks": []
+    },
+    {
+      "path": "/en/portfolio/program-integrated-smart-waste-management",
+      "status": 200,
+      "htmlLanguage": "en",
+      "untranslatedUi": [],
+      "hiddenLinks": []
+    },
+    {
+      "path": "/en/portfolio/portal-procurement-b2b-demo",
+      "status": 200,
+      "htmlLanguage": "en",
+      "untranslatedUi": [],
+      "hiddenLinks": []
+    },
+    {
+      "path": "/en/portfolio/sales-command-center-demo",
+      "status": 200,
+      "htmlLanguage": "en",
+      "untranslatedUi": [],
+      "hiddenLinks": []
+    },
+    {
+      "path": "/en/portfolio/invoice-automation-enterprise-demo",
+      "status": 200,
+      "htmlLanguage": "en",
+      "untranslatedUi": [],
+      "hiddenLinks": []
+    },
+    {
+      "path": "/en/portfolio/customer-self-service-portal-demo",
+      "status": 200,
+      "htmlLanguage": "en",
+      "untranslatedUi": [],
+      "hiddenLinks": []
+    },
+    {
+      "path": "/en/portfolio/sistem-erp-manufaktur-jaya",
+      "status": 200,
+      "htmlLanguage": "en",
+      "untranslatedUi": [],
+      "hiddenLinks": []
+    },
+    {
+      "path": "/en/portfolio/dashboard-bi-retail-chain",
+      "status": 200,
+      "htmlLanguage": "en",
+      "untranslatedUi": [],
+      "hiddenLinks": []
+    },
+    {
+      "path": "/en/portfolio/platform-ecommerce-fashion",
+      "status": 200,
+      "htmlLanguage": "en",
+      "untranslatedUi": [],
+      "hiddenLinks": []
+    },
+    {
+      "path": "/en/portfolio/automasi-hr-perusahaan-tbk",
+      "status": 200,
+      "htmlLanguage": "en",
+      "untranslatedUi": [],
+      "hiddenLinks": []
+    }
+  ],
+  "blockedRoutes": [
+    {
+      "path": "/id/blog",
+      "status": 404,
+      "finalUrl": "http://localhost:3001/id/blog",
+      "localizedNotFound": true,
+      "browserLanguage": "id",
+      "browserHeading": "Halaman Tidak Ditemukan",
+      "localizationVerifiedIn": "browser after hydration"
+    },
+    {
+      "path": "/id/blog/panduan-seo-teknis-2025",
+      "status": 404,
+      "finalUrl": "http://localhost:3001/id/blog/panduan-seo-teknis-2025",
+      "localizedNotFound": true,
+      "browserLanguage": "id",
+      "browserHeading": "Halaman Tidak Ditemukan",
+      "localizationVerifiedIn": "browser after hydration"
+    },
+    {
+      "path": "/id/case-study",
+      "status": 404,
+      "finalUrl": "http://localhost:3001/id/case-study",
+      "localizedNotFound": true,
+      "browserLanguage": "id",
+      "browserHeading": "Halaman Tidak Ditemukan",
+      "localizationVerifiedIn": "browser after hydration"
+    },
+    {
+      "path": "/id/case-study/portal-procurement-b2b-demo",
+      "status": 404,
+      "finalUrl": "http://localhost:3001/id/case-study/portal-procurement-b2b-demo",
+      "localizedNotFound": true,
+      "browserLanguage": "id",
+      "browserHeading": "Halaman Tidak Ditemukan",
+      "localizationVerifiedIn": "browser after hydration"
+    },
+    {
+      "path": "/en/blog",
+      "status": 404,
+      "finalUrl": "http://localhost:3001/en/blog",
+      "localizedNotFound": true,
+      "browserLanguage": "en",
+      "browserHeading": "Page Not Found",
+      "localizationVerifiedIn": "browser after hydration"
+    },
+    {
+      "path": "/en/blog/panduan-seo-teknis-2025",
+      "status": 404,
+      "finalUrl": "http://localhost:3001/en/blog/panduan-seo-teknis-2025",
+      "localizedNotFound": true,
+      "browserLanguage": "en",
+      "browserHeading": "Page Not Found",
+      "localizationVerifiedIn": "browser after hydration"
+    },
+    {
+      "path": "/en/case-study",
+      "status": 404,
+      "finalUrl": "http://localhost:3001/en/case-study",
+      "localizedNotFound": true,
+      "browserLanguage": "en",
+      "browserHeading": "Page Not Found",
+      "localizationVerifiedIn": "browser after hydration"
+    },
+    {
+      "path": "/en/case-study/portal-procurement-b2b-demo",
+      "status": 404,
+      "finalUrl": "http://localhost:3001/en/case-study/portal-procurement-b2b-demo",
+      "localizedNotFound": true,
+      "browserLanguage": "en",
+      "browserHeading": "Page Not Found",
+      "localizationVerifiedIn": "browser after hydration"
+    },
+    {
+      "path": "/blog",
+      "status": 404,
+      "finalUrl": "http://localhost:3001/id/blog",
+      "localizedNotFound": true,
+      "browserLanguage": "en",
+      "browserHeading": "Page Not Found",
+      "localizationVerifiedIn": "browser after hydration"
+    },
+    {
+      "path": "/blog/panduan-seo-teknis-2025",
+      "status": 404,
+      "finalUrl": "http://localhost:3001/id/blog/panduan-seo-teknis-2025",
+      "localizedNotFound": true,
+      "browserLanguage": "en",
+      "browserHeading": "Page Not Found",
+      "localizationVerifiedIn": "browser after hydration"
+    },
+    {
+      "path": "/case-study",
+      "status": 404,
+      "finalUrl": "http://localhost:3001/id/case-study",
+      "localizedNotFound": true,
+      "browserLanguage": "en",
+      "browserHeading": "Page Not Found",
+      "localizationVerifiedIn": "browser after hydration"
+    },
+    {
+      "path": "/case-study/portal-procurement-b2b-demo",
+      "status": 404,
+      "finalUrl": "http://localhost:3001/id/case-study/portal-procurement-b2b-demo",
+      "localizedNotFound": true,
+      "browserLanguage": "en",
+      "browserHeading": "Page Not Found",
+      "localizationVerifiedIn": "browser after hydration"
+    }
+  ],
+  "englishDataValuesPreserved": 263,
+  "summary": {
+    "publicRoutesChecked": 44,
+    "publicRouteFailures": 0,
+    "blockedRoutesChecked": 12,
+    "blockedRouteFailures": 0,
+    "desktopPageThemeChecks": 88,
+    "responsiveMenuChecks": 36,
+    "browserOverflowFailures": 0,
+    "browserLocaleFailures": 0,
+    "testedViewports": [
+      1280,
+      662
+    ],
+    "themeStyleFailures": 0,
+    "themeLabelFailures": 0
+  },
+  "browser": {
+    "desktop": [
+      {
+        "path": "/id",
+        "heading": "MemadukanKecerdasan,MembentukMasa Depan",
+        "hiddenMenuLinks": 0,
+        "language": "id",
+        "overflow": false,
+        "theme": "light",
+        "themeButton": {
+          "background": "rgba(76, 29, 149, 0.88)",
+          "border": "rgba(196, 181, 253, 0.5)",
+          "boxShadow": "rgba(167, 139, 250, 0.08) 0px 0px 15px 0px",
+          "color": "rgb(255, 255, 255)",
+          "height": "44px",
+          "label": "Mode Gelap",
+          "padding": "8px 14px",
+          "pressed": "false",
+          "radius": "12px"
+        },
+        "viewport": 1280
+      },
+      {
+        "path": "/id/home",
+        "heading": "MemadukanKecerdasan,MembentukMasa Depan",
+        "hiddenMenuLinks": 0,
+        "language": "id",
+        "overflow": false,
+        "theme": "light",
+        "themeButton": {
+          "background": "rgba(76, 29, 149, 0.88)",
+          "border": "rgba(196, 181, 253, 0.5)",
+          "boxShadow": "rgba(167, 139, 250, 0.08) 0px 0px 15px 0px",
+          "color": "rgb(255, 255, 255)",
+          "height": "44px",
+          "label": "Mode Gelap",
+          "padding": "8px 14px",
+          "pressed": "false",
+          "radius": "12px"
+        },
+        "viewport": 1280
+      },
+      {
+        "path": "/id/about",
+        "heading": "TentangViolet Global Indonesia",
+        "hiddenMenuLinks": 0,
+        "language": "id",
+        "overflow": false,
+        "theme": "light",
+        "themeButton": {
+          "background": "rgba(76, 29, 149, 0.88)",
+          "border": "rgba(196, 181, 253, 0.5)",
+          "boxShadow": "rgba(167, 139, 250, 0.08) 0px 0px 15px 0px",
+          "color": "rgb(255, 255, 255)",
+          "height": "44px",
+          "label": "Mode Gelap",
+          "padding": "8px 14px",
+          "pressed": "false",
+          "radius": "12px"
+        },
+        "viewport": 1280
+      },
+      {
+        "path": "/id/services",
+        "heading": "LayananViolet Global",
+        "hiddenMenuLinks": 0,
+        "language": "id",
+        "overflow": false,
+        "theme": "light",
+        "themeButton": {
+          "background": "rgba(76, 29, 149, 0.88)",
+          "border": "rgba(196, 181, 253, 0.5)",
+          "boxShadow": "rgba(167, 139, 250, 0.08) 0px 0px 15px 0px",
+          "color": "rgb(255, 255, 255)",
+          "height": "44px",
+          "label": "Mode Gelap",
+          "padding": "8px 14px",
+          "pressed": "false",
+          "radius": "12px"
+        },
+        "viewport": 1280
+      },
+      {
+        "path": "/id/portfolio",
+        "heading": "Proyek",
+        "hiddenMenuLinks": 0,
+        "language": "id",
+        "overflow": false,
+        "theme": "light",
+        "themeButton": {
+          "background": "rgba(76, 29, 149, 0.88)",
+          "border": "rgba(196, 181, 253, 0.5)",
+          "boxShadow": "rgba(167, 139, 250, 0.08) 0px 0px 15px 0px",
+          "color": "rgb(255, 255, 255)",
+          "height": "44px",
+          "label": "Mode Gelap",
+          "padding": "8px 14px",
+          "pressed": "false",
+          "radius": "12px"
+        },
+        "viewport": 1280
+      },
+      {
+        "path": "/id/faq",
+        "heading": "Bantuan &Pertanyaan",
+        "hiddenMenuLinks": 0,
+        "language": "id",
+        "overflow": false,
+        "theme": "light",
+        "themeButton": {
+          "background": "rgba(76, 29, 149, 0.88)",
+          "border": "rgba(196, 181, 253, 0.5)",
+          "boxShadow": "rgba(167, 139, 250, 0.08) 0px 0px 15px 0px",
+          "color": "rgb(255, 255, 255)",
+          "height": "44px",
+          "label": "Mode Gelap",
+          "padding": "8px 14px",
+          "pressed": "false",
+          "radius": "12px"
+        },
+        "viewport": 1280
+      },
+      {
+        "path": "/id/contact",
+        "heading": "HubungiKami",
+        "hiddenMenuLinks": 0,
+        "language": "id",
+        "overflow": false,
+        "theme": "light",
+        "themeButton": {
+          "background": "rgba(76, 29, 149, 0.88)",
+          "border": "rgba(196, 181, 253, 0.5)",
+          "boxShadow": "rgba(167, 139, 250, 0.08) 0px 0px 15px 0px",
+          "color": "rgb(255, 255, 255)",
+          "height": "44px",
+          "label": "Mode Gelap",
+          "padding": "8px 14px",
+          "pressed": "false",
+          "radius": "12px"
+        },
+        "viewport": 1280
+      },
+      {
+        "path": "/id/services/it-development",
+        "heading": "Pengembangan TI",
+        "hiddenMenuLinks": 0,
+        "language": "id",
+        "overflow": false,
+        "theme": "light",
+        "themeButton": {
+          "background": "rgba(76, 29, 149, 0.88)",
+          "border": "rgba(196, 181, 253, 0.5)",
+          "boxShadow": "rgba(167, 139, 250, 0.08) 0px 0px 15px 0px",
+          "color": "rgb(255, 255, 255)",
+          "height": "44px",
+          "label": "Mode Gelap",
+          "padding": "8px 14px",
+          "pressed": "false",
+          "radius": "12px"
+        },
+        "viewport": 1280
+      },
+      {
+        "path": "/id/services/consulting",
+        "heading": "Konsultasi",
+        "hiddenMenuLinks": 0,
+        "language": "id",
+        "overflow": false,
+        "theme": "light",
+        "themeButton": {
+          "background": "rgba(76, 29, 149, 0.88)",
+          "border": "rgba(196, 181, 253, 0.5)",
+          "boxShadow": "rgba(167, 139, 250, 0.08) 0px 0px 15px 0px",
+          "color": "rgb(255, 255, 255)",
+          "height": "44px",
+          "label": "Mode Gelap",
+          "padding": "8px 14px",
+          "pressed": "false",
+          "radius": "12px"
+        },
+        "viewport": 1280
+      },
+      {
+        "path": "/id/services/sustainable-energy-solutions",
+        "heading": "Solusi Energi Berkelanjutan",
+        "hiddenMenuLinks": 0,
+        "language": "id",
+        "overflow": false,
+        "theme": "light",
+        "themeButton": {
+          "background": "rgba(76, 29, 149, 0.88)",
+          "border": "rgba(196, 181, 253, 0.5)",
+          "boxShadow": "rgba(167, 139, 250, 0.08) 0px 0px 15px 0px",
+          "color": "rgb(255, 255, 255)",
+          "height": "44px",
+          "label": "Mode Gelap",
+          "padding": "8px 14px",
+          "pressed": "false",
+          "radius": "12px"
+        },
+        "viewport": 1280
+      },
+      {
+        "path": "/id/portfolio/platform-narativa-x",
+        "heading": "Narativa-X — Intelijen Media Sosial",
+        "hiddenMenuLinks": 0,
+        "language": "id",
+        "overflow": false,
+        "theme": "light",
+        "themeButton": null,
+        "viewport": 1280
+      },
+      {
+        "path": "/id/portfolio/platform-crypto-analytics",
+        "heading": "Platform Analitik Aset Kripto",
+        "hiddenMenuLinks": 0,
+        "language": "id",
+        "overflow": false,
+        "theme": "light",
+        "themeButton": null,
+        "viewport": 1280
+      },
+      {
+        "path": "/id/portfolio/platform-enterprise-automation",
+        "heading": "Automasi Media Sosial Perusahaan",
+        "hiddenMenuLinks": 0,
+        "language": "id",
+        "overflow": false,
+        "theme": "light",
+        "themeButton": null,
+        "viewport": 1280
+      },
+      {
+        "path": "/id/portfolio/program-integrated-smart-waste-management",
+        "heading": "Pengelolaan Sampah Pintar Terpadu",
+        "hiddenMenuLinks": 0,
+        "language": "id",
+        "overflow": false,
+        "theme": "light",
+        "themeButton": null,
+        "viewport": 1280
+      },
+      {
+        "path": "/id/portfolio/portal-procurement-b2b-demo",
+        "heading": "Portal Pengadaan B2B",
+        "hiddenMenuLinks": 0,
+        "language": "id",
+        "overflow": false,
+        "theme": "light",
+        "themeButton": null,
+        "viewport": 1280
+      },
+      {
+        "path": "/id/portfolio/sales-command-center-demo",
+        "heading": "Pusat Kendali Penjualan Nasional",
+        "hiddenMenuLinks": 0,
+        "language": "id",
+        "overflow": false,
+        "theme": "light",
+        "themeButton": null,
+        "viewport": 1280
+      },
+      {
+        "path": "/id/portfolio/invoice-automation-enterprise-demo",
+        "heading": "Automasi Faktur Perusahaan",
+        "hiddenMenuLinks": 0,
+        "language": "id",
+        "overflow": false,
+        "theme": "light",
+        "themeButton": null,
+        "viewport": 1280
+      },
+      {
+        "path": "/id/portfolio/customer-self-service-portal-demo",
+        "heading": "Portal Layanan Mandiri Pelanggan",
+        "hiddenMenuLinks": 0,
+        "language": "id",
+        "overflow": false,
+        "theme": "light",
+        "themeButton": null,
+        "viewport": 1280
+      },
+      {
+        "path": "/id/portfolio/sistem-erp-manufaktur-jaya",
+        "heading": "Sistem ERP Manufaktur Jaya",
+        "hiddenMenuLinks": 0,
+        "language": "id",
+        "overflow": false,
+        "theme": "light",
+        "themeButton": null,
+        "viewport": 1280
+      },
+      {
+        "path": "/id/portfolio/dashboard-bi-retail-chain",
+        "heading": "Dasbor BI untuk Jaringan Ritel",
+        "hiddenMenuLinks": 0,
+        "language": "id",
+        "overflow": false,
+        "theme": "light",
+        "themeButton": null,
+        "viewport": 1280
+      },
+      {
+        "path": "/id/portfolio/platform-ecommerce-fashion",
+        "heading": "Platform Perdagangan Elektronik Merek Busana",
+        "hiddenMenuLinks": 0,
+        "language": "id",
+        "overflow": false,
+        "theme": "light",
+        "themeButton": null,
+        "viewport": 1280
+      },
+      {
+        "path": "/id/portfolio/automasi-hr-perusahaan-tbk",
+        "heading": "Automasi SDM Perusahaan Tbk",
+        "hiddenMenuLinks": 0,
+        "language": "id",
+        "overflow": false,
+        "theme": "light",
+        "themeButton": null,
+        "viewport": 1280
+      },
+      {
+        "path": "/en",
+        "heading": "HarnessingIntelligence,Defining theFuture",
+        "hiddenMenuLinks": 0,
+        "language": "en",
+        "overflow": false,
+        "theme": "light",
+        "themeButton": {
+          "background": "rgba(76, 29, 149, 0.88)",
+          "border": "rgba(196, 181, 253, 0.5)",
+          "boxShadow": "rgba(167, 139, 250, 0.08) 0px 0px 15px 0px",
+          "color": "rgb(255, 255, 255)",
+          "height": "44px",
+          "label": "Dark Mode",
+          "padding": "8px 14px",
+          "pressed": "false",
+          "radius": "12px"
+        },
+        "viewport": 1280
+      },
+      {
+        "path": "/en/home",
+        "heading": "HarnessingIntelligence,Defining theFuture",
+        "hiddenMenuLinks": 0,
+        "language": "en",
+        "overflow": false,
+        "theme": "light",
+        "themeButton": {
+          "background": "rgba(76, 29, 149, 0.88)",
+          "border": "rgba(196, 181, 253, 0.5)",
+          "boxShadow": "rgba(167, 139, 250, 0.08) 0px 0px 15px 0px",
+          "color": "rgb(255, 255, 255)",
+          "height": "44px",
+          "label": "Dark Mode",
+          "padding": "8px 14px",
+          "pressed": "false",
+          "radius": "12px"
+        },
+        "viewport": 1280
+      },
+      {
+        "path": "/en/about",
+        "heading": "AboutViolet Global Indonesia",
+        "hiddenMenuLinks": 0,
+        "language": "en",
+        "overflow": false,
+        "theme": "light",
+        "themeButton": {
+          "background": "rgba(76, 29, 149, 0.88)",
+          "border": "rgba(196, 181, 253, 0.5)",
+          "boxShadow": "rgba(167, 139, 250, 0.08) 0px 0px 15px 0px",
+          "color": "rgb(255, 255, 255)",
+          "height": "44px",
+          "label": "Dark Mode",
+          "padding": "8px 14px",
+          "pressed": "false",
+          "radius": "12px"
+        },
+        "viewport": 1280
+      },
+      {
+        "path": "/en/services",
+        "heading": "OurServices",
+        "hiddenMenuLinks": 0,
+        "language": "en",
+        "overflow": false,
+        "theme": "light",
+        "themeButton": {
+          "background": "rgba(76, 29, 149, 0.88)",
+          "border": "rgba(196, 181, 253, 0.5)",
+          "boxShadow": "rgba(167, 139, 250, 0.08) 0px 0px 15px 0px",
+          "color": "rgb(255, 255, 255)",
+          "height": "44px",
+          "label": "Dark Mode",
+          "padding": "8px 14px",
+          "pressed": "false",
+          "radius": "12px"
+        },
+        "viewport": 1280
+      },
+      {
+        "path": "/en/portfolio",
+        "heading": "Project",
+        "hiddenMenuLinks": 0,
+        "language": "en",
+        "overflow": false,
+        "theme": "light",
+        "themeButton": {
+          "background": "rgba(76, 29, 149, 0.88)",
+          "border": "rgba(196, 181, 253, 0.5)",
+          "boxShadow": "rgba(167, 139, 250, 0.08) 0px 0px 15px 0px",
+          "color": "rgb(255, 255, 255)",
+          "height": "44px",
+          "label": "Dark Mode",
+          "padding": "8px 14px",
+          "pressed": "false",
+          "radius": "12px"
+        },
+        "viewport": 1280
+      },
+      {
+        "path": "/en/faq",
+        "heading": "Help &Support",
+        "hiddenMenuLinks": 0,
+        "language": "en",
+        "overflow": false,
+        "theme": "light",
+        "themeButton": {
+          "background": "rgba(76, 29, 149, 0.88)",
+          "border": "rgba(196, 181, 253, 0.5)",
+          "boxShadow": "rgba(167, 139, 250, 0.08) 0px 0px 15px 0px",
+          "color": "rgb(255, 255, 255)",
+          "height": "44px",
+          "label": "Dark Mode",
+          "padding": "8px 14px",
+          "pressed": "false",
+          "radius": "12px"
+        },
+        "viewport": 1280
+      },
+      {
+        "path": "/en/contact",
+        "heading": "ConnectWith Us",
+        "hiddenMenuLinks": 0,
+        "language": "en",
+        "overflow": false,
+        "theme": "light",
+        "themeButton": {
+          "background": "rgba(76, 29, 149, 0.88)",
+          "border": "rgba(196, 181, 253, 0.5)",
+          "boxShadow": "rgba(167, 139, 250, 0.08) 0px 0px 15px 0px",
+          "color": "rgb(255, 255, 255)",
+          "height": "44px",
+          "label": "Dark Mode",
+          "padding": "8px 14px",
+          "pressed": "false",
+          "radius": "12px"
+        },
+        "viewport": 1280
+      },
+      {
+        "path": "/en/services/it-development",
+        "heading": "IT Development",
+        "hiddenMenuLinks": 0,
+        "language": "en",
+        "overflow": false,
+        "theme": "light",
+        "themeButton": {
+          "background": "rgba(76, 29, 149, 0.88)",
+          "border": "rgba(196, 181, 253, 0.5)",
+          "boxShadow": "rgba(167, 139, 250, 0.08) 0px 0px 15px 0px",
+          "color": "rgb(255, 255, 255)",
+          "height": "44px",
+          "label": "Dark Mode",
+          "padding": "8px 14px",
+          "pressed": "false",
+          "radius": "12px"
+        },
+        "viewport": 1280
+      },
+      {
+        "path": "/en/services/consulting",
+        "heading": "Consulting",
+        "hiddenMenuLinks": 0,
+        "language": "en",
+        "overflow": false,
+        "theme": "light",
+        "themeButton": {
+          "background": "rgba(76, 29, 149, 0.88)",
+          "border": "rgba(196, 181, 253, 0.5)",
+          "boxShadow": "rgba(167, 139, 250, 0.08) 0px 0px 15px 0px",
+          "color": "rgb(255, 255, 255)",
+          "height": "44px",
+          "label": "Dark Mode",
+          "padding": "8px 14px",
+          "pressed": "false",
+          "radius": "12px"
+        },
+        "viewport": 1280
+      },
+      {
+        "path": "/en/services/sustainable-energy-solutions",
+        "heading": "Sustainable Energy Solutions",
+        "hiddenMenuLinks": 0,
+        "language": "en",
+        "overflow": false,
+        "theme": "light",
+        "themeButton": {
+          "background": "rgba(76, 29, 149, 0.88)",
+          "border": "rgba(196, 181, 253, 0.5)",
+          "boxShadow": "rgba(167, 139, 250, 0.08) 0px 0px 15px 0px",
+          "color": "rgb(255, 255, 255)",
+          "height": "44px",
+          "label": "Dark Mode",
+          "padding": "8px 14px",
+          "pressed": "false",
+          "radius": "12px"
+        },
+        "viewport": 1280
+      },
+      {
+        "path": "/en/portfolio/platform-narativa-x",
+        "heading": "Narativa-X — Social Media Intelligence",
+        "hiddenMenuLinks": 0,
+        "language": "en",
+        "overflow": false,
+        "theme": "light",
+        "themeButton": null,
+        "viewport": 1280
+      },
+      {
+        "path": "/en/portfolio/platform-crypto-analytics",
+        "heading": "Cryptocurrency Analytics Platform",
+        "hiddenMenuLinks": 0,
+        "language": "en",
+        "overflow": false,
+        "theme": "light",
+        "themeButton": null,
+        "viewport": 1280
+      },
+      {
+        "path": "/en/portfolio/platform-enterprise-automation",
+        "heading": "Enterprise Social Media Automation",
+        "hiddenMenuLinks": 0,
+        "language": "en",
+        "overflow": false,
+        "theme": "light",
+        "themeButton": null,
+        "viewport": 1280
+      },
+      {
+        "path": "/en/portfolio/program-integrated-smart-waste-management",
+        "heading": "Integrated Smart Waste Management",
+        "hiddenMenuLinks": 0,
+        "language": "en",
+        "overflow": false,
+        "theme": "light",
+        "themeButton": null,
+        "viewport": 1280
+      },
+      {
+        "path": "/en/portfolio/portal-procurement-b2b-demo",
+        "heading": "B2B Procurement Portal",
+        "hiddenMenuLinks": 0,
+        "language": "en",
+        "overflow": false,
+        "theme": "light",
+        "themeButton": null,
+        "viewport": 1280
+      },
+      {
+        "path": "/en/portfolio/sales-command-center-demo",
+        "heading": "National Sales Command Center",
+        "hiddenMenuLinks": 0,
+        "language": "en",
+        "overflow": false,
+        "theme": "light",
+        "themeButton": null,
+        "viewport": 1280
+      },
+      {
+        "path": "/en/portfolio/invoice-automation-enterprise-demo",
+        "heading": "Enterprise Invoice Automation",
+        "hiddenMenuLinks": 0,
+        "language": "en",
+        "overflow": false,
+        "theme": "light",
+        "themeButton": null,
+        "viewport": 1280
+      },
+      {
+        "path": "/en/portfolio/customer-self-service-portal-demo",
+        "heading": "Customer Self-Service Portal",
+        "hiddenMenuLinks": 0,
+        "language": "en",
+        "overflow": false,
+        "theme": "light",
+        "themeButton": null,
+        "viewport": 1280
+      },
+      {
+        "path": "/en/portfolio/sistem-erp-manufaktur-jaya",
+        "heading": "Manufaktur Jaya ERP System",
+        "hiddenMenuLinks": 0,
+        "language": "en",
+        "overflow": false,
+        "theme": "light",
+        "themeButton": null,
+        "viewport": 1280
+      },
+      {
+        "path": "/en/portfolio/dashboard-bi-retail-chain",
+        "heading": "BI Dashboard for Retail Chain",
+        "hiddenMenuLinks": 0,
+        "language": "en",
+        "overflow": false,
+        "theme": "light",
+        "themeButton": null,
+        "viewport": 1280
+      },
+      {
+        "path": "/en/portfolio/platform-ecommerce-fashion",
+        "heading": "Fashion Brand E-Commerce Platform",
+        "hiddenMenuLinks": 0,
+        "language": "en",
+        "overflow": false,
+        "theme": "light",
+        "themeButton": null,
+        "viewport": 1280
+      },
+      {
+        "path": "/en/portfolio/automasi-hr-perusahaan-tbk",
+        "heading": "HR Automation for Public Company",
+        "hiddenMenuLinks": 0,
+        "language": "en",
+        "overflow": false,
+        "theme": "light",
+        "themeButton": null,
+        "viewport": 1280
+      },
+      {
+        "path": "/id",
+        "heading": "MemadukanKecerdasan,MembentukMasa Depan",
+        "hiddenMenuLinks": 0,
+        "language": "id",
+        "overflow": false,
+        "theme": "dark",
+        "themeButton": {
+          "background": "rgba(255, 255, 255, 0.1)",
+          "border": "rgba(255, 255, 255, 0.2)",
+          "boxShadow": "rgba(167, 139, 250, 0.08) 0px 0px 15px 0px",
+          "color": "rgb(255, 255, 255)",
+          "height": "44px",
+          "label": "Mode Terang",
+          "padding": "8px 14px",
+          "pressed": "true",
+          "radius": "12px"
+        },
+        "viewport": 1280
+      },
+      {
+        "path": "/id/home",
+        "heading": "MemadukanKecerdasan,MembentukMasa Depan",
+        "hiddenMenuLinks": 0,
+        "language": "id",
+        "overflow": false,
+        "theme": "dark",
+        "themeButton": {
+          "background": "rgba(255, 255, 255, 0.1)",
+          "border": "rgba(255, 255, 255, 0.2)",
+          "boxShadow": "rgba(167, 139, 250, 0.08) 0px 0px 15px 0px",
+          "color": "rgb(255, 255, 255)",
+          "height": "44px",
+          "label": "Mode Terang",
+          "padding": "8px 14px",
+          "pressed": "true",
+          "radius": "12px"
+        },
+        "viewport": 1280
+      },
+      {
+        "path": "/id/about",
+        "heading": "TentangViolet Global Indonesia",
+        "hiddenMenuLinks": 0,
+        "language": "id",
+        "overflow": false,
+        "theme": "dark",
+        "themeButton": {
+          "background": "rgba(255, 255, 255, 0.1)",
+          "border": "rgba(255, 255, 255, 0.2)",
+          "boxShadow": "rgba(167, 139, 250, 0.08) 0px 0px 15px 0px",
+          "color": "rgb(255, 255, 255)",
+          "height": "44px",
+          "label": "Mode Terang",
+          "padding": "8px 14px",
+          "pressed": "true",
+          "radius": "12px"
+        },
+        "viewport": 1280
+      },
+      {
+        "path": "/id/services",
+        "heading": "LayananViolet Global",
+        "hiddenMenuLinks": 0,
+        "language": "id",
+        "overflow": false,
+        "theme": "dark",
+        "themeButton": {
+          "background": "rgba(255, 255, 255, 0.1)",
+          "border": "rgba(255, 255, 255, 0.2)",
+          "boxShadow": "rgba(167, 139, 250, 0.08) 0px 0px 15px 0px",
+          "color": "rgb(255, 255, 255)",
+          "height": "44px",
+          "label": "Mode Terang",
+          "padding": "8px 14px",
+          "pressed": "true",
+          "radius": "12px"
+        },
+        "viewport": 1280
+      },
+      {
+        "path": "/id/portfolio",
+        "heading": "Proyek",
+        "hiddenMenuLinks": 0,
+        "language": "id",
+        "overflow": false,
+        "theme": "dark",
+        "themeButton": {
+          "background": "rgba(255, 255, 255, 0.1)",
+          "border": "rgba(255, 255, 255, 0.2)",
+          "boxShadow": "rgba(167, 139, 250, 0.08) 0px 0px 15px 0px",
+          "color": "rgb(255, 255, 255)",
+          "height": "44px",
+          "label": "Mode Terang",
+          "padding": "8px 14px",
+          "pressed": "true",
+          "radius": "12px"
+        },
+        "viewport": 1280
+      },
+      {
+        "path": "/id/faq",
+        "heading": "Bantuan &Pertanyaan",
+        "hiddenMenuLinks": 0,
+        "language": "id",
+        "overflow": false,
+        "theme": "dark",
+        "themeButton": {
+          "background": "rgba(255, 255, 255, 0.1)",
+          "border": "rgba(255, 255, 255, 0.2)",
+          "boxShadow": "rgba(167, 139, 250, 0.08) 0px 0px 15px 0px",
+          "color": "rgb(255, 255, 255)",
+          "height": "44px",
+          "label": "Mode Terang",
+          "padding": "8px 14px",
+          "pressed": "true",
+          "radius": "12px"
+        },
+        "viewport": 1280
+      },
+      {
+        "path": "/id/contact",
+        "heading": "HubungiKami",
+        "hiddenMenuLinks": 0,
+        "language": "id",
+        "overflow": false,
+        "theme": "dark",
+        "themeButton": {
+          "background": "rgba(255, 255, 255, 0.1)",
+          "border": "rgba(255, 255, 255, 0.2)",
+          "boxShadow": "rgba(167, 139, 250, 0.08) 0px 0px 15px 0px",
+          "color": "rgb(255, 255, 255)",
+          "height": "44px",
+          "label": "Mode Terang",
+          "padding": "8px 14px",
+          "pressed": "true",
+          "radius": "12px"
+        },
+        "viewport": 1280
+      },
+      {
+        "path": "/id/services/it-development",
+        "heading": "Pengembangan TI",
+        "hiddenMenuLinks": 0,
+        "language": "id",
+        "overflow": false,
+        "theme": "dark",
+        "themeButton": {
+          "background": "rgba(255, 255, 255, 0.1)",
+          "border": "rgba(255, 255, 255, 0.2)",
+          "boxShadow": "rgba(167, 139, 250, 0.08) 0px 0px 15px 0px",
+          "color": "rgb(255, 255, 255)",
+          "height": "44px",
+          "label": "Mode Terang",
+          "padding": "8px 14px",
+          "pressed": "true",
+          "radius": "12px"
+        },
+        "viewport": 1280
+      },
+      {
+        "path": "/id/services/consulting",
+        "heading": "Konsultasi",
+        "hiddenMenuLinks": 0,
+        "language": "id",
+        "overflow": false,
+        "theme": "dark",
+        "themeButton": {
+          "background": "rgba(255, 255, 255, 0.1)",
+          "border": "rgba(255, 255, 255, 0.2)",
+          "boxShadow": "rgba(167, 139, 250, 0.08) 0px 0px 15px 0px",
+          "color": "rgb(255, 255, 255)",
+          "height": "44px",
+          "label": "Mode Terang",
+          "padding": "8px 14px",
+          "pressed": "true",
+          "radius": "12px"
+        },
+        "viewport": 1280
+      },
+      {
+        "path": "/id/services/sustainable-energy-solutions",
+        "heading": "Solusi Energi Berkelanjutan",
+        "hiddenMenuLinks": 0,
+        "language": "id",
+        "overflow": false,
+        "theme": "dark",
+        "themeButton": {
+          "background": "rgba(255, 255, 255, 0.1)",
+          "border": "rgba(255, 255, 255, 0.2)",
+          "boxShadow": "rgba(167, 139, 250, 0.08) 0px 0px 15px 0px",
+          "color": "rgb(255, 255, 255)",
+          "height": "44px",
+          "label": "Mode Terang",
+          "padding": "8px 14px",
+          "pressed": "true",
+          "radius": "12px"
+        },
+        "viewport": 1280
+      },
+      {
+        "path": "/id/portfolio/platform-narativa-x",
+        "heading": "Narativa-X — Intelijen Media Sosial",
+        "hiddenMenuLinks": 0,
+        "language": "id",
+        "overflow": false,
+        "theme": "dark",
+        "themeButton": null,
+        "viewport": 1280
+      },
+      {
+        "path": "/id/portfolio/platform-crypto-analytics",
+        "heading": "Platform Analitik Aset Kripto",
+        "hiddenMenuLinks": 0,
+        "language": "id",
+        "overflow": false,
+        "theme": "dark",
+        "themeButton": null,
+        "viewport": 1280
+      },
+      {
+        "path": "/id/portfolio/platform-enterprise-automation",
+        "heading": "Automasi Media Sosial Perusahaan",
+        "hiddenMenuLinks": 0,
+        "language": "id",
+        "overflow": false,
+        "theme": "dark",
+        "themeButton": null,
+        "viewport": 1280
+      },
+      {
+        "path": "/id/portfolio/program-integrated-smart-waste-management",
+        "heading": "Pengelolaan Sampah Pintar Terpadu",
+        "hiddenMenuLinks": 0,
+        "language": "id",
+        "overflow": false,
+        "theme": "dark",
+        "themeButton": null,
+        "viewport": 1280
+      },
+      {
+        "path": "/id/portfolio/portal-procurement-b2b-demo",
+        "heading": "Portal Pengadaan B2B",
+        "hiddenMenuLinks": 0,
+        "language": "id",
+        "overflow": false,
+        "theme": "dark",
+        "themeButton": null,
+        "viewport": 1280
+      },
+      {
+        "path": "/id/portfolio/sales-command-center-demo",
+        "heading": "Pusat Kendali Penjualan Nasional",
+        "hiddenMenuLinks": 0,
+        "language": "id",
+        "overflow": false,
+        "theme": "dark",
+        "themeButton": null,
+        "viewport": 1280
+      },
+      {
+        "path": "/id/portfolio/invoice-automation-enterprise-demo",
+        "heading": "Automasi Faktur Perusahaan",
+        "hiddenMenuLinks": 0,
+        "language": "id",
+        "overflow": false,
+        "theme": "dark",
+        "themeButton": null,
+        "viewport": 1280
+      },
+      {
+        "path": "/id/portfolio/customer-self-service-portal-demo",
+        "heading": "Portal Layanan Mandiri Pelanggan",
+        "hiddenMenuLinks": 0,
+        "language": "id",
+        "overflow": false,
+        "theme": "dark",
+        "themeButton": null,
+        "viewport": 1280
+      },
+      {
+        "path": "/id/portfolio/sistem-erp-manufaktur-jaya",
+        "heading": "Sistem ERP Manufaktur Jaya",
+        "hiddenMenuLinks": 0,
+        "language": "id",
+        "overflow": false,
+        "theme": "dark",
+        "themeButton": null,
+        "viewport": 1280
+      },
+      {
+        "path": "/id/portfolio/dashboard-bi-retail-chain",
+        "heading": "Dasbor BI untuk Jaringan Ritel",
+        "hiddenMenuLinks": 0,
+        "language": "id",
+        "overflow": false,
+        "theme": "dark",
+        "themeButton": null,
+        "viewport": 1280
+      },
+      {
+        "path": "/id/portfolio/platform-ecommerce-fashion",
+        "heading": "Platform Perdagangan Elektronik Merek Busana",
+        "hiddenMenuLinks": 0,
+        "language": "id",
+        "overflow": false,
+        "theme": "dark",
+        "themeButton": null,
+        "viewport": 1280
+      },
+      {
+        "path": "/id/portfolio/automasi-hr-perusahaan-tbk",
+        "heading": "Automasi SDM Perusahaan Tbk",
+        "hiddenMenuLinks": 0,
+        "language": "id",
+        "overflow": false,
+        "theme": "dark",
+        "themeButton": null,
+        "viewport": 1280
+      },
+      {
+        "path": "/en",
+        "heading": "HarnessingIntelligence,Defining theFuture",
+        "hiddenMenuLinks": 0,
+        "language": "en",
+        "overflow": false,
+        "theme": "dark",
+        "themeButton": {
+          "background": "rgba(255, 255, 255, 0.1)",
+          "border": "rgba(255, 255, 255, 0.2)",
+          "boxShadow": "rgba(167, 139, 250, 0.08) 0px 0px 15px 0px",
+          "color": "rgb(255, 255, 255)",
+          "height": "44px",
+          "label": "Light Mode",
+          "padding": "8px 14px",
+          "pressed": "true",
+          "radius": "12px"
+        },
+        "viewport": 1280
+      },
+      {
+        "path": "/en/home",
+        "heading": "HarnessingIntelligence,Defining theFuture",
+        "hiddenMenuLinks": 0,
+        "language": "en",
+        "overflow": false,
+        "theme": "dark",
+        "themeButton": {
+          "background": "rgba(255, 255, 255, 0.1)",
+          "border": "rgba(255, 255, 255, 0.2)",
+          "boxShadow": "rgba(167, 139, 250, 0.08) 0px 0px 15px 0px",
+          "color": "rgb(255, 255, 255)",
+          "height": "44px",
+          "label": "Light Mode",
+          "padding": "8px 14px",
+          "pressed": "true",
+          "radius": "12px"
+        },
+        "viewport": 1280
+      },
+      {
+        "path": "/en/about",
+        "heading": "AboutViolet Global Indonesia",
+        "hiddenMenuLinks": 0,
+        "language": "en",
+        "overflow": false,
+        "theme": "dark",
+        "themeButton": {
+          "background": "rgba(255, 255, 255, 0.1)",
+          "border": "rgba(255, 255, 255, 0.2)",
+          "boxShadow": "rgba(167, 139, 250, 0.08) 0px 0px 15px 0px",
+          "color": "rgb(255, 255, 255)",
+          "height": "44px",
+          "label": "Light Mode",
+          "padding": "8px 14px",
+          "pressed": "true",
+          "radius": "12px"
+        },
+        "viewport": 1280
+      },
+      {
+        "path": "/en/services",
+        "heading": "OurServices",
+        "hiddenMenuLinks": 0,
+        "language": "en",
+        "overflow": false,
+        "theme": "dark",
+        "themeButton": {
+          "background": "rgba(255, 255, 255, 0.1)",
+          "border": "rgba(255, 255, 255, 0.2)",
+          "boxShadow": "rgba(167, 139, 250, 0.08) 0px 0px 15px 0px",
+          "color": "rgb(255, 255, 255)",
+          "height": "44px",
+          "label": "Light Mode",
+          "padding": "8px 14px",
+          "pressed": "true",
+          "radius": "12px"
+        },
+        "viewport": 1280
+      },
+      {
+        "path": "/en/portfolio",
+        "heading": "Project",
+        "hiddenMenuLinks": 0,
+        "language": "en",
+        "overflow": false,
+        "theme": "dark",
+        "themeButton": {
+          "background": "rgba(255, 255, 255, 0.1)",
+          "border": "rgba(255, 255, 255, 0.2)",
+          "boxShadow": "rgba(167, 139, 250, 0.08) 0px 0px 15px 0px",
+          "color": "rgb(255, 255, 255)",
+          "height": "44px",
+          "label": "Light Mode",
+          "padding": "8px 14px",
+          "pressed": "true",
+          "radius": "12px"
+        },
+        "viewport": 1280
+      },
+      {
+        "path": "/en/faq",
+        "heading": "Help &Support",
+        "hiddenMenuLinks": 0,
+        "language": "en",
+        "overflow": false,
+        "theme": "dark",
+        "themeButton": {
+          "background": "rgba(255, 255, 255, 0.1)",
+          "border": "rgba(255, 255, 255, 0.2)",
+          "boxShadow": "rgba(167, 139, 250, 0.08) 0px 0px 15px 0px",
+          "color": "rgb(255, 255, 255)",
+          "height": "44px",
+          "label": "Light Mode",
+          "padding": "8px 14px",
+          "pressed": "true",
+          "radius": "12px"
+        },
+        "viewport": 1280
+      },
+      {
+        "path": "/en/contact",
+        "heading": "ConnectWith Us",
+        "hiddenMenuLinks": 0,
+        "language": "en",
+        "overflow": false,
+        "theme": "dark",
+        "themeButton": {
+          "background": "rgba(255, 255, 255, 0.1)",
+          "border": "rgba(255, 255, 255, 0.2)",
+          "boxShadow": "rgba(167, 139, 250, 0.08) 0px 0px 15px 0px",
+          "color": "rgb(255, 255, 255)",
+          "height": "44px",
+          "label": "Light Mode",
+          "padding": "8px 14px",
+          "pressed": "true",
+          "radius": "12px"
+        },
+        "viewport": 1280
+      },
+      {
+        "path": "/en/services/it-development",
+        "heading": "IT Development",
+        "hiddenMenuLinks": 0,
+        "language": "en",
+        "overflow": false,
+        "theme": "dark",
+        "themeButton": {
+          "background": "rgba(255, 255, 255, 0.1)",
+          "border": "rgba(255, 255, 255, 0.2)",
+          "boxShadow": "rgba(167, 139, 250, 0.08) 0px 0px 15px 0px",
+          "color": "rgb(255, 255, 255)",
+          "height": "44px",
+          "label": "Light Mode",
+          "padding": "8px 14px",
+          "pressed": "true",
+          "radius": "12px"
+        },
+        "viewport": 1280
+      },
+      {
+        "path": "/en/services/consulting",
+        "heading": "Consulting",
+        "hiddenMenuLinks": 0,
+        "language": "en",
+        "overflow": false,
+        "theme": "dark",
+        "themeButton": {
+          "background": "rgba(255, 255, 255, 0.1)",
+          "border": "rgba(255, 255, 255, 0.2)",
+          "boxShadow": "rgba(167, 139, 250, 0.08) 0px 0px 15px 0px",
+          "color": "rgb(255, 255, 255)",
+          "height": "44px",
+          "label": "Light Mode",
+          "padding": "8px 14px",
+          "pressed": "true",
+          "radius": "12px"
+        },
+        "viewport": 1280
+      },
+      {
+        "path": "/en/services/sustainable-energy-solutions",
+        "heading": "Sustainable Energy Solutions",
+        "hiddenMenuLinks": 0,
+        "language": "en",
+        "overflow": false,
+        "theme": "dark",
+        "themeButton": {
+          "background": "rgba(255, 255, 255, 0.1)",
+          "border": "rgba(255, 255, 255, 0.2)",
+          "boxShadow": "rgba(167, 139, 250, 0.08) 0px 0px 15px 0px",
+          "color": "rgb(255, 255, 255)",
+          "height": "44px",
+          "label": "Light Mode",
+          "padding": "8px 14px",
+          "pressed": "true",
+          "radius": "12px"
+        },
+        "viewport": 1280
+      },
+      {
+        "path": "/en/portfolio/platform-narativa-x",
+        "heading": "Narativa-X — Social Media Intelligence",
+        "hiddenMenuLinks": 0,
+        "language": "en",
+        "overflow": false,
+        "theme": "dark",
+        "themeButton": null,
+        "viewport": 1280
+      },
+      {
+        "path": "/en/portfolio/platform-crypto-analytics",
+        "heading": "Cryptocurrency Analytics Platform",
+        "hiddenMenuLinks": 0,
+        "language": "en",
+        "overflow": false,
+        "theme": "dark",
+        "themeButton": null,
+        "viewport": 1280
+      },
+      {
+        "path": "/en/portfolio/platform-enterprise-automation",
+        "heading": "Enterprise Social Media Automation",
+        "hiddenMenuLinks": 0,
+        "language": "en",
+        "overflow": false,
+        "theme": "dark",
+        "themeButton": null,
+        "viewport": 1280
+      },
+      {
+        "path": "/en/portfolio/program-integrated-smart-waste-management",
+        "heading": "Integrated Smart Waste Management",
+        "hiddenMenuLinks": 0,
+        "language": "en",
+        "overflow": false,
+        "theme": "dark",
+        "themeButton": null,
+        "viewport": 1280
+      },
+      {
+        "path": "/en/portfolio/portal-procurement-b2b-demo",
+        "heading": "B2B Procurement Portal",
+        "hiddenMenuLinks": 0,
+        "language": "en",
+        "overflow": false,
+        "theme": "dark",
+        "themeButton": null,
+        "viewport": 1280
+      },
+      {
+        "path": "/en/portfolio/sales-command-center-demo",
+        "heading": "National Sales Command Center",
+        "hiddenMenuLinks": 0,
+        "language": "en",
+        "overflow": false,
+        "theme": "dark",
+        "themeButton": null,
+        "viewport": 1280
+      },
+      {
+        "path": "/en/portfolio/invoice-automation-enterprise-demo",
+        "heading": "Enterprise Invoice Automation",
+        "hiddenMenuLinks": 0,
+        "language": "en",
+        "overflow": false,
+        "theme": "dark",
+        "themeButton": null,
+        "viewport": 1280
+      },
+      {
+        "path": "/en/portfolio/customer-self-service-portal-demo",
+        "heading": "Customer Self-Service Portal",
+        "hiddenMenuLinks": 0,
+        "language": "en",
+        "overflow": false,
+        "theme": "dark",
+        "themeButton": null,
+        "viewport": 1280
+      },
+      {
+        "path": "/en/portfolio/sistem-erp-manufaktur-jaya",
+        "heading": "Manufaktur Jaya ERP System",
+        "hiddenMenuLinks": 0,
+        "language": "en",
+        "overflow": false,
+        "theme": "dark",
+        "themeButton": null,
+        "viewport": 1280
+      },
+      {
+        "path": "/en/portfolio/dashboard-bi-retail-chain",
+        "heading": "BI Dashboard for Retail Chain",
+        "hiddenMenuLinks": 0,
+        "language": "en",
+        "overflow": false,
+        "theme": "dark",
+        "themeButton": null,
+        "viewport": 1280
+      },
+      {
+        "path": "/en/portfolio/platform-ecommerce-fashion",
+        "heading": "Fashion Brand E-Commerce Platform",
+        "hiddenMenuLinks": 0,
+        "language": "en",
+        "overflow": false,
+        "theme": "dark",
+        "themeButton": null,
+        "viewport": 1280
+      },
+      {
+        "path": "/en/portfolio/automasi-hr-perusahaan-tbk",
+        "heading": "HR Automation for Public Company",
+        "hiddenMenuLinks": 0,
+        "language": "en",
+        "overflow": false,
+        "theme": "dark",
+        "themeButton": null,
+        "viewport": 1280
+      }
+    ],
+    "responsive": [
+      {
+        "path": "/id/home",
+        "heading": "MemadukanKecerdasan,MembentukMasa Depan",
+        "hiddenMenuLinks": 0,
+        "language": "id",
+        "overflow": false,
+        "theme": "dark",
+        "themeButton": {
+          "background": "rgba(255, 255, 255, 0.1)",
+          "border": "rgba(255, 255, 255, 0.2)",
+          "boxShadow": "rgba(167, 139, 250, 0.08) 0px 0px 15px 0px",
+          "color": "rgb(255, 255, 255)",
+          "height": "44px",
+          "label": "Mode Terang",
+          "padding": "8px 14px",
+          "pressed": "true",
+          "radius": "12px"
+        },
+        "viewport": 662
+      },
+      {
+        "path": "/id/about",
+        "heading": "TentangViolet Global Indonesia",
+        "hiddenMenuLinks": 0,
+        "language": "id",
+        "overflow": false,
+        "theme": "dark",
+        "themeButton": {
+          "background": "rgba(255, 255, 255, 0.1)",
+          "border": "rgba(255, 255, 255, 0.2)",
+          "boxShadow": "rgba(167, 139, 250, 0.08) 0px 0px 15px 0px",
+          "color": "rgb(255, 255, 255)",
+          "height": "44px",
+          "label": "Mode Terang",
+          "padding": "8px 14px",
+          "pressed": "true",
+          "radius": "12px"
+        },
+        "viewport": 662
+      },
+      {
+        "path": "/id/services",
+        "heading": "LayananViolet Global",
+        "hiddenMenuLinks": 0,
+        "language": "id",
+        "overflow": false,
+        "theme": "dark",
+        "themeButton": {
+          "background": "rgba(255, 255, 255, 0.1)",
+          "border": "rgba(255, 255, 255, 0.2)",
+          "boxShadow": "rgba(167, 139, 250, 0.08) 0px 0px 15px 0px",
+          "color": "rgb(255, 255, 255)",
+          "height": "44px",
+          "label": "Mode Terang",
+          "padding": "8px 14px",
+          "pressed": "true",
+          "radius": "12px"
+        },
+        "viewport": 662
+      },
+      {
+        "path": "/id/portfolio",
+        "heading": "Proyek",
+        "hiddenMenuLinks": 0,
+        "language": "id",
+        "overflow": false,
+        "theme": "dark",
+        "themeButton": {
+          "background": "rgba(255, 255, 255, 0.1)",
+          "border": "rgba(255, 255, 255, 0.2)",
+          "boxShadow": "rgba(167, 139, 250, 0.08) 0px 0px 15px 0px",
+          "color": "rgb(255, 255, 255)",
+          "height": "44px",
+          "label": "Mode Terang",
+          "padding": "8px 14px",
+          "pressed": "true",
+          "radius": "12px"
+        },
+        "viewport": 662
+      },
+      {
+        "path": "/id/faq",
+        "heading": "Bantuan &Pertanyaan",
+        "hiddenMenuLinks": 0,
+        "language": "id",
+        "overflow": false,
+        "theme": "dark",
+        "themeButton": {
+          "background": "rgba(255, 255, 255, 0.1)",
+          "border": "rgba(255, 255, 255, 0.2)",
+          "boxShadow": "rgba(167, 139, 250, 0.08) 0px 0px 15px 0px",
+          "color": "rgb(255, 255, 255)",
+          "height": "44px",
+          "label": "Mode Terang",
+          "padding": "8px 14px",
+          "pressed": "true",
+          "radius": "12px"
+        },
+        "viewport": 662
+      },
+      {
+        "path": "/id/contact",
+        "heading": "HubungiKami",
+        "hiddenMenuLinks": 0,
+        "language": "id",
+        "overflow": false,
+        "theme": "dark",
+        "themeButton": {
+          "background": "rgba(255, 255, 255, 0.1)",
+          "border": "rgba(255, 255, 255, 0.2)",
+          "boxShadow": "rgba(167, 139, 250, 0.08) 0px 0px 15px 0px",
+          "color": "rgb(255, 255, 255)",
+          "height": "44px",
+          "label": "Mode Terang",
+          "padding": "8px 14px",
+          "pressed": "true",
+          "radius": "12px"
+        },
+        "viewport": 662
+      },
+      {
+        "path": "/id/services/it-development",
+        "heading": "Pengembangan TI",
+        "hiddenMenuLinks": 0,
+        "language": "id",
+        "overflow": false,
+        "theme": "dark",
+        "themeButton": {
+          "background": "rgba(255, 255, 255, 0.1)",
+          "border": "rgba(255, 255, 255, 0.2)",
+          "boxShadow": "rgba(167, 139, 250, 0.08) 0px 0px 15px 0px",
+          "color": "rgb(255, 255, 255)",
+          "height": "44px",
+          "label": "Mode Terang",
+          "padding": "8px 14px",
+          "pressed": "true",
+          "radius": "12px"
+        },
+        "viewport": 662
+      },
+      {
+        "path": "/id/services/consulting",
+        "heading": "Konsultasi",
+        "hiddenMenuLinks": 0,
+        "language": "id",
+        "overflow": false,
+        "theme": "dark",
+        "themeButton": {
+          "background": "rgba(255, 255, 255, 0.1)",
+          "border": "rgba(255, 255, 255, 0.2)",
+          "boxShadow": "rgba(167, 139, 250, 0.08) 0px 0px 15px 0px",
+          "color": "rgb(255, 255, 255)",
+          "height": "44px",
+          "label": "Mode Terang",
+          "padding": "8px 14px",
+          "pressed": "true",
+          "radius": "12px"
+        },
+        "viewport": 662
+      },
+      {
+        "path": "/id/services/sustainable-energy-solutions",
+        "heading": "Solusi Energi Berkelanjutan",
+        "hiddenMenuLinks": 0,
+        "language": "id",
+        "overflow": false,
+        "theme": "dark",
+        "themeButton": {
+          "background": "rgba(255, 255, 255, 0.1)",
+          "border": "rgba(255, 255, 255, 0.2)",
+          "boxShadow": "rgba(167, 139, 250, 0.08) 0px 0px 15px 0px",
+          "color": "rgb(255, 255, 255)",
+          "height": "44px",
+          "label": "Mode Terang",
+          "padding": "8px 14px",
+          "pressed": "true",
+          "radius": "12px"
+        },
+        "viewport": 662
+      },
+      {
+        "path": "/en/home",
+        "heading": "HarnessingIntelligence,Defining theFuture",
+        "hiddenMenuLinks": 0,
+        "language": "en",
+        "overflow": false,
+        "theme": "dark",
+        "themeButton": {
+          "background": "rgba(255, 255, 255, 0.1)",
+          "border": "rgba(255, 255, 255, 0.2)",
+          "boxShadow": "rgba(167, 139, 250, 0.08) 0px 0px 15px 0px",
+          "color": "rgb(255, 255, 255)",
+          "height": "44px",
+          "label": "Light Mode",
+          "padding": "8px 14px",
+          "pressed": "true",
+          "radius": "12px"
+        },
+        "viewport": 662
+      },
+      {
+        "path": "/en/about",
+        "heading": "AboutViolet Global Indonesia",
+        "hiddenMenuLinks": 0,
+        "language": "en",
+        "overflow": false,
+        "theme": "dark",
+        "themeButton": {
+          "background": "rgba(255, 255, 255, 0.1)",
+          "border": "rgba(255, 255, 255, 0.2)",
+          "boxShadow": "rgba(167, 139, 250, 0.08) 0px 0px 15px 0px",
+          "color": "rgb(255, 255, 255)",
+          "height": "44px",
+          "label": "Light Mode",
+          "padding": "8px 14px",
+          "pressed": "true",
+          "radius": "12px"
+        },
+        "viewport": 662
+      },
+      {
+        "path": "/en/services",
+        "heading": "OurServices",
+        "hiddenMenuLinks": 0,
+        "language": "en",
+        "overflow": false,
+        "theme": "dark",
+        "themeButton": {
+          "background": "rgba(255, 255, 255, 0.1)",
+          "border": "rgba(255, 255, 255, 0.2)",
+          "boxShadow": "rgba(167, 139, 250, 0.08) 0px 0px 15px 0px",
+          "color": "rgb(255, 255, 255)",
+          "height": "44px",
+          "label": "Light Mode",
+          "padding": "8px 14px",
+          "pressed": "true",
+          "radius": "12px"
+        },
+        "viewport": 662
+      },
+      {
+        "path": "/en/portfolio",
+        "heading": "Project",
+        "hiddenMenuLinks": 0,
+        "language": "en",
+        "overflow": false,
+        "theme": "dark",
+        "themeButton": {
+          "background": "rgba(255, 255, 255, 0.1)",
+          "border": "rgba(255, 255, 255, 0.2)",
+          "boxShadow": "rgba(167, 139, 250, 0.08) 0px 0px 15px 0px",
+          "color": "rgb(255, 255, 255)",
+          "height": "44px",
+          "label": "Light Mode",
+          "padding": "8px 14px",
+          "pressed": "true",
+          "radius": "12px"
+        },
+        "viewport": 662
+      },
+      {
+        "path": "/en/faq",
+        "heading": "Help &Support",
+        "hiddenMenuLinks": 0,
+        "language": "en",
+        "overflow": false,
+        "theme": "dark",
+        "themeButton": {
+          "background": "rgba(255, 255, 255, 0.1)",
+          "border": "rgba(255, 255, 255, 0.2)",
+          "boxShadow": "rgba(167, 139, 250, 0.08) 0px 0px 15px 0px",
+          "color": "rgb(255, 255, 255)",
+          "height": "44px",
+          "label": "Light Mode",
+          "padding": "8px 14px",
+          "pressed": "true",
+          "radius": "12px"
+        },
+        "viewport": 662
+      },
+      {
+        "path": "/en/contact",
+        "heading": "ConnectWith Us",
+        "hiddenMenuLinks": 0,
+        "language": "en",
+        "overflow": false,
+        "theme": "dark",
+        "themeButton": {
+          "background": "rgba(255, 255, 255, 0.1)",
+          "border": "rgba(255, 255, 255, 0.2)",
+          "boxShadow": "rgba(167, 139, 250, 0.08) 0px 0px 15px 0px",
+          "color": "rgb(255, 255, 255)",
+          "height": "44px",
+          "label": "Light Mode",
+          "padding": "8px 14px",
+          "pressed": "true",
+          "radius": "12px"
+        },
+        "viewport": 662
+      },
+      {
+        "path": "/en/services/it-development",
+        "heading": "IT Development",
+        "hiddenMenuLinks": 0,
+        "language": "en",
+        "overflow": false,
+        "theme": "dark",
+        "themeButton": {
+          "background": "rgba(255, 255, 255, 0.1)",
+          "border": "rgba(255, 255, 255, 0.2)",
+          "boxShadow": "rgba(167, 139, 250, 0.08) 0px 0px 15px 0px",
+          "color": "rgb(255, 255, 255)",
+          "height": "44px",
+          "label": "Light Mode",
+          "padding": "8px 14px",
+          "pressed": "true",
+          "radius": "12px"
+        },
+        "viewport": 662
+      },
+      {
+        "path": "/en/services/consulting",
+        "heading": "Consulting",
+        "hiddenMenuLinks": 0,
+        "language": "en",
+        "overflow": false,
+        "theme": "dark",
+        "themeButton": {
+          "background": "rgba(255, 255, 255, 0.1)",
+          "border": "rgba(255, 255, 255, 0.2)",
+          "boxShadow": "rgba(167, 139, 250, 0.08) 0px 0px 15px 0px",
+          "color": "rgb(255, 255, 255)",
+          "height": "44px",
+          "label": "Light Mode",
+          "padding": "8px 14px",
+          "pressed": "true",
+          "radius": "12px"
+        },
+        "viewport": 662
+      },
+      {
+        "path": "/en/services/sustainable-energy-solutions",
+        "heading": "Sustainable Energy Solutions",
+        "hiddenMenuLinks": 0,
+        "language": "en",
+        "overflow": false,
+        "theme": "dark",
+        "themeButton": {
+          "background": "rgba(255, 255, 255, 0.1)",
+          "border": "rgba(255, 255, 255, 0.2)",
+          "boxShadow": "rgba(167, 139, 250, 0.08) 0px 0px 15px 0px",
+          "color": "rgb(255, 255, 255)",
+          "height": "44px",
+          "label": "Light Mode",
+          "padding": "8px 14px",
+          "pressed": "true",
+          "radius": "12px"
+        },
+        "viewport": 662
+      },
+      {
+        "path": "/id/home",
+        "heading": "MemadukanKecerdasan,MembentukMasa Depan",
+        "hiddenMenuLinks": 0,
+        "language": "id",
+        "overflow": false,
+        "theme": "light",
+        "themeButton": {
+          "background": "rgba(76, 29, 149, 0.88)",
+          "border": "rgba(196, 181, 253, 0.5)",
+          "boxShadow": "rgba(167, 139, 250, 0.08) 0px 0px 15px 0px",
+          "color": "rgb(255, 255, 255)",
+          "height": "44px",
+          "label": "Mode Gelap",
+          "padding": "8px 14px",
+          "pressed": "false",
+          "radius": "12px"
+        },
+        "viewport": 662
+      },
+      {
+        "path": "/id/about",
+        "heading": "TentangViolet Global Indonesia",
+        "hiddenMenuLinks": 0,
+        "language": "id",
+        "overflow": false,
+        "theme": "light",
+        "themeButton": {
+          "background": "rgba(76, 29, 149, 0.88)",
+          "border": "rgba(196, 181, 253, 0.5)",
+          "boxShadow": "rgba(167, 139, 250, 0.08) 0px 0px 15px 0px",
+          "color": "rgb(255, 255, 255)",
+          "height": "44px",
+          "label": "Mode Gelap",
+          "padding": "8px 14px",
+          "pressed": "false",
+          "radius": "12px"
+        },
+        "viewport": 662
+      },
+      {
+        "path": "/id/services",
+        "heading": "LayananViolet Global",
+        "hiddenMenuLinks": 0,
+        "language": "id",
+        "overflow": false,
+        "theme": "light",
+        "themeButton": {
+          "background": "rgba(76, 29, 149, 0.88)",
+          "border": "rgba(196, 181, 253, 0.5)",
+          "boxShadow": "rgba(167, 139, 250, 0.08) 0px 0px 15px 0px",
+          "color": "rgb(255, 255, 255)",
+          "height": "44px",
+          "label": "Mode Gelap",
+          "padding": "8px 14px",
+          "pressed": "false",
+          "radius": "12px"
+        },
+        "viewport": 662
+      },
+      {
+        "path": "/id/portfolio",
+        "heading": "Proyek",
+        "hiddenMenuLinks": 0,
+        "language": "id",
+        "overflow": false,
+        "theme": "light",
+        "themeButton": {
+          "background": "rgba(76, 29, 149, 0.88)",
+          "border": "rgba(196, 181, 253, 0.5)",
+          "boxShadow": "rgba(167, 139, 250, 0.08) 0px 0px 15px 0px",
+          "color": "rgb(255, 255, 255)",
+          "height": "44px",
+          "label": "Mode Gelap",
+          "padding": "8px 14px",
+          "pressed": "false",
+          "radius": "12px"
+        },
+        "viewport": 662
+      },
+      {
+        "path": "/id/faq",
+        "heading": "Bantuan &Pertanyaan",
+        "hiddenMenuLinks": 0,
+        "language": "id",
+        "overflow": false,
+        "theme": "light",
+        "themeButton": {
+          "background": "rgba(76, 29, 149, 0.88)",
+          "border": "rgba(196, 181, 253, 0.5)",
+          "boxShadow": "rgba(167, 139, 250, 0.08) 0px 0px 15px 0px",
+          "color": "rgb(255, 255, 255)",
+          "height": "44px",
+          "label": "Mode Gelap",
+          "padding": "8px 14px",
+          "pressed": "false",
+          "radius": "12px"
+        },
+        "viewport": 662
+      },
+      {
+        "path": "/id/contact",
+        "heading": "HubungiKami",
+        "hiddenMenuLinks": 0,
+        "language": "id",
+        "overflow": false,
+        "theme": "light",
+        "themeButton": {
+          "background": "rgba(76, 29, 149, 0.88)",
+          "border": "rgba(196, 181, 253, 0.5)",
+          "boxShadow": "rgba(167, 139, 250, 0.08) 0px 0px 15px 0px",
+          "color": "rgb(255, 255, 255)",
+          "height": "44px",
+          "label": "Mode Gelap",
+          "padding": "8px 14px",
+          "pressed": "false",
+          "radius": "12px"
+        },
+        "viewport": 662
+      },
+      {
+        "path": "/id/services/it-development",
+        "heading": "Pengembangan TI",
+        "hiddenMenuLinks": 0,
+        "language": "id",
+        "overflow": false,
+        "theme": "light",
+        "themeButton": {
+          "background": "rgba(76, 29, 149, 0.88)",
+          "border": "rgba(196, 181, 253, 0.5)",
+          "boxShadow": "rgba(167, 139, 250, 0.08) 0px 0px 15px 0px",
+          "color": "rgb(255, 255, 255)",
+          "height": "44px",
+          "label": "Mode Gelap",
+          "padding": "8px 14px",
+          "pressed": "false",
+          "radius": "12px"
+        },
+        "viewport": 662
+      },
+      {
+        "path": "/id/services/consulting",
+        "heading": "Konsultasi",
+        "hiddenMenuLinks": 0,
+        "language": "id",
+        "overflow": false,
+        "theme": "light",
+        "themeButton": {
+          "background": "rgba(76, 29, 149, 0.88)",
+          "border": "rgba(196, 181, 253, 0.5)",
+          "boxShadow": "rgba(167, 139, 250, 0.08) 0px 0px 15px 0px",
+          "color": "rgb(255, 255, 255)",
+          "height": "44px",
+          "label": "Mode Gelap",
+          "padding": "8px 14px",
+          "pressed": "false",
+          "radius": "12px"
+        },
+        "viewport": 662
+      },
+      {
+        "path": "/id/services/sustainable-energy-solutions",
+        "heading": "Solusi Energi Berkelanjutan",
+        "hiddenMenuLinks": 0,
+        "language": "id",
+        "overflow": false,
+        "theme": "light",
+        "themeButton": {
+          "background": "rgba(76, 29, 149, 0.88)",
+          "border": "rgba(196, 181, 253, 0.5)",
+          "boxShadow": "rgba(167, 139, 250, 0.08) 0px 0px 15px 0px",
+          "color": "rgb(255, 255, 255)",
+          "height": "44px",
+          "label": "Mode Gelap",
+          "padding": "8px 14px",
+          "pressed": "false",
+          "radius": "12px"
+        },
+        "viewport": 662
+      },
+      {
+        "path": "/en/home",
+        "heading": "HarnessingIntelligence,Defining theFuture",
+        "hiddenMenuLinks": 0,
+        "language": "en",
+        "overflow": false,
+        "theme": "light",
+        "themeButton": {
+          "background": "rgba(76, 29, 149, 0.88)",
+          "border": "rgba(196, 181, 253, 0.5)",
+          "boxShadow": "rgba(167, 139, 250, 0.08) 0px 0px 15px 0px",
+          "color": "rgb(255, 255, 255)",
+          "height": "44px",
+          "label": "Dark Mode",
+          "padding": "8px 14px",
+          "pressed": "false",
+          "radius": "12px"
+        },
+        "viewport": 662
+      },
+      {
+        "path": "/en/about",
+        "heading": "AboutViolet Global Indonesia",
+        "hiddenMenuLinks": 0,
+        "language": "en",
+        "overflow": false,
+        "theme": "light",
+        "themeButton": {
+          "background": "rgba(76, 29, 149, 0.88)",
+          "border": "rgba(196, 181, 253, 0.5)",
+          "boxShadow": "rgba(167, 139, 250, 0.08) 0px 0px 15px 0px",
+          "color": "rgb(255, 255, 255)",
+          "height": "44px",
+          "label": "Dark Mode",
+          "padding": "8px 14px",
+          "pressed": "false",
+          "radius": "12px"
+        },
+        "viewport": 662
+      },
+      {
+        "path": "/en/services",
+        "heading": "OurServices",
+        "hiddenMenuLinks": 0,
+        "language": "en",
+        "overflow": false,
+        "theme": "light",
+        "themeButton": {
+          "background": "rgba(76, 29, 149, 0.88)",
+          "border": "rgba(196, 181, 253, 0.5)",
+          "boxShadow": "rgba(167, 139, 250, 0.08) 0px 0px 15px 0px",
+          "color": "rgb(255, 255, 255)",
+          "height": "44px",
+          "label": "Dark Mode",
+          "padding": "8px 14px",
+          "pressed": "false",
+          "radius": "12px"
+        },
+        "viewport": 662
+      },
+      {
+        "path": "/en/portfolio",
+        "heading": "Project",
+        "hiddenMenuLinks": 0,
+        "language": "en",
+        "overflow": false,
+        "theme": "light",
+        "themeButton": {
+          "background": "rgba(76, 29, 149, 0.88)",
+          "border": "rgba(196, 181, 253, 0.5)",
+          "boxShadow": "rgba(167, 139, 250, 0.08) 0px 0px 15px 0px",
+          "color": "rgb(255, 255, 255)",
+          "height": "44px",
+          "label": "Dark Mode",
+          "padding": "8px 14px",
+          "pressed": "false",
+          "radius": "12px"
+        },
+        "viewport": 662
+      },
+      {
+        "path": "/en/faq",
+        "heading": "Help &Support",
+        "hiddenMenuLinks": 0,
+        "language": "en",
+        "overflow": false,
+        "theme": "light",
+        "themeButton": {
+          "background": "rgba(76, 29, 149, 0.88)",
+          "border": "rgba(196, 181, 253, 0.5)",
+          "boxShadow": "rgba(167, 139, 250, 0.08) 0px 0px 15px 0px",
+          "color": "rgb(255, 255, 255)",
+          "height": "44px",
+          "label": "Dark Mode",
+          "padding": "8px 14px",
+          "pressed": "false",
+          "radius": "12px"
+        },
+        "viewport": 662
+      },
+      {
+        "path": "/en/contact",
+        "heading": "ConnectWith Us",
+        "hiddenMenuLinks": 0,
+        "language": "en",
+        "overflow": false,
+        "theme": "light",
+        "themeButton": {
+          "background": "rgba(76, 29, 149, 0.88)",
+          "border": "rgba(196, 181, 253, 0.5)",
+          "boxShadow": "rgba(167, 139, 250, 0.08) 0px 0px 15px 0px",
+          "color": "rgb(255, 255, 255)",
+          "height": "44px",
+          "label": "Dark Mode",
+          "padding": "8px 14px",
+          "pressed": "false",
+          "radius": "12px"
+        },
+        "viewport": 662
+      },
+      {
+        "path": "/en/services/it-development",
+        "heading": "IT Development",
+        "hiddenMenuLinks": 0,
+        "language": "en",
+        "overflow": false,
+        "theme": "light",
+        "themeButton": {
+          "background": "rgba(76, 29, 149, 0.88)",
+          "border": "rgba(196, 181, 253, 0.5)",
+          "boxShadow": "rgba(167, 139, 250, 0.08) 0px 0px 15px 0px",
+          "color": "rgb(255, 255, 255)",
+          "height": "44px",
+          "label": "Dark Mode",
+          "padding": "8px 14px",
+          "pressed": "false",
+          "radius": "12px"
+        },
+        "viewport": 662
+      },
+      {
+        "path": "/en/services/consulting",
+        "heading": "Consulting",
+        "hiddenMenuLinks": 0,
+        "language": "en",
+        "overflow": false,
+        "theme": "light",
+        "themeButton": {
+          "background": "rgba(76, 29, 149, 0.88)",
+          "border": "rgba(196, 181, 253, 0.5)",
+          "boxShadow": "rgba(167, 139, 250, 0.08) 0px 0px 15px 0px",
+          "color": "rgb(255, 255, 255)",
+          "height": "44px",
+          "label": "Dark Mode",
+          "padding": "8px 14px",
+          "pressed": "false",
+          "radius": "12px"
+        },
+        "viewport": 662
+      },
+      {
+        "path": "/en/services/sustainable-energy-solutions",
+        "heading": "Sustainable Energy Solutions",
+        "hiddenMenuLinks": 0,
+        "language": "en",
+        "overflow": false,
+        "theme": "light",
+        "themeButton": {
+          "background": "rgba(76, 29, 149, 0.88)",
+          "border": "rgba(196, 181, 253, 0.5)",
+          "boxShadow": "rgba(167, 139, 250, 0.08) 0px 0px 15px 0px",
+          "color": "rgb(255, 255, 255)",
+          "height": "44px",
+          "label": "Dark Mode",
+          "padding": "8px 14px",
+          "pressed": "false",
+          "radius": "12px"
+        },
+        "viewport": 662
+      }
+    ],
+    "interactionStates": {
+      "dark": {
+        "hover": {
+          "background": "rgba(255, 255, 255, 0.14)",
+          "border": "rgba(255, 255, 255, 0.4)",
+          "hover": true
+        },
+        "focus": {
+          "focus": true,
+          "outline": "rgb(167, 139, 250) solid 2px",
+          "outlineOffset": "3px"
+        },
+        "active": {
+          "active": true,
+          "background": "rgba(255, 255, 255, 0.14)",
+          "border": "rgba(255, 255, 255, 0.4)"
+        }
+      },
+      "light": {
+        "hover": {
+          "background": "rgba(91, 33, 182, 0.96)",
+          "color": "rgb(255, 255, 255)",
+          "hover": true
+        },
+        "focus": {
+          "focus": true,
+          "outline": "rgb(167, 139, 250) solid 2px",
+          "outlineOffset": "3px"
+        },
+        "active": {
+          "active": true,
+          "background": "rgba(91, 33, 182, 0.96)",
+          "color": "rgb(255, 255, 255)"
+        }
+      }
+    },
+    "formTests": {
+      "requiredIndonesian": true,
+      "requiredEnglish": true,
+      "emailIndonesian": true,
+      "emailEnglish": true,
+      "pendingIndonesian": true,
+      "pendingEnglish": true,
+      "successIndonesian": true,
+      "successEnglish": true,
+      "languageSwitchPreservesContactRoute": true,
+      "scope": "Client UI validation and existing simulated success state; no external email delivery was tested."
+    },
+    "blockedRoutes": [
+      {
+        "requestedPath": "/id/blog",
+        "finalUrl": "http://localhost:3001/id/blog",
+        "heading": "Halaman Tidak Ditemukan",
+        "homeLink": "/id/home",
+        "language": "id"
+      },
+      {
+        "requestedPath": "/id/blog/panduan-seo-teknis-2025",
+        "finalUrl": "http://localhost:3001/id/blog/panduan-seo-teknis-2025",
+        "heading": "Halaman Tidak Ditemukan",
+        "homeLink": "/id/home",
+        "language": "id"
+      },
+      {
+        "requestedPath": "/id/case-study",
+        "finalUrl": "http://localhost:3001/id/case-study",
+        "heading": "Halaman Tidak Ditemukan",
+        "homeLink": "/id/home",
+        "language": "id"
+      },
+      {
+        "requestedPath": "/id/case-study/portal-procurement-b2b-demo",
+        "finalUrl": "http://localhost:3001/id/case-study/portal-procurement-b2b-demo",
+        "heading": "Halaman Tidak Ditemukan",
+        "homeLink": "/id/home",
+        "language": "id"
+      },
+      {
+        "requestedPath": "/en/blog",
+        "finalUrl": "http://localhost:3001/en/blog",
+        "heading": "Page Not Found",
+        "homeLink": "/en/home",
+        "language": "en"
+      },
+      {
+        "requestedPath": "/en/blog/panduan-seo-teknis-2025",
+        "finalUrl": "http://localhost:3001/en/blog/panduan-seo-teknis-2025",
+        "heading": "Page Not Found",
+        "homeLink": "/en/home",
+        "language": "en"
+      },
+      {
+        "requestedPath": "/en/case-study",
+        "finalUrl": "http://localhost:3001/en/case-study",
+        "heading": "Page Not Found",
+        "homeLink": "/en/home",
+        "language": "en"
+      },
+      {
+        "requestedPath": "/en/case-study/portal-procurement-b2b-demo",
+        "finalUrl": "http://localhost:3001/en/case-study/portal-procurement-b2b-demo",
+        "heading": "Page Not Found",
+        "homeLink": "/en/home",
+        "language": "en"
+      },
+      {
+        "requestedPath": "/blog",
+        "finalUrl": "http://localhost:3001/en/blog",
+        "heading": "Page Not Found",
+        "homeLink": "/en/home",
+        "language": "en"
+      },
+      {
+        "requestedPath": "/blog/panduan-seo-teknis-2025",
+        "finalUrl": "http://localhost:3001/en/blog/panduan-seo-teknis-2025",
+        "heading": "Page Not Found",
+        "homeLink": "/en/home",
+        "language": "en"
+      },
+      {
+        "requestedPath": "/case-study",
+        "finalUrl": "http://localhost:3001/en/case-study",
+        "heading": "Page Not Found",
+        "homeLink": "/en/home",
+        "language": "en"
+      },
+      {
+        "requestedPath": "/case-study/portal-procurement-b2b-demo",
+        "finalUrl": "http://localhost:3001/en/case-study/portal-procurement-b2b-demo",
+        "heading": "Page Not Found",
+        "homeLink": "/en/home",
+        "language": "en"
+      }
+    ]
+  },
+  "previousTaskCriteria": {
+    "footerDesktop": {
+      "background": "rgb(255, 255, 255)",
+      "copyright": "© 2025 - 2026 Violet Global Indonesia. Semua hak dilindungi.",
+      "logoCenter": 160,
+      "radius": "12px",
+      "socialCenter": 160
+    },
+    "footerLight": {
+      "background": "rgb(255, 255, 255)",
+      "copyright": "© 2025 - 2026 Violet Global Indonesia. Semua hak dilindungi.",
+      "radius": "12px",
+      "theme": "light"
+    },
+    "footerMobile": {
+      "background": "rgb(255, 255, 255)",
+      "contentCenter": 328,
+      "logoCenter": 328,
+      "socialCenter": 328,
+      "viewport": 662
+    },
+    "serviceAssetChecks": [
+      {
+        "fit": "cover",
+        "loaded": true,
+        "source": "/_next/image?url=%2Fimages%2Fservices%2Fit-development.webp&w=3840&q=75",
+        "title": "Pengembangan TI"
+      },
+      {
+        "fit": "cover",
+        "loaded": true,
+        "source": "/_next/image?url=%2Fimages%2Fservices%2Fconsulting.webp&w=3840&q=75",
+        "title": "Konsultasi"
+      },
+      {
+        "fit": "cover",
+        "loaded": true,
+        "source": "/_next/image?url=%2Fimages%2Fservices%2Fsustainable-energy-solutions.webp&w=3840&q=75",
+        "title": "Solusi Energi Berkelanjutan"
+      }
+    ],
+    "clientLogoChecks": [
+      {
+        "backdrop": "rgb(255, 255, 255)",
+        "fit": "contain",
+        "loaded": true,
+        "name": "Pemerintah Provinsi Jawa Tengah"
+      },
+      {
+        "backdrop": "rgb(255, 255, 255)",
+        "fit": "contain",
+        "loaded": true,
+        "name": "Mabes Polri"
+      },
+      {
+        "backdrop": "rgb(255, 255, 255)",
+        "fit": "contain",
+        "loaded": true,
+        "name": "PT BPR BKK Jateng (Perseroda)"
+      }
+    ],
+    "visualReview": {
+      "method": "Visual review of generated photographs and page previews",
+      "serviceSubjects": {
+        "it-development": "Software workstation and analytics screens",
+        "consulting": "Market analysis documents and strategy roadmap",
+        "sustainable-energy-solutions": "Solar panels and waste processing facility"
+      },
+      "peopleInGeneratedServiceImages": false,
+      "footerBackdrop": "White panel with 12px corners and a soft shadow",
+      "clientLogos": "Official artwork, original aspect ratios, descriptive alt text; logos only"
+    }
+  },
+  "unknownRoutes": [
+    {
+      "path": "/id/unavailable-page",
+      "status": 404,
+      "localized": true
+    },
+    {
+      "path": "/en/unavailable-page",
+      "status": 404,
+      "localized": true
+    }
+  ],
+  "unitTests": {
+    "command": "npm test",
+    "result": "passed",
+    "files": 4,
+    "tests": 17
+  },
+  "productionBuild": {
+    "command": "npm run build",
+    "result": "passed",
+    "typescript": "passed"
+  },
+  "lint": {
+    "command": "npm run lint",
+    "result": "failed",
+    "preExistingErrors": 5,
+    "preExistingWarnings": 3,
+    "errorLocations": [
+      "src/components/sections/HeroSection.tsx:53 (set-state-in-effect)",
+      "src/components/ui/DotGrid.tsx:354,355 (explicit-any)",
+      "src/lib/portfolio-utils.ts:32,35 (explicit-any)"
+    ]
+  },
+  "gitDiffCheck": "passed",
+  "changedFiles": [
+    "docs/assets/service-image-generation.json",
+    "docs/qa/language-theme-audit.json",
+    "public/clients/SOURCES.md",
+    "public/clients/bkk-jateng.png",
+    "public/clients/mabes-polri.png",
+    "public/clients/pemprov-jateng.png",
+    "public/images/services/consulting.webp",
+    "public/images/services/it-development.webp",
+    "public/images/services/sustainable-energy-solutions.webp",
+    "src/app/[locale]/(website)/about/page.tsx",
+    "src/app/[locale]/(website)/blog/[slug]/page.tsx",
+    "src/app/[locale]/(website)/blog/page.tsx",
+    "src/app/[locale]/(website)/case-study/[slug]/page.tsx",
+    "src/app/[locale]/(website)/case-study/page.tsx",
+    "src/app/[locale]/(website)/contact/layout.tsx",
+    "src/app/[locale]/(website)/contact/page.tsx",
+    "src/app/[locale]/(website)/faq/FAQContent.tsx",
+    "src/app/[locale]/(website)/faq/page.tsx",
+    "src/app/[locale]/(website)/home/page.tsx",
+    "src/app/[locale]/(website)/page.tsx",
+    "src/app/[locale]/(website)/portfolio/PortfolioContent.tsx",
+    "src/app/[locale]/(website)/portfolio/[slug]/page.tsx",
+    "src/app/[locale]/(website)/portfolio/page.tsx",
+    "src/app/[locale]/(website)/services/[slug]/page.tsx",
+    "src/app/[locale]/(website)/services/page.tsx",
+    "src/app/[locale]/layout.tsx",
+    "src/app/[locale]/not-found.tsx",
+    "src/app/globals.css",
+    "src/app/layout.tsx",
+    "src/app/not-found.tsx",
+    "src/components/i18n/LocaleInitializer.tsx",
+    "src/components/layout/Footer.tsx",
+    "src/components/layout/Navbar.tsx",
+    "src/components/layout/WhatsAppButton.tsx",
+    "src/components/sections/CTASection.tsx",
+    "src/components/sections/ClientsSection.tsx",
+    "src/components/sections/HeroSection.tsx",
+    "src/components/sections/TestimonialsSection.tsx",
+    "src/components/theme/ThemeInitializer.tsx",
+    "src/components/theme/ThemeToggle.tsx",
+    "src/components/theme/useTheme.ts",
+    "src/components/ui/InteractiveLogoMark.tsx",
+    "src/lib/data/clients.ts",
+    "src/lib/data/general.ts",
+    "src/lib/data/portfolio.ts",
+    "src/lib/data/service-images.ts",
+    "src/lib/data/services.ts",
+    "src/lib/page-metadata.ts",
+    "src/lib/theme.ts",
+    "src/messages/en.json",
+    "src/messages/id.json",
+    "src/types/index.ts",
+    "tests/fixtures/i18n.ts",
+    "tests/fixtures/rich-text-fixtures.ts",
+    "tests/i18n-theme.test.tsx",
+    "tests/portfolio-detail-page.test.tsx",
+    "tests/service-detail-page.test.tsx"
+  ],
+  "formDeliveryLimitation": "The existing contact form simulates sending and success. Only client-side validation, loading/success copy, and language switching were tested; external email delivery was not tested."
+}

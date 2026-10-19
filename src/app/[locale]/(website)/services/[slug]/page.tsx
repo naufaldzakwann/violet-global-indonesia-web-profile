@@ -1,9 +1,10 @@
 import { notFound } from "next/navigation";
+import { getTranslations } from "next-intl/server";
 import Link from "next/link";
 import Image from "next/image";
 import { services as staticServices, getCategoryLabel } from "@/lib/data/services";
 import { portfolios } from "@/lib/data/portfolio";
-import { serviceDetailHero } from "@/lib/data/service-images";
+import { getDetailHero } from "@/lib/data/service-images";
 import { AnimateOnView } from "@/components/ui/AnimateOnView";
 import { Icon } from "@/components/ui/Icon";
 import { RichTextContent } from "@/components/ui/RichTextContent";
@@ -30,6 +31,7 @@ export default async function ServiceDetailPage({ params }: Props) {
   if (!svc) notFound();
 
   const isId = locale === "id";
+  const t = await getTranslations({ locale, namespace: "serviceDetail" });
   const entry = svc;
   const title = isId ? entry.title : entry.titleEn || entry.title;
   const shortDesc = isId ? entry.shortDesc : entry.shortDescEn || entry.shortDesc;
@@ -56,7 +58,7 @@ export default async function ServiceDetailPage({ params }: Props) {
               href={`/${locale}/services`}
               className="text-[10px] font-bold uppercase tracking-widest text-violet-600 transition-colors hover:text-slate-900 dark:text-violet-400 dark:hover:text-white"
             >
-              ← {isId ? "Layanan" : "Services"}
+              ← {t("services")}
             </Link>
             <div className="h-4 w-px bg-slate-200 dark:bg-white/10" />
             <div className="text-[10px] font-bold uppercase tracking-widest text-slate-400 dark:text-white/40">
@@ -83,7 +85,7 @@ export default async function ServiceDetailPage({ params }: Props) {
                 href={`/${locale}/contact`}
                 className="inline-flex items-center gap-2 rounded-full bg-violet-600 px-6 py-3 text-[12px] font-bold uppercase tracking-[0.14em] text-white shadow-[0_14px_30px_rgba(124,58,237,0.35)] transition-all hover:bg-violet-500"
               >
-                {isId ? "Konsultasi Gratis" : "Free Consultation"}
+                {t("freeConsultation")}
                 <Icon name="ArrowRight" size={14} />
               </Link>
               {entry.products && entry.products.length > 0 && (
@@ -91,7 +93,7 @@ export default async function ServiceDetailPage({ params }: Props) {
                   href="#produk"
                   className="inline-flex items-center gap-2 rounded-full border border-slate-200 px-6 py-3 text-[12px] font-bold uppercase tracking-[0.14em] text-slate-600 transition-all hover:border-violet-300 hover:text-violet-700 dark:border-white/15 dark:text-slate-300 dark:hover:border-violet-400/50 dark:hover:text-white"
                 >
-                  {isId ? "Lihat Produknya" : "See the Products"}
+                  {t("seeTheProducts")}
                 </a>
               )}
             </div>
@@ -100,9 +102,10 @@ export default async function ServiceDetailPage({ params }: Props) {
           {/* Gambar hero */}
           <AnimateOnView delay={200} className="relative mt-10 aspect-[21/9] overflow-hidden rounded-3xl border border-slate-100 shadow-xl shadow-slate-200/50 dark:border-white/10 dark:shadow-black/40">
             <Image
-              src={serviceDetailHero}
+              src={getDetailHero(slug)}
               alt={title}
               fill
+              sizes="(max-width: 896px) calc(100vw - 48px), 848px"
               className="object-cover opacity-90 dark:opacity-75"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-black/10 to-transparent dark:from-black/30" />
@@ -113,7 +116,7 @@ export default async function ServiceDetailPage({ params }: Props) {
         <section className="mb-20">
           <AnimateOnView>
             <h2 className="mb-6 text-xs font-bold uppercase tracking-widest text-violet-600 dark:text-violet-400">
-              {isId ? `Apa itu ${title}?` : `What is ${title}?`}
+              {t("whatIs", { title })}
             </h2>
             <div className="space-y-6 text-lg font-light leading-relaxed text-slate-600 dark:text-slate-300">
               <RichTextContent
@@ -130,10 +133,10 @@ export default async function ServiceDetailPage({ params }: Props) {
           <section className="mb-20">
             <AnimateOnView>
               <h2 className="mb-3 text-xs font-bold uppercase tracking-widest text-violet-600 dark:text-violet-400">
-                {isId ? "Layanan Ini Cocok untuk Siapa?" : "Who Is This Service For?"}
+                {t("whoIsThisServiceFor")}
               </h2>
               <p className="mb-8 text-sm text-slate-400 dark:text-white/40">
-                {isId ? "Cocokkan dengan kondisi Anda — kalau salah satu terasa familiar, layanan ini untuk Anda." : "Match it with your situation — if any of these feels familiar, this service is for you."}
+                {t("audienceIntro")}
               </p>
             </AnimateOnView>
             <div className="grid gap-3 sm:grid-cols-2">
@@ -156,10 +159,10 @@ export default async function ServiceDetailPage({ params }: Props) {
           <section id="produk" className="mb-20 scroll-mt-24">
             <AnimateOnView>
               <h2 className="mb-3 text-xs font-bold uppercase tracking-widest text-violet-600 dark:text-violet-400">
-                {isId ? "Produk & Platform di Layanan Ini" : "Products & Platforms in This Service"}
+                {t("productsPlatformsInThisService")}
               </h2>
               <p className="mb-8 text-sm text-slate-400 dark:text-white/40">
-                {isId ? "Beberapa pilihan yang tersedia — klik untuk melihat detailnya." : "The available options — click to see the details."}
+                {t("productsIntro")}
               </p>
             </AnimateOnView>
 
@@ -204,7 +207,7 @@ export default async function ServiceDetailPage({ params }: Props) {
                             href={`/${locale}${product.href}`}
                             className="mt-7 inline-flex items-center gap-2 rounded-full border border-violet-200 bg-violet-50 px-5 py-2.5 text-[11px] font-bold uppercase tracking-[0.14em] text-violet-700 transition-all hover:border-violet-600 hover:bg-violet-600 hover:text-white dark:border-violet-400/30 dark:bg-violet-500/10 dark:text-violet-200 dark:hover:bg-violet-600 dark:hover:text-white"
                           >
-                            {isId ? "Lihat Halaman Lengkap" : "View Full Page"}
+                            {t("viewFullPage")}
                             <Icon name="ArrowRight" size={13} />
                           </Link>
                         )}
@@ -222,10 +225,10 @@ export default async function ServiceDetailPage({ params }: Props) {
           <section className="mb-20">
             <AnimateOnView>
               <h2 className="mb-3 text-xs font-bold uppercase tracking-widest text-violet-600 dark:text-violet-400">
-                {isId ? "Cara Kami Bekerja" : "How We Work"}
+                {t("howWeWork")}
               </h2>
               <p className="mb-8 text-sm text-slate-400 dark:text-white/40">
-                {isId ? "Prosesnya sederhana dan transparan — Anda tahu apa yang terjadi di setiap langkah." : "The process is simple and transparent — you know what happens at every step."}
+                {t("processIntro")}
               </p>
             </AnimateOnView>
 
@@ -255,7 +258,7 @@ export default async function ServiceDetailPage({ params }: Props) {
         <section className="mb-20">
           <AnimateOnView>
             <h2 className="mb-3 text-xs font-bold uppercase tracking-widest text-violet-600 dark:text-violet-400">
-              {isId ? "Yang Anda Dapatkan" : "What You Get"}
+              {t("whatYouGet")}
             </h2>
           </AnimateOnView>
           <ul className="mt-6 grid gap-3 sm:grid-cols-2">
@@ -275,13 +278,13 @@ export default async function ServiceDetailPage({ params }: Props) {
           <section className="border-t border-slate-100 pt-16 dark:border-white/5">
             <AnimateOnView className="mb-10">
               <h2 className="mb-4 text-xs font-bold uppercase tracking-widest text-slate-400 dark:text-white/40">
-                {isId ? "Bukti Kualitas" : "Proof of Excellence"}
+                {t("proofOfExcellence")}
               </h2>
               <h3
                 className="mb-6 text-3xl font-medium leading-tight tracking-tight text-slate-900 dark:text-white"
                 style={{ fontFamily: "var(--font-poppins)" }}
               >
-                {isId ? `Karya ${title} yang Pernah Kami Kerjakan.` : `Successfully delivered ${title} projects.`}
+                {t("successfullyDeliveredProjects", { title })}
               </h3>
             </AnimateOnView>
 
@@ -295,7 +298,7 @@ export default async function ServiceDetailPage({ params }: Props) {
                     <div className="relative aspect-[4/3] overflow-hidden rounded-2xl shadow-lg md:col-span-4">
                       <Image
                         src={project.thumbnail}
-                        alt={project.title}
+                        alt={isId ? project.title : project.titleEn}
                         fill
                         className="object-cover transition-transform duration-700 group-hover:scale-105"
                       />
@@ -309,7 +312,7 @@ export default async function ServiceDetailPage({ params }: Props) {
                         {isId ? project.problem : project.problemEn}
                       </p>
                       <div className="flex flex-wrap gap-2">
-                        {project.technologies.slice(0, 3).map((t) => (
+                        {(isId ? project.technologies : (project.technologiesEn ?? project.technologies)).slice(0, 3).map((t) => (
                           <span key={t} className="rounded-full border border-slate-200 px-2 py-0.5 text-[9px] font-bold uppercase text-slate-400 dark:border-white/15 dark:text-white/50">
                             {t}
                           </span>
@@ -331,7 +334,7 @@ export default async function ServiceDetailPage({ params }: Props) {
                 href={`/${locale}/portfolio`}
                 className="text-xs font-bold uppercase tracking-widest text-slate-400 transition-colors hover:text-violet-600 dark:hover:text-violet-300"
               >
-                {isId ? "Lihat Seluruh Portfolio →" : "View Entire Portfolio →"}
+                {t("viewEntirePortfolio")}
               </Link>
             </AnimateOnView>
           </section>
@@ -347,18 +350,16 @@ export default async function ServiceDetailPage({ params }: Props) {
                   className="mb-4 text-2xl font-bold tracking-tight text-white md:text-3xl"
                   style={{ fontFamily: "var(--font-poppins)" }}
                 >
-                  {isId ? `Masih ragu ${title} cocok untuk Anda?` : `Not sure ${title} is right for you?`}
+                  {t("notSureIsRightForYou", { title })}
                 </h2>
                 <p className="mx-auto mb-8 max-w-md text-[15px] leading-relaxed text-white/50">
-                  {isId
-                    ? "Ceritakan kebutuhan Anda — konsultasi pertama gratis, tanpa komitmen apa pun."
-                    : "Tell us what you need — the first consultation is free, with no commitment."}
+                  {t("consultationIntro")}
                 </p>
                 <Link
                   href={`/${locale}/contact`}
                   className="inline-flex items-center gap-2 rounded-full bg-violet-600 px-7 py-3.5 text-[12px] font-bold uppercase tracking-[0.14em] text-white shadow-[0_14px_30px_rgba(124,58,237,0.4)] transition-all hover:bg-violet-500"
                 >
-                  {isId ? "Mulai Konsultasi Gratis" : "Start Free Consultation"}
+                  {t("startFreeConsultation")}
                   <Icon name="ArrowRight" size={14} />
                 </Link>
               </div>
@@ -368,7 +369,7 @@ export default async function ServiceDetailPage({ params }: Props) {
 
         <footer className="mt-16 border-t border-slate-50 pt-10 text-center dark:border-white/5">
           <AnimateOnView className="pointer-events-none select-none opacity-10">
-            <span className="text-[9px] font-bold uppercase tracking-[1.5em]">VIOLET GLOBAL INDONESIA • {new Date().getFullYear()}</span>
+            <span className="text-[9px] font-bold uppercase tracking-[1.5em]">VIOLET GLOBAL INDONESIA • 2025 - {new Intl.DateTimeFormat("en", { year: "numeric", timeZone: "Asia/Jakarta" }).format(new Date())}</span>
           </AnimateOnView>
         </footer>
 

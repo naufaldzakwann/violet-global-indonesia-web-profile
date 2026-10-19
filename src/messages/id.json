@@ -4,27 +4,42 @@
     "about": "Tentang Kami",
     "services": "Layanan",
     "portfolio": "Portofolio",
-    "caseStudy": "Case Study",
+    "caseStudy": "Studi Kasus",
     "blog": "Blog",
     "contact": "Kontak",
-    "faq": "FAQ",
-    "cta": "Konsultasi Gratis"
+    "faq": "Bantuan",
+    "cta": "Konsultasi Gratis",
+    "toggleMenu": "Buka atau tutup menu",
+    "closeMenu": "Tutup menu",
+    "closeOverlay": "Tutup lapisan menu",
+    "switchLanguage": "Ubah bahasa ke Inggris"
   },
   "hero": {
-    "badge": "One-Stop IT & Digital Solution",
-    "headline": ["Memadukan", "Kecerdasan,", "Membentuk", "Masa Depan"],
-    "title": "Solusi IT Terlengkap untuk Bisnis Anda",
-    "subtitle": "Violet Global Indonesia hadir sebagai mitra teknologi terpercaya — dari pengembangan website, keamanan siber, hingga transformasi digital bisnis Anda.",
+    "badge": "Solusi TI dan Digital Terpadu",
+    "headline": [
+      "Memadukan",
+      "Kecerdasan,",
+      "Membentuk",
+      "Masa Depan"
+    ],
+    "title": "Solusi TI Terlengkap untuk Bisnis Anda",
+    "subtitle": "Violet Global Indonesia hadir sebagai mitra teknologi terpercaya — dari pengembangan situs web, keamanan siber, hingga transformasi digital bisnis Anda.",
     "ctaPrimary": "Konsultasi Gratis Sekarang",
-    "ctaSecondary": "Lihat Portofolio Kami"
+    "ctaSecondary": "Lihat Portofolio Kami",
+    "toBegin": "untuk memulai",
+    "contactUs": "HUBUNGI KAMI",
+    "tapLogo": "Klik logo",
+    "startHint": "Klik logo untuk memulai"
   },
   "services": {
     "badge": "Layanan Kami",
-    "title": "Solusi terintegrasi untuk kebutuhan enterprise Anda",
-    "subtitle": "Tiga pilar layanan kami — IT Development, Consulting, dan Sustainable Energy Solutions — menghadirkan solusi terintegrasi: upstream - downstream.",
+    "title": "Solusi terintegrasi untuk kebutuhan perusahaan Anda",
+    "subtitle": "Tiga pilar layanan kami — pengembangan TI, konsultasi, dan solusi energi berkelanjutan — menghadirkan solusi terintegrasi dari hulu ke hilir.",
     "learnMore": "Pelajari",
     "consultNow": "Konsultasi Sekarang",
-    "allServices": "Semua Layanan"
+    "allServices": "Semua Layanan",
+    "headingFirst": "Layanan",
+    "headingSecond": "Violet Global"
   },
   "why": {
     "badge": "Mengapa Memilih VGI",
@@ -33,7 +48,7 @@
     "points": [
       {
         "icon": "Package",
-        "title": "One-Stop Solution",
+        "title": "Solusi Terpadu",
         "desc": "Semua kebutuhan bisnis Anda terpenuhi di satu tempat. Tidak perlu koordinasi dengan banyak vendor."
       },
       {
@@ -44,12 +59,12 @@
       {
         "icon": "Clock",
         "title": "Tepat Waktu",
-        "desc": "Kami berkomitmen pada deadline. 95% proyek kami diselesaikan on-time atau lebih awal dari jadwal."
+        "desc": "Kami berkomitmen pada tenggat waktu. 95% proyek kami diselesaikan tepat waktu atau lebih awal dari jadwal."
       },
       {
         "icon": "HeadphonesIcon",
-        "title": "Support 24/7",
-        "desc": "Tim support kami siap membantu Anda kapan pun dibutuhkan, termasuk di luar jam kerja."
+        "title": "Dukungan 24/7",
+        "desc": "Tim dukungan kami siap membantu Anda kapan pun dibutuhkan, termasuk di luar jam kerja."
       },
       {
         "icon": "TrendingUp",
@@ -74,7 +89,7 @@
     "solution": "Solusi",
     "result": "Hasil",
     "technologies": "Teknologi",
-    "liveProject": "Lihat Live Project",
+    "liveProject": "Lihat Proyek Langsung",
     "backToPortfolio": "← Kembali ke Portofolio"
   },
   "testimonials": {
@@ -87,7 +102,10 @@
     "subtitle": "Konsultasikan kebutuhan bisnis Anda dengan tim ahli kami secara gratis. Kami siap membantu.",
     "primary": "Konsultasi Gratis Sekarang",
     "secondary": "Hubungi via WhatsApp",
-    "phone": "+62 851-6641-5046"
+    "phone": "+62 851-6641-5046",
+    "badge": "Konsultasi",
+    "strategy": "Pendekatan berbasis strategi",
+    "whatsappMessage": "Halo VGI, saya ingin berkonsultasi."
   },
   "about": {
     "badge": "Tentang Kami",
@@ -108,24 +126,65 @@
     "history": {
       "title": "Perjalanan Kami",
       "items": [
-        { "year": "2019", "event": "VGI didirikan dengan fokus awal pada pengembangan website dan aplikasi" },
-        { "year": "2020", "event": "Ekspansi layanan ke digital marketing dan desain branding" },
-        { "year": "2021", "event": "Membuka divisi Cybersecurity dan Data Analytics" },
-        { "year": "2022", "event": "Mencapai milestone 50 klien aktif dan membangun tim 20+ profesional" },
-        { "year": "2023", "event": "Meluncurkan layanan Automasi & Integrasi Sistem untuk korporasi" },
-        { "year": "2024", "event": "Mencapai 150+ proyek selesai dan ekspansi layanan ke klien internasional" },
-        { "year": "2025", "event": "Peluncuran website korporat baru sebagai wujud komitmen transparansi" }
+        {
+          "year": "2019",
+          "event": "VGI didirikan dengan fokus awal pada pengembangan website dan aplikasi"
+        },
+        {
+          "year": "2020",
+          "event": "Ekspansi layanan ke pemasaran digital dan desain merek"
+        },
+        {
+          "year": "2021",
+          "event": "Membuka divisi Keamanan Siber dan Analitik Data"
+        },
+        {
+          "year": "2022",
+          "event": "Mencapai pencapaian 50 klien aktif dan membangun tim 20+ profesional"
+        },
+        {
+          "year": "2023",
+          "event": "Meluncurkan layanan Automasi & Integrasi Sistem untuk korporasi"
+        },
+        {
+          "year": "2024",
+          "event": "Mencapai 150+ proyek selesai dan ekspansi layanan ke klien internasional"
+        },
+        {
+          "year": "2025",
+          "event": "Peluncuran website korporat baru sebagai wujud komitmen transparansi"
+        }
       ]
     },
     "values": "Nilai Inti Kami",
     "team": {
       "title": "Tim Manajemen",
       "subtitle": "Dipimpin oleh profesional berpengalaman yang berkomitmen pada kesuksesan klien."
-    }
+    },
+    "whoWeAre": "Siapa Kami",
+    "itDevelopment": "Pengembangan TI",
+    "consulting": "Konsultasi",
+    "sustainableEnergySolutions": "Solusi Energi Berkelanjutan",
+    "about": "Tentang",
+    "valuesCulture": "Nilai & Budaya",
+    "overviewTitle": "Memberdayakan bisnis dengan menghubungkan teknologi global bersama peluang yang terus berkembang di Indonesia — melalui panduan strategis dan solusi energi berkelanjutan.",
+    "overviewDescription": "Violet Global Indonesia (VGI) adalah perusahaan teknologi dan solusi energi berkelanjutan yang berdiri sejak 2019. Kami menghadirkan solusi terintegrasi dari hulu ke hilir — menyatukan tiga pilar layanan dalam satu ekosistem pendampingan yang utuh.",
+    "overviewScope": "Dari membangun sistem digital, merancang strategi bisnis, hingga mengembangkan proyek energi terbarukan dan pengelolaan sampah — kami mendampingi dari riset dan strategi, pembangunan, sampai operasional, dengan pendekatan berbasis data dan AI.",
+    "overviewPoints": [
+      "Satu mitra untuk seluruh kebutuhan: dari sistem digital, strategi bisnis, hingga proyek energi berkelanjutan.",
+      "Pendekatan menyeluruh: riset, strategi, pembangunan, hingga pendampingan operasional.",
+      "Berbasis data & AI — terukur, terstruktur, dan relevan dengan kebutuhan bisnis Anda."
+    ],
+    "purpose": "TUJUAN",
+    "action": "TINDAKAN",
+    "management": "Manajemen",
+    "itDevelopmentDescription": "Sistem, aplikasi & infrastruktur digital",
+    "consultingDescription": "Strategi, masuk pasar & pengembangan bisnis",
+    "sustainableEnergyDescription": "Energi terbarukan & ekonomi sirkular"
   },
   "blog": {
     "badge": "Blog & Artikel",
-    "title": "Insights & Pengetahuan Terbaru",
+    "title": "Wawasan & Pengetahuan Terbaru",
     "subtitle": "Artikel, tutorial, dan wawasan dari tim ahli VGI untuk membantu bisnis Anda berkembang.",
     "readMore": "Baca Selengkapnya",
     "readTime": "menit baca",
@@ -138,7 +197,7 @@
   "contact": {
     "badge": "Hubungi Kami",
     "title": "Mulai Proyek Bersama Kami",
-    "subtitle": "Isi form konsultasi berikut dan tim kami akan menghubungi Anda dalam 1×24 jam di hari kerja.",
+    "subtitle": "Isi formulir konsultasi berikut dan tim kami akan menghubungi Anda dalam 1×24 jam di hari kerja.",
     "info": {
       "title": "Informasi Kontak",
       "phone": "Telepon / WhatsApp",
@@ -158,7 +217,7 @@
       "email": "Alamat Email",
       "phone": "Nomor Telepon / WhatsApp",
       "services": "Layanan yang Diminati",
-      "budget": "Estimasi Budget",
+      "budget": "Estimasi Anggaran",
       "message": "Pesan / Keterangan Tambahan",
       "agreeTerms": "Saya menyetujui kebijakan privasi VGI",
       "next": "Selanjutnya",
@@ -174,26 +233,45 @@
         "Rp 20 – 50 Juta",
         "Rp 50 – 100 Juta",
         "> Rp 100 Juta"
-      ]
-    }
+      ],
+      "sendAnother": "Kirim pesan lain",
+      "namePlaceholder": "Nama",
+      "emailPlaceholder": "Email",
+      "phonePlaceholder": "Nomor telepon",
+      "messagePlaceholder": "Ceritakan proyek Anda...",
+      "requiredError": "Kolom ini wajib diisi.",
+      "emailError": "Masukkan alamat email yang valid."
+    },
+    "connect": "Hubungi",
+    "withUs": "Kami",
+    "sendAMessage": "Kirim Pesan",
+    "callUs": "Telepon Kami",
+    "whatsappAvailable": "Tersedia melalui WhatsApp",
+    "followUs": "Ikuti Kami",
+    "emailUs": "Kirim Email",
+    "available": "Tersedia 24/7",
+    "visitStudio": "Kunjungi Kantor Kami",
+    "mapTitle": "Peta lokasi kantor Violet Global Indonesia"
   },
   "faq": {
-    "badge": "FAQ",
+    "badge": "Pertanyaan Umum",
     "title": "Pertanyaan yang Sering Ditanyakan",
     "subtitle": "Temukan jawaban atas pertanyaan umum seputar layanan dan proses kerja VGI.",
     "search": "Cari pertanyaan...",
     "noResults": "Pertanyaan tidak ditemukan. Coba kata kunci lain atau hubungi kami langsung.",
-    "filterAll": "Semua"
+    "filterAll": "Semua",
+    "help": "Bantuan &",
+    "support": "Pertanyaan"
   },
   "footer": {
     "services": "Layanan",
     "company": "Perusahaan",
     "contact": "Kontak",
-    "newsletter": "Tetap Update",
-    "newsletterText": "Dapatkan artikel dan insight terbaru langsung di inbox Anda.",
+    "newsletter": "Tetap Terinformasi",
+    "newsletterText": "Dapatkan artikel dan wawasan terbaru langsung di kotak masuk Anda.",
     "emailPlaceholder": "Email Anda",
     "subscribe": "Langganan",
-    "copyright": "© 2025 Violet Global Indonesia. Semua hak dilindungi.",
+    "copyright": "© 2025 - {currentYear} Violet Global Indonesia. Semua hak dilindungi.",
     "privacy": "Kebijakan Privasi",
     "terms": "Syarat & Ketentuan"
   },
@@ -206,6 +284,349 @@
     "client": "Klien",
     "year": "Tahun",
     "category": "Kategori",
-    "by": "oleh"
+    "by": "oleh",
+    "whatsappLabel": "Hubungi melalui WhatsApp",
+    "whatsappMessage": "Halo VGI, saya ingin berkonsultasi mengenai layanan Anda.",
+    "interactiveLogo": "Logo Violet interaktif"
+  },
+  "portfolioList": {
+    "viewServices": "Lihat Layanan",
+    "contactUs": "Hubungi Kami",
+    "viewBy": "Tampilan",
+    "thumbnail": "Gambar",
+    "list": "Daftar",
+    "projectName": "Nama Proyek",
+    "preview": "Pratinjau",
+    "category": "Kategori",
+    "status": "Status",
+    "openCategoryFilter": "Buka filter kategori",
+    "categoryFilter": "Filter kategori",
+    "emptyTitle": "Portofolio Sedang Diperbarui",
+    "emptyDescription": "Kami sedang merapikan arsip proyek agar hanya menampilkan karya nyata terbaik kami. Silakan jelajahi layanan kami atau hubungi tim untuk mendiskusikan kebutuhan proyek Anda.",
+    "updated": "Terakhir Diperbarui",
+    "title": "Proyek",
+    "all": "Semua",
+    "live": "Aktif",
+    "review": "Dalam Peninjauan",
+    "archive": "Arsip",
+    "client": "Klien"
+  },
+  "serviceDetail": {
+    "services": "Layanan",
+    "freeConsultation": "Konsultasi Gratis",
+    "seeTheProducts": "Lihat Produknya",
+    "whatIs": "Apa itu {title}?",
+    "whoIsThisServiceFor": "Layanan Ini Cocok untuk Siapa?",
+    "productsPlatformsInThisService": "Produk & Platform di Layanan Ini",
+    "viewFullPage": "Lihat Halaman Lengkap",
+    "howWeWork": "Cara Kami Bekerja",
+    "whatYouGet": "Yang Anda Dapatkan",
+    "proofOfExcellence": "Bukti Kualitas",
+    "successfullyDeliveredProjects": "Karya {title} yang Pernah Kami Kerjakan.",
+    "viewEntirePortfolio": "Lihat Seluruh Portofolio →",
+    "notSureIsRightForYou": "Masih ragu {title} cocok untuk Anda?",
+    "startFreeConsultation": "Mulai Konsultasi Gratis",
+    "audienceIntro": "Cocokkan dengan kondisi Anda — kalau salah satu terasa familiar, layanan ini untuk Anda.",
+    "productsIntro": "Beberapa pilihan yang tersedia — klik untuk melihat detailnya.",
+    "processIntro": "Prosesnya sederhana dan transparan — Anda tahu apa yang terjadi di setiap langkah.",
+    "consultationIntro": "Ceritakan kebutuhan Anda — konsultasi pertama gratis, tanpa komitmen apa pun."
+  },
+  "theme": {
+    "dark": "Mode Gelap",
+    "light": "Mode Terang",
+    "switchToDark": "Beralih ke mode gelap",
+    "switchToLight": "Beralih ke mode terang"
+  },
+  "clients": {
+    "title": "Klien Kami",
+    "pemprovName": "Pemerintah Provinsi Jawa Tengah"
+  },
+  "notFound": {
+    "title": "Halaman Tidak Ditemukan",
+    "description": "Halaman ini tidak tersedia. Silakan kembali ke beranda.",
+    "back": "Kembali ke Beranda"
+  },
+  "meta": {
+    "siteTitle": "Violet Global Indonesia — Solusi TI dan Digital Terpadu",
+    "siteDescription": "Violet Global Indonesia adalah mitra solusi TI dan digital terpadu. Layanan: pengembangan TI, konsultasi, dan solusi energi berkelanjutan.",
+    "homeTitle": "Violet Global Indonesia — Solusi TI dan Digital",
+    "homeDescription": "Selamat datang di Violet Global Indonesia. Solusi TI dan digital terlengkap untuk bisnis Anda.",
+    "landingTitle": "Violet Global Indonesia — Solusi Digital",
+    "landingDescription": "Violet Global Indonesia — Solusi TI dan digital terlengkap untuk bisnis Anda.",
+    "servicesTitle": "Layanan",
+    "servicesDescription": "Tiga pilar layanan Violet Global Indonesia — pengembangan TI, konsultasi, dan solusi energi berkelanjutan.",
+    "aboutTitle": "Tentang Kami",
+    "contactTitle": "Kontak",
+    "portfolioTitle": "Portofolio",
+    "faqTitle": "Pertanyaan Umum"
+  },
+  "portfolioDetail": {
+    "back": "Kembali",
+    "overview": "Gambaran Umum",
+    "palette": "Palet Warna",
+    "structure": "Struktur",
+    "design": "Desain",
+    "type": "Jenis",
+    "role": "Peran",
+    "tools": "Perangkat",
+    "skills": "Keahlian",
+    "page": "Halaman",
+    "pageDescription": "Halaman {name} dirancang untuk menampilkan informasi utama secara jelas, menjaga ritme visual tetap rapi, dan membantu pengguna memahami alur proyek dengan cepat.",
+    "narrative": "Tema yang dipilih untuk proyek ini adalah {theme}. {themeReason} Gaya yang digunakan adalah {styleText}. {styleReason}",
+    "imageAlt": "{title}, halaman {number}",
+    "presets": {
+      "default": {
+        "type": "Situs Web / Aplikasi Web",
+        "role": "Strategi Produk, Desain UX/UI, Pengembangan Antarmuka",
+        "skills": [
+          "Penulisan UX",
+          "Perancangan Kerangka",
+          "Desain Responsif",
+          "Pemikiran Sistem"
+        ],
+        "structure": [
+          "Beranda",
+          "Gambaran Umum",
+          "Fitur",
+          "Alur Kerja",
+          "Dasbor",
+          "Detail",
+          "Seluler",
+          "Ajakan Bertindak"
+        ],
+        "palette": [
+          [
+            "#0F172A",
+            "Tinta"
+          ],
+          [
+            "#315EFB",
+            "Biru Sinyal"
+          ],
+          [
+            "#E8EEFF",
+            "Kabut Tipis"
+          ],
+          [
+            "#F8FAFC",
+            "Kertas"
+          ]
+        ],
+        "theme": "sistem produk modern",
+        "styleText": "minimal, modular, dan mengutamakan gambar",
+        "themeReason": "Tema ini dipilih agar produk terasa profesional, jelas, dan siap digunakan dalam konteks bisnis.",
+        "styleReason": "Gaya ini menjaga fokus pada struktur informasi, memberi ruang bernapas, dan membuat pengalaman terasa modern."
+      },
+      "ecommerce": {
+        "type": "Pengalaman Belanja Daring",
+        "role": "Desain Perdagangan, Arahan UX, Pengalaman Antarmuka",
+        "skills": [
+          "Desain Konversi",
+          "Arahan Artistik",
+          "Perdagangan Responsif",
+          "Hierarki Konten"
+        ],
+        "structure": [
+          "Beranda",
+          "Koleksi",
+          "Produk",
+          "Cerita",
+          "Katalog",
+          "Keranjang",
+          "Pembayaran",
+          "Seluler"
+        ],
+        "palette": [
+          [
+            "#171717",
+            "Hitam"
+          ],
+          [
+            "#B88B5B",
+            "Perunggu"
+          ],
+          [
+            "#F0E7DC",
+            "Pasir"
+          ],
+          [
+            "#FCFAF7",
+            "Gading"
+          ]
+        ],
+        "theme": "perdagangan editorial premium",
+        "styleText": "minimal, berpusat pada gambar, dan mewah secara sederhana",
+        "themeReason": "Tema ini dipilih agar pengalaman belanja terasa aspiratif dan berkelas sejak kesan pertama.",
+        "styleReason": "Gaya ini menjaga fokus pada produk, memberi ruang bernapas, dan mendukung alur konversi tanpa terasa ramai."
+      },
+      "data-analytics": {
+        "type": "Dasbor Analitik",
+        "role": "Desain Dasbor, Narasi Data, Antarmuka BI",
+        "skills": [
+          "Desain Informasi",
+          "Visualisasi Data",
+          "Strategi UX",
+          "Pemetaan KPI"
+        ],
+        "structure": [
+          "Gambaran Umum",
+          "KPI",
+          "Wilayah",
+          "Saluran",
+          "Tren",
+          "Peringatan",
+          "Laporan",
+          "Seluler"
+        ],
+        "palette": [
+          [
+            "#111827",
+            "Grafit"
+          ],
+          [
+            "#0EA5E9",
+            "Biru Data"
+          ],
+          [
+            "#DCF3FF",
+            "Langit"
+          ],
+          [
+            "#F9FAFB",
+            "Putih Lembut"
+          ]
+        ],
+        "theme": "dasbor untuk pengambilan keputusan",
+        "styleText": "modular, kontras tinggi, dan mengutamakan wawasan",
+        "themeReason": "Tema ini dipilih agar data yang kompleks tetap terasa tegas dan mudah diterjemahkan menjadi keputusan.",
+        "styleReason": "Gaya ini membuat KPI, grafik, dan status tampil jelas namun tetap tertata ringan saat dibaca."
+      },
+      "design-branding": {
+        "type": "Pengalaman Merek",
+        "role": "Arahan Artistik, Identitas Visual, Sistem Merek",
+        "skills": [
+          "Desain Identitas",
+          "Bahasa Visual",
+          "Narasi Merek",
+          "Penataan Kampanye"
+        ],
+        "structure": [
+          "Halaman Utama",
+          "Narasi",
+          "Visual",
+          "Kemasan",
+          "Media Sosial",
+          "Kampanye",
+          "Merchandise",
+          "Panduan"
+        ],
+        "palette": [
+          [
+            "#121212",
+            "Hitam"
+          ],
+          [
+            "#D46A6A",
+            "Aksen"
+          ],
+          [
+            "#F5D9C8",
+            "Warna Hangat"
+          ],
+          [
+            "#FAF7F2",
+            "Kanvas"
+          ]
+        ],
+        "theme": "narasi merek yang tertata",
+        "styleText": "editorial, ekspresif, dan terkurasi",
+        "themeReason": "Tema ini dipilih agar identitas merek terasa kuat, matang, dan lebih mudah diingat di setiap titik interaksi.",
+        "styleReason": "Gaya ini memberi ritme visual yang khas sehingga presentasi merek tidak terasa generik."
+      },
+      "automation": {
+        "type": "Platform Automasi",
+        "role": "Desain Alur Kerja, Pemikiran Sistem, Desain Antarmuka",
+        "skills": [
+          "Pemetaan Proses",
+          "Logika Automasi",
+          "Penanganan Pengecualian",
+          "Penyederhanaan UX"
+        ],
+        "structure": [
+          "Beranda",
+          "Alur Kerja",
+          "Penerimaan",
+          "Persetujuan",
+          "Catatan",
+          "Pengecualian",
+          "Pelaporan",
+          "Seluler"
+        ],
+        "palette": [
+          [
+            "#0A0F1F",
+            "Inti"
+          ],
+          [
+            "#22C55E",
+            "Hijau Alur"
+          ],
+          [
+            "#DBFCE7",
+            "Daun"
+          ],
+          [
+            "#F8FAFC",
+            "Awan"
+          ]
+        ],
+        "theme": "platform alur kerja terstruktur",
+        "styleText": "rapi, sistematis, dan berpusat pada proses",
+        "themeReason": "Tema ini dipilih untuk menonjolkan rasa kontrol dan kejelasan pada proses yang berjalan otomatis.",
+        "styleReason": "Gaya tersebut membantu alur yang kompleks terasa lebih mudah diikuti dan efisien."
+      },
+      "cybersecurity": {
+        "type": "Audit Keamanan Siber",
+        "role": "Peninjauan Keamanan, Penyederhanaan UX, Desain Pelaporan",
+        "skills": [
+          "Perumusan Ancaman",
+          "Pemetaan Audit",
+          "Kejelasan Informasi",
+          "Komunikasi Risiko"
+        ],
+        "structure": [
+          "Gambaran Umum",
+          "Cakupan",
+          "Temuan",
+          "Tingkat Keparahan",
+          "Kontrol",
+          "Perbaikan",
+          "Laporan",
+          "Seluler"
+        ],
+        "palette": [
+          [
+            "#0B1120",
+            "Malam"
+          ],
+          [
+            "#2563EB",
+            "Biru Kepercayaan"
+          ],
+          [
+            "#DCE7FF",
+            "Perisai"
+          ],
+          [
+            "#F3F6FC",
+            "Kabut"
+          ]
+        ],
+        "theme": "narasi keamanan yang terkontrol",
+        "styleText": "gelap, terkendali, dan meyakinkan",
+        "themeReason": "Tema ini dipilih agar presentasi terasa kredibel, serius, dan menenangkan dalam konteks keamanan.",
+        "styleReason": "Gaya ini menekankan fokus, meminimalkan distraksi, dan menjaga informasi sensitif terasa terkontrol."
+      }
+    }
   }
 }

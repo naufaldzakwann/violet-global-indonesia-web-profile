@@ -7,20 +7,20 @@ export const services: Service[] = [
     id: "svc-it-development",
     slug: "it-development",
     icon: "Cpu",
-    title: "IT Development",
+    title: "Pengembangan TI",
     titleEn: "IT Development",
-    shortDesc: "Platform dan produk digital berbasis AI — media intelligence, blockchain analytics, dan automasi enterprise.",
+    shortDesc: "Platform dan produk digital berbasis AI — intelijen media, analitik blockchain, dan automasi perusahaan.",
     shortDescEn: "AI-powered digital platforms and products — media intelligence, blockchain analytics, and enterprise automation.",
     description:
-      "Lini IT Development menghadirkan platform digital intelligence berbasis AI: memantau percakapan publik, menganalisis data blockchain, hingga mengotomatiskan operasi media sosial berskala enterprise. Semua produk dirancang agar aman, skalabel, dan terukur dampaknya.",
+      "Lini Pengembangan TI menghadirkan platform intelijen digital berbasis AI: memantau percakapan publik, menganalisis data blockchain, hingga mengotomatiskan operasi media sosial berskala perusahaan. Semua produk dirancang agar aman, skalabel, dan terukur dampaknya.",
     descriptionEn:
       "The IT Development division delivers AI-powered digital intelligence platforms: monitoring public conversations, analyzing blockchain data, and automating enterprise-scale social media operations. Every product is designed to be secure, scalable, and measurable.",
     features: [
-      "Platform intelligence berbasis AI",
-      "Dashboard pemantauan real-time & pelaporan otomatis",
+      "Platform intelijen berbasis AI",
+      "Dasbor pemantauan waktu nyata & pelaporan otomatis",
       "Dukungan bahasa Indonesia untuk analisis konten",
       "Infrastruktur skalabel untuk volume data besar",
-      "Integrasi dengan tools analisis existing",
+      "Integrasi dengan perangkat analisis yang sudah ada",
     ],
     featuresEn: [
       "AI-based intelligence platforms",
@@ -32,9 +32,9 @@ export const services: Service[] = [
     category: "it-development",
     audience: [
       "Anda ingin memantau percakapan dan reputasi di media sosial secara otomatis, tanpa cek manual satu per satu",
-      "Institusi keuangan atau penegak hukum yang perlu memantau transaksi crypto dan investigasi forensik",
+      "Institusi keuangan atau penegak hukum yang perlu memantau transaksi kripto dan investigasi forensik",
       "Tim yang mengelola banyak akun media sosial sekaligus dan butuh sistem yang aman & terukur",
-      "Perusahaan yang butuh dashboard data real-time untuk pengambilan keputusan cepat",
+      "Perusahaan yang butuh dasbor data waktu nyata untuk pengambilan keputusan cepat",
     ],
     audienceEn: [
       "You want to monitor conversations and reputation on social media automatically, without manual checking",
@@ -45,18 +45,18 @@ export const services: Service[] = [
     process: [
       { title: "Ceritakan Kebutuhan Anda", titleEn: "Tell Us Your Needs", desc: "Diskusi santai (gratis) untuk memahami masalah yang ingin Anda selesaikan — belum perlu tahu solusi teknisnya.", descEn: "A relaxed (free) discussion to understand the problem you want to solve — no technical knowledge needed upfront." },
       { title: "Demo & Usulan Solusi", titleEn: "Demo & Proposed Solution", desc: "Kami perkenalkan platform yang relevan lewat demo langsung, lalu susun usulan solusi dan estimasinya.", descEn: "We introduce the relevant platform with a live demo, then prepare a solution proposal and estimate." },
-      { title: "Implementasi & Integrasi", titleEn: "Implementation & Integration", desc: "Tim kami memasang, menyesuaikan, dan menghubungkan sistem dengan tools yang sudah Anda pakai.", descEn: "Our team sets up, customizes, and connects the system with the tools you already use." },
-      { title: "Pelatihan & Dukungan", titleEn: "Training & Support", desc: "Kami latih tim Anda sampai terbiasa, dan tetap standby bila ada kendala atau kebutuhan baru.", descEn: "We train your team until they are comfortable, and stay on standby for issues or new needs." },
+      { title: "Implementasi & Integrasi", titleEn: "Implementation & Integration", desc: "Tim kami memasang, menyesuaikan, dan menghubungkan sistem dengan perangkat yang sudah Anda pakai.", descEn: "Our team sets up, customizes, and connects the system with the tools you already use." },
+      { title: "Pelatihan & Dukungan", titleEn: "Training & Support", desc: "Kami latih tim Anda sampai terbiasa, dan tetap siap membantu bila ada kendala atau kebutuhan baru.", descEn: "We train your team until they are comfortable, and stay on standby for issues or new needs." },
     ],
     products: [
       {
         icon: "Globe",
         name: "Narativa-X",
         nameEn: "Narativa-X",
-        tagline: "Social Media Intelligence Platform",
+        tagline: "Platform Intelijen Media Sosial",
         taglineEn: "Social Media Intelligence Platform",
         description:
-          "Platform intelijen media berbasis AI untuk memantau, menganalisis, dan merespons percakapan publik secara real-time.",
+          "Platform intelijen media berbasis AI untuk memantau, menganalisis, dan merespons percakapan publik secara langsung.",
         descriptionEn:
           "An AI-based media intelligence platform for monitoring, analyzing, and responding to public conversations.",
         capabilities: [
@@ -64,7 +64,7 @@ export const services: Service[] = [
           "Analisis sentimen berbasis AI dengan dukungan bahasa Indonesia",
           "Deteksi dini misinformasi dan kampanye negatif",
           "Pemetaan jaringan dan identifikasi aktor kunci",
-          "Dashboard real-time dan sistem pelaporan otomatis",
+          "Dasbor waktu nyata dan sistem pelaporan otomatis",
         ],
         capabilitiesEn: [
           "Multi-platform monitoring (social media, news portals, dark web)",
@@ -76,19 +76,19 @@ export const services: Service[] = [
       },
       {
         icon: "ShieldCheck",
-        name: "Cryptocurrency Analytics Platform",
+        name: "Platform Analitik Aset Kripto",
         nameEn: "Cryptocurrency Analytics Platform",
-        tagline: "Blockchain Intelligence & Compliance",
+        tagline: "Intelijen Blockchain & Kepatuhan",
         taglineEn: "Blockchain Intelligence & Compliance",
         description:
           "Platform analitik blockchain untuk pemantauan transaksi, investigasi forensik, dan kepatuhan regulasi.",
         descriptionEn:
           "Blockchain analytics platform for transaction monitoring, forensic investigation, and regulatory compliance.",
         capabilities: [
-          "Pemantauan transaksi multi-blockchain secara real-time",
-          "Analisis jaringan dan clustering wallet",
-          "Deteksi aktivitas mencurigakan (pencucian uang, fraud)",
-          "Tools investigasi forensik dengan bukti siap pengadilan",
+          "Pemantauan transaksi multi-blockchain secara langsung",
+          "Analisis jaringan dan pengelompokan dompet",
+          "Deteksi aktivitas mencurigakan (pencucian uang, penipuan)",
+          "Perangkat investigasi forensik dengan bukti siap pengadilan",
           "Integrasi dengan i2 Analyst Notebook",
         ],
         capabilitiesEn: [
@@ -101,19 +101,19 @@ export const services: Service[] = [
       },
       {
         icon: "Zap",
-        name: "Enterprise Social Media Automation",
+        name: "Automasi Media Sosial Perusahaan",
         nameEn: "Enterprise Social Media Automation",
-        tagline: "Otomasi Media Sosial Enterprise",
+        tagline: "Automasi Media Sosial Perusahaan",
         taglineEn: "Enterprise Social Media Automation",
         description:
-          "Platform otomasi media sosial yang aman, skalabel, dan efektif untuk kebutuhan enterprise.",
+          "Platform otomasi media sosial yang aman, skalabel, dan efektif untuk kebutuhan perusahaan.",
         descriptionEn:
           "A secure, scalable, and effective social media automation platform for enterprise needs.",
         capabilities: [
-          "Kelola puluhan ribu akun dari satu dashboard",
-          "Smart engagement — like, comment, share otomatis dengan pola natural",
-          "Peningkatan views video/live stream secara masif",
-          "Dashboard analitik untuk memantau growth dan engagement ROI",
+          "Kelola puluhan ribu akun dari satu dasbor",
+          "Interaksi cerdas — suka, komentar, dan bagikan otomatis dengan pola natural",
+          "Peningkatan tayangan video/siaran langsung secara masif",
+          "Dasbor analitik untuk memantau pertumbuhan dan interaksi ROI",
           "Pelaporan konten massal otomatis",
         ],
         capabilitiesEn: [
@@ -130,9 +130,9 @@ export const services: Service[] = [
     id: "svc-consulting",
     slug: "consulting",
     icon: "Lightbulb",
-    title: "Consulting",
+    title: "Konsultasi",
     titleEn: "Consulting",
-    shortDesc: "Konsultasi strategis — market entry, teknologi, pengembangan bisnis, dan aktivasi pasar baru.",
+    shortDesc: "Konsultasi strategis — masuk pasar, teknologi, pengembangan bisnis, dan aktivasi pasar baru.",
     shortDescEn: "Strategic consulting — market entry, technology, business development, and new market activation.",
     description:
       "Layanan konsultansi strategis untuk membantu organisasi masuk pasar baru, merancang arsitektur teknologi, mempercepat pertumbuhan bisnis, dan mengaktifkan potensi pasar yang belum tergarap — semuanya berbasis data dan AI.",
@@ -140,8 +140,8 @@ export const services: Service[] = [
       "Strategic consulting services that help organizations enter new markets, design technology architecture, accelerate business growth, and activate untapped market potential — all grounded in data and AI.",
     features: [
       "Riset dan analisis pasar berbasis data & AI",
-      "Dukungan tender pemerintah & proposal enterprise",
-      "Perancangan strategi go-to-market dan ekspansi",
+      "Dukungan tender pemerintah & proposal perusahaan",
+      "Perancangan strategi masuk pasar dan ekspansi",
       "Strukturisasi kemitraan strategis dan KPBU/PPP",
       "Dokumentasi proposal & investasi",
     ],
@@ -155,7 +155,7 @@ export const services: Service[] = [
     category: "consulting",
     audience: [
       "Ingin masuk pasar baru tapi belum tahu harus mulai dari mana",
-      "Butuh peta jalan (roadmap) transformasi digital yang jelas dan bertahap",
+      "Butuh peta jalan transformasi digital yang jelas dan bertahap",
       "Ingin mengembangkan bisnis, mencari kemitraan, atau mengikuti tender pemerintah",
       "Punya peluang pasar baru yang belum tergarap dan butuh validasi sebelum investasi",
     ],
@@ -168,13 +168,13 @@ export const services: Service[] = [
     process: [
       { title: "Sesi Pemahaman Bisnis", titleEn: "Business Discovery Session", desc: "Kami dengarkan kondisi, target, dan kendala Anda — tanpa jargon teknis.", descEn: "We listen to your situation, goals, and constraints — no tech jargon." },
       { title: "Riset & Analisis", titleEn: "Research & Analysis", desc: "Tim kami melakukan riset pasar, regulasi, dan analisis data sesuai lingkup kesepakatan.", descEn: "Our team conducts market, regulatory, and data analysis according to the agreed scope." },
-      { title: "Rekomendasi & Roadmap", titleEn: "Recommendations & Roadmap", desc: "Anda menerima rekomendasi yang mudah dibaca: apa yang harus dilakukan, urutannya, dan estimasinya.", descEn: "You receive easy-to-read recommendations: what to do, in what order, and the estimates." },
+      { title: "Rekomendasi & Peta Jalan", titleEn: "Recommendations & Roadmap", desc: "Anda menerima rekomendasi yang mudah dibaca: apa yang harus dilakukan, urutannya, dan estimasinya.", descEn: "You receive easy-to-read recommendations: what to do, in what order, and the estimates." },
       { title: "Pendampingan Eksekusi", titleEn: "Execution Support", desc: "Kalau diperlukan, kami dampingi langkah awal implementasi hingga kemitraan terbentuk.", descEn: "If needed, we accompany the first implementation steps through to formed partnerships." },
     ],
     products: [
       {
         icon: "Globe",
-        name: "Market Entry Consultant",
+        name: "Konsultan Masuk Pasar",
         nameEn: "Market Entry Consultant",
         tagline: "Membuka Pintu Masuk Pasar dengan Strategi yang Tepat",
         taglineEn: "Opening Market Entry Doors with the Right Strategy",
@@ -185,10 +185,10 @@ export const services: Service[] = [
         capabilities: [
           "Riset dan analisis pasar berbasis data & AI",
           "Pemetaan regulasi, perizinan, dan kepatuhan lokal",
-          "Strategi positioning dan penetrasi pasar",
-          "Identifikasi kemitraan kunci dan stakeholder",
-          "Roadmap go-to-market dan dukungan eksekusi",
-          "Competitive intelligence dan benchmarking",
+          "Strategi pemosisian dan penetrasi pasar",
+          "Identifikasi kemitraan kunci dan pemangku kepentingan",
+          "Peta jalan masuk pasar dan dukungan eksekusi",
+          "Intelijen persaingan dan pembandingan",
         ],
         capabilitiesEn: [
           "Market research and analysis based on data & AI",
@@ -201,21 +201,21 @@ export const services: Service[] = [
       },
       {
         icon: "Cpu",
-        name: "Strategic Technology Consultant",
+        name: "Konsultan Strategi Teknologi",
         nameEn: "Strategic Technology Consultant",
         tagline: "Arsitektur Teknologi untuk Keunggulan Kompetitif",
         taglineEn: "Technology Architecture for Competitive Advantage",
         description:
-          "Perancangan strategi teknologi dan arsitektur enterprise agar teknologi menjadi keunggulan bersaing, bukan beban.",
+          "Perancangan strategi teknologi dan arsitektur perusahaan agar teknologi menjadi keunggulan bersaing, bukan beban.",
         descriptionEn:
           "Technology strategy and enterprise architecture design so technology becomes a competitive advantage, not a burden.",
         capabilities: [
-          "Perencanaan strategis IT dan roadmap transformasi digital",
-          "Arsitektur enterprise dan asesmen teknologi",
+          "Perencanaan strategis TI dan peta jalan transformasi digital",
+          "Arsitektur perusahaan dan asesmen teknologi",
           "Strategi implementasi AI/ML dan infrastruktur data",
-          "Perancangan framework keamanan siber & advisory kepatuhan",
+          "Perancangan kerangka kerja keamanan siber & konsultasi kepatuhan",
           "Strategi migrasi cloud dan optimasi infrastruktur",
-          "Due diligence teknologi dan evaluasi vendor",
+          "Uji kelayakan teknologi dan evaluasi vendor",
         ],
         capabilitiesEn: [
           "IT strategic planning and digital transformation roadmap",
@@ -228,21 +228,21 @@ export const services: Service[] = [
       },
       {
         icon: "TrendingUp",
-        name: "Business Development Consultant",
+        name: "Konsultan Pengembangan Bisnis",
         nameEn: "Business Development Consultant",
         tagline: "Mempercepat Pertumbuhan Bisnis yang Berkelanjutan",
         taglineEn: "Accelerating Sustainable Business Growth",
         description:
-          "Dampingi pertumbuhan bisnis — dari membangun pipeline, kemitraan, hingga retensi klien jangka panjang.",
+          "Dampingi pertumbuhan bisnis — dari membangun daftar peluang, kemitraan, hingga retensi klien jangka panjang.",
         descriptionEn:
           "Accelerate business growth — from pipeline building and partnerships to long-term client retention.",
         capabilities: [
-          "Pengembangan pipeline strategis dan lead generation",
+          "Pengembangan daftar peluang strategis dan perolehan prospek",
           "Pembangunan kemitraan dan aliansi",
-          "Dukungan tender pemerintah dan proposal enterprise",
-          "Model pendapatan dan strategi pricing",
+          "Dukungan tender pemerintah dan proposal perusahaan",
+          "Model pendapatan dan strategi harga",
           "Perencanaan ekspansi pasar",
-          "Relationship management dan retensi klien",
+          "Pengelolaan hubungan dan retensi klien",
         ],
         capabilitiesEn: [
           "Strategic pipeline development and lead generation",
@@ -255,7 +255,7 @@ export const services: Service[] = [
       },
       {
         icon: "Rocket",
-        name: "Prospective Market Enabler",
+        name: "Penggerak Pasar Potensial",
         nameEn: "Prospective Market Enabler",
         tagline: "Mengaktifkan Potensi Pasar yang Belum Tergarap",
         taglineEn: "Activating Untapped Market Potential",
@@ -265,9 +265,9 @@ export const services: Service[] = [
           "Opening and activating new markets — from opportunity validation to public-private partnership facilitation.",
         capabilities: [
           "Identifikasi dan validasi peluang pasar baru",
-          "Pemetaan ekosistem dan engagement stakeholder",
+          "Pemetaan ekosistem dan interaksi pemangku kepentingan",
           "Penciptaan permintaan dan edukasi pasar",
-          "Desain pilot project dan proof-of-concept",
+          "Desain proyek percontohan dan pembuktian konsep",
           "Fasilitasi Kerjasama Pemerintah-Badan Usaha (KPBU/PPP)",
         ],
         capabilitiesEn: [
@@ -284,20 +284,20 @@ export const services: Service[] = [
     id: "svc-sustainable-energy-solutions",
     slug: "sustainable-energy-solutions",
     icon: "Recycle",
-    title: "Sustainable Energy Solutions",
+    title: "Solusi Energi Berkelanjutan",
     titleEn: "Sustainable Energy Solutions",
-    shortDesc: "Teknologi energi & lingkungan — smart waste management, plastics-to-fuel, dan proyek energi terbarukan.",
+    shortDesc: "Teknologi energi & lingkungan — pengelolaan sampah pintar, konversi plastik menjadi bahan bakar, dan proyek energi terbarukan.",
     shortDescEn: "Energy & environmental technology — smart waste management, plastics-to-fuel, and renewable energy projects.",
     description:
-      "Lini Sustainable Energy Solutions menghubungkan digital intelligence dengan infrastruktur energi dan lingkungan yang praktis: pengelolaan sampah pintar terintegrasi, konversi limbah plastik menjadi bahan bakar, hingga pengembangan proyek energi terbarukan yang berkelanjutan.",
+      "Lini Solusi Energi Berkelanjutan menghubungkan intelijen digital dengan infrastruktur energi dan lingkungan yang praktis: pengelolaan sampah pintar terintegrasi, konversi limbah plastik menjadi bahan bakar, hingga pengembangan proyek energi terbarukan yang berkelanjutan.",
     descriptionEn:
       "The Sustainable Energy Solutions division connects digital intelligence with practical energy and environmental infrastructure: integrated smart waste management, plastics-to-fuel conversion, and sustainable renewable energy project development.",
     features: [
       "Perencanaan & pengembangan infrastruktur pengolahan sampah (TPST/TPA)",
-      "Implementasi Smart Bin & monitoring armada berbasis IoT",
-      "Dashboard analitik untuk pengawasan & kepatuhan lingkungan",
+      "Implementasi tempat sampah pintar & pemantauan armada berbasis IoT",
+      "Dasbor analitik untuk pengawasan & kepatuhan lingkungan",
       "Strukturisasi skema KPBU dengan pemerintah & badan usaha",
-      "Pemantauan digital & performance management selama siklus proyek",
+      "Pemantauan digital & manajemen kinerja selama siklus proyek",
     ],
     featuresEn: [
       "Waste processing infrastructure planning & development (TPST/TPA)",
@@ -310,7 +310,7 @@ export const services: Service[] = [
     audience: [
       "Pemerintah daerah yang ingin membangun sistem pengelolaan sampah modern (TPST/TPA)",
       "Perusahaan yang wajib mengelola limbah dan laporan kepatuhan lingkungan",
-      "Investor atau pengembang yang sedang mencari proyek green energy yang layak",
+      "Investor atau pengembang yang sedang mencari proyek energi terbarukan yang layak",
       "Kawasan industri yang ingin sistem pengelolaan sampah & energi terpadu",
     ],
     audienceEn: [
@@ -322,18 +322,18 @@ export const services: Service[] = [
     process: [
       { title: "Konsultasi & Studi Kelayakan", titleEn: "Consultation & Feasibility Study", desc: "Kami pelajari kondisi lokasi, volume sampah/energi, dan potensi ekonominya dulu sebelum lanjut.", descEn: "We first study site conditions, waste/energy volume, and economic potential before proceeding." },
       { title: "Perancangan Skema", titleEn: "Scheme Design", desc: "Menyusun skema teknis, pembiayaan, dan kerja sama — termasuk format KPBU dengan pemerintah bila relevan.", descEn: "We design the technical, financing, and cooperation scheme — including government PPP (KPBU) formats when relevant." },
-      { title: "Pembangunan & Integrasi Teknologi", titleEn: "Construction & Technology Integration", desc: "Infrastruktur dibangun dan dihubungkan dengan teknologi pintar (IoT, dashboard pemantauan).", descEn: "Infrastructure is built and connected with smart technology (IoT, monitoring dashboards)." },
+      { title: "Pembangunan & Integrasi Teknologi", titleEn: "Construction & Technology Integration", desc: "Infrastruktur dibangun dan dihubungkan dengan teknologi pintar (IoT, dasbor pemantauan).", descEn: "Infrastructure is built and connected with smart technology (IoT, monitoring dashboards)." },
       { title: "Operasional & Pemantauan", titleEn: "Operations & Monitoring", desc: "Sistem berjalan dengan pemantauan digital berkelanjutan dan dukungan tim kami.", descEn: "The system runs with continuous digital monitoring and support from our team." },
     ],
     products: [
       {
         icon: "Recycle",
-        name: "Integrated Smart Waste Management",
+        name: "Pengelolaan Sampah Pintar Terpadu",
         nameEn: "Integrated Smart Waste Management",
         tagline: "Manajemen, Infrastruktur, & Pengolahan Sampah Pintar",
         taglineEn: "Management, Infrastructure, & Smart Waste Processing Solutions",
         description:
-          "Solusi terpadu pengelolaan sampah — dari perencanaan dan konsultasi infrastruktur TPST/TPA, teknologi Smart Bin & IoT, hingga program pemberdayaan masyarakat.",
+          "Solusi terpadu pengelolaan sampah — dari perencanaan dan konsultasi infrastruktur TPST/TPA, teknologi tempat sampah pintar & IoT, hingga program pemberdayaan masyarakat.",
         descriptionEn:
           "End-to-end waste management solutions — from TPST/TPA infrastructure planning and consultation to Smart Bin & IoT technology and community empowerment programs.",
         capabilities: [
@@ -341,8 +341,8 @@ export const services: Service[] = [
           "Konsultasi manajemen operasional & studi kelayakan pengelolaan sampah",
           "Penyelarasan skema kerja dengan pemerintah & badan usaha (KPBU)",
           "Pengembangan fasilitas pemilahan, daur ulang & ekonomi sirkular",
-          "Implementasi Smart Bin & sistem monitoring armada berbasis IoT",
-          "Dashboard analitik untuk pengawasan & kepatuhan lingkungan",
+          "Implementasi tempat sampah pintar & sistem pemantauan armada berbasis IoT",
+          "Dasbor analitik untuk pengawasan & kepatuhan lingkungan",
           "Program edukasi, sosialisasi & pemberdayaan masyarakat",
         ],
         capabilitiesEn: [
@@ -357,20 +357,20 @@ export const services: Service[] = [
       },
       {
         icon: "Globe",
-        name: "Green Energy Project Development",
+        name: "Pengembangan Proyek Energi Terbarukan",
         nameEn: "Green Energy Project Development",
         tagline: "Proyek Energi Terbarukan Berbasis Teknologi",
         taglineEn: "Technology-Enabled Renewable Energy Projects",
         description:
-          "Pengembangan proyek energi terbarukan yang mendukung dekarbonisasi, pemulihan sumber daya, dan ketahanan energi — lengkap dengan pemantauan digital. Proyek-proyek berikut merupakan peluang pengembangan target dan pipeline konsep bisnis, bukan proyek yang telah selesai dibangun.",
+          "Pengembangan proyek energi terbarukan yang mendukung dekarbonisasi, pemulihan sumber daya, dan ketahanan energi — lengkap dengan pemantauan digital. Proyek-proyek berikut merupakan target pengembangan dan konsep peluang bisnis, bukan proyek yang telah selesai dibangun.",
         descriptionEn:
           "Development of renewable energy projects supporting decarbonization, resource recovery, and energy resilience — complete with digital monitoring. The following projects are target development opportunities and business-development pipeline concepts, not completed or commissioned projects.",
         capabilities: [
-          "Integrated Waste-to-Energy Project",
-          "Solar PV & Smart Energy Project",
-          "Organic Waste-to-Biogas Project",
-          "Green Industrial Energy Platform",
-          "Smart Waste & Circular Economy Hub",
+          "Proyek Terpadu Konversi Sampah menjadi Energi",
+          "Proyek Panel Surya & Energi Pintar",
+          "Proyek Konversi Limbah Organik menjadi Biogas",
+          "Platform Energi Industri Ramah Lingkungan",
+          "Pusat Pengelolaan Sampah Pintar & Ekonomi Sirkular",
         ],
         capabilitiesEn: [
           "Integrated Waste-to-Energy Project",
@@ -386,16 +386,16 @@ export const services: Service[] = [
 
 export const getCategoryLabel = (category: string, locale: string): string => {
   const labels: Record<string, { id: string; en: string }> = {
-    "it-development":          { id: "IT Development", en: "IT Development" },
-    "consulting":   { id: "Consulting", en: "Consulting" },
-    "sustainable-energy-solutions":   { id: "Sustainable Energy Solutions", en: "Sustainable Energy Solutions" },
-    "web-app":             { id: "Website & Aplikasi", en: "Website & App" },
+    "it-development":          { id: "Pengembangan TI", en: "IT Development" },
+    "consulting":   { id: "Konsultasi", en: "Consulting" },
+    "sustainable-energy-solutions":   { id: "Solusi Energi Berkelanjutan", en: "Sustainable Energy Solutions" },
+    "web-app":             { id: "situs web & Aplikasi", en: "Website & App" },
       "cybersecurity":       { id: "Keamanan Siber", en: "Cybersecurity" },
-    "social-media":        { id: "Social Media", en: "Social Media" },
+    "social-media":        { id: "Media Sosial", en: "Social Media" },
     "digital-marketing":   { id: "Optimasi Digital", en: "Digital Optimization" },
-    "design-branding":     { id: "Desain & Branding", en: "Design & Branding" },
-    "ecommerce":           { id: "E-Commerce", en: "E-Commerce" },
-    "data-analytics":      { id: "Data Analytics", en: "Data Analytics" },
+    "design-branding":     { id: "Desain & Identitas Merek", en: "Design & Branding" },
+    "ecommerce":           { id: "Perdagangan Elektronik", en: "E-Commerce" },
+    "data-analytics":      { id: "Analitik Data", en: "Data Analytics" },
     "automation":          { id: "Automasi Sistem", en: "Automation" },
   };
   return labels[category]?.[locale as "id" | "en"] ?? category;

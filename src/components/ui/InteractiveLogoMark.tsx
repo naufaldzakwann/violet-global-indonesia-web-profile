@@ -1,6 +1,7 @@
 "use client";
 
 import Image from "next/image";
+import { useTranslations } from "next-intl";
 
 function LogoLayer({ priority = false }: { priority?: boolean }) {
   return (
@@ -17,11 +18,12 @@ function LogoLayer({ priority = false }: { priority?: boolean }) {
 }
 
 export function InteractiveLogoMark() {
+  const t = useTranslations("common");
   return (
     <button
       type="button"
       className="hero-logo-stage group relative block h-[210px] w-[210px] cursor-pointer select-none bg-transparent outline-none sm:h-[280px] sm:w-[280px] lg:h-[340px] lg:w-[340px]"
-      aria-label="Interactive Violet logo"
+      aria-label={t("interactiveLogo")}
     >
       <div className="hero-logo-3d pointer-events-none absolute inset-0">
         <div className="hero-logo-core absolute inset-0">

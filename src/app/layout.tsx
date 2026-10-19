@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { SpeedInsights } from "@vercel/speed-insights/next";
+import { getLocale } from "next-intl/server";
 import { ThemeInitializer } from "@/components/theme/ThemeInitializer";
 import "./globals.css";
 
@@ -43,13 +44,20 @@ export const metadata: Metadata = {
   },
 };
 
-export default function RootLayout({
+export default async function RootLayout({
   children,
 }: {
   children: React.ReactNode;
 }) {
+  const locale = await getLocale();
   return (
-    <html lang="id" suppressHydrationWarning>
+    <html lang={locale === "en" ? "en" : "id"} suppressHydrationWarning>
+      <head>
+        <script
+          id="violet-theme-init"
+          dangerouslySetInnerHTML={{ __html: 'try{document.documentElement.dataset.theme=window.localStorage.getItem("violet-theme")==="dark"?"dark":"light"}catch{document.documentElement.dataset.theme="light"}' }}
+        />
+      </head>
       <body className="antialiased">
         <ThemeInitializer />
         {children}

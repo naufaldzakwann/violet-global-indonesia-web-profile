@@ -7,7 +7,7 @@ export function CTASection() {
   const t = useTranslations("cta");
   const locale = useLocale();
   const waUrl = `https://wa.me/6285166415046?text=${encodeURIComponent(
-    locale === "id" ? "Halo VGI, saya ingin berkonsultasi." : "Hello VGI, I would like to consult.",
+    t("whatsappMessage"),
   )}`;
 
   return (
@@ -27,7 +27,7 @@ export function CTASection() {
                 <div className="mb-6 flex items-center gap-4">
                   <span className="h-px w-12 bg-violet-200/70" />
                   <span className="text-[11px] font-semibold uppercase tracking-[0.28em] text-violet-100/90">
-                    Consultation
+                    {t("badge")}
                   </span>
                 </div>
               </AnimateOnView>
@@ -51,7 +51,7 @@ export function CTASection() {
                 <div className="mt-8 flex flex-wrap items-center gap-x-6 gap-y-3 text-sm text-violet-100/88">
                   <div className="flex items-center gap-3 rounded-full border border-white/12 bg-white/8 px-4 py-2 backdrop-blur-sm">
                     <span className="h-2 w-2 rounded-full bg-violet-200" />
-                    <span>Strategy-first approach</span>
+                    <span>{t("strategy")}</span>
                   </div>
                   <div className="flex items-center gap-3 rounded-full border border-white/12 bg-white/8 px-4 py-2 backdrop-blur-sm">
                     <span className="h-2 w-2 rounded-full bg-sky-200" />

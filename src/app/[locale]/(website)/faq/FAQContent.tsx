@@ -13,7 +13,7 @@ type FAQ = {
   category: string;
 };
 
-export function FAQContent({ initialFaqs, locale }: { initialFaqs: FAQ[]; locale: string }) {
+export function FAQContent({ initialFaqs }: { initialFaqs: FAQ[] }) {
   const t = useTranslations("faq");
   const [search, setSearch] = useState("");
   const [activeId, setActiveId] = useState<string | null>(null);
@@ -49,11 +49,11 @@ export function FAQContent({ initialFaqs, locale }: { initialFaqs: FAQ[]; locale
           <AnimateOnView delay={100}>
             <h1 className="text-4xl md:text-6xl font-bold mb-6 tracking-tight leading-[1.2]">
               <span className="bg-gradient-to-b from-white via-white to-white/70 bg-clip-text text-transparent">
-                {locale === "id" ? "Bantuan &" : "Help &"}
+                {t("help")}
               </span>
               <br />
               <span className="text-violet-400 drop-shadow-[0_0_15px_rgba(167,139,250,0.25)]">
-                {locale === "id" ? "Pertanyaan" : "Support"}
+                {t("support")}
               </span>
             </h1>
           </AnimateOnView>

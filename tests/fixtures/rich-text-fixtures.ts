@@ -10,7 +10,7 @@ export const EXPLANATION_STRING_ID = "Penjelasan string fixture ID tampil.";
 export const EXPLANATION_STRING_EN = "String explanation fixture EN appears.";
 export const EMPTY_PAGE_FALLBACK_ID = "Halaman halaman kosong dirancang untuk menampilkan informasi utama secara jelas";
 export const EMPTY_PAGE_FALLBACK_EN = "The empty page page is designed to present key information clearly";
-export const PRESET_NARRATIVE_ID = "Tema yang dipilih untuk project ini adalah modern product system.";
+export const PRESET_NARRATIVE_ID = "Tema yang dipilih untuk proyek ini adalah sistem produk modern.";
 export const PRESET_NARRATIVE_EN = "The chosen theme for this project is modern product system.";
 
 export const SERVICE_CONTENT_STRING_ID = "Konten layanan string fixture ID tampil.";

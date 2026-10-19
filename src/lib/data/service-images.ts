@@ -15,3 +15,14 @@ export const serviceImages: Record<string, string> = {
 export const serviceFallbackImage = "/migrated/services/automasi-integrasi-sistem.jpg";
 
 export const serviceDetailHero = "/migrated/services/detail-hero.jpg";
+
+// Gambar khusus halaman detail; cover pada daftar layanan tetap memakai serviceImages.
+export const serviceDetailImages: Record<string, string> = {
+  "it-development": "/images/services/it-development.webp",
+  "consulting": "/images/services/consulting.webp",
+  "sustainable-energy-solutions": "/images/services/sustainable-energy-solutions.webp",
+};
+
+export function getDetailHero(slug: string): string {
+  return serviceDetailImages[slug] ?? serviceDetailHero;
+}

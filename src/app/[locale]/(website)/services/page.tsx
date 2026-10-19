@@ -6,7 +6,7 @@ import { AnimateOnView } from "@/components/ui/AnimateOnView";
 import { Icon } from "@/components/ui/Icon";
 import { PageHeroDotGrid } from "@/components/ui/PageHeroDotGrid";
 import { CTASection } from "@/components/sections/CTASection";
-import type { Metadata } from "next";
+import { getPageMetadata } from "@/lib/page-metadata";
 import type { Service } from "@/types";
 
 type LocalizedServiceCard = Service & {
@@ -15,10 +15,10 @@ type LocalizedServiceCard = Service & {
   title: string;
 };
 
-export const metadata: Metadata = {
-  title: "Layanan / Services",
-  description: "Tiga pilar layanan Violet Global Indonesia — IT Development, Consulting, dan Sustainable Energy Solutions.",
-};
+export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }) {
+  const { locale } = await params;
+  return getPageMetadata(locale, "services");
+}
 
 const getGraphic = (slug: string) => serviceImages[slug] || serviceFallbackImage;
 
@@ -52,11 +52,11 @@ export default async function ServicesPage({ params }: { params: Promise<{ local
           <AnimateOnView delay={100}>
             <h1 className="mb-6 text-4xl font-bold leading-[1.2] tracking-tight md:text-6xl">
               <span className="bg-gradient-to-b from-white via-white to-white/70 bg-clip-text text-transparent">
-                {locale === "id" ? "Layanan" : "Our"}
+                {t("headingFirst")}
               </span>
               <br />
               <span className="text-violet-400 drop-shadow-[0_0_15px_rgba(167,139,250,0.25)]">
-                {locale === "id" ? "Violet Global" : "Services"}
+                {t("headingSecond")}
               </span>
             </h1>
           </AnimateOnView>

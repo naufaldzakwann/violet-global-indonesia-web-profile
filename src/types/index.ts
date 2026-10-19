@@ -103,6 +103,7 @@ export interface Portfolio {
   result: string;
   resultEn: string;
   technologies: string[];
+  technologiesEn?: string[];
   liveUrl?: string;
   featured: boolean;
   // ── Field opsional konten migrasi. Halaman detail merender bila diisi dan

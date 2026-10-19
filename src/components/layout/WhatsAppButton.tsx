@@ -3,19 +3,18 @@
 import type { CSSProperties } from "react";
 import { useEffect, useState } from "react";
 import { usePathname } from "next/navigation";
-import { useLocale } from "next-intl";
+import { useLocale, useTranslations } from "next-intl";
 
 const HOME_HERO_UNLOCK_EVENT = "violet:home-hero-unlock";
 
 export function WhatsAppButton() {
   const locale = useLocale();
+  const t = useTranslations("common");
   const pathname = usePathname();
   const [homeWaUnlocked, setHomeWaUnlocked] = useState(false);
   const [revealDelay, setRevealDelay] = useState<number | null>(null);
   const phone = "6285166415046";
-  const message = locale === "id"
-    ? "Halo VGI, saya ingin berkonsultasi mengenai layanan Anda."
-    : "Hello VGI, I would like to consult about your services.";
+  const message = t("whatsappMessage");
 
   const url = `https://wa.me/${phone}?text=${encodeURIComponent(message)}`;
   const isHome = pathname === `/${locale}` || pathname === `/${locale}/`;
@@ -42,7 +41,7 @@ export function WhatsAppButton() {
       href={url}
       target="_blank"
       rel="noopener noreferrer"
-      aria-label="Chat WhatsApp"
+      aria-label={t("whatsappLabel")}
       className={`fixed bottom-6 right-6 z-50 flex h-14 w-14 items-center justify-center rounded-full shadow-2xl transition-transform hover:scale-110 active:scale-95 ${shouldHideWa ? "pointer-events-none translate-y-4 opacity-0" : ""} ${!isHome || homeWaUnlocked ? "hero-nav-pop is-visible" : "hero-nav-pop"}`}
       style={revealStyle ? { ...revealStyle, background: "#25D366" } : { background: "#25D366" }}
     >

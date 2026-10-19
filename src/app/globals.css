@@ -328,6 +328,33 @@
     z-index: 50;
     transition: all 0.3s ease;
   }
+
+  /* One theme control for every route and viewport; glass styling follows the home control. */
+  .theme-toggle {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    min-height: 2.75rem;
+    padding: 0.5rem 0.875rem;
+    border: 1px solid rgba(196, 181, 253, 0.5);
+    border-radius: 0.75rem;
+    background: rgba(76, 29, 149, 0.88);
+    color: #fff;
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+    font-weight: 600;
+    backdrop-filter: blur(16px);
+    box-shadow: 0 0 15px rgba(167, 139, 250, 0.08);
+    transition: background-color 200ms, border-color 200ms, box-shadow 200ms;
+    cursor: pointer;
+  }
+  .theme-toggle:hover { background: rgba(91, 33, 182, 0.96); border-color: rgba(196, 181, 253, 0.8); }
+  .theme-toggle:active { background: rgba(109, 40, 217, 0.96); }
+  .theme-toggle:focus-visible { outline: 2px solid #a78bfa; outline-offset: 3px; }
+  html[data-theme="dark"] .theme-toggle { background: rgba(255, 255, 255, 0.1); border-color: rgba(255, 255, 255, 0.2); }
+  html[data-theme="dark"] .theme-toggle:hover { background: rgba(255, 255, 255, 0.14); border-color: rgba(255, 255, 255, 0.4); }
+  html[data-theme="dark"] .theme-toggle:active { background: rgba(255, 255, 255, 0.18); }
   .navbar-scrolled {
     background: var(--theme-navbar);
     -webkit-backdrop-filter: blur(20px);

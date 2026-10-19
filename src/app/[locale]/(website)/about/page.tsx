@@ -1,57 +1,40 @@
+import { getPageMetadata } from "@/lib/page-metadata";
 import { useTranslations, useLocale } from "next-intl";
 import { teamMembers, coreValues } from "@/lib/data/general";
 import { AnimateOnView } from "@/components/ui/AnimateOnView";
 import { Icon } from "@/components/ui/Icon";
 import { PageHeroDotGrid } from "@/components/ui/PageHeroDotGrid";
-import type { Metadata } from "next";
 
 export default function AboutPage() {
   const t = useTranslations("about");
   const locale = useLocale();
   const missionItems = t.raw("mission.items") as string[];
   const companyOverview = {
-    eyebrow: locale === "id" ? "Siapa Kami" : "Who We Are",
+    eyebrow: t("whoWeAre"),
     title:
-      locale === "id"
-        ? "Memberdayakan bisnis dengan menghubungkan teknologi global bersama peluang yang terus berkembang di Indonesia — melalui panduan strategis dan solusi energi berkelanjutan."
-        : "Empowering businesses by connecting global technology with Indonesia's emerging opportunities through strategic guidance and sustainable energy solutions.",
+      t("overviewTitle"),
     description:
-      locale === "id"
-        ? "Violet Global Indonesia (VGI) adalah perusahaan teknologi dan solusi energi berkelanjutan yang berdiri sejak 2019. Kami menghadirkan solusi terintegrasi dari hulu ke hilir (upstream to downstream) — menyatukan tiga pilar layanan dalam satu ekosistem pendampingan yang utuh."
-        : "Violet Global Indonesia (VGI) is a technology and sustainable energy solutions company established in 2019. We deliver integrated solutions from upstream to downstream — uniting three service pillars in one complete accompanying ecosystem.",
+      t("overviewDescription"),
     description2:
-      locale === "id"
-        ? "Dari membangun sistem digital, merancang strategi bisnis, hingga mengembangkan proyek energi terbarukan dan pengelolaan sampah — kami mendampingi dari riset dan strategi, pembangunan, sampai operasional, dengan pendekatan berbasis data dan AI."
-        : "From building digital systems and designing business strategy to developing renewable energy and waste management projects — we accompany clients from research and strategy through construction to operations, with a data- and AI-driven approach.",
-    points:
-      locale === "id"
-        ? [
-          "Satu mitra untuk seluruh kebutuhan: dari sistem digital, strategi bisnis, hingga proyek energi berkelanjutan.",
-          "Pendekatan end-to-end: riset, strategi, pembangunan, hingga pendampingan operasional.",
-          "Berbasis data & AI — terukur, terstruktur, dan relevan dengan kebutuhan bisnis Anda.",
-        ]
-        : [
-          "One partner for every need: from digital systems and business strategy to sustainable energy projects.",
-          "An end-to-end approach: research, strategy, build, and operational support.",
-          "Data- & AI-driven — measurable, structured, and relevant to your business needs.",
-        ],
+      t("overviewScope"),
+    points: t.raw("overviewPoints") as string[],
   };
 
   const pillars = [
     {
       icon: "Cpu",
-      name: locale === "id" ? "IT Development" : "IT Development",
-      desc: locale === "id" ? "Sistem, aplikasi & infrastruktur digital" : "Systems, applications & digital infrastructure",
+      name: t("itDevelopment"),
+      desc: t("itDevelopmentDescription"),
     },
     {
       icon: "Lightbulb",
-      name: locale === "id" ? "Consulting" : "Consulting",
-      desc: locale === "id" ? "Strategi, market entry & pengembangan bisnis" : "Strategy, market entry & business development",
+      name: t("consulting"),
+      desc: t("consultingDescription"),
     },
     {
       icon: "Recycle",
-      name: locale === "id" ? "Sustainable Energy Solutions" : "Sustainable Energy Solutions",
-      desc: locale === "id" ? "Energi terbarukan & ekonomi sirkular" : "Renewable energy & circular economy",
+      name: t("sustainableEnergySolutions"),
+      desc: t("sustainableEnergyDescription"),
     },
   ];
 
@@ -75,7 +58,7 @@ export default function AboutPage() {
           <AnimateOnView delay={100}>
             <h1 className="text-4xl md:text-6xl font-bold mb-6 tracking-tight leading-[1.2]">
               <span className="bg-gradient-to-b from-white via-white to-white/70 bg-clip-text text-transparent">
-                {locale === "id" ? "Tentang" : "About"}
+                {t("about")}
               </span>
               <br />
               <span className="text-violet-400 drop-shadow-[0_0_15px_rgba(167,139,250,0.25)]">
@@ -156,8 +139,8 @@ export default function AboutPage() {
       <section className="bg-slate-50 py-32 sm:py-48 relative overflow-hidden">
         {/* Decorative background elements */}
         <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full h-full opacity-[0.03] pointer-events-none select-none overflow-hidden">
-          <div className="text-[20vw] font-bold absolute -top-10 -left-10 leading-none">PURPOSE</div>
-          <div className="text-[20vw] font-bold absolute -bottom-10 -right-10 leading-none">ACTION</div>
+          <div className="text-[20vw] font-bold absolute -top-10 -left-10 leading-none">{t("purpose")}</div>
+          <div className="text-[20vw] font-bold absolute -bottom-10 -right-10 leading-none">{t("action")}</div>
         </div>
 
         <div className="section-container relative z-10">
@@ -177,7 +160,7 @@ export default function AboutPage() {
                   </div>
 
                   <span className="block text-xs font-bold uppercase tracking-[0.4em] text-violet-600 mb-6">
-                    {locale === "id" ? "Visi" : "Vision"}
+                    {t("vision.title")}
                   </span>
 
                   <h3 className="text-4xl sm:text-5xl font-light text-slate-900 leading-[1.1] mb-8" style={{ fontFamily: "var(--font-poppins)" }}>
@@ -200,7 +183,7 @@ export default function AboutPage() {
                 <div className="relative z-10 grid sm:grid-cols-2 gap-12">
                   <div className="sm:col-span-2">
                     <span className="block text-xs font-bold uppercase tracking-[0.4em] text-violet-400 mb-6">
-                      {locale === "id" ? "Misi" : "Mission"}
+                      {t("mission.title")}
                     </span>
                     <h3 className="text-3xl sm:text-4xl font-semibold text-white mb-10 tracking-tight" style={{ fontFamily: "var(--font-poppins)" }}>
                       {t("mission.title")}
@@ -228,7 +211,7 @@ export default function AboutPage() {
           <div className="max-w-2xl mb-24">
             <AnimateOnView>
               <span className="text-[10px] font-bold uppercase tracking-[0.5em] text-violet-600 mb-6 block">
-                {locale === "id" ? "Nilai & Budaya" : "Values & Culture"}
+                {t("valuesCulture")}
               </span>
               <h2 className="text-4xl sm:text-5xl font-medium text-slate-900 tracking-tight" style={{ fontFamily: "var(--font-poppins)" }}>
                 {t("values")}
@@ -277,7 +260,7 @@ export default function AboutPage() {
                 <div className="inline-flex items-center gap-3 mb-6">
                   <span className="h-px w-8 bg-violet-600/30" />
                   <span className="text-xs font-semibold uppercase tracking-[0.3em] text-violet-600">
-                    Management
+                    {t("management")}
                   </span>
                 </div>
               </AnimateOnView>
@@ -334,4 +317,9 @@ export default function AboutPage() {
       </section>
     </div>
   );
+}
+
+export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }) {
+  const { locale } = await params;
+  return getPageMetadata(locale, "about");
 }

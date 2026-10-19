@@ -2,14 +2,14 @@ import { HeroSection } from "@/components/sections/HeroSection";
 import { ServicesSection } from "@/components/sections/ServicesSection";
 import { WhyUsSection } from "@/components/sections/WhyUsSection";
 import { PortfolioSection } from "@/components/sections/PortfolioSection";
-import { TestimonialsSection } from "@/components/sections/TestimonialsSection";
+import { ClientsSection } from "@/components/sections/ClientsSection";
 import { CTASection } from "@/components/sections/CTASection";
-import type { Metadata } from "next";
+import { getPageMetadata } from "@/lib/page-metadata";
 
-export const metadata: Metadata = {
-  title: "Violet Global Indonesia — Digital Excellence & IT Solutions",
-  description: "Selamat datang di Violet Global Indonesia. Solusi IT dan digital terlengkap untuk bisnis Anda.",
-};
+export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }) {
+  const { locale } = await params;
+  return getPageMetadata(locale, "home");
+}
 
 export default async function HomePage({ params }: { params: Promise<{ locale: string }> }) {
   const { locale } = await params;
@@ -42,7 +42,7 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
         <ServicesSection limit={6} locale={locale} />
         <WhyUsSection />
         <PortfolioSection limit={4} locale={locale} />
-        <TestimonialsSection locale={locale} />
+        <ClientsSection />
       </div>
       
       <CTASection />

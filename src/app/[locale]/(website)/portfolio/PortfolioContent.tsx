@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import { useTranslations } from "next-intl";
 import Link from "next/link";
 import Image from "next/image";
 import {
@@ -45,6 +46,7 @@ type PortfolioContentProps = {
 };
 
 export function PortfolioContent({ projects, locale, categoryOptions }: PortfolioContentProps) {
+  const t = useTranslations("portfolioList");
   const [activeFilter, setActiveFilter] = useState("all");
   const [mobileFilterOpen, setMobileFilterOpen] = useState(false);
   const [viewMode, setViewMode] = useState<"thumbnail" | "list">("thumbnail");
@@ -78,32 +80,30 @@ export function PortfolioContent({ projects, locale, categoryOptions }: Portfoli
     return (
       <section className="portfolio-content-shell bg-[linear-gradient(180deg,#fcfbf8_0%,#f4efe8_46%,#f7f3ee_100%)]">
         <div className="mx-auto w-full max-w-[92rem] px-4 py-16 sm:px-6 lg:px-8 lg:py-24">
-          <h1 className="portfolio-page-title mb-12 text-4xl font-semibold tracking-[-0.05em] text-black md:text-5xl">Project</h1>
+          <h1 className="portfolio-page-title mb-12 text-4xl font-semibold tracking-[-0.05em] text-black md:text-5xl">{t("title")}</h1>
 
           <div className="portfolio-enter mx-auto max-w-2xl rounded-[1.6rem] border border-black/8 bg-white/72 px-8 py-16 text-center shadow-[0_18px_44px_rgba(15,23,42,0.06),inset_0_1px_0_rgba(255,255,255,0.88)] backdrop-blur-sm sm:px-12">
             <div className="mx-auto mb-7 flex h-16 w-16 items-center justify-center rounded-2xl border border-black/6 bg-[#f4efe8] text-black/50">
               <LayoutGrid className="h-7 w-7" strokeWidth={1.5} />
             </div>
             <h2 className="mb-3 text-xl font-semibold tracking-tight text-black md:text-2xl" style={{ fontFamily: "var(--font-poppins)" }}>
-              {locale === "id" ? "Portfolio Sedang Diperbarui" : "Portfolio Is Being Updated"}
+              {t("emptyTitle")}
             </h2>
             <p className="mx-auto mb-9 max-w-md text-[14px] leading-relaxed text-black/55">
-              {locale === "id"
-                ? "Kami sedang merapikan arsip proyek agar hanya menampilkan karya nyata terbaik kami. Silakan jelajahi layanan kami atau hubungi tim untuk mendiskusikan kebutuhan proyek Anda."
-                : "We are curating our project archive to showcase only our best real-world work. Explore our services or contact our team to discuss your project needs."}
+              {t("emptyDescription")}
             </p>
             <div className="flex flex-col items-center justify-center gap-3 sm:flex-row">
               <Link
                 href={`/${locale}/services`}
                 className="inline-flex items-center justify-center rounded-full bg-black px-6 py-3 text-[11px] font-bold uppercase tracking-[0.18em] text-white transition-colors hover:bg-black/80"
               >
-                {locale === "id" ? "Lihat Layanan" : "View Services"}
+                {t("viewServices")}
               </Link>
               <Link
                 href={`/${locale}/contact`}
                 className="inline-flex items-center justify-center rounded-full border border-black/12 bg-white px-6 py-3 text-[11px] font-bold uppercase tracking-[0.18em] text-black/70 transition-colors hover:border-black/30 hover:text-black"
               >
-                {locale === "id" ? "Hubungi Kami" : "Contact Us"}
+                {t("contactUs")}
               </Link>
             </div>
           </div>
@@ -163,14 +163,14 @@ export function PortfolioContent({ projects, locale, categoryOptions }: Portfoli
       : "border border-black/8 bg-white/62 text-neutral-600 shadow-[0_12px_28px_rgba(15,23,42,0.05),inset_0_1px_0_rgba(255,255,255,0.88)] hover:-translate-y-0.5 hover:bg-white/86 hover:text-black hover:shadow-[0_18px_40px_rgba(15,23,42,0.09)]";
 
   const listLabels = {
-    viewBy: locale === "id" ? "View by" : "View by",
-    thumbnail: locale === "id" ? "Thumbnail" : "Thumbnail",
-    list: locale === "id" ? "List" : "List",
-    projectName: locale === "id" ? "Nama Project" : "Project Name",
-    preview: locale === "id" ? "Preview" : "Preview",
-    category: locale === "id" ? "Kategori" : "Category",
-    status: locale === "id" ? "Status" : "Status",
-    updated: locale === "id" ? "Update Time" : "Update Time",
+    viewBy: t("viewBy"),
+    thumbnail: t("thumbnail"),
+    list: t("list"),
+    projectName: t("projectName"),
+    preview: t("preview"),
+    category: t("category"),
+    status: t("status"),
+    updated: t("updated"),
   };
 
   const categoryIcon = (category: string) => {
@@ -211,7 +211,7 @@ export function PortfolioContent({ projects, locale, categoryOptions }: Portfoli
     <section className="portfolio-content-shell bg-[linear-gradient(180deg,#fcfbf8_0%,#f4efe8_46%,#f7f3ee_100%)]">
       <div className="mx-auto w-full max-w-[92rem] px-3 py-12 sm:px-3.5 lg:px-4 lg:py-16">
         <div className="portfolio-enter relative z-30 mb-8 flex flex-col gap-6 lg:mb-10">
-          <h1 className="portfolio-page-title text-4xl font-semibold tracking-[-0.05em] text-black md:text-5xl">Project</h1>
+          <h1 className="portfolio-page-title text-4xl font-semibold tracking-[-0.05em] text-black md:text-5xl">{t("title")}</h1>
 
           <div className="flex flex-col gap-4 lg:flex-row lg:items-center lg:justify-between">
             <div className="relative sm:hidden">
@@ -220,14 +220,14 @@ export function PortfolioContent({ projects, locale, categoryOptions }: Portfoli
                 onClick={() => setMobileFilterOpen((open) => !open)}
                 className="portfolio-mobile-filter-toggle flex w-full items-center justify-between gap-3 rounded-[1.1rem] border border-black/8 bg-white/72 px-4 py-3 text-left shadow-[0_16px_36px_rgba(15,23,42,0.06),inset_0_1px_0_rgba(255,255,255,0.88)] backdrop-blur-sm transition-all duration-300"
                 aria-expanded={mobileFilterOpen}
-                aria-label={locale === "id" ? "Buka filter kategori" : "Open category filter"}
+                aria-label={t("openCategoryFilter")}
               >
                 <span className="min-w-0">
                   <span className="block text-[10px] font-medium uppercase tracking-[0.18em] text-black/42">
-                    {locale === "id" ? "Filter kategori" : "Category filter"}
+                    {t("categoryFilter")}
                   </span>
                   <span className="mt-1 block truncate text-[13px] font-medium text-black">
-                    {activeFilterOption?.value === "all" ? "All" : activeFilterOption?.label}
+                    {activeFilterOption?.value === "all" ? t("all") : activeFilterOption?.label}
                   </span>
                 </span>
                 <span className="inline-flex h-9 w-9 shrink-0 items-center justify-center rounded-full border border-black/6 bg-white/80 text-black/72">
@@ -255,7 +255,7 @@ export function PortfolioContent({ projects, locale, categoryOptions }: Portfoli
                               : "bg-white/72 text-neutral-700 hover:bg-white hover:text-black"
                           }`}
                         >
-                          <span className="truncate">{category.value === "all" ? "All" : category.label}</span>
+                          <span className="truncate">{category.value === "all" ? t("all") : category.label}</span>
                           <span
                             className={`inline-flex min-w-6 items-center justify-center rounded-full px-1.5 py-0.5 text-[9px] font-semibold ${
                               isActive
@@ -296,7 +296,7 @@ export function PortfolioContent({ projects, locale, categoryOptions }: Portfoli
                           isActive ? "bg-white/8" : "bg-white/70"
                         }`}
                       />
-                      <span className="relative">{category.value === "all" ? "All" : category.label}</span>
+                      <span className="relative">{category.value === "all" ? t("all") : category.label}</span>
                       <span
                         className={`relative inline-flex min-w-6 items-center justify-center rounded-full px-1.5 py-0.5 text-[9px] font-semibold transition-all duration-300 ${
                           isActive

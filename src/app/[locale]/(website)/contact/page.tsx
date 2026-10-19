@@ -5,7 +5,6 @@ import { useLocale, useTranslations } from "next-intl";
 import { AnimateOnView } from "@/components/ui/AnimateOnView";
 import { Icon } from "@/components/ui/Icon";
 import { PageHeroDotGrid } from "@/components/ui/PageHeroDotGrid";
-import { services } from "@/lib/data/services";
 
 interface FormData {
   fullName: string;
@@ -46,7 +45,7 @@ export default function ContactPage() {
             </h2>
             <p className="text-slate-500 mb-10 font-light leading-relaxed">{t("form.successMsg")}</p>
             <button onClick={() => setStatus("idle")} className="text-violet-600 font-semibold hover:underline">
-              Send another message
+              {t("form.sendAnother")}
             </button>
           </AnimateOnView>
         </div>
@@ -74,11 +73,11 @@ export default function ContactPage() {
           <AnimateOnView delay={100}>
             <h1 className="text-4xl md:text-6xl font-bold mb-6 tracking-tight leading-[1.2]">
               <span className="bg-gradient-to-b from-white via-white to-white/70 bg-clip-text text-transparent">
-                {locale === "id" ? "Hubungi" : "Connect"}
+                {t("connect")}
               </span>
               <br />
               <span className="text-violet-400 drop-shadow-[0_0_15px_rgba(167,139,250,0.25)]">
-                {locale === "id" ? "Kami" : "With Us"}
+                {t("withUs")}
               </span>
             </h1>
           </AnimateOnView>
@@ -106,8 +105,8 @@ export default function ContactPage() {
               <div className="w-14 h-14 rounded-full bg-emerald-50 flex items-center justify-center text-emerald-600 mb-6 transition-transform hover:scale-110 duration-300">
                 <Icon name="Phone" size={24} strokeWidth={1.5} />
               </div>
-              <h3 className="text-lg font-bold text-slate-800 mb-1">Call Us</h3>
-              <p className="text-xs text-slate-400 mb-4 font-medium">WhatsApp Available</p>
+              <h3 className="text-lg font-bold text-slate-800 mb-1">{t("callUs")}</h3>
+              <p className="text-xs text-slate-400 mb-4 font-medium">{t("whatsappAvailable")}</p>
               <a href={`tel:${t("info.phoneVal")}`} className="text-sm font-bold text-slate-900 hover:text-emerald-600 transition-colors">{t("info.phoneVal")}</a>
               <div className="hidden md:block absolute right-0 top-1/2 -translate-y-1/2 w-px h-16 bg-slate-100" />
             </AnimateOnView>
@@ -119,7 +118,7 @@ export default function ContactPage() {
               </div>
               <h3 className="text-lg font-bold text-slate-800 mb-1">Instagram</h3>
               <p className="text-xs text-slate-400 mb-4 font-medium">@violetglobalindonesia</p>
-              <a href="https://www.instagram.com/violetglobalindonesia" target="_blank" rel="noopener noreferrer" className="text-sm font-bold text-slate-900 hover:text-pink-600 transition-colors">Follow Us</a>
+              <a href="https://www.instagram.com/violetglobalindonesia" target="_blank" rel="noopener noreferrer" className="text-sm font-bold text-slate-900 hover:text-pink-600 transition-colors">{t("followUs")}</a>
               <div className="hidden md:block absolute right-0 top-1/2 -translate-y-1/2 w-px h-16 bg-slate-100" />
             </AnimateOnView>
 
@@ -128,8 +127,8 @@ export default function ContactPage() {
               <div className="w-14 h-14 rounded-full bg-sky-50 flex items-center justify-center text-sky-500 mb-6 transition-transform hover:scale-110 duration-300">
                 <Icon name="Mail" size={24} strokeWidth={1.5} />
               </div>
-              <h3 className="text-lg font-bold text-slate-800 mb-1">Email Us</h3>
-              <p className="text-xs text-slate-400 mb-4 font-medium">Available 24/7</p>
+              <h3 className="text-lg font-bold text-slate-800 mb-1">{t("emailUs")}</h3>
+              <p className="text-xs text-slate-400 mb-4 font-medium">{t("available")}</p>
               <a href={`mailto:${t("info.emailVal")}`} className="text-sm font-bold text-slate-900 hover:text-sky-600 transition-colors">{t("info.emailVal")}</a>
             </AnimateOnView>
           </div>
@@ -144,47 +143,58 @@ export default function ContactPage() {
             <div className="absolute -bottom-24 left-0 h-48 w-48 rounded-full bg-fuchsia-300/20 blur-3xl" />
             <div className="relative z-10 text-center mb-14">
               <h2 className="text-3xl md:text-5xl font-medium text-white tracking-tight" style={{ fontFamily: "var(--font-poppins)" }}>
-                {locale === "id" ? "Kirim Pesan" : "Send a Message"}
+                {t("sendAMessage")}
               </h2>
             </div>
 
-            <form onSubmit={handleSubmit} className="relative z-10 space-y-6">
+            <form
+              onSubmit={handleSubmit}
+              lang={locale}
+              onInvalid={(event) => {
+                const field = event.target as HTMLInputElement | HTMLTextAreaElement;
+                field.setCustomValidity(t(field.validity.valueMissing ? "form.requiredError" : "form.emailError"));
+              }}
+              onInput={(event) => {
+                (event.target as HTMLInputElement | HTMLTextAreaElement).setCustomValidity("");
+              }}
+              className="relative z-10 space-y-6"
+            >
               <div className="grid md:grid-cols-3 gap-6">
                 <div className="space-y-2">
-                  <label className="text-[10px] font-bold uppercase tracking-[0.2em] text-white/70 ml-1">{t("form.fullName")}</label>
-                  <input
+                  <label htmlFor="contact-fullName" className="text-[10px] font-bold uppercase tracking-[0.2em] text-white/70 ml-1">{t("form.fullName")}</label>
+                  <input id="contact-fullName"
                     type="text" required value={form.fullName}
                     onChange={(e) => setForm({ ...form, fullName: e.target.value })}
-                    placeholder="Name"
+                    placeholder={t("form.namePlaceholder")}
                     className="w-full bg-white border-none rounded-lg px-5 py-4 focus:ring-4 focus:ring-white/20 outline-none transition-all text-slate-900 placeholder:text-slate-300 text-sm shadow-sm"
                   />
                 </div>
                 <div className="space-y-2">
-                  <label className="text-[10px] font-bold uppercase tracking-[0.2em] text-white/70 ml-1">Email Address</label>
-                  <input
+                  <label htmlFor="contact-email" className="text-[10px] font-bold uppercase tracking-[0.2em] text-white/70 ml-1">{t("form.email")}</label>
+                  <input id="contact-email"
                     type="email" required value={form.email}
                     onChange={(e) => setForm({ ...form, email: e.target.value })}
-                    placeholder="Email"
+                    placeholder={t("form.emailPlaceholder")}
                     className="w-full bg-white border-none rounded-lg px-5 py-4 focus:ring-4 focus:ring-white/20 outline-none transition-all text-slate-900 placeholder:text-slate-300 text-sm shadow-sm"
                   />
                 </div>
                 <div className="space-y-2">
-                  <label className="text-[10px] font-bold uppercase tracking-[0.2em] text-white/70 ml-1">{t("form.phone")}</label>
-                  <input
+                  <label htmlFor="contact-phone" className="text-[10px] font-bold uppercase tracking-[0.2em] text-white/70 ml-1">{t("form.phone")}</label>
+                  <input id="contact-phone"
                     type="tel" required value={form.phone}
                     onChange={(e) => setForm({ ...form, phone: e.target.value })}
-                    placeholder="Phone"
+                    placeholder={t("form.phonePlaceholder")}
                     className="w-full bg-white border-none rounded-lg px-5 py-4 focus:ring-4 focus:ring-white/20 outline-none transition-all text-slate-900 placeholder:text-slate-300 text-sm shadow-sm"
                   />
                 </div>
               </div>
 
               <div className="space-y-2">
-                <label className="text-[10px] font-bold uppercase tracking-[0.2em] text-white/70 ml-1">{t("form.message")}</label>
-                <textarea
+                <label htmlFor="contact-message" className="text-[10px] font-bold uppercase tracking-[0.2em] text-white/70 ml-1">{t("form.message")}</label>
+                <textarea id="contact-message"
                   required value={form.message}
                   onChange={(e) => setForm({ ...form, message: e.target.value })}
-                  placeholder="Tell us about your project..."
+                  placeholder={t("form.messagePlaceholder")}
                   className="w-full bg-white border-none rounded-lg px-5 py-4 focus:ring-4 focus:ring-white/20 outline-none transition-all text-slate-900 placeholder:text-slate-300 text-sm min-h-[160px] resize-none shadow-sm"
                 />
               </div>
@@ -194,7 +204,7 @@ export default function ContactPage() {
                   type="submit" disabled={status === "loading"}
                   className="inline-flex items-center gap-3 px-16 py-4 rounded-lg bg-white text-violet-700 font-bold hover:bg-slate-50 transition-all duration-300 shadow-2xl shadow-black/20 disabled:opacity-50"
                 >
-                  {status === "loading" ? "..." : t("form.submit")}
+                  {status === "loading" ? t("form.submitting") : t("form.submit")}
                   <Icon name="ArrowRight" size={18} />
                 </button>
               </div>
@@ -205,7 +215,7 @@ export default function ContactPage() {
         {/* 4. Address & Map Section */}
         <section className="mt-24">
           <AnimateOnView delay={400} className="text-center mb-12">
-            <span className="text-[10px] font-bold text-violet-600 uppercase tracking-[0.5em] mb-4 block">Visit Our Studio</span>
+            <span className="text-[10px] font-bold text-violet-600 uppercase tracking-[0.5em] mb-4 block">{t("visitStudio")}</span>
             <h3 className="text-xl md:text-2xl font-medium text-slate-800 tracking-tight leading-relaxed max-w-3xl mx-auto whitespace-pre-line" style={{ fontFamily: "var(--font-poppins)" }}>
               {t("info.addressVal")}
             </h3>
@@ -213,7 +223,8 @@ export default function ContactPage() {
 
           <AnimateOnView delay={500} className="rounded-2xl overflow-hidden border border-slate-100 h-[450px] shadow-2xl shadow-slate-200">
             <iframe
-              src="https://maps.google.com/maps?q=Menara%20Hijau%20Jl.%20MT%20Haryono%20Kav.%2033%20Pancoran%20Jakarta%20Selatan&z=16&output=embed"
+              title={t("mapTitle")}
+              src={`https://maps.google.com/maps?q=Menara%20Hijau%20Jl.%20MT%20Haryono%20Kav.%2033%20Pancoran%20Jakarta%20Selatan&z=16&output=embed&hl=${locale}`}
               width="100%" height="100%" style={{ border: 0 }} allowFullScreen loading="lazy" referrerPolicy="no-referrer-when-downgrade"
             />
           </AnimateOnView>

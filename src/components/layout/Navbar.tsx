@@ -8,6 +8,8 @@ import { usePathname } from "next/navigation";
 import { useLocale, useTranslations } from "next-intl";
 import { cn } from "@/lib/utils";
 import { Icon } from "@/components/ui/Icon";
+import { ThemeToggle } from "@/components/theme/ThemeToggle";
+import { useTheme } from "@/components/theme/useTheme";
 
 const HOME_HERO_UNLOCK_EVENT = "violet:home-hero-unlock";
 
@@ -26,8 +28,6 @@ const navLinks = [
   { href: "/about", key: "about" },
   { href: "/services", key: "services" },
   { href: "/portfolio", key: "portfolio" },
-  { href: "/case-study", key: "caseStudy" },
-  { href: "/blog", key: "blog" },
   { href: "/faq", key: "faq" },
   { href: "/contact", key: "contact" },
 ];
@@ -38,13 +38,7 @@ export function Navbar() {
   const pathname = usePathname();
   const [scrolled, setScrolled] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
-  const [theme, setTheme] = useState<"light" | "dark">(() => {
-    if (typeof document === "undefined") {
-      return "light";
-    }
-
-    return document.documentElement.dataset.theme === "dark" ? "dark" : "light";
-  });
+  const { theme } = useTheme();
   const [homeNavUnlocked, setHomeNavUnlocked] = useState(false);
   const [revealSchedule, setRevealSchedule] = useState<Record<string, number>>({});
 
@@ -111,12 +105,6 @@ export function Navbar() {
     return null;
   }
 
-  const toggleTheme = () => {
-    const nextTheme = isThemeDark ? "light" : "dark";
-    setTheme(nextTheme);
-    document.documentElement.dataset.theme = nextTheme;
-    window.localStorage.setItem("violet-theme", nextTheme);
-  };
 
   return (
     <nav
@@ -220,6 +208,7 @@ export function Navbar() {
           <div className="flex items-center gap-3">
             <Link
               href={newPath}
+              aria-label={t("switchLanguage")}
               className={cn(
                 "flex h-[2.2rem] min-w-[1.8rem] items-center justify-center rounded-[0.7rem] border px-2 text-[10px] font-semibold tracking-[0.06em] transition-all duration-300 md:hidden",
                 getRevealProps("locale", 420).className,
@@ -236,6 +225,7 @@ export function Navbar() {
 
             <Link
               href={newPath}
+              aria-label={t("switchLanguage")}
               className={cn(
                 "hidden items-center gap-1.5 rounded-lg border px-3 py-1.5 text-sm font-semibold transition-all duration-300 md:flex",
                 getRevealProps("locale", 420).className,
@@ -251,25 +241,10 @@ export function Navbar() {
               {otherLocale.toUpperCase()}
             </Link>
 
-            <button
-              type="button"
-              onClick={toggleTheme}
-              aria-label={isThemeDark ? "Switch to light mode" : "Switch to dark mode"}
-              aria-pressed={isThemeDark}
-              className={cn(
-                "hidden items-center gap-2 rounded-xl border px-3.5 py-2 text-sm font-semibold transition-all duration-300 md:inline-flex",
-                getRevealProps("cta", 500).className,
-                isDarkNav
-                  ? "border-white/20 bg-white/10 text-white shadow-[0_0_15px_rgba(255,255,255,0.08)] hover:border-white/40 hover:bg-white/14"
-                  : isThemeDark
-                    ? "border-violet-200/20 bg-[linear-gradient(180deg,rgba(23,17,37,0.96)_0%,rgba(16,12,28,0.96)_100%)] text-white shadow-[0_16px_36px_rgba(4,6,17,0.30),inset_0_1px_0_rgba(255,255,255,0.05)] hover:border-violet-300/35 hover:bg-[#1d1530]"
-                    : "border-violet-200 bg-white/90 text-violet-800 shadow-[0_10px_25px_rgba(76,29,149,0.08)] hover:bg-violet-50",
-              )}
+            <ThemeToggle
+              className={cn("!hidden md:!inline-flex", getRevealProps("cta", 500).className)}
               style={getRevealProps("cta", 500).style}
-            >
-              <Icon name={isThemeDark ? "Sun" : "Moon"} size={16} />
-              <span>{isThemeDark ? "Light Mode" : "Dark Mode"}</span>
-            </button>
+            />
 
             <button
               onClick={() => setMobileOpen(!mobileOpen)}
@@ -279,7 +254,8 @@ export function Navbar() {
                 isDarkNav ? "text-white hover:bg-white/10" : (useDarkChrome ? "text-white hover:bg-white/10" : "text-gray-700 hover:bg-gray-100"),
               )}
               style={getRevealProps("menu", 580).style}
-              aria-label="Toggle menu"
+              aria-label={t("toggleMenu")}
+              aria-expanded={mobileOpen}
             >
               <Icon name={mobileOpen ? "X" : "Menu"} size={22} className={cn(isDarkNav ? "text-white" : (useDarkChrome ? "text-white" : "text-gray-700"))} />
             </button>
@@ -290,7 +266,7 @@ export function Navbar() {
             <div className="lg:hidden">
               <button
                 type="button"
-                aria-label="Close menu overlay"
+                aria-label={t("closeOverlay")}
                 className="fixed inset-0 z-40 bg-[#12071d]/28 backdrop-blur-[2px]"
               onClick={() => setMobileOpen(false)}
             />
@@ -312,26 +288,14 @@ export function Navbar() {
                         ? "border border-white/10 bg-white/[0.05] text-violet-50 hover:bg-white/[0.1]"
                         : "border border-violet-100 bg-white/90 text-violet-700 hover:bg-violet-50",
                     )}
-                    aria-label="Close menu"
+                    aria-label={t("closeMenu")}
                   >
                     <Icon name="X" size={14} />
                   </button>
                 </div>
 
                 <div className="flex flex-col gap-1">
-                  <button
-                    type="button"
-                    onClick={toggleTheme}
-                    className={cn(
-                      "mb-1 flex items-center justify-between rounded-[0.95rem] border px-3 py-2.5 text-left text-[13px] font-medium transition-colors",
-                      isThemeDark
-                        ? "border-violet-200/14 bg-[linear-gradient(180deg,rgba(255,255,255,0.06)_0%,rgba(255,255,255,0.03)_100%)] text-white shadow-[0_10px_24px_rgba(4,6,17,0.24)] hover:bg-white/10"
-                        : "border-violet-200 bg-white/90 text-violet-800 hover:bg-violet-50",
-                    )}
-                  >
-                    <span>{isThemeDark ? "Light Mode" : "Dark Mode"}</span>
-                    <Icon name={isThemeDark ? "Sun" : "Moon"} size={15} />
-                  </button>
+                  <ThemeToggle className="mb-1 w-full" />
 
                   {navLinks.map(({ href, key }) => (
                     <Link

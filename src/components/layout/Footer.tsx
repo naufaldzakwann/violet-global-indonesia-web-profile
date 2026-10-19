@@ -3,7 +3,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { useLocale, useTranslations } from "next-intl";
+import { useLocale, useNow, useTranslations } from "next-intl";
 import { Icon } from "@/components/ui/Icon";
 import { services } from "@/lib/data/services";
 
@@ -12,6 +12,11 @@ export function Footer() {
   const tc = useTranslations("nav");
   const locale = useLocale();
   const pathname = usePathname();
+  const now = useNow({ updateInterval: 60_000 });
+  const currentYear = new Intl.DateTimeFormat("en", {
+    year: "numeric",
+    timeZone: "Asia/Jakarta",
+  }).format(now);
   const segments = pathname.split("/").filter(Boolean);
   const isPortfolioDetail = segments[0] === locale && segments[1] === "portfolio" && segments.length >= 3;
   const isCaseStudyRoute = segments[0] === locale && segments[1] === "case-study";
@@ -23,7 +28,6 @@ export function Footer() {
   const companyLinks = [
     { label: tc("about"), href: `/${locale}/about` },
     { label: tc("portfolio"), href: `/${locale}/portfolio` },
-    { label: tc("blog"), href: `/${locale}/blog` },
     { label: tc("faq"), href: `/${locale}/faq` },
     { label: tc("contact"), href: `/${locale}/contact` },
   ];
@@ -39,18 +43,22 @@ export function Footer() {
     <footer className="border-t border-violet-400/16 bg-[linear-gradient(180deg,#1a0d27_0%,#140a21_48%,#0c0615_100%)] text-white">
       <div className="section-container py-14 sm:py-16">
         <div className="grid gap-10 lg:grid-cols-[1.2fr_0.9fr_0.9fr_1fr]">
-          <div className="max-w-sm">
-            <Link href={`/${locale}/home`} className="mb-5 inline-flex items-center">
+          <div className="flex w-full max-w-[16rem] flex-col items-center gap-5 self-center justify-self-center py-3 lg:justify-self-start lg:py-0">
+            <Link
+              href={`/${locale}/home`}
+              className="flex w-full items-center justify-center rounded-xl bg-white px-4 py-3 shadow-[0_8px_24px_rgba(0,0,0,0.12)] focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-violet-300"
+            >
               <Image
                 src="/VGI_Logo_Horizontal.PNG"
                 alt="Violet Global Indonesia"
                 width={1618}
                 height={352}
-                className="h-10 w-auto object-contain md:h-12"
+                sizes="224px"
+                className="h-auto w-full object-contain"
               />
             </Link>
 
-            <div className="flex gap-2.5">
+            <div className="flex w-full items-center justify-center gap-3">
               {socialLinks.map(({ name, icon, href }) => (
                 <a
                   key={name}
@@ -58,7 +66,7 @@ export function Footer() {
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label={name}
-                  className="flex h-10 w-10 items-center justify-center rounded-full border border-violet-300/18 bg-violet-300/[0.09] text-violet-100/78 transition-all duration-200 hover:border-violet-300/44 hover:bg-violet-300/[0.16] hover:text-white"
+                  className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full border border-violet-300/18 bg-violet-300/[0.09] text-violet-100/78 transition-all duration-200 hover:border-violet-300/44 hover:bg-violet-300/[0.16] hover:text-white focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-violet-300"
                 >
                   <Icon name={icon} size={16} />
                 </a>
@@ -121,7 +129,7 @@ export function Footer() {
         </div>
 
         <div className="mt-10 flex flex-col gap-3 border-t border-violet-300/16 pt-5 text-sm text-violet-100/46 sm:flex-row sm:items-center sm:justify-between">
-          <p>{t("copyright")}</p>
+          <p>{t("copyright", { currentYear })}</p>
           <div className="flex gap-5">
             <Link href={`/${locale}/home`} className="transition-colors hover:text-violet-200">
               {t("privacy")}

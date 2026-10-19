@@ -8,15 +8,28 @@
     "blog": "Blog",
     "contact": "Contact",
     "faq": "FAQ",
-    "cta": "Free Consultation"
+    "cta": "Free Consultation",
+    "toggleMenu": "Toggle menu",
+    "closeMenu": "Close menu",
+    "closeOverlay": "Close menu overlay",
+    "switchLanguage": "Switch language to Indonesian"
   },
   "hero": {
     "badge": "One-Stop IT & Digital Solution",
-    "headline": ["Harnessing", "Intelligence,", "Defining the", "Future"],
+    "headline": [
+      "Harnessing",
+      "Intelligence,",
+      "Defining the",
+      "Future"
+    ],
     "title": "The Most Complete IT Solution for Your Business",
     "subtitle": "Violet Global Indonesia is your trusted technology partner — from website development, cybersecurity, to complete digital business transformation.",
     "ctaPrimary": "Get Free Consultation Now",
-    "ctaSecondary": "View Our Portfolio"
+    "ctaSecondary": "View Our Portfolio",
+    "toBegin": "to begin",
+    "contactUs": "CONTACT US",
+    "tapLogo": "Tap the logo",
+    "startHint": "Tap the logo to begin"
   },
   "services": {
     "badge": "Our Services",
@@ -24,7 +37,9 @@
     "subtitle": "Our three service pillars — IT Development, Consulting, and Sustainable Energy Solutions — deliver integrated solutions: upstream - downstream.",
     "learnMore": "Learn More",
     "consultNow": "Consult Now",
-    "allServices": "All Services"
+    "allServices": "All Services",
+    "headingFirst": "Our",
+    "headingSecond": "Services"
   },
   "why": {
     "badge": "Why Choose VGI",
@@ -87,7 +102,10 @@
     "subtitle": "Consult your business needs with our expert team for free. We are ready to help.",
     "primary": "Get Free Consultation Now",
     "secondary": "Contact via WhatsApp",
-    "phone": "+62 851-6641-5046"
+    "phone": "+62 851-6641-5046",
+    "badge": "Consultation",
+    "strategy": "Strategy-first approach",
+    "whatsappMessage": "Hello VGI, I would like to consult."
   },
   "about": {
     "badge": "About Us",
@@ -108,20 +126,61 @@
     "history": {
       "title": "Our Journey",
       "items": [
-        { "year": "2019", "event": "VGI founded with initial focus on website and application development" },
-        { "year": "2020", "event": "Service expansion to digital marketing and brand design" },
-        { "year": "2021", "event": "Opening Cybersecurity and Data Analytics division" },
-        { "year": "2022", "event": "Reached milestone of 50 active clients and built a 20+ professional team" },
-        { "year": "2023", "event": "Launched Automation & System Integration services for corporations" },
-        { "year": "2024", "event": "Achieved 150+ completed projects and expanded services to international clients" },
-        { "year": "2025", "event": "Launch of new corporate website as a commitment to transparency" }
+        {
+          "year": "2019",
+          "event": "VGI founded with initial focus on website and application development"
+        },
+        {
+          "year": "2020",
+          "event": "Service expansion to digital marketing and brand design"
+        },
+        {
+          "year": "2021",
+          "event": "Opening Cybersecurity and Data Analytics division"
+        },
+        {
+          "year": "2022",
+          "event": "Reached milestone of 50 active clients and built a 20+ professional team"
+        },
+        {
+          "year": "2023",
+          "event": "Launched Automation & System Integration services for corporations"
+        },
+        {
+          "year": "2024",
+          "event": "Achieved 150+ completed projects and expanded services to international clients"
+        },
+        {
+          "year": "2025",
+          "event": "Launch of new corporate website as a commitment to transparency"
+        }
       ]
     },
     "values": "Our Core Values",
     "team": {
       "title": "Management Team",
       "subtitle": "Led by experienced professionals committed to client success."
-    }
+    },
+    "whoWeAre": "Who We Are",
+    "itDevelopment": "IT Development",
+    "consulting": "Consulting",
+    "sustainableEnergySolutions": "Sustainable Energy Solutions",
+    "about": "About",
+    "valuesCulture": "Values & Culture",
+    "overviewTitle": "Empowering businesses by connecting global technology with Indonesia's emerging opportunities through strategic guidance and sustainable energy solutions.",
+    "overviewDescription": "Violet Global Indonesia (VGI) is a technology and sustainable energy solutions company established in 2019. We deliver integrated solutions from upstream to downstream — uniting three service pillars in one complete accompanying ecosystem.",
+    "overviewScope": "From building digital systems and designing business strategy to developing renewable energy and waste management projects — we accompany clients from research and strategy through construction to operations, with a data- and AI-driven approach.",
+    "overviewPoints": [
+      "One partner for every need: from digital systems and business strategy to sustainable energy projects.",
+      "An end-to-end approach: research, strategy, build, and operational support.",
+      "Data- & AI-driven — measurable, structured, and relevant to your business needs."
+    ],
+    "purpose": "PURPOSE",
+    "action": "ACTION",
+    "management": "Management",
+    "itDevelopmentDescription": "Systems, applications & digital infrastructure",
+    "consultingDescription": "Strategy, market entry & business development",
+    "sustainableEnergyDescription": "Renewable energy & circular economy"
   },
   "blog": {
     "badge": "Blog & Articles",
@@ -174,8 +233,25 @@
         "IDR 20 – 50 Million",
         "IDR 50 – 100 Million",
         "> IDR 100 Million"
-      ]
-    }
+      ],
+      "sendAnother": "Send another message",
+      "namePlaceholder": "Name",
+      "emailPlaceholder": "Email",
+      "phonePlaceholder": "Phone",
+      "messagePlaceholder": "Tell us about your project...",
+      "requiredError": "Please fill out this field.",
+      "emailError": "Please enter a valid email address."
+    },
+    "connect": "Connect",
+    "withUs": "With Us",
+    "sendAMessage": "Send a Message",
+    "callUs": "Call Us",
+    "whatsappAvailable": "WhatsApp Available",
+    "followUs": "Follow Us",
+    "emailUs": "Email Us",
+    "available": "Available 24/7",
+    "visitStudio": "Visit Our Studio",
+    "mapTitle": "Violet Global Indonesia office location map"
   },
   "faq": {
     "badge": "FAQ",
@@ -183,7 +259,9 @@
     "subtitle": "Find answers to common questions about VGI's services and work processes.",
     "search": "Search questions...",
     "noResults": "Question not found. Try different keywords or contact us directly.",
-    "filterAll": "All"
+    "filterAll": "All",
+    "help": "Help &",
+    "support": "Support"
   },
   "footer": {
     "services": "Services",
@@ -193,7 +271,7 @@
     "newsletterText": "Get the latest articles and insights delivered directly to your inbox.",
     "emailPlaceholder": "Your Email",
     "subscribe": "Subscribe",
-    "copyright": "© 2025 Violet Global Indonesia. All rights reserved.",
+    "copyright": "© 2025 - {currentYear} Violet Global Indonesia. All rights reserved.",
     "privacy": "Privacy Policy",
     "terms": "Terms & Conditions"
   },
@@ -206,6 +284,349 @@
     "client": "Client",
     "year": "Year",
     "category": "Category",
-    "by": "by"
+    "by": "by",
+    "whatsappLabel": "Chat WhatsApp",
+    "whatsappMessage": "Hello VGI, I would like to consult about your services.",
+    "interactiveLogo": "Interactive Violet logo"
+  },
+  "portfolioList": {
+    "viewServices": "View Services",
+    "contactUs": "Contact Us",
+    "viewBy": "View by",
+    "thumbnail": "Thumbnail",
+    "list": "List",
+    "projectName": "Project Name",
+    "preview": "Preview",
+    "category": "Category",
+    "status": "Status",
+    "openCategoryFilter": "Open category filter",
+    "categoryFilter": "Category filter",
+    "emptyTitle": "Portfolio Is Being Updated",
+    "emptyDescription": "We are curating our project archive to showcase only our best real-world work. Explore our services or contact our team to discuss your project needs.",
+    "updated": "Update Time",
+    "title": "Project",
+    "all": "All",
+    "live": "Live",
+    "review": "Review",
+    "archive": "Archive",
+    "client": "Client"
+  },
+  "serviceDetail": {
+    "services": "Services",
+    "freeConsultation": "Free Consultation",
+    "seeTheProducts": "See the Products",
+    "whatIs": "What is {title}?",
+    "whoIsThisServiceFor": "Who Is This Service For?",
+    "productsPlatformsInThisService": "Products & Platforms in This Service",
+    "viewFullPage": "View Full Page",
+    "howWeWork": "How We Work",
+    "whatYouGet": "What You Get",
+    "proofOfExcellence": "Proof of Excellence",
+    "successfullyDeliveredProjects": "Successfully delivered {title} projects.",
+    "viewEntirePortfolio": "View Entire Portfolio →",
+    "notSureIsRightForYou": "Not sure {title} is right for you?",
+    "startFreeConsultation": "Start Free Consultation",
+    "audienceIntro": "Match it with your situation — if any of these feels familiar, this service is for you.",
+    "productsIntro": "The available options — click to see the details.",
+    "processIntro": "The process is simple and transparent — you know what happens at every step.",
+    "consultationIntro": "Tell us what you need — the first consultation is free, with no commitment."
+  },
+  "theme": {
+    "dark": "Dark Mode",
+    "light": "Light Mode",
+    "switchToDark": "Switch to dark mode",
+    "switchToLight": "Switch to light mode"
+  },
+  "clients": {
+    "title": "Our Client",
+    "pemprovName": "Central Java Provincial Government"
+  },
+  "notFound": {
+    "title": "Page Not Found",
+    "description": "This page is unavailable. Please return to the home page.",
+    "back": "Return Home"
+  },
+  "meta": {
+    "siteTitle": "Violet Global Indonesia — One-Stop IT & Digital Solution",
+    "siteDescription": "Violet Global Indonesia is a trusted one-stop IT & digital solution company. Services: Web Development, Cybersecurity, Digital Marketing, Data Analytics, and more.",
+    "homeTitle": "Violet Global Indonesia — Digital Excellence & IT Solutions",
+    "homeDescription": "Welcome to Violet Global Indonesia. Complete IT and digital solutions for your business.",
+    "landingTitle": "Violet Global Indonesia — Digital Solution",
+    "landingDescription": "Violet Global Indonesia — Complete IT and digital solutions for your business.",
+    "servicesTitle": "Services",
+    "servicesDescription": "Three pillars of Violet Global Indonesia services — IT Development, Consulting, and Sustainable Energy Solutions.",
+    "aboutTitle": "About Us",
+    "contactTitle": "Contact",
+    "portfolioTitle": "Portfolio",
+    "faqTitle": "FAQ"
+  },
+  "portfolioDetail": {
+    "back": "Back",
+    "overview": "Overview",
+    "palette": "Color Palette",
+    "structure": "Infrastructure",
+    "design": "Design",
+    "type": "Type",
+    "role": "Role",
+    "tools": "Tools",
+    "skills": "Skills",
+    "page": "Page",
+    "pageDescription": "The {name} page is designed to present key information clearly, keep the visual rhythm clean, and help users understand the project flow quickly.",
+    "narrative": "The chosen theme for this project is {theme}. {themeReason} The selected style is {styleText}. {styleReason}",
+    "imageAlt": "{title} page {number}",
+    "presets": {
+      "default": {
+        "type": "Website / Web App",
+        "role": "Product Strategy, UX/UI Design, Frontend Development",
+        "skills": [
+          "UX Writing",
+          "Wireframing",
+          "Responsive Design",
+          "System Thinking"
+        ],
+        "structure": [
+          "Home",
+          "Overview",
+          "Features",
+          "Workflow",
+          "Dashboard",
+          "Detail",
+          "Mobile",
+          "CTA"
+        ],
+        "palette": [
+          [
+            "#0F172A",
+            "Ink"
+          ],
+          [
+            "#315EFB",
+            "Signal Blue"
+          ],
+          [
+            "#E8EEFF",
+            "Mist"
+          ],
+          [
+            "#F8FAFC",
+            "Paper"
+          ]
+        ],
+        "theme": "modern product system",
+        "styleText": "minimal, modular, and image-forward",
+        "themeReason": "This theme was chosen so the product feels professional, clear, and ready for business use.",
+        "styleReason": "This style keeps the focus on structure, creates breathing room, and makes the experience feel modern."
+      },
+      "ecommerce": {
+        "type": "E-Commerce Experience",
+        "role": "Commerce Design, UX Direction, Frontend Experience",
+        "skills": [
+          "Conversion Design",
+          "Art Direction",
+          "Responsive Commerce",
+          "Content Hierarchy"
+        ],
+        "structure": [
+          "Home",
+          "Collection",
+          "Product",
+          "Story",
+          "Lookbook",
+          "Cart",
+          "Checkout",
+          "Mobile"
+        ],
+        "palette": [
+          [
+            "#171717",
+            "Noir"
+          ],
+          [
+            "#B88B5B",
+            "Bronze"
+          ],
+          [
+            "#F0E7DC",
+            "Sand"
+          ],
+          [
+            "#FCFAF7",
+            "Ivory"
+          ]
+        ],
+        "theme": "premium editorial commerce",
+        "styleText": "minimal, image-led, and clean luxury",
+        "themeReason": "This theme was chosen so the shopping experience feels aspirational and elevated from the first impression.",
+        "styleReason": "This style keeps the focus on the product, creates breathing room, and supports conversion without feeling crowded."
+      },
+      "data-analytics": {
+        "type": "Analytics Dashboard",
+        "role": "Dashboard Design, Data Storytelling, BI Interface",
+        "skills": [
+          "Information Design",
+          "Data Visualization",
+          "UX Strategy",
+          "KPI Mapping"
+        ],
+        "structure": [
+          "Overview",
+          "KPI",
+          "Regional",
+          "Channels",
+          "Trend",
+          "Alerts",
+          "Reports",
+          "Mobile"
+        ],
+        "palette": [
+          [
+            "#111827",
+            "Graphite"
+          ],
+          [
+            "#0EA5E9",
+            "Data Blue"
+          ],
+          [
+            "#DCF3FF",
+            "Sky Tint"
+          ],
+          [
+            "#F9FAFB",
+            "Soft White"
+          ]
+        ],
+        "theme": "focused decision dashboard",
+        "styleText": "modular, high-contrast, and insight-first",
+        "themeReason": "This theme was chosen so complex data still feels direct and easy to turn into decisions.",
+        "styleReason": "This style keeps KPIs, charts, and status cues clear while staying visually light."
+      },
+      "design-branding": {
+        "type": "Brand Experience",
+        "role": "Art Direction, Visual Identity, Brand System",
+        "skills": [
+          "Identity Design",
+          "Visual Language",
+          "Brand Narrative",
+          "Campaign Styling"
+        ],
+        "structure": [
+          "Landing",
+          "Narrative",
+          "Visual",
+          "Packaging",
+          "Social",
+          "Campaign",
+          "Merch",
+          "Guideline"
+        ],
+        "palette": [
+          [
+            "#121212",
+            "Black"
+          ],
+          [
+            "#D46A6A",
+            "Accent"
+          ],
+          [
+            "#F5D9C8",
+            "Warm Tone"
+          ],
+          [
+            "#FAF7F2",
+            "Canvas"
+          ]
+        ],
+        "theme": "refined brand storytelling",
+        "styleText": "editorial, expressive, and highly curated",
+        "themeReason": "This theme was chosen so the brand identity feels strong, mature, and more memorable across touchpoints.",
+        "styleReason": "This style creates a distinct visual rhythm so the brand presentation never feels generic."
+      },
+      "automation": {
+        "type": "Automation Platform",
+        "role": "Workflow Design, Systems Thinking, Interface Design",
+        "skills": [
+          "Process Mapping",
+          "Automation Logic",
+          "Exception Design",
+          "UX Simplification"
+        ],
+        "structure": [
+          "Home",
+          "Workflow",
+          "Intake",
+          "Approval",
+          "Log",
+          "Exception",
+          "Reporting",
+          "Mobile"
+        ],
+        "palette": [
+          [
+            "#0A0F1F",
+            "Core"
+          ],
+          [
+            "#22C55E",
+            "Flow Green"
+          ],
+          [
+            "#DBFCE7",
+            "Leaf Tint"
+          ],
+          [
+            "#F8FAFC",
+            "Cloud"
+          ]
+        ],
+        "theme": "structured workflow platform",
+        "styleText": "clean, systematic, and process-led",
+        "themeReason": "This theme was chosen to emphasize control and clarity across automated processes.",
+        "styleReason": "This style helps complex flows feel easier to follow and more efficient."
+      },
+      "cybersecurity": {
+        "type": "Cybersecurity Audit",
+        "role": "Security Review, UX Simplification, Reporting Design",
+        "skills": [
+          "Threat Framing",
+          "Audit Mapping",
+          "Information Clarity",
+          "Risk Communication"
+        ],
+        "structure": [
+          "Overview",
+          "Scope",
+          "Findings",
+          "Severity",
+          "Controls",
+          "Remediation",
+          "Report",
+          "Mobile"
+        ],
+        "palette": [
+          [
+            "#0B1120",
+            "Night"
+          ],
+          [
+            "#2563EB",
+            "Trust Blue"
+          ],
+          [
+            "#DCE7FF",
+            "Shield Tint"
+          ],
+          [
+            "#F3F6FC",
+            "Fog"
+          ]
+        ],
+        "theme": "controlled security narrative",
+        "styleText": "dark, restrained, and high-trust",
+        "themeReason": "This theme was chosen so the presentation feels credible, serious, and reassuring in a security context.",
+        "styleReason": "This style emphasizes focus, minimizes distraction, and keeps sensitive information feeling controlled."
+      }
+    }
   }
 }

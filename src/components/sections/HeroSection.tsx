@@ -360,7 +360,7 @@ export function HeroSection({ isInitiallyUnlocked = false }: { isInitiallyUnlock
               className="group relative flex min-w-0 flex-1 items-center justify-center gap-2 overflow-hidden rounded-full border border-white/10 bg-white/5 px-4 py-3 text-center text-[10px] font-medium tracking-[0.14em] text-white/70 transition-all hover:bg-white/10 hover:text-white sm:gap-3 sm:px-6 sm:text-[11px] md:py-3.5 md:text-[12px] lg:h-16 lg:flex-none lg:justify-start lg:gap-4 lg:px-8 lg:text-[13px] lg:tracking-[0.2em]"
             >
               <span className="relative z-10 whitespace-nowrap">
-                {locale === "id" ? "HUBUNGI KAMI" : "CONTACT US"}
+                {t("contactUs")}
               </span>
             </Link>
           </div>
@@ -440,14 +440,14 @@ export function HeroSection({ isInitiallyUnlocked = false }: { isInitiallyUnlock
           <div className="flex items-center gap-3 text-[10px] uppercase tracking-[0.32em] text-white/44 sm:text-[11px] lg:hidden">
             <span className="h-px w-8 bg-white/14 sm:w-12" />
             <div className="flex flex-col items-center text-center leading-[1.4]">
-              <span>{locale === "id" ? "Klik logo" : "Tap the logo"}</span>
-              <span>{locale === "id" ? "untuk memulai" : "to begin"}</span>
+              <span>{t("tapLogo")}</span>
+              <span>{t("toBegin")}</span>
             </div>
             <span className="h-px w-8 bg-white/14 sm:w-12" />
           </div>
           <div className="hidden items-center gap-3 text-[10px] uppercase tracking-[0.32em] text-white/44 sm:text-[11px] lg:flex">
             <span className="h-px w-8 bg-white/14 sm:w-12" />
-            <span>{locale === "id" ? "Klik logo untuk memulai" : "Tap the logo to begin"}</span>
+            <span>{t("startHint")}</span>
             <span className="h-px w-8 bg-white/14 sm:w-12" />
           </div>
         </div>
